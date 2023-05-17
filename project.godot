@@ -14,6 +14,11 @@ config/name="mparty"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
