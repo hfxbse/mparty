@@ -9,5 +9,7 @@ func load_json_file(file_path: String):
 			return parsed_data
 		else:
 			print("Couldn't read file.")
+			return null
 	else:
 		print("File doesn't exists.")
+		return null
