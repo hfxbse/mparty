@@ -1,0 +1,21 @@
+{
+    "questions":
+    [
+        {
+            "question": "Bin ich eine Frage?",
+            "answer_possibilities": ["ja", "nein", "doch", "oh"]
+        },
+        {
+            "question": "Bin ich eine Frage?",
+            "answer_possibilities": ["ja", "nein", "doch", "oh"]
+        },
+        {
+            "question": "Bin ich eine Frage?",
+            "answer_possibilities": ["ja", "nein", "doch", "oh"]
+        },
+        {
+            "question": "Bin ich eine Frage?",
+            "answer_possibilities": ["ja", "nein", "doch", "oh"]
+        }
+    ]
+}

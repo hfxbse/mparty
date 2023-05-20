@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="mparty"
+run/main_scene="res://node_2d.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+QuesionsHandler="*res://Scripts/data_handler/quesions_handler.gd"
 
 [rendering]
 

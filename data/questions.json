@@ -1,0 +1,25 @@
+{
+	"questions":
+	[
+		{
+			"question": "Bin ich eine Frage?",
+			"answer_possibilities": ["ja", "nein", "doch", "oh"],
+			"right_answer": 0
+		},
+		{
+			"question": "Wie heißt unser PM Lehrer",
+			"answer_possibilities": ["Dieter", "Jürgen", "Hans-Jürgen", "Uwe"],
+			"right_answer": 3
+		},
+		{
+			"question": "Welche Reihe passt am wenigsten auf?",
+			"answer_possibilities": ["1.", "2.", "3.", "4."],
+			"right_answer": 3
+		},
+		{
+			"question": "Wie oft wurde bei Robort eine neue Linux Distribution installiert",
+			"answer_possibilities": ["1", "3", ">10", "7"],
+			"right_answer": 2
+		}
+	]
+}
