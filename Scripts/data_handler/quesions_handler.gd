@@ -22,7 +22,7 @@ func get_random_question():
 	return questions[randi() % questions.size()].get_question()
 
 func get_question(index: int):
-	if(index > 0 and index < questions.size()):
+	if(index >= 0 and index < questions.size()):
 		return questions[index]
 	else:
 		print("Question index out of bounds.")
