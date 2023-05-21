@@ -1,0 +1,131 @@
+[gd_scene load_steps=13 format=3 uid="uid://bcs3nvv2okhry"]
+
+[ext_resource type="Texture2D" uid="uid://rl4cst0d1vnb" path="res://map/feld.svg" id="1_tgamd"]
+[ext_resource type="PackedScene" uid="uid://kw7typmphika" path="res://map/path.tscn" id="2_44xbr"]
+
+[sub_resource type="Curve2D" id="Curve2D_vu328"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2, 4, 0, 0, 0, 0, 280, 67)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_dpjmq"]
+script/source = "extends Path2D
+
+@export var target : NodePath
+"
+
+[sub_resource type="Curve2D" id="Curve2D_yuc0n"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 4, -1, 0, 0, 0, 0, 78, 169)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_j2g1k"]
+script/source = "extends Path2D
+
+@export var target : NodePath
+"
+
+[sub_resource type="Curve2D" id="Curve2D_xhc85"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3, 0, 0, 0, 0, 0, -219, 104)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_v3iqj"]
+script/source = "extends Path2D
+
+@export var target : NodePath
+"
+
+[sub_resource type="Curve2D" id="Curve2D_7mc5s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 1, 0, 0, 0, 0, -258, -122)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_6gdov"]
+script/source = "extends Path2D
+
+@export var target : NodePath
+"
+
+[sub_resource type="Curve2D" id="Curve2D_8a3ki"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, -239)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_08mgl"]
+script/source = "extends Path2D
+
+@export var target : NodePath
+"
+
+[node name="Node" type="Node"]
+
+[node name="Start" type="Node2D" parent="."]
+position = Vector2(315, 96)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Start"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tgamd")
+
+[node name="Path2D" parent="Start" instance=ExtResource("2_44xbr")]
+curve = SubResource("Curve2D_vu328")
+script = SubResource("GDScript_dpjmq")
+target = NodePath("../../Field1")
+
+[node name="Field1" type="Node2D" parent="."]
+position = Vector2(596, 167)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Field1"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tgamd")
+
+[node name="Path2D" parent="Field1" instance=ExtResource("2_44xbr")]
+curve = SubResource("Curve2D_yuc0n")
+script = SubResource("GDScript_j2g1k")
+target = NodePath("../../Field2")
+
+[node name="Field2" type="Node2D" parent="."]
+position = Vector2(672, 341)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Field2"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tgamd")
+
+[node name="Path2D" parent="Field2" instance=ExtResource("2_44xbr")]
+curve = SubResource("Curve2D_xhc85")
+script = SubResource("GDScript_v3iqj")
+target = NodePath("../../Field3")
+
+[node name="Field3" type="Node2D" parent="."]
+position = Vector2(450, 452)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Field3"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tgamd")
+
+[node name="Path2D" parent="Field3" instance=ExtResource("2_44xbr")]
+curve = SubResource("Curve2D_7mc5s")
+script = SubResource("GDScript_6gdov")
+target = NodePath("../../Field4")
+
+[node name="Field4" type="Node2D" parent="."]
+position = Vector2(189, 330)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Field4"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tgamd")
+
+[node name="Path2D" parent="Field4" instance=ExtResource("2_44xbr")]
+curve = SubResource("Curve2D_8a3ki")
+script = SubResource("GDScript_08mgl")
+target = NodePath("../../Start")
