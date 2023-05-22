@@ -1,4 +1,4 @@
-class_name EventHandler extends Node
+class_name EventHandler extends Resource
 
 var file_path = "res://Scripts/data/events.json"
 var events: Array[Event]

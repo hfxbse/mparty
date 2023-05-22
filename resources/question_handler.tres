@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="QuestionsHandler" load_steps=2 format=3 uid="uid://clsogge4rahyl"]
+
+[ext_resource type="Script" path="res://Scripts/data_handler/quesions_handler.gd" id="1_okd8l"]
+
+[resource]
+script = ExtResource("1_okd8l")

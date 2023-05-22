@@ -1,7 +1,6 @@
-#Added QuestionHandler to the Autoloader in Project settings, so it is accessible globaly and only instantiated once
-class_name QuestionsHandler extends Node
+class_name QuestionsHandler extends Resource
 
-var file_path = "res://data/questions.json"
+var file_path = "res://Scripts/data/questions.json"
 var json_loader = JSONLoader.new()
 var questions: Array[Question]
 var current_question_index = 0;
