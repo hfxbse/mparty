@@ -2,8 +2,9 @@ class_name QuestionsHandler extends Resource
 
 var file_path = "res://Scripts/data/questions.json"
 var json_loader = JSONLoader.new()
-var questions: Array[Question]
-var current_question_index = 0;
+#0: easy, 1: normal, 2: difficult
+var questions = {0: [], 1: [], 2: []}
+var current_question_index = -1;
 
 func _init():
 	var questions_from_json = json_loader.load_json_file(file_path)["questions"]		
@@ -13,26 +14,28 @@ func _init():
 			question_obj.set_question(question["question"])
 			question_obj.set_answer_possibilities(question["answer_possibilities"])
 			question_obj.set_right_answer(question["right_answer"])
-			questions.append(question_obj)
+			var difficulty = question["difficulty"]
+			question_obj.set_difficulty(difficulty)
+			questions[int(difficulty)].append(question_obj)
 	else:
 		print("Couldn't load questions.")
 		
-func get_random_question():
-	return questions[randi() % questions.size()].get_question()
+func get_random_question(difficulty: int):
+	return questions.get(difficulty)[randi() % questions[difficulty].size()].get_question()
 
-func get_question(index: int):
+func get_question(index: int, difficulty: int):
 	if(index >= 0 and index < questions.size()):
-		return questions[index]
+		return questions.get(difficulty)[index]
 	else:
 		print("Question index out of bounds.")
 		return null
 
-func get_next_question():
-	if(current_question_index < questions.size() - 1):
+func get_next_question(difficulty: int):
+	if(current_question_index < questions.get(difficulty).size() - 1):
 		current_question_index += 1
 	else: 
 		current_question_index = 0
-	var question = get_question(current_question_index)
+	var question = get_question(current_question_index, difficulty)
 	if(question != null):
 		return question
 	else:
