@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwbwn4wc8mnyf"]
+
+[ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="1_jg31g"]
+[ext_resource type="Script" path="res://main.gd" id="1_spnpj"]
+[ext_resource type="Texture2D" uid="uid://br6fg1fghhmy2" path="res://icon.svg" id="3_r8gba"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_spnpj")
+
+[node name="Map" parent="." instance=ExtResource("1_jg31g")]
+
+[node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_r8gba")

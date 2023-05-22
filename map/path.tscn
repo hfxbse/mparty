@@ -1,20 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://kw7typmphika"]
 
+[ext_resource type="Script" path="res://map/Path2D.gd" id="1_neb52"]
+
 [sub_resource type="Curve2D" id="Curve2D_ckhfd"]
-
-[sub_resource type="GDScript" id="GDScript_25r00"]
-script/source = "extends Path2D
-
-@export var target : NodePath
-"
 
 [node name="Path2D" type="Path2D"]
 curve = SubResource("Curve2D_ckhfd")
-script = SubResource("GDScript_25r00")
+script = ExtResource("1_neb52")
 metadata/_edit_group_ = true
 
-[node name="PathFollow2D" type="PathFollow2D" parent="."]
+[node name="Follow" type="PathFollow2D" parent="."]
 position = Vector2(3, 2)
 rotation = 0.475592
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Follow"]
