@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="EventHandler" load_steps=2 format=3 uid="uid://dh1ngs6bhkeut"]
-
-[ext_resource type="Script" path="res://Scripts/data_handler/events_handler.gd" id="1_kjxla"]
-
-[resource]
-script = ExtResource("1_kjxla")
