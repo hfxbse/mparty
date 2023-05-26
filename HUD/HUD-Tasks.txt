@@ -1,0 +1,6 @@
+- Item einlösen
+	--> Auswahlliste Items
+- Würfeln
+- Feld ansehen (geht Kamera wechsel)
+
+- Punktestand (kleines Fnster dauerhaft)
