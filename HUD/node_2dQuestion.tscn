@@ -1,0 +1,136 @@
+[gd_scene load_steps=5 format=3 uid="uid://dft2qj70fe0nb"]
+
+[ext_resource type="Script" path="res://Question.gd" id="1_p0w7b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77odi"]
+bg_color = Color(0.682353, 0.8, 0.901961, 1)
+
+[sub_resource type="Animation" id="Animation_2mnru"]
+resource_name = "popUpDice"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d273h"]
+_data = {
+"popUpShop": SubResource("Animation_2mnru")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Question" type="Node2D" parent="."]
+script = ExtResource("1_p0w7b")
+
+[node name="Panel" type="Panel" parent="Question"]
+offset_left = 184.0
+offset_top = 118.0
+offset_right = 986.0
+offset_bottom = 536.0
+pivot_offset = Vector2(336, 166)
+
+[node name="Label" type="Label" parent="Question/Panel"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 8.0
+offset_right = 780.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Question: ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnswerA" type="Button" parent="Question/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = -205.284
+offset_top = -367.806
+offset_right = 132.716
+offset_bottom = -246.806
+pivot_offset = Vector2(43, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_77odi")
+action_mode = 0
+text = "A: "
+
+[node name="AnswerB" type="Button" parent="Question/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = 153.716
+offset_top = -367.806
+offset_right = 478.716
+offset_bottom = -243.806
+pivot_offset = Vector2(43, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_77odi")
+action_mode = 0
+text = "B:"
+
+[node name="AnswerC" type="Button" parent="Question/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = -200.284
+offset_top = -210.806
+offset_right = 132.716
+offset_bottom = -83.806
+pivot_offset = Vector2(43, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_77odi")
+action_mode = 0
+text = "C:"
+
+[node name="AnswerD" type="Button" parent="Question/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = 156.716
+offset_top = -210.806
+offset_right = 473.716
+offset_bottom = -86.806
+pivot_offset = Vector2(43, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_77odi")
+action_mode = 0
+text = "D:"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Question/Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_d273h")
+}
+
+[connection signal="pressed" from="Question/Panel/AnswerA" to="Question" method="_on_answer_a_pressed"]
+[connection signal="pressed" from="Question/Panel/AnswerB" to="Question" method="_on_answer_b_pressed"]
+[connection signal="pressed" from="Question/Panel/AnswerC" to="Question" method="_on_answer_c_pressed"]
+[connection signal="pressed" from="Question/Panel/AnswerD" to="Question" method="_on_answer_d_pressed"]
