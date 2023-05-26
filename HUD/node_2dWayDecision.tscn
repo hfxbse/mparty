@@ -1,0 +1,116 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddxtkmtkcinse"]
+
+[ext_resource type="Script" path="res://WayDecision.gd" id="1_t08r7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4yfg"]
+bg_color = Color(0.682353, 0.8, 0.901961, 1)
+
+[sub_resource type="Animation" id="Animation_2mnru"]
+resource_name = "popUpDice"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d273h"]
+_data = {
+"popUpShop": SubResource("Animation_2mnru")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WayDecision" type="Node2D" parent="."]
+script = ExtResource("1_t08r7")
+
+[node name="Panel" type="Panel" parent="WayDecision"]
+offset_left = 184.0
+offset_top = 118.0
+offset_right = 986.0
+offset_bottom = 536.0
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(336, 166)
+
+[node name="Label" type="Label" parent="WayDecision/Panel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 59.0
+offset_right = 783.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+text = "Select your way!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonLeft" type="Button" parent="WayDecision/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = -15.284
+offset_top = -241.806
+offset_right = 119.716
+offset_bottom = -183.806
+pivot_offset = Vector2(43, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_d4yfg")
+action_mode = 0
+text = "<--"
+
+[node name="ButtonForward" type="Button" parent="WayDecision/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = 55.716
+offset_top = -173.806
+offset_right = 216.716
+offset_bottom = -107.806
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_d4yfg")
+action_mode = 0
+text = "forward"
+
+[node name="ButtonRight" type="Button" parent="WayDecision/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 1.167
+anchor_right = 0.342
+anchor_bottom = 1.167
+offset_left = 152.716
+offset_top = -241.806
+offset_right = 287.716
+offset_bottom = -183.806
+pivot_offset = Vector2(43, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_d4yfg")
+action_mode = 0
+text = "-->"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WayDecision/Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_d273h")
+}
+
+[connection signal="pressed" from="WayDecision/Panel/ButtonLeft" to="WayDecision" method="_on_button_left_pressed"]
+[connection signal="pressed" from="WayDecision/Panel/ButtonForward" to="WayDecision" method="_on_button_forward_pressed"]
+[connection signal="pressed" from="WayDecision/Panel/ButtonRight" to="WayDecision" method="_on_button_right_pressed"]
