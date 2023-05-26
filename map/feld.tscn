@@ -1,20 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://su1cbdipn3iy"]
+[gd_scene load_steps=5 format=3 uid="uid://su1cbdipn3iy"]
 
-[ext_resource type="Script" path="res://map/feld.gd" id="1_knfh5"]
+[ext_resource type="Script" path="res://map/feld.gd" id="1_1edkh"]
 [ext_resource type="Texture2D" uid="uid://rl4cst0d1vnb" path="res://map/feld.svg" id="1_ojcwx"]
-[ext_resource type="PackedScene" uid="uid://kw7typmphika" path="res://map/path.tscn" id="2_15b6w"]
+[ext_resource type="PackedScene" uid="uid://bt0fygqn3yfuv" path="res://map/path.tscn" id="2_15b6w"]
 
 [sub_resource type="Curve2D" id="Curve2D_hrhyr"]
 
-[sub_resource type="GDScript" id="GDScript_p8n0q"]
-script/source = "extends Path2D
-
-@export var target : NodePath
-"
-
 [node name="Node2D" type="Node2D"]
 position = Vector2(166, 96)
-script = ExtResource("1_knfh5")
+script = ExtResource("1_1edkh")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -23,4 +17,3 @@ texture = ExtResource("1_ojcwx")
 
 [node name="Path" parent="." instance=ExtResource("2_15b6w")]
 curve = SubResource("Curve2D_hrhyr")
-script = SubResource("GDScript_p8n0q")
