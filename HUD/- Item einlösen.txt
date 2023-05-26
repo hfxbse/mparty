@@ -1,0 +1,43 @@
+Auswahlmenü:
+- Item einlösen
+	--> Auswahlliste Items
+	--> exit Button, Einlösebutton (User wird beim Einlösen nochmal nachgefragt)
+
+- Würfeln #
+ --> Button startet Wurf
+ --> delay
+ --> Animation von nem Würfel
+ --> Ergebnis (User bestätigt es am schluss)
+
+ --> Ende: Würfelsound
+
+- Feld ansehen (geht Kamera wechsel)
+
+--Auswahlmenü Ende--
+
+- Punktestand (kleines Fnster dauerhaft)
+
+Mapreaktion:
+- Shop Menü #
+ --> wie viele Items?
+ --> Kostet Geld, wird Itemstorage hinzugefügt
+ 
+ --> Stimmen im Hintergrund (wie im Laden)
+
+-Fragen Menu 
+ --> Schwierigkeiten
+ --> Frage #
+
+--Mapreaktion Ende--
+
+Spielstart
+-Hauptmenü
+ --> Spiel starten
+
+--Spielstart Ende--
+
+Spieleinstellung
+Musik (An/Aus)
+Exit
+
+--Spieleinstellugnen Ende--
