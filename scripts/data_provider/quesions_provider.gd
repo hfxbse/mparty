@@ -28,13 +28,13 @@ func _init():
 		
 		questions[difficulty].append(question_obj)
 		
-func get_random_question(difficulty: int):
+func get_random_question(difficulty: Question.Difficulty):
 	return get_question(randi() % questions[difficulty].size(), difficulty)
 
-func get_question(index: int, difficulty: int):
+func get_question(index: int, difficulty: Question.Difficulty):
 	return questions[difficulty][index]
 
-func get_next_question(difficulty: int):
+func get_next_question(difficulty: Question.Difficulty):
 	if(current_question_index < questions[difficulty].size() - 1):
 		current_question_index += 1
 	else: 
