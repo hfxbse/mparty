@@ -29,7 +29,7 @@ func _init():
 		questions[difficulty].append(question_obj)
 		
 func get_random_question(difficulty: int):
-	return questions[difficulty][randi() % questions[difficulty].size()].get_question()
+	return get_question(randi() % questions[difficulty].size(), difficulty)
 
 func get_question(index: int, difficulty: int):
 	return questions[difficulty][index]
