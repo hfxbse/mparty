@@ -31,10 +31,10 @@ _data = {
 script = ExtResource("2_bfirb")
 
 [node name="Panel" type="Panel" parent="Dice"]
-offset_left = 184.0
-offset_top = 118.0
-offset_right = 986.0
-offset_bottom = 536.0
+offset_left = 131.0
+offset_top = 97.0
+offset_right = 985.0
+offset_bottom = 524.0
 scale = Vector2(1.2, 1.2)
 pivot_offset = Vector2(336, 166)
 
@@ -45,13 +45,13 @@ anchor_left = 0.342
 anchor_top = 1.167
 anchor_right = 0.342
 anchor_bottom = 1.167
-offset_left = 100.037
-offset_top = -182.467
-offset_right = 152.037
-offset_bottom = -124.467
+offset_left = 81.932
+offset_top = -231.309
+offset_right = 187.932
+offset_bottom = -178.309
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 38
 theme_override_styles/normal = SubResource("StyleBoxFlat_bbr11")
 action_mode = 0
 text = "ok"
@@ -63,10 +63,10 @@ libraries = {
 
 [node name="Label" type="Label" parent="Dice/Panel"]
 layout_mode = 0
-offset_left = 136.667
-offset_top = 63.3333
-offset_right = 661.667
-offset_bottom = 209.333
+offset_left = 160.167
+offset_top = 53.5
+offset_right = 685.167
+offset_bottom = 172.5
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 85
 text = "Roll the dice!"
