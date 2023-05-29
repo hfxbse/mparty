@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cjkxjqlcjh4vo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 512.0
+
+[node name="Menu-Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 8.0
+offset_right = 292.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 36
+text = "Main Menu"
+
+[node name="Start" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 192.0
+text = "Start"
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 320.0
+text = "Exit"
