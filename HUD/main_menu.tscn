@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cjkxjqlcjh4vo"]
+[gd_scene load_steps=2 format=3 uid="uid://cjkxjqlcjh4vo"]
+
+[ext_resource type="Script" path="res://HUD/Start.gd" id="1_kr5wk"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,6 +33,7 @@ offset_top = 128.0
 offset_right = 256.0
 offset_bottom = 192.0
 text = "Start"
+script = ExtResource("1_kr5wk")
 
 [node name="Exit" type="Button" parent="Panel"]
 layout_mode = 0
