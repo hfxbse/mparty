@@ -6,11 +6,10 @@ var map
 func _ready():
 	player = $Player
 	map = $Map
-	player.current_location = map.get_start()
+	player.currentLocation = map.get_start()
 
 func _on_button_pressed():
-	$Button.hide();
-	get_node(map.get_start()).path.move("/root/Node/Player").connect(_on_field_reached);
+	map.move("/root/Node/Player", 2)
 	
 func _on_field_reached():
 	print("Field reached")

@@ -35,28 +35,28 @@ position = Vector2(398, 91)
 
 [node name="Path" parent="Start" index="1"]
 curve = SubResource("Curve2D_hojm5")
-target = NodePath("../../Feld1")
+targetPath = NodePath("../../Feld1")
 
 [node name="Feld1" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(574, 193)
 
 [node name="Path" parent="Feld1" index="1"]
 curve = SubResource("Curve2D_13oju")
-target = NodePath("../../Feld2")
+targetPath = NodePath("../../Feld2")
 
 [node name="Feld2" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(452, 379)
 
 [node name="Path" parent="Feld2" index="1"]
 curve = SubResource("Curve2D_aeh0y")
-target = NodePath("../../Feld3/Path")
+targetPath = NodePath("../../Feld3")
 
 [node name="Feld3" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(240, 263)
 
 [node name="Path" parent="Feld3" index="1"]
 curve = SubResource("Curve2D_hqy1u")
-target = NodePath("../../Start")
+targetPath = NodePath("../../Start")
 
 [editable path="Start"]
 [editable path="Feld1"]
