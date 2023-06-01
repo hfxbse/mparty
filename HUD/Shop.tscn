@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://34fkmw4iqwaf"]
 
-[ext_resource type="Script" path="res://ItemShop.gd" id="1_s4ujq"]
+[ext_resource type="Script" path="res://HUD/Item1.gd" id="1_621lm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glvue"]
 bg_color = Color(0.682353, 0.8, 0.901961, 1)
@@ -25,19 +25,31 @@ _data = {
 "popUpShop": SubResource("Animation_2mnru")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="ItemShop" type="Node2D" parent="."]
-script = ExtResource("1_s4ujq")
-
-[node name="Panel" type="Panel" parent="ItemShop"]
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 1088.0
-offset_bottom = 576.0
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -256.0
+offset_right = 512.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset = Vector2(336, 166)
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="ItemShop/Panel"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 344.0
 offset_top = 64.0
@@ -49,7 +61,7 @@ text = "Select your item"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Item1" type="Button" parent="ItemShop/Panel"]
+[node name="Item1" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -68,8 +80,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_glvue")
 action_mode = 0
 text = "1
 20€"
+script = ExtResource("1_621lm")
 
-[node name="Item2" type="Button" parent="ItemShop/Panel"]
+[node name="Item2" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -89,7 +102,7 @@ action_mode = 0
 text = "2
 100€"
 
-[node name="Item3" type="Button" parent="ItemShop/Panel"]
+[node name="Item3" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -109,7 +122,7 @@ action_mode = 0
 text = "3
 30€"
 
-[node name="Item4" type="Button" parent="ItemShop/Panel"]
+[node name="Item4" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -129,7 +142,7 @@ action_mode = 0
 text = "4
 40€"
 
-[node name="ExitButton" type="Button" parent="ItemShop/Panel"]
+[node name="ExitButton" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -148,13 +161,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_glvue")
 action_mode = 0
 text = "exit"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ItemShop/Panel"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
 libraries = {
 "": SubResource("AnimationLibrary_d273h")
 }
 
-[connection signal="pressed" from="ItemShop/Panel/Item1" to="ItemShop" method="_on_item_1_pressed"]
-[connection signal="pressed" from="ItemShop/Panel/Item2" to="ItemShop" method="_on_item_2_pressed"]
-[connection signal="pressed" from="ItemShop/Panel/Item3" to="ItemShop" method="_on_item_3_pressed"]
-[connection signal="pressed" from="ItemShop/Panel/Item4" to="ItemShop" method="_on_item_4_pressed"]
-[connection signal="pressed" from="ItemShop/Panel/ExitButton" to="ItemShop" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Panel/Item1" to="Panel/Item1" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Item2" to="Panel/Item1" method="_on_item_2_pressed"]
+[connection signal="pressed" from="Panel/Item3" to="Panel/Item1" method="_on_item_3_pressed"]
+[connection signal="pressed" from="Panel/Item4" to="Panel/Item1" method="_on_item_4_pressed"]
+[connection signal="pressed" from="Panel/ExitButton" to="Panel/Item1" method="_on_exit_button_pressed"]
