@@ -1,3 +1,0 @@
-This is the map folder. 
-This file is only so the folder will be commited. 
-Please delete this file.
