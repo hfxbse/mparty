@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddxtkmtkcinse"]
+[gd_scene load_steps=6 format=3 uid="uid://ddxtkmtkcinse"]
 
-[ext_resource type="Script" path="res://WayDecision.gd" id="1_t08r7"]
+[ext_resource type="Script" path="res://HUD/node_2dWayDecision.gd" id="1_6e7hh"]
+[ext_resource type="Script" path="res://HUD/Panel.gd" id="1_fddt7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4yfg"]
 bg_color = Color(0.682353, 0.8, 0.901961, 1)
@@ -25,20 +26,34 @@ _data = {
 "popUpStart": SubResource("Animation_2mnru")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6e7hh")
 
-[node name="WayDecision" type="Node2D" parent="."]
-script = ExtResource("1_t08r7")
-
-[node name="Panel" type="Panel" parent="WayDecision"]
-offset_left = 131.0
-offset_top = 97.0
-offset_right = 985.0
-offset_bottom = 524.0
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = -213.5
+offset_right = 427.0
+offset_bottom = 213.5
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(1.2, 1.2)
 pivot_offset = Vector2(336, 166)
+script = ExtResource("1_fddt7")
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="WayDecision/Panel"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 280.167
 offset_top = 53.5
@@ -50,7 +65,7 @@ text = "Select your way!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonLeft" type="Button" parent="WayDecision/Panel"]
+[node name="ButtonLeft" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -69,7 +84,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_d4yfg")
 action_mode = 0
 text = "<--"
 
-[node name="ButtonForward" type="Button" parent="WayDecision/Panel"]
+[node name="ButtonForward" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -87,7 +102,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_d4yfg")
 action_mode = 0
 text = "forward"
 
-[node name="ButtonRight" type="Button" parent="WayDecision/Panel"]
+[node name="ButtonRight" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -106,11 +121,11 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_d4yfg")
 action_mode = 0
 text = "-->"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="WayDecision/Panel"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
 libraries = {
 "": SubResource("AnimationLibrary_d273h")
 }
 
-[connection signal="pressed" from="WayDecision/Panel/ButtonLeft" to="WayDecision" method="_on_button_left_pressed"]
-[connection signal="pressed" from="WayDecision/Panel/ButtonForward" to="WayDecision" method="_on_button_forward_pressed"]
-[connection signal="pressed" from="WayDecision/Panel/ButtonRight" to="WayDecision" method="_on_button_right_pressed"]
+[connection signal="pressed" from="Panel/ButtonLeft" to="Panel" method="_on_button_left_pressed"]
+[connection signal="pressed" from="Panel/ButtonForward" to="Panel" method="_on_button_forward_pressed"]
+[connection signal="pressed" from="Panel/ButtonRight" to="Panel" method="_on_button_right_pressed"]

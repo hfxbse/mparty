@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 func _on_item_1_pressed():
 	var label = $Panel/Label
@@ -26,3 +26,7 @@ func _on_item_4_pressed():
 
 func _on_exit_button_pressed():
 	$Panel/AnimationPlayer.play_backwards("popUpShop")
+
+
+func _on_pressed():
+	pass # Replace with function body.
