@@ -29,16 +29,8 @@ text = "Main Menu"
 [node name="Start" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 128.0
-offset_top = 128.0
+offset_top = 192.0
 offset_right = 256.0
-offset_bottom = 192.0
+offset_bottom = 256.0
 text = "Start"
 script = ExtResource("1_kr5wk")
-
-[node name="Exit" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 256.0
-offset_right = 256.0
-offset_bottom = 320.0
-text = "Exit"
