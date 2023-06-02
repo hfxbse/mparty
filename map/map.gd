@@ -13,20 +13,19 @@ func get_start():
 func move(newPlayerPath: NodePath, distance: int):
 	playerPath = newPlayerPath
 	player = get_node(newPlayerPath)
-	var movementPath = player.currentLocation.path
-	moves = distance - 1
-	fieldReachedSignal = movementPath.move(playerPath)
-	fieldReachedSignal.connect(_on_field_reached)
+	moves = distance
+	_move()
 
 func _on_field_reached():
 	fieldReachedSignal.disconnect(_on_field_reached)
 	if moves == 0:
 		turn_ended.emit()
 		return
+	_move()
+	
+func _move():
+	moves -= 1
 	var movementPath = player.currentLocation.path
 	fieldReachedSignal = movementPath.move(playerPath)
 	fieldReachedSignal.connect(_on_field_reached)
-	moves -= 1
-	
-	
 	
