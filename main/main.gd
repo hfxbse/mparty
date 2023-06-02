@@ -16,6 +16,3 @@ func _ready():
 
 func _on_button_pressed():
 	map.move("/root/Node/Player", 2)
-
-func _process(delta):
-	pass
