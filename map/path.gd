@@ -1,6 +1,6 @@
 extends Path2D
 
-signal field_reached()
+signal field_reached
 @export var targetPath : NodePath
 @onready var target = get_node(targetPath)
 

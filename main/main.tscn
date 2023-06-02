@@ -18,4 +18,5 @@ offset_right = 799.0
 offset_bottom = 160.0
 text = "MOVE"
 
+[connection signal="turn_ended" from="Map" to="." method="_on_map_turn_ended"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

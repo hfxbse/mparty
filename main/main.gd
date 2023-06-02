@@ -15,4 +15,8 @@ func _ready():
 	player.currentLocation = map.get_start()
 
 func _on_button_pressed():
-	map.move("/root/Node/Player", 2)
+	$Button.hide()
+	map.move("/root/Node/Player", 3)
+
+func _on_map_turn_ended():
+	$Button.show()
