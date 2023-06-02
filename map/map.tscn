@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcs3nvv2okhry"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_4s7g8"]
-[ext_resource type="PackedScene" uid="uid://su1cbdipn3iy" path="res://map/feld.tscn" id="2_n4m0x"]
+[ext_resource type="PackedScene" uid="uid://su1cbdipn3iy" path="res://map/field.tscn" id="2_n4m0x"]
 
 [sub_resource type="Curve2D" id="Curve2D_hojm5"]
 _data = {
@@ -35,30 +35,30 @@ position = Vector2(398, 91)
 
 [node name="Path" parent="Start" index="1"]
 curve = SubResource("Curve2D_hojm5")
-targetPath = NodePath("../../Feld1")
+targetPath = NodePath("../../Field1")
 
-[node name="Feld1" parent="." instance=ExtResource("2_n4m0x")]
+[node name="Field1" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(574, 193)
 
-[node name="Path" parent="Feld1" index="1"]
+[node name="Path" parent="Field1" index="1"]
 curve = SubResource("Curve2D_13oju")
-targetPath = NodePath("../../Feld2")
+targetPath = NodePath("../../Field2")
 
-[node name="Feld2" parent="." instance=ExtResource("2_n4m0x")]
+[node name="Field2" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(452, 379)
 
-[node name="Path" parent="Feld2" index="1"]
+[node name="Path" parent="Field2" index="1"]
 curve = SubResource("Curve2D_aeh0y")
-targetPath = NodePath("../../Feld3")
+targetPath = NodePath("../../Field3")
 
-[node name="Feld3" parent="." instance=ExtResource("2_n4m0x")]
+[node name="Field3" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(240, 263)
 
-[node name="Path" parent="Feld3" index="1"]
+[node name="Path" parent="Field3" index="1"]
 curve = SubResource("Curve2D_hqy1u")
 targetPath = NodePath("../../Start")
 
 [editable path="Start"]
-[editable path="Feld1"]
-[editable path="Feld2"]
-[editable path="Feld3"]
+[editable path="Field1"]
+[editable path="Field2"]
+[editable path="Field3"]
