@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjbt16bpg11ma"]
+
+[ext_resource type="Texture2D" uid="uid://m1lul3jymv52" path="res://HUD/Pictures/Settings.png" id="1_7hweb"]
+[ext_resource type="Texture2D" uid="uid://dunu28ycwa7jy" path="res://HUD/Pictures/Tools.png" id="2_h5yhe"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Settings" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuButton" type="MenuButton" parent="Panel/Settings"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 250.0
+offset_bottom = 250.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("1_7hweb")
+flat = false
+alignment = 0
+icon_alignment = 1
+item_count = 2
+popup/item_0/text = "Exit"
+popup/item_0/checked = true
+popup/item_0/id = 0
+popup/item_1/text = "Musik"
+popup/item_1/checked = true
+popup/item_1/id = 1
+popup/item_1/disabled = true
+
+[node name="Actions" type="Panel" parent="Panel"]
+offset_top = 584.0
+offset_right = 64.0
+offset_bottom = 648.0
+
+[node name="Stats" type="Panel" parent="Panel"]
+offset_left = 1024.0
+offset_right = 1152.0
+offset_bottom = 192.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Stats"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 184.0
+text = "Stats later here
+"
+
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 259.0
+offset_bottom = 248.0
+scale = Vector2(0.2, 0.2)
+icon = ExtResource("2_h5yhe")
+item_count = 3
+popup/item_0/text = "Dice"
+popup/item_0/checked = true
+popup/item_0/id = 0
+popup/item_1/text = "Items"
+popup/item_1/checked = true
+popup/item_1/id = 1
+popup/item_2/text = "MapView"
+popup/item_2/checked = true
+popup/item_2/id = 2
