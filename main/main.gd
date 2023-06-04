@@ -5,6 +5,8 @@ extends Node
 @onready var MoveButton = $MoveButton
 
 
+signal turn_start()
+
 func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	#Example call
