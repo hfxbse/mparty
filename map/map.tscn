@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcs3nvv2okhry"]
+
+[ext_resource type="Script" path="res://map/map.gd" id="1_4s7g8"]
+[ext_resource type="PackedScene" uid="uid://su1cbdipn3iy" path="res://map/field.tscn" id="2_n4m0x"]
+
+[sub_resource type="Curve2D" id="Curve2D_hojm5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -3, 3, 0, 0, 0, 0, 177, 105)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_13oju"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 1, 0, 0, 0, 0, -124, 185)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_aeh0y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3, 1, 0, 0, 0, 0, -210, -120)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_hqy1u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2, -1, 0, 0, 0, 0, 161, -170)
+}
+point_count = 2
+
+[node name="Node" type="Node"]
+script = ExtResource("1_4s7g8")
+
+[node name="Start" parent="." instance=ExtResource("2_n4m0x")]
+position = Vector2(398, 91)
+
+[node name="Path" parent="Start" index="1"]
+curve = SubResource("Curve2D_hojm5")
+targetPath = NodePath("../../Field1")
+
+[node name="Field1" parent="." instance=ExtResource("2_n4m0x")]
+position = Vector2(574, 193)
+
+[node name="Path" parent="Field1" index="1"]
+curve = SubResource("Curve2D_13oju")
+targetPath = NodePath("../../Field2")
+
+[node name="Field2" parent="." instance=ExtResource("2_n4m0x")]
+position = Vector2(452, 379)
+
+[node name="Path" parent="Field2" index="1"]
+curve = SubResource("Curve2D_aeh0y")
+targetPath = NodePath("../../Field3")
+
+[node name="Field3" parent="." instance=ExtResource("2_n4m0x")]
+position = Vector2(240, 263)
+
+[node name="Path" parent="Field3" index="1"]
+curve = SubResource("Curve2D_hqy1u")
+targetPath = NodePath("../../Start")
+
+[editable path="Start"]
+[editable path="Field1"]
+[editable path="Field2"]
+[editable path="Field3"]

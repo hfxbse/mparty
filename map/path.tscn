@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt0fygqn3yfuv"]
+
+[ext_resource type="Script" path="res://map/path.gd" id="1_q0ti2"]
+[ext_resource type="Script" path="res://map/follow.gd" id="2_rdsi1"]
+
+[sub_resource type="Curve2D" id="Curve2D_ckhfd"]
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_ckhfd")
+script = ExtResource("1_q0ti2")
+metadata/_edit_group_ = true
+
+[node name="Follow" type="PathFollow2D" parent="."]
+position = Vector2(3, 2)
+rotation = 0.475592
+script = ExtResource("2_rdsi1")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Follow"]
