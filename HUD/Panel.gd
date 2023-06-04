@@ -1,4 +1,4 @@
-extends Control
+extends QuestionPanel
 
 func _on_button_left_pressed():
 	var label = $Label
@@ -16,4 +16,3 @@ func _on_button_right_pressed():
 	var label = $Label
 	var button = $ButtonRight
 	label.set_text(String("Your decided to turn right"))
-
