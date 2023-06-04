@@ -42,11 +42,13 @@ popup/item_1/id = 1
 popup/item_1/disabled = true
 
 [node name="Actions" type="Panel" parent="Panel"]
+layout_mode = 0
 offset_top = 584.0
 offset_right = 64.0
 offset_bottom = 648.0
 
 [node name="Stats" type="Panel" parent="Panel"]
+layout_mode = 0
 offset_left = 1024.0
 offset_right = 1152.0
 offset_bottom = 192.0
@@ -61,10 +63,11 @@ text = "Stats later here
 "
 
 [node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 0
 offset_left = 8.0
-offset_top = 8.0
+offset_top = 592.0
 offset_right = 259.0
-offset_bottom = 248.0
+offset_bottom = 832.0
 scale = Vector2(0.2, 0.2)
 icon = ExtResource("2_h5yhe")
 item_count = 3

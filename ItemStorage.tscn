@@ -1,0 +1,208 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsf1sbfi8b6hr"]
+
+[ext_resource type="Script" path="res://ItemStorage.gd" id="1_bowyq"]
+[ext_resource type="Texture2D" uid="uid://duluh15t8bxlr" path="res://HUD/Pictures/Exit.png" id="1_cm5aj"]
+
+[sub_resource type="Animation" id="Animation_2mnru"]
+resource_name = "popUpUniversal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d273h"]
+_data = {
+"popUpUniversal": SubResource("Animation_2mnru")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjcoj"]
+expand_margin_left = 15.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmkgn"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemStorage" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12934
+anchor_top = 0.170525
+anchor_right = 0.87066
+anchor_bottom = 0.829475
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(336, 166)
+script = ExtResource("1_bowyq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Item1" type="Button" parent="ItemStorage"]
+offset_left = 59.0003
+offset_top = 49.4998
+offset_right = 123.0
+offset_bottom = 113.5
+text = "1"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item1"]
+layout_mode = 0
+offset_left = 87.9997
+offset_top = 7.50018
+offset_right = 240.0
+offset_bottom = 47.5002
+text = "Beschreibung"
+
+[node name="Item2" type="Button" parent="ItemStorage"]
+offset_left = 323.0
+offset_top = 49.4998
+offset_right = 387.0
+offset_bottom = 114.5
+text = "2"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item2"]
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 248.0
+offset_bottom = 56.0
+text = "Beschreibung"
+
+[node name="Item3" type="Button" parent="ItemStorage"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 177.5
+offset_right = 387.0
+offset_bottom = 242.5
+text = "3"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item3"]
+offset_left = 96.0
+offset_top = 8.0
+offset_right = 248.0
+offset_bottom = 48.0
+text = "Beschreibung"
+
+[node name="Item4" type="Button" parent="ItemStorage"]
+offset_left = 59.0003
+offset_top = 177.5
+offset_right = 123.0
+offset_bottom = 241.5
+text = "4"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item4"]
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 56.0
+text = "Beschreibung"
+
+[node name="Item5" type="Button" parent="ItemStorage"]
+offset_left = 59.0003
+offset_top = 305.5
+offset_right = 123.0
+offset_bottom = 369.5
+disabled = true
+text = "5"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item5"]
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 56.0
+text = "Beschreibung"
+
+[node name="Item6" type="Button" parent="ItemStorage"]
+offset_left = 323.0
+offset_top = 305.5
+offset_right = 387.0
+offset_bottom = 369.5
+text = "6"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item6"]
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 56.0
+text = "Beschreibung"
+
+[node name="Item7" type="Button" parent="ItemStorage"]
+offset_left = 587.0
+offset_top = 49.4998
+offset_right = 651.0
+offset_bottom = 113.5
+text = "7"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item7"]
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 56.0
+text = "Beschreibung"
+
+[node name="Item8" type="Button" parent="ItemStorage"]
+offset_left = 587.0
+offset_top = 177.5
+offset_right = 651.0
+offset_bottom = 241.5
+disabled = true
+text = "8"
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ItemStorage/Item8"]
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 56.0
+text = "Beschreibung"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ItemStorage"]
+libraries = {
+"": SubResource("AnimationLibrary_d273h")
+}
+
+[node name="ExitButton" type="Button" parent="ItemStorage"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.800307
+anchor_top = 0.693816
+anchor_right = 0.84185
+anchor_bottom = 0.77786
+offset_left = 92.088
+offset_top = 42.9484
+offset_right = 321.61
+offset_bottom = 306.062
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.146)
+pivot_offset = Vector2(43, 2)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_gjcoj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lmkgn")
+action_mode = 0
+icon = ExtResource("1_cm5aj")
+alignment = 2
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ItemStorage/ExitButton" to="ItemStorage" method="_on_exit_button_pressed"]
