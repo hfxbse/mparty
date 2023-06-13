@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 func _on_answer_a_pressed():
 	var label = $Panel/Label
