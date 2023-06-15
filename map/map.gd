@@ -25,7 +25,7 @@ func _on_field_reached():
 	
 func _move():
 	moves -= 1
-	var movementPath = player.currentLocation.path
-	fieldReachedSignal = movementPath.move(playerPath)
+	var playerLocation = player.currentLocation
+	fieldReachedSignal = playerLocation.move(playerPath)
 	fieldReachedSignal.connect(_on_field_reached)
 	
