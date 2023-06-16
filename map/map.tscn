@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcs3nvv2okhry"]
+[gd_scene load_steps=14 format=3 uid="uid://bcs3nvv2okhry"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_4s7g8"]
 [ext_resource type="PackedScene" uid="uid://su1cbdipn3iy" path="res://map/field.tscn" id="2_n4m0x"]
+[ext_resource type="PackedScene" uid="uid://ihrptgjsglld" path="res://map/splitField.tscn" id="3_1iw7h"]
 
 [sub_resource type="Curve2D" id="Curve2D_hojm5"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -3, 3, 0, 0, 0, 0, 177, 105)
+"points": PackedVector2Array(0, 0, 0, 0, 3, -2, 0, 0, 0, 0, 238, -23)
 }
 point_count = 2
 
@@ -27,6 +28,135 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_5pbjl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2, 1, 0, 0, 0, 0, -60, 124)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_82xim"]
+script/source = "extends Path2D
+
+signal field_reached
+@export var targetPath : NodePath
+@onready var target = get_node(targetPath)
+
+var active
+var follow
+
+func _ready():
+	active = false
+	follow = $Follow
+	follow.remote.update_position = false
+	follow.remote.update_rotation = false
+
+func _process(delta):
+	if !active:
+		return
+	follow.progress_ratio +=  delta*1.5
+	if follow.progress_ratio >= 0.95:
+		follow.progress_ratio = 1;
+		field_reached.emit()
+		active = false
+		follow.remote.update_position = false
+
+func move(player: NodePath):
+	follow.progress_ratio = 0
+	follow.remote.remote_path = player
+	follow.remote.update_position = true
+	get_node(player).currentLocation = target
+	active = true
+	return field_reached
+	
+	
+"
+
+[sub_resource type="Curve2D" id="Curve2D_ok3rb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 98, 183)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_7p5ic"]
+script/source = "extends Path2D
+
+signal field_reached
+@export var targetPath : NodePath
+@onready var target = get_node(targetPath)
+
+var active
+var follow
+
+func _ready():
+	active = false
+	follow = $Follow
+	follow.remote.update_position = false
+	follow.remote.update_rotation = false
+
+func _process(delta):
+	if !active:
+		return
+	follow.progress_ratio +=  delta*1.5
+	if follow.progress_ratio >= 0.95:
+		follow.progress_ratio = 1;
+		field_reached.emit()
+		active = false
+		follow.remote.update_position = false
+
+func move(player: NodePath):
+	follow.progress_ratio = 0
+	follow.remote.remote_path = player
+	follow.remote.update_position = true
+	get_node(player).currentLocation = target
+	active = true
+	return field_reached
+	
+	
+"
+
+[sub_resource type="Curve2D" id="Curve2D_uwo5w"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3, 1, 0, 0, 0, 0, -276, 117)
+}
+point_count = 2
+
+[sub_resource type="GDScript" id="GDScript_ustxy"]
+script/source = "extends Path2D
+
+signal field_reached
+@export var targetPath : NodePath
+@onready var target = get_node(targetPath)
+
+var active
+var follow
+
+func _ready():
+	active = false
+	follow = $Follow
+	follow.remote.update_position = false
+	follow.remote.update_rotation = false
+
+func _process(delta):
+	if !active:
+		return
+	follow.progress_ratio +=  delta*1.5
+	if follow.progress_ratio >= 0.95:
+		follow.progress_ratio = 1;
+		field_reached.emit()
+		active = false
+		follow.remote.update_position = false
+
+func move(player: NodePath):
+	follow.progress_ratio = 0
+	follow.remote.remote_path = player
+	follow.remote.update_position = true
+	get_node(player).currentLocation = target
+	active = true
+	return field_reached
+	
+	
+"
+
 [node name="Node" type="Node"]
 script = ExtResource("1_4s7g8")
 
@@ -35,7 +165,7 @@ position = Vector2(398, 91)
 
 [node name="Path" parent="Start" index="1"]
 curve = SubResource("Curve2D_hojm5")
-targetPath = NodePath("../../Field1")
+targetPath = NodePath("../../Split1")
 
 [node name="Field1" parent="." instance=ExtResource("2_n4m0x")]
 position = Vector2(574, 193)
@@ -58,7 +188,30 @@ position = Vector2(240, 263)
 curve = SubResource("Curve2D_hqy1u")
 targetPath = NodePath("../../Start")
 
+[node name="Split1" parent="." instance=ExtResource("3_1iw7h")]
+position = Vector2(635, 73)
+
+[node name="Path" parent="Split1" index="1"]
+curve = SubResource("Curve2D_5pbjl")
+script = SubResource("GDScript_82xim")
+targetPath = NodePath("../../Field1")
+
+[node name="Path2" parent="Split1" index="3"]
+curve = SubResource("Curve2D_ok3rb")
+script = SubResource("GDScript_7p5ic")
+targetPath = NodePath("../../Field4")
+
+[node name="Field4" parent="." instance=ExtResource("2_n4m0x")]
+position = Vector2(729, 257)
+
+[node name="Path" parent="Field4" index="1"]
+curve = SubResource("Curve2D_uwo5w")
+script = SubResource("GDScript_ustxy")
+targetPath = NodePath("../../Field2")
+
 [editable path="Start"]
 [editable path="Field1"]
 [editable path="Field2"]
 [editable path="Field3"]
+[editable path="Split1"]
+[editable path="Field4"]
