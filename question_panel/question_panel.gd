@@ -13,26 +13,31 @@ func _ready():
 	question_label.set_text(question.question)
 	
 	for answer_possibility in question.answer_possibilities:
-		var answer_button = AnswerButton.new(answer_possibility)
-		var button_margin_container = MarginContainer.new()
-		var button_margin = 5
-		
-		button_margin_container.add_theme_constant_override("margin_left", button_margin)
-		button_margin_container.add_theme_constant_override("margin_right", button_margin)
-		button_margin_container.add_theme_constant_override("margin_top", button_margin)
-		button_margin_container.add_theme_constant_override("margin_bottom", button_margin)
-		
-		answer_button.answer_selected.connect(_on_answer_selected)
-		
-		button_margin_container.add_child(answer_button)
+		var answer_button = create_answer_button(answer_possibility, _on_answer_selected, 5)
 		
 		if counter % 2 == 0:
-			answer_container.get_child(0).add_child(button_margin_container)
+			answer_container.get_child(0).add_child(answer_button)
 		else:
-			answer_container.get_child(1).add_child(button_margin_container)
+			answer_container.get_child(1).add_child(answer_button)
 		
 		counter += 1
 		
+		
+func create_answer_button(answer, selected_receiver, margin):
+		var answer_button = AnswerButton.new(answer)
+		var margin_container = MarginContainer.new()
+		
+		margin_container.add_theme_constant_override("margin_left", margin)
+		margin_container.add_theme_constant_override("margin_right", margin)
+		margin_container.add_theme_constant_override("margin_top", margin)
+		margin_container.add_theme_constant_override("margin_bottom", margin)
+		
+		answer_button.answer_selected.connect(_on_answer_selected)
+		
+		margin_container.add_child(answer_button)
+		
+		return margin_container
+
 		
 func _on_answer_selected(answer_text):
 	selected_answer = answer_text
