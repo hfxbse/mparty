@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://34fkmw4iqwaf"]
+[gd_scene load_steps=9 format=3 uid="uid://b8wgenibjs81h"]
 
-[ext_resource type="Script" path="res://HUD/ShopPanel.gd" id="1_x1y4n"]
-[ext_resource type="Texture2D" uid="uid://duluh15t8bxlr" path="res://HUD/Pictures/Exit.png" id="2_3g5dt"]
-[ext_resource type="Texture2D" uid="uid://cdjtc4ohdtyq8" path="res://HUD/Pictures/Shop.png" id="4_2x8wq"]
+[ext_resource type="Script" path="res://shop/shop.gd" id="1_fhcyc"]
+[ext_resource type="Texture2D" uid="uid://duluh15t8bxlr" path="res://shop/exit.png" id="2_3g5dt"]
+[ext_resource type="Texture2D" uid="uid://cdjtc4ohdtyq8" path="res://shop/shop.png" id="4_2x8wq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glvue"]
 bg_color = Color(0.431373, 0.505882, 0.568627, 1)
@@ -57,7 +57,7 @@ offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(336, 166)
-script = ExtResource("1_x1y4n")
+script = ExtResource("1_fhcyc")
 
 [node name="Label" type="Label" parent="ShopPanel"]
 layout_mode = 1
