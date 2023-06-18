@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://pafrdl87j2l4"]
 
-[ext_resource type="Script" path="res://HUD/DicePanel.gd" id="1_lvh11"]
+[ext_resource type="Script" path="res://dice/Dice.gd" id="1_2eigy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbr11"]
 bg_color = Color(0.682353, 0.8, 0.901961, 1)
@@ -33,7 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DicePanel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 117.0
 offset_top = 122.0
@@ -41,9 +41,9 @@ offset_right = 1044.0
 offset_bottom = 520.0
 scale = Vector2(0.966667, 0.966667)
 pivot_offset = Vector2(336, 166)
-script = ExtResource("1_lvh11")
+script = ExtResource("1_2eigy")
 
-[node name="Button" type="Button" parent="DicePanel"]
+[node name="Button" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
@@ -61,7 +61,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_bbr11")
 action_mode = 0
 text = "ok"
 
-[node name="Label" type="Label" parent="DicePanel"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 160.167
 offset_top = 53.5
@@ -73,9 +73,9 @@ text = "Roll the dice!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DicePanel"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
 libraries = {
 "": SubResource("AnimationLibrary_d273h")
 }
 
-[connection signal="pressed" from="DicePanel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
