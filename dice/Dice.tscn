@@ -35,11 +35,11 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 117.0
-offset_top = 122.0
-offset_right = 1044.0
-offset_bottom = 520.0
-scale = Vector2(0.966667, 0.966667)
+offset_left = 144.0
+offset_top = 136.0
+offset_right = 1104.0
+offset_bottom = 521.0
+scale = Vector2(0.666667, 0.666667)
 pivot_offset = Vector2(336, 166)
 script = ExtResource("1_2eigy")
 
@@ -50,10 +50,10 @@ anchor_left = 0.342
 anchor_top = 1.167
 anchor_right = 0.342
 anchor_bottom = 1.167
-offset_left = 81.932
-offset_top = -231.309
-offset_right = 187.932
-offset_bottom = -178.309
+offset_left = 103.68
+offset_top = -196.295
+offset_right = 199.68
+offset_bottom = -143.295
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 38
@@ -63,10 +63,10 @@ text = "ok"
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 160.167
-offset_top = 53.5
-offset_right = 685.167
-offset_bottom = 172.5
+offset_left = 192.0
+offset_top = 49.0
+offset_right = 768.0
+offset_bottom = 168.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 85
 text = "Roll the dice!"
@@ -78,4 +78,4 @@ libraries = {
 "": SubResource("AnimationLibrary_d273h")
 }
 
-[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed" flags=18]
