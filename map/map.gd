@@ -3,7 +3,7 @@ extends Node
 var moves = 0
 var player
 var playerPath
-var fieldReachedSignal
+var step_completed
 
 signal turn_ended
 
@@ -16,8 +16,8 @@ func move(newPlayerPath: NodePath, distance: int):
 	moves = distance
 	_move()
 
-func _on_field_reached():
-	fieldReachedSignal.disconnect(_on_field_reached)
+func _on_step_completed():
+	step_completed.disconnect(_on_step_completed)
 	if moves == 0:
 		turn_ended.emit()
 		return
@@ -25,7 +25,7 @@ func _on_field_reached():
 	
 func _move():
 	moves -= 1
-	var movementPath = player.currentLocation.path
-	fieldReachedSignal = movementPath.move(playerPath)
-	fieldReachedSignal.connect(_on_field_reached)
+	var playerLocation = player.currentLocation
+	step_completed = playerLocation.move(playerPath)
+	step_completed.connect(_on_step_completed)
 	
