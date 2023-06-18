@@ -8,7 +8,7 @@ var selected_answer
 func _ready():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	var counter = 0
-	#Need to get difficulty from map
+	# Need to get difficulty from map
 	question = question_handler.get_random_question(Question.Difficulty.EASY)
 	question_label.set_text(question.question)
 	
@@ -32,6 +32,7 @@ func _ready():
 			answer_container.get_child(1).add_child(button_margin_container)
 		
 		counter += 1
+		
 		
 func _on_answer_selected(answer_text):
 	selected_answer = answer_text

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dft2qj70fe0nb"]
 
-[ext_resource type="Script" path="res://HUD/QuestionContainer.gd" id="1_fxjdh"]
+[ext_resource type="Script" path="res://question_panel/question_panel.gd" id="1_jy063"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,7 +21,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="QuestionContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-script = ExtResource("1_fxjdh")
+script = ExtResource("1_jy063")
 
 [node name="QuestionLabel" type="Label" parent="MarginContainer/QuestionContainer"]
 layout_mode = 2
