@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bt0fygqn3yfuv" path="res://map/path.tscn" id="3_x5801"]
 [ext_resource type="Texture2D" uid="uid://bvec52gahl5ca" path="res://map/fieldclickable.svg" id="4_k8e4b"]
 [ext_resource type="Texture2D" uid="uid://bfgih7pekieu" path="res://map/fieldclickable_hover.svg" id="5_lgxva"]
-[ext_resource type="Script" path="res://map/TextureButton.gd" id="6_3c05o"]
+[ext_resource type="Script" path="res://map/textureButton.gd" id="6_x8j7d"]
 
 [sub_resource type="Curve2D" id="Curve2D_hrhyr"]
 
@@ -30,6 +30,6 @@ offset_bottom = 454.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("4_k8e4b")
 texture_hover = ExtResource("5_lgxva")
-script = ExtResource("6_3c05o")
+script = ExtResource("6_x8j7d")
 
 [node name="Path2" parent="." instance=ExtResource("3_x5801")]
