@@ -11,14 +11,14 @@ func _ready():
 
 func _input(event):  
 	if is_current():  
-		if event is InputEventMouseButton and event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:  
+		if event is InputEventMouseButton and event.button_mask == MOUSE_BUTTON_LEFT:#MOUSE_BUTTON_MASK_MIDDLE:  
 			if event.pressed:
 				last_pos = position
 				target_pos = get_global_mouse_position()
 				is_moving = true  
 			else:  
 				is_moving = false  
-  
+
 func _physics_process(delta):
 	if (position - target_pos).length() < 3.0:
 		is_moving = false
