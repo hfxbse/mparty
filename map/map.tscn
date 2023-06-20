@@ -160,19 +160,15 @@ targetPath = NodePath("../../Start")
 [node name="Split1" parent="." instance=ExtResource("3_1iw7h")]
 position = Vector2(639, 59)
 
-[node name="Field" parent="Split1" index="0"]
-offset_left = -27.0
-offset_top = -23.0
-offset_right = 32.0
-offset_bottom = 37.0
-
-[node name="Path" parent="Split1/Field" index="0"]
-targetPath = NodePath("../../../Field1")
-
-[node name="Path2" parent="Split1" index="1"]
+[node name="Path2" parent="Split1" index="0"]
 curve = SubResource("Curve2D_ok3rb")
 script = SubResource("GDScript_7p5ic")
 targetPath = NodePath("../../Field4")
+
+[node name="Field" parent="Split1" instance=ExtResource("2_n4m0x")]
+
+[node name="Path" parent="Split1/Field" index="0"]
+targetPath = NodePath("../../../Field1")
 
 [node name="Field4" parent="." instance=ExtResource("2_n4m0x")]
 offset_left = 729.0
