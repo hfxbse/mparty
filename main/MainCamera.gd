@@ -1,38 +1,47 @@
 extends Camera2D  
 
 var last_pos
-var target_pos = Vector2.ZERO
-var vel = Vector2(0, 0) 
-var is_moving = false  
-var speed = 8 
+var target_zoom = 1.0
+const MIN_ZOOM = 0.2
+const MAX_ZOOM = 2.0
+const ZOOM_INCREMENT = 0.1
+const ZOOM_RATE = 5.0
 
 func _ready():
 	last_pos = position
 
-func _input(event):  
+func _unhandled_input(event: InputEvent) -> void:
 	if is_current():  
-		if event is InputEventMouseButton and event.button_mask == MOUSE_BUTTON_LEFT:#MOUSE_BUTTON_MASK_MIDDLE:  
-			if event.pressed:
-				last_pos = position
-				target_pos = get_global_mouse_position()
-				is_moving = true  
-			else:  
-				is_moving = false  
+		if event is InputEventMouseMotion:
+			if event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:
+				position -= event.relative * zoom
+			print(event.button_mask)
+		elif event is InputEventMouseButton:
+			if event.is_pressed:
+				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+					print("up")
+					zoom_in()
+				if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+					print("down")
+					zoom_out()
 
+func zoom_in():
+	target_zoom = min(target_zoom + ZOOM_INCREMENT, MAX_ZOOM)
+	set_physics_process(true)
+
+func zoom_out():
+	target_zoom = max(target_zoom - ZOOM_INCREMENT, MIN_ZOOM)
+	set_physics_process(true)
+	
 func _physics_process(delta):
-	if (position - target_pos).length() < 3.0:
-		is_moving = false
-		target_pos = Vector2.ZERO
-		vel = Vector2(0, 0)
-		
-	if is_moving:
-		var newvel = target_pos
-		newvel = newvel-position
-		newvel = newvel.limit_length(speed)
-		vel = vel.lerp(newvel, 0.2)
-		position = position + vel		
-		
+	zoom = lerp(zoom, 
+	target_zoom * Vector2.ONE,
+	ZOOM_RATE * delta
+	)
+	set_physics_process(
+		not is_equal_approx(zoom.x, target_zoom)
+	)
+
 func set_camera():
 	position = last_pos
 	make_current()
-	
