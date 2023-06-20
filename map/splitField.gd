@@ -9,31 +9,42 @@ signal step_completed
 var path_ended
 var playerPath
 
+
+func enable_path_option(path, picked_signal, receiver):
+	picked_signal.connect(receiver)
+	path.target.button.activate(picked_signal)
+
+
+func disable_path_option(path, picked_signal, receiver):
+	picked_signal.disconnect(receiver)
+	path.target.button.deactivate()
+
+
 func move(player: NodePath):
 	playerPath = player
-	path_picked.connect(_on_path_picked)
-	path2_picked.connect(_on_path2_picked)
-	path.target.button.activate(path_picked)
-	path2.target.button.activate(path2_picked)
+	
+	enable_path_option(path, path_picked, _on_path_picked)
+	enable_path_option(path2, path2_picked, _on_path2_picked)	
+	
 	return step_completed
 
-func _cleanUp():
-	path2_picked.disconnect(_on_path2_picked)	
-	path_picked.disconnect(_on_path_picked)
-	path.target.button.deactivate()
-	path2.target.button.deactivate()
+
+func on_picked_handler(picked_path):
+	disable_path_option(path, path_picked, _on_path_picked)
+	disable_path_option(path2, path2_picked, _on_path2_picked)
+	
+	path_ended = picked_path.move(playerPath)
+	path_ended.connect(_on_path_ended)
+	
 
 func _on_path_picked():
-	_cleanUp()
-	path_ended = path.move(playerPath)
-	path_ended.connect(_on_path_ended)
-	
-	
+	on_picked_handler(path)
+
+
 func _on_path2_picked():
-	_cleanUp()
-	path_ended = path2.move(playerPath)
-	path_ended.connect(_on_path_ended)
-	
+	on_picked_handler(path2)
+
+
 func _on_path_ended():
 	path_ended.disconnect(_on_path_ended)
 	step_completed.emit()
