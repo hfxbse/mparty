@@ -1,4 +1,4 @@
-extends Node2D
+class_name Field extends Node2D
 
 @onready var path = $Path
 @onready var button = $TextureButton

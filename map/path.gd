@@ -1,4 +1,4 @@
-extends Path2D
+class_name Path extends Path2D
 
 signal field_reached
 @export var targetPath : NodePath

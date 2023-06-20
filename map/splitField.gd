@@ -1,4 +1,4 @@
-extends "res://map/field.gd"
+class_name SplitField extends Field
 
 @onready var path2 = $Path2
 
