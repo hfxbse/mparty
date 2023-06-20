@@ -16,7 +16,7 @@ func _ready():
 
 func _on_button_pressed():
 	button.hide()
-	map.move("/root/Node/Player", 3)
+	map.move(player, 3)
 
 func _on_map_turn_ended():
 	button.show()
