@@ -15,14 +15,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion:
 			if event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:
 				position -= event.relative * zoom
-			print(event.button_mask)
 		elif event is InputEventMouseButton:
 			if event.is_pressed:
 				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-					print("up")
 					zoom_in()
 				if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-					print("down")
 					zoom_out()
 
 func zoom_in():
