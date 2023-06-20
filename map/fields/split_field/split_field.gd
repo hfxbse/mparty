@@ -11,6 +11,14 @@ var path_ended
 var playerPath
 
 
+func enable_picker():
+	return field.enable_picker()
+
+
+func disable_picker():
+	return field.disable_picker()
+
+
 func enable_path_option(path, picked_signal, receiver):
 	picked_signal.connect(receiver)
 	path.target.enable_picker().connect(receiver)
