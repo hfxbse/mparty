@@ -6,9 +6,7 @@ var playerPath
 var step_completed
 
 signal turn_ended
-
-func get_start():
-	return $Start
+@onready var start = $Start
 
 func move(newPlayerPath: NodePath, distance: int):
 	playerPath = newPlayerPath
