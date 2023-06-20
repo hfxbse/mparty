@@ -23,6 +23,6 @@ func _on_step_completed():
 	
 func _step():
 	moves -= 1
-	step_completed = player.currentLocation.move(player.get_path())
+	step_completed = player.currentLocation.move(player)
 	step_completed.connect(_on_step_completed)
 	

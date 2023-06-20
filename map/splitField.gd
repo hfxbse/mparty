@@ -20,8 +20,8 @@ func disable_path_option(path, picked_signal, receiver):
 	path.target.button.deactivate()
 
 
-func move(player: NodePath):
-	playerPath = player
+func move(player: Player):
+	playerPath = player.get_path()
 	
 	enable_path_option(path, path_picked, _on_path_picked)
 	enable_path_option(path2, path2_picked, _on_path2_picked)	
