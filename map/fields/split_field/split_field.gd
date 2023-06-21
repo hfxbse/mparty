@@ -1,3 +1,4 @@
+@tool
 class_name SplitField extends Node2D
 
 var field
@@ -11,6 +12,13 @@ var playerPath
 
 const missing_field_warning = "SplitField needs a Field as child node."
 const too_many_fields_warining = "SplitField cannot have more than one Field as child."
+
+
+func _get_configuration_warnings():
+	var fields = get_fields()
+	
+	if fields.is_empty(): return [missing_field_warning]
+	elif fields.size() > 1: return [too_many_fields_warining]
 
 
 func get_fields():
@@ -29,6 +37,8 @@ func _ready():
 	assert(fields.size() == 1, too_many_fields_warining)
 
 	field = fields[0]
+	
+	if Engine.is_editor_hint(): update_configuration_warnings()
 
 
 func enable_picker():
