@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_ckhfd"]
 
-[node name="Path2D" type="Path2D"]
+[node name="MapPath" type="Path2D"]
 curve = SubResource("Curve2D_ckhfd")
 script = ExtResource("1_8bvwn")
 metadata/_edit_group_ = true
