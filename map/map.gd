@@ -2,30 +2,30 @@ extends Node
 
 var moves = 0
 var player
-var playerPath
 var step_completed
 
 signal turn_ended
+@onready var start = $Start
 
-func get_start():
-	return $Start
 
-func move(newPlayerPath: NodePath, distance: int):
-	playerPath = newPlayerPath
-	player = get_node(newPlayerPath)
+func move(player: Player, distance: int):
+	self.player = player
 	moves = distance
-	_move()
+	_step()
+
 
 func _on_step_completed():
 	step_completed.disconnect(_on_step_completed)
+	
 	if moves == 0:
 		turn_ended.emit()
 		return
-	_move()
-	
-func _move():
+		
+	_step()
+
+
+func _step():
 	moves -= 1
-	var playerLocation = player.currentLocation
-	step_completed = playerLocation.move(playerPath)
+	step_completed = player.currentLocation.move(player)
 	step_completed.connect(_on_step_completed)
 	

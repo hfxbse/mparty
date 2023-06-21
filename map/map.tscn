@@ -1,79 +1,36 @@
-[gd_scene load_steps=14 format=3 uid="uid://bcs3nvv2okhry"]
+[gd_scene load_steps=12 format=3 uid="uid://bcs3nvv2okhry"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_4s7g8"]
-[ext_resource type="PackedScene" uid="uid://su1cbdipn3iy" path="res://map/field.tscn" id="2_n4m0x"]
-[ext_resource type="PackedScene" uid="uid://ihrptgjsglld" path="res://map/splitField.tscn" id="3_1iw7h"]
+[ext_resource type="PackedScene" uid="uid://v1lhq5i31xjj" path="res://map/fields/field.tscn" id="2_n4m0x"]
+[ext_resource type="PackedScene" uid="uid://dmjan161owmyb" path="res://map/fields/split_field/split_field.tscn" id="3_1iw7h"]
 
 [sub_resource type="Curve2D" id="Curve2D_hojm5"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3, -2, 0, 0, 0, 0, 238, -23)
+"points": PackedVector2Array(0, 0, 0, 0, 34, 27, 0, 0, 0, 0, 244, -26)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_13oju"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1, 1, 0, 0, 0, 0, -124, 185)
+"points": PackedVector2Array(0, 0, 0, 0, 27, 26, 0, 0, 0, 0, -89, 218)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_aeh0y"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3, 1, 0, 0, 0, 0, -210, -120)
+"points": PackedVector2Array(0, 0, 0, 0, 32, 29, 0, 0, 0, 0, -186, -89)
 }
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_hqy1u"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2, -1, 0, 0, 0, 0, 161, -170)
+"points": PackedVector2Array(0, 0, 0, 0, 31, 27, 0, 0, 0, 0, 191, -144)
 }
 point_count = 2
-
-[sub_resource type="Curve2D" id="Curve2D_5pbjl"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -2, 1, 0, 0, 0, 0, -60, 124)
-}
-point_count = 2
-
-[sub_resource type="GDScript" id="GDScript_82xim"]
-script/source = "extends Path2D
-
-signal field_reached
-@export var targetPath : NodePath
-@onready var target = get_node(targetPath)
-
-var active
-var follow
-
-func _ready():
-	active = false
-	follow = $Follow
-	follow.remote.update_position = false
-	follow.remote.update_rotation = false
-
-func _process(delta):
-	if !active:
-		return
-	follow.progress_ratio +=  delta*1.5
-	if follow.progress_ratio >= 0.95:
-		follow.progress_ratio = 1;
-		field_reached.emit()
-		active = false
-		follow.remote.update_position = false
-
-func move(player: NodePath):
-	follow.progress_ratio = 0
-	follow.remote.remote_path = player
-	follow.remote.update_position = true
-	get_node(player).currentLocation = target
-	active = true
-	return field_reached
-	
-	
-"
 
 [sub_resource type="Curve2D" id="Curve2D_ok3rb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 98, 183)
+"points": PackedVector2Array(0, 0, 0, 0, 6, 10, 0, 0, 0, 0, 116, 236)
 }
 point_count = 2
 
@@ -116,7 +73,7 @@ func move(player: NodePath):
 
 [sub_resource type="Curve2D" id="Curve2D_uwo5w"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3, 1, 0, 0, 0, 0, -276, 117)
+"points": PackedVector2Array(0, 0, 0, 0, 21, 35, 0, 0, 0, 0, -244, 154)
 }
 point_count = 2
 
@@ -161,50 +118,65 @@ func move(player: NodePath):
 script = ExtResource("1_4s7g8")
 
 [node name="Start" parent="." instance=ExtResource("2_n4m0x")]
-position = Vector2(398, 91)
+offset_left = 398.0
+offset_top = 91.0
+offset_right = 457.0
+offset_bottom = 151.0
 
-[node name="Path" parent="Start" index="1"]
+[node name="Path" parent="Start" index="0"]
 curve = SubResource("Curve2D_hojm5")
 targetPath = NodePath("../../Split1")
 
 [node name="Field1" parent="." instance=ExtResource("2_n4m0x")]
-position = Vector2(574, 193)
+offset_left = 574.0
+offset_top = 193.0
+offset_right = 633.0
+offset_bottom = 253.0
 
-[node name="Path" parent="Field1" index="1"]
+[node name="Path" parent="Field1" index="0"]
 curve = SubResource("Curve2D_13oju")
 targetPath = NodePath("../../Field2")
 
 [node name="Field2" parent="." instance=ExtResource("2_n4m0x")]
-position = Vector2(452, 379)
+offset_left = 452.0
+offset_top = 379.0
+offset_right = 511.0
+offset_bottom = 439.0
 
-[node name="Path" parent="Field2" index="1"]
+[node name="Path" parent="Field2" index="0"]
 curve = SubResource("Curve2D_aeh0y")
 targetPath = NodePath("../../Field3")
 
 [node name="Field3" parent="." instance=ExtResource("2_n4m0x")]
-position = Vector2(240, 263)
+offset_left = 240.0
+offset_top = 263.0
+offset_right = 299.0
+offset_bottom = 323.0
 
-[node name="Path" parent="Field3" index="1"]
+[node name="Path" parent="Field3" index="0"]
 curve = SubResource("Curve2D_hqy1u")
 targetPath = NodePath("../../Start")
 
 [node name="Split1" parent="." instance=ExtResource("3_1iw7h")]
-position = Vector2(635, 73)
+position = Vector2(639, 59)
 
-[node name="Path" parent="Split1" index="1"]
-curve = SubResource("Curve2D_5pbjl")
-script = SubResource("GDScript_82xim")
-targetPath = NodePath("../../Field1")
-
-[node name="Path2" parent="Split1" index="3"]
+[node name="Path2" parent="Split1" index="0"]
 curve = SubResource("Curve2D_ok3rb")
 script = SubResource("GDScript_7p5ic")
 targetPath = NodePath("../../Field4")
 
-[node name="Field4" parent="." instance=ExtResource("2_n4m0x")]
-position = Vector2(729, 257)
+[node name="Field" parent="Split1" instance=ExtResource("2_n4m0x")]
 
-[node name="Path" parent="Field4" index="1"]
+[node name="Path" parent="Split1/Field" index="0"]
+targetPath = NodePath("../../../Field1")
+
+[node name="Field4" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 729.0
+offset_top = 257.0
+offset_right = 788.0
+offset_bottom = 317.0
+
+[node name="Path" parent="Field4" index="0"]
 curve = SubResource("Curve2D_uwo5w")
 script = SubResource("GDScript_ustxy")
 targetPath = NodePath("../../Field2")
@@ -214,4 +186,5 @@ targetPath = NodePath("../../Field2")
 [editable path="Field2"]
 [editable path="Field3"]
 [editable path="Split1"]
+[editable path="Split1/Field"]
 [editable path="Field4"]

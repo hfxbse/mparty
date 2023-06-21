@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmjan161owmyb"]
+
+[ext_resource type="Script" path="res://map/fields/split_field/split_field.gd" id="1_h8aqv"]
+[ext_resource type="PackedScene" uid="uid://bt0fygqn3yfuv" path="res://map/path/path.tscn" id="2_ow1ja"]
+
+[node name="SplitField" type="Node2D"]
+script = ExtResource("1_h8aqv")
+metadata/_edit_group_ = true
+
+[node name="Path2" parent="." instance=ExtResource("2_ow1ja")]
