@@ -6,6 +6,7 @@ signal field_reached
 const target_not_set = "Path target not set."
 const curve_not_created = "Path curve not set."
 
+@export var player_speed: float = 100
 
 var target: Field
 @export var target_field: NodePath:
@@ -53,7 +54,7 @@ func _process(delta):
 
 	if !follow.remote.update_position: return
 
-	follow.progress_ratio +=  delta * 0.5
+	follow.progress_ratio +=  delta * 2.5 * player_speed / curve.get_baked_length()
 
 	if follow.progress_ratio >= 0.95:
 		follow.progress_ratio = 1;
