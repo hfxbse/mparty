@@ -2,7 +2,7 @@
 class_name Field extends Button
 
 signal picked
-signal step_completed
+signal step_completed(reached_field)
 const missing_path_warning = "Field needs at least one MapPath."
 
 var paths: Array[MapPath]
@@ -70,6 +70,6 @@ func disable_picker() -> Signal:
 func _on_pressed():
 	if !disabled: picked.emit()
 
-func _on_field_reached():
+func _on_field_reached(reached_field):
 	field_reached.disconnect(_on_field_reached)
-	step_completed.emit()
+	step_completed.emit(reached_field)

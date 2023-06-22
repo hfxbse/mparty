@@ -2,7 +2,7 @@ extends Node
 
 @onready var player = $Player
 @onready var map = $Map
-@onready var button = $Button
+@onready var MoveButton = $MoveButton
 
 
 func _init():
@@ -12,11 +12,18 @@ func _init():
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 	
 func _ready():
-	player.currentLocation = map.start
+	map.registerPlayer(player)
 
 func _on_button_pressed():
-	button.hide()
-	map.move(player, 3)
+	MoveButton.hide()
+	map.move(player, 2)
 
 func _on_map_turn_ended():
-	button.show()
+	MoveButton.show()
+
+func _on_back_button_pressed():
+	map.moveBackwards(player, 1)
+
+
+func _on_reset_button_pressed():
+	map.resetLastMove(player)
