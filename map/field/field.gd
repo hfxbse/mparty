@@ -47,10 +47,17 @@ func apply_theme_overide():
 
 func _ready():
 	paths = []
+	var child_theme_override: FieldTheme = null
 
 	for child in get_children():
 		if child is MapPath:
 			paths.append(child)
+		
+		if "field_theme_override" in child && child.field_theme_override != null:
+			child_theme_override = child.field_theme_override
+
+	if theme_override == null:
+		theme_override = child_theme_override
 
 	if not Engine.is_editor_hint():
 		assert(not paths.is_empty(), missing_path_warning)
