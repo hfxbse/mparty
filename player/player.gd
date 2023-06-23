@@ -16,6 +16,7 @@ func move(distance: int):
 	moves = distance
 	_step()
 	
+	
 func _step():
 	moves -= 1
 	step_completed = currentLocation.move(self)
@@ -26,7 +27,7 @@ func _on_step_completed(reached_field):
 	step_completed.disconnect(_on_step_completed)
 	
 	currentLocation = reached_field
-	registerMove(reached_field)
+	register_move(reached_field)
 	
 	if moves == 0:
 		turn_ended.emit()
@@ -35,13 +36,13 @@ func _on_step_completed(reached_field):
 	_step()
 
 
-func registerMove(field):
+func register_move(field):
 		traversedFields.push_back(field)
 		if traversedFields.size() > TRAV_FIELDS_MAX_LENGTH:
 			traversedFields.pop_front()
 
 
-func moveBackwards(n):
+func move_backwards(n):
 	for i in n:
 		if traversedFields.size() <= 1: break
 		currentLocation = traversedFields.pop_back()
@@ -50,6 +51,6 @@ func moveBackwards(n):
 	global_position = currentLocation.global_position
 
 
-func resetLastMove():
+func reset_last_move():
 	while currentLocation != lastLocation:
-		moveBackwards(1)
+		move_backwards(1)
