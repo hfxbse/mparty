@@ -33,7 +33,7 @@ offset_right = 807.0
 offset_bottom = 266.0
 text = "Reset"
 
-[connection signal="turn_ended" from="Map" to="." method="_on_map_turn_ended"]
+[connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
 [connection signal="pressed" from="MoveButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

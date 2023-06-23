@@ -12,18 +12,20 @@ func _init():
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 	
 func _ready():
-	map.registerPlayer(player)
+	var start = map.start
+	player.currentLocation = start
+	player.global_position = start.global_position
+	player.traversedFields = [start]
 
 func _on_button_pressed():
 	MoveButton.hide()
-	map.move(player, 2)
+	player.move(2)
 
-func _on_map_turn_ended():
+func _on_player_turn_ended():
 	MoveButton.show()
 
 func _on_back_button_pressed():
-	map.moveBackwards(player, 1)
-
+	player.moveBackwards(1)
 
 func _on_reset_button_pressed():
-	map.resetLastMove(player)
+	player.resetLastMove()
