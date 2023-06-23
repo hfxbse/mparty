@@ -1,44 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://v1lhq5i31xjj"]
+[gd_scene load_steps=3 format=3 uid="uid://v1lhq5i31xjj"]
 
+[ext_resource type="Theme" uid="uid://v0p4bigbslv3" path="res://map/field/field.tres" id="1_2v8b7"]
 [ext_resource type="Script" path="res://map/field/field.gd" id="2_snbne"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6884r"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymjr0"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xd5yx"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hgv2"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_n2mx6"]
-Button/styles/disabled = SubResource("StyleBoxFlat_6884r")
-Button/styles/hover = SubResource("StyleBoxFlat_ymjr0")
-Button/styles/normal = SubResource("StyleBoxFlat_xd5yx")
-Button/styles/pressed = SubResource("StyleBoxFlat_7hgv2")
 
 [node name="Field" type="Button"]
 offset_left = -29.0
@@ -46,7 +9,7 @@ offset_top = -30.0
 offset_right = 30.0
 offset_bottom = 30.0
 focus_mode = 0
-theme = SubResource("Theme_n2mx6")
+theme = ExtResource("1_2v8b7")
 disabled = true
 script = ExtResource("2_snbne")
 metadata/_edit_group_ = true

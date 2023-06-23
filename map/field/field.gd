@@ -10,11 +10,11 @@ var picked_receivers: Array[Callable]
 var field_reached: Signal
 
 
-var color_overrides: Dictionary = {
-	"disabled": func (): return theme_override.color_normal,
-	"normal": func (): return theme_override.color_path_choice,
-	"hover": func (): return theme_override.color_path_choice_hover,
-	"pressed": func (): return theme_override.color_path_choice_picked,
+var shadow_color_overrides: Dictionary = {
+	"disabled": func (): return theme_override.field_color,
+	"normal": func (): return theme_override.shadow_color_normal,
+	"hover": func (): return theme_override.shadow_color_normal,
+	"pressed": func (): return theme_override.shadow_color_pressed,
 }
 
 
@@ -32,12 +32,16 @@ var color_overrides: Dictionary = {
 
 func apply_theme_overide():
 	for style_name in theme.get_stylebox_list("Button"):
-		if theme_override == null || color_overrides.get(style_name).call() == null:
+		if theme_override == null:
 			remove_theme_stylebox_override(style_name)
 			continue
 
-		var style: StyleBox = theme.get_stylebox(style_name, "Button").duplicate()
-		style.bg_color = color_overrides.get(style_name).call()
+		var style: StyleBoxFlat = theme.get_stylebox(style_name, "Button").duplicate()
+		style.bg_color = theme_override.field_color
+
+		var shadow_color = shadow_color_overrides.get(style_name)
+		if shadow_color != null: style.shadow_color = shadow_color.call()
+
 		add_theme_stylebox_override(style_name, style)
 
 
