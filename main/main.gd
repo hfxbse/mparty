@@ -13,9 +13,9 @@ func _init():
 	
 func _ready():
 	var start = map.start
-	player.currentLocation = start
+	player.current_location = start
 	player.global_position = start.global_position
-	player.traversedFields = [start]
+	player.traversed_fields = [start]
 
 func _on_button_pressed():
 	MoveButton.hide()
@@ -25,7 +25,7 @@ func _on_player_turn_ended():
 	MoveButton.show()
 
 func _on_back_button_pressed():
-	player.moveBackwards(1)
+	player.move_backwards(1)
 
 func _on_reset_button_pressed():
-	player.resetLastMove()
+	player.reset_last_move()
