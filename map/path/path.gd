@@ -24,7 +24,8 @@ func _set(property, value):
 				if Engine.is_editor_hint(): update_configuration_warnings()
 
 
-@onready var follow = $Follow
+@onready var follow: Remote  = $Follow
+@onready var relative_speed =  2.5 * player_speed / curve.get_baked_length()
 
 
 func _ready():
@@ -54,18 +55,27 @@ func _process(delta):
 
 	if !follow.remote.update_position: return
 
-	follow.progress_ratio +=  delta * 2.5 * player_speed / curve.get_baked_length()
+	follow.move(delta)
 
-	if follow.progress_ratio >= 0.95:
-		follow.progress_ratio = 1;
+	if follow.end_reached():
 		field_reached.emit(target)
 
-		follow.remote.update_position = false
 
-
-func move(player: NodePath):
-	follow.progress_ratio = 0
+func follow_path(player, start, end, speed):
+	follow.progress_ratio = start
 	follow.remote.remote_path = player
 	follow.remote.update_position = true
+	follow.end = end
+	follow.speed = speed
+
+
+func move_forwards(player: NodePath):
+	follow_path(player, 0, 1, relative_speed)
+
+	return field_reached
+
+
+func move_backwards(player: NodePath):
+	follow_path(player, 1, 0, -1 * relative_speed)
 
 	return field_reached

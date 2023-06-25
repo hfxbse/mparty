@@ -16,7 +16,7 @@ func _ready():
 	var start = map.start
 	player.current_location = start
 	player.global_position = start.global_position
-	player.traversed_fields = [start]
+	player.traversed_fields.assign([start])
 
 
 func _on_button_pressed():
