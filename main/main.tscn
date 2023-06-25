@@ -12,12 +12,29 @@ position = Vector2(-54, 156)
 
 [node name="Player" parent="." instance=ExtResource("3_kj1dm")]
 
-[node name="Button" type="Button" parent="."]
+[node name="MoveButton" type="Button" parent="."]
 offset_left = 732.0
 offset_top = 129.0
 offset_right = 799.0
 offset_bottom = 160.0
 text = "MOVE"
 
-[connection signal="turn_ended" from="Map" to="." method="_on_map_turn_ended"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="BackButton" type="Button" parent="."]
+offset_left = 730.0
+offset_top = 176.0
+offset_right = 801.0
+offset_bottom = 211.0
+text = "BACK"
+
+[node name="UndoButton" type="Button" parent="."]
+offset_left = 733.0
+offset_top = 231.0
+offset_right = 807.0
+offset_bottom = 266.0
+text = "Undo"
+
+[connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
+[connection signal="pressed" from="MoveButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="UndoButton" to="." method="_on_undo_button_pressed"]
+[connection signal="pressed" from="UndoButton" to="." method="_on_reset_button_pressed"]
