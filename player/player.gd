@@ -47,10 +47,11 @@ func move_backwards(n):
 		if traversed_fields.size() <= 1: break
 		current_location = traversed_fields.pop_back()
 		global_position = current_location.global_position
+
 	current_location = traversed_fields.back()
 	global_position = current_location.global_position
 
 
-func reset_last_move():
+func undo_last_move():
 	while current_location != last_location:
 		move_backwards(1)

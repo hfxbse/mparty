@@ -26,14 +26,15 @@ offset_right = 801.0
 offset_bottom = 211.0
 text = "BACK"
 
-[node name="ResetButton" type="Button" parent="."]
+[node name="UndoButton" type="Button" parent="."]
 offset_left = 733.0
 offset_top = 231.0
 offset_right = 807.0
 offset_bottom = 266.0
-text = "Reset"
+text = "Undo"
 
 [connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
 [connection signal="pressed" from="MoveButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="UndoButton" to="." method="_on_undo_button_pressed"]
+[connection signal="pressed" from="UndoButton" to="." method="_on_reset_button_pressed"]
