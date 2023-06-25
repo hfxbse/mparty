@@ -6,7 +6,7 @@ var step_completed
 var currentLocation
 var lastLocation
 var traversedFields = []
-var TRAV_FIELDS_MAX_LENGTH = 20
+const TRAV_FIELDS_MAX_LENGTH = 20
 
 signal turn_ended
 
