@@ -1,7 +1,6 @@
 class_name Player extends Node2D
 
 var moves = 0
-var step_completed
 
 var current_location: Field
 var last_location: Field
@@ -19,15 +18,9 @@ func move(distance: int):
 	
 func _step():
 	moves -= 1
-	step_completed = current_location.move_forwards(self)
-	step_completed.connect(_on_step_completed)
 
-
-func _on_step_completed(reached_field):
-	step_completed.disconnect(_on_step_completed)
-	
 	register_move(current_location)
-	current_location = reached_field
+	current_location = await current_location.move_forwards(self)
 
 	if moves == 0:
 		turn_ended.emit()
