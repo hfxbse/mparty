@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://v1lhq5i31xjj"]
 
-[ext_resource type="Theme" uid="uid://v0p4bigbslv3" path="res://map/field/field.tres" id="1_4m47m"]
+[ext_resource type="Theme" uid="uid://v0p4bigbslv3" path="res://map/field/field.tres" id="1_2v8b7"]
 [ext_resource type="Script" path="res://map/field/field.gd" id="2_snbne"]
 
 [node name="Field" type="Button"]
@@ -9,7 +9,7 @@ offset_top = -30.0
 offset_right = 30.0
 offset_bottom = 30.0
 focus_mode = 0
-theme = ExtResource("1_4m47m")
+theme = ExtResource("1_2v8b7")
 disabled = true
 script = ExtResource("2_snbne")
 metadata/_edit_group_ = true
