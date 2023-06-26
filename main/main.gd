@@ -1,6 +1,6 @@
 extends Node
 
-@onready var player = $Player
+@onready var player: Player = $Player
 @onready var map = $Map
 @onready var MoveButton = $MoveButton
 
