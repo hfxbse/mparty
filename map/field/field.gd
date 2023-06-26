@@ -31,9 +31,20 @@ func _get_configuration_warnings():
 	return errors
 
 
-func move(player: Player):
+func move_backwards(player: Player):
+	if player.traversed_fields.is_empty(): return
+
+	for path in paths:
+		if path.target == player.current_location:
+			player.current_location = self
+			return path.move_backwards(player.get_path())
+
+	assert(false, "Field is not connected to current location of the player.")
+
+
+func move_forwards(player: Player):
 	if paths.size() == 1:
-		return paths[0].move(player.get_path())
+		return paths[0].move_forwards(player.get_path())
 
 
 	picked_receivers.clear()
@@ -48,7 +59,7 @@ func move(player: Player):
 func move_along_picked_path(player, path):
 	disable_pickers()
 
-	field_reached = path.move(player.get_path())
+	field_reached = path.move_forwards(player.get_path())
 	field_reached.connect(_on_field_reached)
 
 

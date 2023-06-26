@@ -1,6 +1,6 @@
 extends Node
 
-@onready var player = $Player
+@onready var player: Player = $Player
 @onready var map = $Map
 @onready var MoveButton = $MoveButton
 
@@ -16,7 +16,7 @@ func _ready():
 	var start = map.start
 	player.current_location = start
 	player.global_position = start.global_position
-	player.traversed_fields = [start]
+	player.traversed_fields.assign([start])
 
 
 func _on_button_pressed():

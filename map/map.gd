@@ -1,3 +1,3 @@
 extends Node
 
-@onready var start = $Start
+@onready var start: Field = $Start
