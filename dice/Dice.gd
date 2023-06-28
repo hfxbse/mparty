@@ -5,7 +5,7 @@ extends Panel
 @onready var button = $Button
 
 func _on_button_pressed():
-	var random = randi_range(1,6)
+	var random = randi_range(1,12)
 	
 	animation.play("popUpScale")
 	label.set_text(String("%d" % random))
