@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://von48tablgm2"]
+
+[ext_resource type="Script" path="res://fieldActions/eventfield/readEventCard.gd" id="1_fnvd6"]
+
+[node name="readEventCard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fnvd6")
+
+[node name="openEventCard" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -192.5
+offset_right = 480.0
+offset_bottom = 192.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(336, 166)
+
+[node name="Label" type="Label" parent="openEventCard"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 60.5
+offset_right = 736.0
+offset_bottom = 316.5
+
+[node name="Button" type="Button" parent="openEventCard"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 268.5
+offset_right = 504.0
+offset_bottom = 299.5
+text = "ok"
+
+[connection signal="pressed" from="openEventCard/Button" to="." method="_on_button_pressed"]
