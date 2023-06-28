@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://gyrwwx5kril5"]
+
+[ext_resource type="Script" path="res://addons/gd-openai/examples/scenes/chat_completions.gd" id="1_w43qh"]
+[ext_resource type="Script" path="res://addons/gd-openai/resources/v1/chat_completion_request_message.gd" id="2_7sah4"]
+[ext_resource type="Script" path="res://addons/gd-openai/resources/v1/chat_completions_request.gd" id="2_x8m1y"]
+[ext_resource type="Script" path="res://addons/gd-openai/connector.gd" id="3_7sdmk"]
+[ext_resource type="PackedScene" uid="uid://bcj4yrlscskor" path="res://addons/gd-openai/examples/scenes/chat_completion_messages.tscn" id="5_ctk4j"]
+
+[sub_resource type="Resource" id="Resource_fxr2k"]
+script = ExtResource("2_7sah4")
+role = "system"
+content = ""
+name = ""
+
+[sub_resource type="Resource" id="Resource_5ke2c"]
+script = ExtResource("2_7sah4")
+role = "user"
+content = ""
+name = ""
+
+[sub_resource type="Resource" id="Resource_r2ek4"]
+script = ExtResource("2_x8m1y")
+model = "gpt-3.5-turbo"
+messages = Array[ExtResource("2_7sah4")]([SubResource("Resource_fxr2k"), SubResource("Resource_5ke2c")])
+
+[node name="ChatCompletions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w43qh")
+request = SubResource("Resource_r2ek4")
+
+[node name="OpenAiApiRequest" type="HTTPRequest" parent="."]
+script = ExtResource("3_7sdmk")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 300
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Messages" parent="VSplitContainer/VBoxContainer" instance=ExtResource("5_ctk4j")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="VSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Clear" type="Button" parent="VSplitContainer/VBoxContainer/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Clear"
+
+[node name="Submit" type="Button" parent="VSplitContainer/VBoxContainer/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Submit"
+
+[connection signal="data_received" from="OpenAiApiRequest" to="." method="_on_open_ai_api_request_data_received"]
+[connection signal="error_response" from="OpenAiApiRequest" to="." method="_on_open_ai_api_request_error_response"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Actions/Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Actions/Submit" to="." method="_on_submit_pressed"]
