@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://mkf5pfyp4pvj"]
+[gd_scene load_steps=3 format=3 uid="uid://mkf5pfyp4pvj"]
 
+[ext_resource type="Script" path="res://main/main.gd" id="1_c230o"]
 [ext_resource type="Script" path="res://question_panel/question_panel.gd" id="1_v2mk2"]
 
 [node name="questionDifficulty" type="Control"]
@@ -10,9 +11,9 @@ anchor_bottom = 1.0
 offset_left = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v2mk2")
+script = ExtResource("1_c230o")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="DifficultyPanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v2mk2")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="DifficultyPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.042
@@ -43,7 +44,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 49
 text = "Schwierigkeit der Fragen"
 
-[node name="Difficulty1" type="Button" parent="Panel"]
+[node name="Difficulty1" type="Button" parent="DifficultyPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -55,7 +56,7 @@ offset_bottom = -56.0
 grow_vertical = 2
 text = "Einfach"
 
-[node name="Difficulty2" type="Button" parent="Panel"]
+[node name="Difficulty2" type="Button" parent="DifficultyPanel"]
 layout_mode = 0
 offset_left = 316.0
 offset_top = 156.0
@@ -63,7 +64,7 @@ offset_right = 444.0
 offset_bottom = 351.0
 text = "Mittel"
 
-[node name="Difficulty3" type="Button" parent="Panel"]
+[node name="Difficulty3" type="Button" parent="DifficultyPanel"]
 layout_mode = 0
 offset_left = 508.0
 offset_top = 156.0
@@ -71,6 +72,6 @@ offset_right = 636.0
 offset_bottom = 351.0
 text = "Schwer"
 
-[connection signal="pressed" from="Panel/Difficulty1" to="." method="_on_difficulty_1_pressed"]
-[connection signal="pressed" from="Panel/Difficulty2" to="." method="_on_difficulty_2_pressed"]
-[connection signal="pressed" from="Panel/Difficulty3" to="." method="_on_difficulty_3_pressed"]
+[connection signal="pressed" from="DifficultyPanel/Difficulty1" to="." method="_on_difficulty_1_pressed"]
+[connection signal="pressed" from="DifficultyPanel/Difficulty2" to="." method="_on_difficulty_2_pressed"]
+[connection signal="pressed" from="DifficultyPanel/Difficulty3" to="." method="_on_difficulty_3_pressed"]
