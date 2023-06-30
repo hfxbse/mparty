@@ -27,7 +27,6 @@ border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
 shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
 shadow_size = 10
-anti_aliasing_size = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cak2e"]
 bg_color = Color(1, 1, 1, 1)
