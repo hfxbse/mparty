@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://bcs3nvv2okhry"]
+[gd_scene load_steps=205 format=3 uid="uid://bcs3nvv2okhry"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_4s7g8"]
 [ext_resource type="PackedScene" uid="uid://v1lhq5i31xjj" path="res://map/field/field.tscn" id="2_n4m0x"]
@@ -136,6 +136,12 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_maus5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 25, 30, 0, 0, 0, 0, 25, -34)
+}
+point_count = 2
+
 [sub_resource type="Curve2D" id="Curve2D_v4aiw"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -179.293, -0.973236, 0, 0, 0, 0, -237.293, -0.973236)
@@ -232,6 +238,18 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_kngji"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 30, 0, 0, 0, 0, 89, 30)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_2o08s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 29, 0, 0, 0, 0, 29, -33)
+}
+point_count = 2
+
 [sub_resource type="Curve2D" id="Curve2D_topq6"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 380.707, 56.0268, 0, 0, 0, 0, 379.707, 116.027)
@@ -316,9 +334,21 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_kg0j6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 27, 0, 0, 0, 0, -31, 27)
+}
+point_count = 2
+
 [sub_resource type="Curve2D" id="Curve2D_ht4w7"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 659.707, 114.027, 0, 0, 0, 0, 659.707, 174.027)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_otqp7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 28, 0, 0, 0, 0, 87, 31)
 }
 point_count = 2
 
@@ -379,6 +409,12 @@ point_count = 2
 [sub_resource type="Curve2D" id="Curve2D_vrk2t"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 883.707, 169.027, 0, 0, 0, 0, 883.707, 229.027)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_tfbh8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 29, 0, 0, 0, 0, 34, 89)
 }
 point_count = 2
 
@@ -490,6 +526,12 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_3ae3x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 30, 0, 0, 0, 0, 89, 30)
+}
+point_count = 2
+
 [sub_resource type="Curve2D" id="Curve2D_wxa6c"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 268.707, -169.973, 0, 0, 0, 0, 267.707, -227.973)
@@ -505,6 +547,12 @@ point_count = 2
 [sub_resource type="Curve2D" id="Curve2D_jxipv"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -69.2932, -169.973, 0, 0, 0, 0, -8.29315, -169.973)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_pp65q"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 30, 0, 0, 0, 0, -31, 30)
 }
 point_count = 2
 
@@ -577,6 +625,1068 @@ point_count = 2
 [sub_resource type="Curve2D" id="Curve2D_e1kle"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -123.293, -285.973, 0, 0, 0, 0, -66.2932, -285.973)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npkf0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxeot"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbcph"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgbob"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_sbbgr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 29, 0, 0, 0, 0, 48, -29)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_35pny"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 26, 30, 0, 0, 0, 0, 25, 93)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw3y6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yayur"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ad3wk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iyxyp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_0s3pd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 420, 222, 0, 0, 0, 0, 453, 170)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_robmg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 31, 0, 0, 0, 0, 7, 86)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i10k0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyy5c"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1h3y"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ps3gk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_j7cqg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30, 30, 0, 0, 0, 0, 86, 31)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_vxr7k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 30, 0, 0, 0, 0, -6, 80)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bprq4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmvot"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ai3s"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynciy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_5jh1l"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 32, 0, 0, 0, 0, -34, 32)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_s3bsy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 31, 0, 0, 0, 0, 81, -1)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5rmg"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o65c8"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utlqq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoxjc"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_ct8i0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30, 28, 0, 0, 0, 0, 77, 67)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_n3q4a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30, 28, 0, 0, 0, 0, -25, 60)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcwv2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v1db"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayruq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hfdp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_bn6th"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 32, 0, 0, 0, 0, -3, 85)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_lmdap"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 31, 0, 0, 0, 0, -18, -7)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rftj6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dimab"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14rgt"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpevv"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_2cajx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 31, 0, 0, 0, 0, -18, 68)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_fydfj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 31, 0, 0, 0, 0, 59, -21)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mht2p"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o3we"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50jv1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjcv0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_3htnb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 31, 0, 0, 0, 0, 54, 88)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ll6q6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 30, 0, 0, 0, 0, 75, -6)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psopv"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbvir"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfcwh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ap7bw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_cc0tm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 30, 32, 0, 0, 0, 0, 87, 37)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ys2kc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 29, 32, 0, 0, 0, 0, 3, -26)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb2gu"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_geaj4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43q8c"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6htf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_nrxtb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 26, 0, 0, 0, 0, 29, 91)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ge2r4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 27, 0, 0, 0, 0, -30, 22)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_e44oq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 31, 0, 0, 0, 0, -28, 31)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15t1n"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_of2is"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0u8sq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itcb6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_th3hi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 31, 0, 0, 0, 0, -33, 31)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ih20f"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 30, 0, 0, 0, 0, 74, -6)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ali4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufym1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oq1d3"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g35ya"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_kiiyi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 29, 0, 0, 0, 0, -19, 68)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_bfyl1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 29, 0, 0, 0, 0, 77, 66)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwu2j"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e4q1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_colca"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3am1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_5xswd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 30, 0, 0, 0, 0, 18, -33)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_xtabb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 29, 0, 0, 0, 0, 87, 31)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kepub"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aa5oi"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuuhj"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilqvh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_mufyt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 30, 0, 0, 0, 0, -21, -6)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_q45bh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 31, 0, 0, 0, 0, 36, 88)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1y3va"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcl6m"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruqvj"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ultj4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_wus07"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1359, 460, 0, 0, 0, 0, 1300, 460)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_bueg7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 31, 0, 0, 0, 0, 20, -28)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcwl5"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr0o1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvro7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3prj"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="Curve2D" id="Curve2D_dlqt0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 30, 0, 0, 0, 0, -31, 26)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_8rqen"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 28, 31, 0, 0, 0, 0, 88, 31)
 }
 point_count = 2
 
@@ -831,6 +1941,10 @@ offset_top = 311.0
 offset_right = 432.0
 offset_bottom = 371.0
 
+[node name="MapPath2" parent="Main_5_5" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_maus5")
+target_field = NodePath("../../B0_0")
+
 [node name="MapPath" parent="Main_5_5" instance=ExtResource("3_2pmp2")]
 position = Vector2(208.293, 30.9732)
 curve = SubResource("Curve2D_v4aiw")
@@ -995,38 +2109,46 @@ position = Vector2(-351.707, -197.027)
 curve = SubResource("Curve2D_ab0do")
 target_field = NodePath("../../Main_14_9")
 
-[node name="Main_15_6" parent="." instance=ExtResource("2_n4m0x")]
-offset_left = 933.0
-offset_top = 368.0
-offset_right = 992.0
-offset_bottom = 428.0
+[node name="Main_16_6" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 989.0
+offset_top = 367.0
+offset_right = 1048.0
+offset_bottom = 427.0
 
-[node name="MapPath" parent="Main_15_6" instance=ExtResource("3_2pmp2")]
+[node name="MapPath3" parent="Main_16_6" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_kngji")
+target_field = NodePath("../../B2_3")
+
+[node name="MapPath2" parent="Main_16_6" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_2o08s")
+target_field = NodePath("../../B1_6")
+
+[node name="MapPath" parent="Main_16_6" instance=ExtResource("3_2pmp2")]
 position = Vector2(-351.707, -26.0268)
 curve = SubResource("Curve2D_topq6")
-target_field = NodePath("../../Main_15_7")
+target_field = NodePath("../../Main_16_7")
 
-[node name="Main_15_7" parent="." instance=ExtResource("2_n4m0x")]
-offset_left = 933.0
-offset_top = 425.0
-offset_right = 992.0
-offset_bottom = 485.0
+[node name="Main_16_7" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 989.0
+offset_top = 424.0
+offset_right = 1048.0
+offset_bottom = 484.0
 
-[node name="MapPath" parent="Main_15_7" instance=ExtResource("3_2pmp2")]
+[node name="MapPath" parent="Main_16_7" instance=ExtResource("3_2pmp2")]
 position = Vector2(-351.707, -83.0268)
 curve = SubResource("Curve2D_0heqx")
-target_field = NodePath("../../Main_15_8")
+target_field = NodePath("../../Main_16_8")
 
-[node name="Main_15_8" parent="." instance=ExtResource("2_n4m0x")]
-offset_left = 933.0
-offset_top = 482.0
-offset_right = 992.0
-offset_bottom = 542.0
+[node name="Main_16_8" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 989.0
+offset_top = 481.0
+offset_right = 1048.0
+offset_bottom = 541.0
 
-[node name="MapPath" parent="Main_15_8" instance=ExtResource("3_2pmp2")]
+[node name="MapPath" parent="Main_16_8" instance=ExtResource("3_2pmp2")]
 position = Vector2(-351.707, -140.027)
 curve = SubResource("Curve2D_x4s1m")
-target_field = NodePath("../../Main_15_9")
+target_field = NodePath("../../Main_16_9")
 
 [node name="Main_12_10" parent="." instance=ExtResource("2_n4m0x")]
 offset_left = 765.0
@@ -1155,10 +2277,18 @@ offset_top = 428.0
 offset_right = 1272.0
 offset_bottom = 488.0
 
+[node name="MapPath2" parent="Main_20_7" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_kg0j6")
+target_field = NodePath("../../B2_0")
+
 [node name="MapPath" parent="Main_20_7" instance=ExtResource("3_2pmp2")]
 position = Vector2(-631.707, -86.0268)
 curve = SubResource("Curve2D_ht4w7")
 target_field = NodePath("../../Main_20_8")
+
+[node name="MapPath3" parent="Main_20_7" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_otqp7")
+target_field = NodePath("../../B3_1")
 
 [node name="Main_20_8" parent="." instance=ExtResource("2_n4m0x")]
 offset_left = 1213.0
@@ -1275,6 +2405,10 @@ offset_left = 1325.0
 offset_top = 370.0
 offset_right = 1384.0
 offset_bottom = 430.0
+
+[node name="MapPath2" parent="Main_22_6" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_tfbh8")
+target_field = NodePath("../../B3_0")
 
 [node name="MapPath" parent="Main_22_6" instance=ExtResource("3_2pmp2")]
 position = Vector2(-743.707, -28.0268)
@@ -1474,6 +2608,10 @@ offset_top = 142.0
 offset_right = 880.0
 offset_bottom = 202.0
 
+[node name="MapPath2" parent="Main_13_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_3ae3x")
+target_field = NodePath("../../B1_0")
+
 [node name="MapPath" parent="Main_13_2" instance=ExtResource("3_2pmp2")]
 position = Vector2(-239.707, 199.973)
 curve = SubResource("Curve2D_wxa6c")
@@ -1500,6 +2638,10 @@ offset_bottom = 202.0
 position = Vector2(96.2932, 199.973)
 curve = SubResource("Curve2D_jxipv")
 target_field = NodePath("../../Main_8_2")
+
+[node name="MapPath2" parent="Main_7_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_pp65q")
+target_field = NodePath("../../B0_2")
 
 [node name="Main_8_2" parent="." instance=ExtResource("2_n4m0x")]
 offset_left = 542.0
@@ -1632,3 +2774,319 @@ offset_bottom = 86.0
 position = Vector2(152.293, 315.973)
 curve = SubResource("Curve2D_e1kle")
 target_field = NodePath("../../Main_7_0")
+
+[node name="B0_0" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 373.0
+offset_top = 249.0
+offset_right = 432.0
+offset_bottom = 309.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_npkf0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rxeot")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wbcph")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cgbob")
+rounded = true
+
+[node name="MapPath2" parent="B0_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_sbbgr")
+target_field = NodePath("../../B0_1")
+
+[node name="MapPath" parent="B0_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_35pny")
+target_field = NodePath("../../Main_5_5")
+
+[node name="B0_1" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 392.0
+offset_top = 192.0
+offset_right = 451.0
+offset_bottom = 252.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kw3y6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yayur")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ad3wk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_iyxyp")
+rounded = true
+
+[node name="MapPath" parent="B0_1" instance=ExtResource("3_2pmp2")]
+position = Vector2(-392, -192)
+curve = SubResource("Curve2D_0s3pd")
+target_field = NodePath("../../B0_2")
+
+[node name="MapPath2" parent="B0_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_robmg")
+target_field = NodePath("../../B0_0")
+
+[node name="B0_2" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 425.0
+offset_top = 142.0
+offset_right = 484.0
+offset_bottom = 202.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_i10k0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jyy5c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v1h3y")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ps3gk")
+rounded = true
+
+[node name="MapPath" parent="B0_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_j7cqg")
+target_field = NodePath("../../Main_7_2")
+
+[node name="MapPath2" parent="B0_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_vxr7k")
+target_field = NodePath("../../B0_1")
+
+[node name="B1_0" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 882.0
+offset_top = 141.0
+offset_right = 941.0
+offset_bottom = 201.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_bprq4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fmvot")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1ai3s")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ynciy")
+rounded = true
+
+[node name="MapPath2" parent="B1_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_5jh1l")
+target_field = NodePath("../../Main_13_2")
+
+[node name="MapPath" parent="B1_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_s3bsy")
+target_field = NodePath("../../B1_1")
+
+[node name="B1_1" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 934.0
+offset_top = 112.0
+offset_right = 993.0
+offset_bottom = 172.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_b5rmg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o65c8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_utlqq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eoxjc")
+rounded = true
+
+[node name="MapPath" parent="B1_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_ct8i0")
+target_field = NodePath("../../B1_2")
+
+[node name="MapPath2" parent="B1_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_n3q4a")
+target_field = NodePath("../../B1_0")
+
+[node name="B1_2" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 982.0
+offset_top = 148.0
+offset_right = 1041.0
+offset_bottom = 208.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xcwv2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v1db")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ayruq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1hfdp")
+rounded = true
+
+[node name="MapPath" parent="B1_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_bn6th")
+target_field = NodePath("../../B1_3")
+
+[node name="MapPath2" parent="B1_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_lmdap")
+target_field = NodePath("../../B1_1")
+
+[node name="B1_3" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 952.0
+offset_top = 201.0
+offset_right = 1011.0
+offset_bottom = 261.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rftj6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dimab")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_14rgt")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpevv")
+rounded = true
+
+[node name="MapPath" parent="B1_3" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_2cajx")
+target_field = NodePath("../../B1_4")
+
+[node name="MapPath2" parent="B1_3" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_fydfj")
+target_field = NodePath("../../B1_2")
+
+[node name="B1_4" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 905.0
+offset_top = 239.0
+offset_right = 964.0
+offset_bottom = 299.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_mht2p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8o3we")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_50jv1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wjcv0")
+rounded = true
+
+[node name="MapPath" parent="B1_4" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_3htnb")
+target_field = NodePath("../../B1_5")
+
+[node name="MapPath2" parent="B1_4" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_ll6q6")
+target_field = NodePath("../../B1_3")
+
+[node name="B1_5" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 930.0
+offset_top = 295.0
+offset_right = 989.0
+offset_bottom = 355.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_psopv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jbvir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cfcwh")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ap7bw")
+rounded = true
+
+[node name="MapPath" parent="B1_5" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_cc0tm")
+target_field = NodePath("../../B1_6")
+
+[node name="MapPath2" parent="B1_5" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_ys2kc")
+target_field = NodePath("../../B1_4")
+
+[node name="B1_6" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 989.0
+offset_top = 306.0
+offset_right = 1048.0
+offset_bottom = 366.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rb2gu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_geaj4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_43q8c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_w6htf")
+rounded = true
+
+[node name="MapPath" parent="B1_6" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_nrxtb")
+target_field = NodePath("../../Main_16_6")
+
+[node name="MapPath2" parent="B1_6" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_ge2r4")
+target_field = NodePath("../../B1_5")
+
+[node name="Main_16_9" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 989.0
+offset_top = 539.0
+offset_right = 1048.0
+offset_bottom = 599.0
+
+[node name="MapPath" parent="Main_16_9" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_e44oq")
+target_field = NodePath("../../Main_15_9")
+
+[node name="B2_3" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 1049.0
+offset_top = 366.0
+offset_right = 1108.0
+offset_bottom = 426.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_15t1n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_of2is")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0u8sq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_itcb6")
+rounded = true
+
+[node name="MapPath" parent="B2_3" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_th3hi")
+target_field = NodePath("../../Main_16_6")
+
+[node name="MapPath2" parent="B2_3" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_ih20f")
+target_field = NodePath("../../B2_2")
+
+[node name="B2_2" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 1096.0
+offset_top = 330.0
+offset_right = 1155.0
+offset_bottom = 390.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ali4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ufym1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oq1d3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_g35ya")
+rounded = true
+
+[node name="MapPath" parent="B2_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_kiiyi")
+target_field = NodePath("../../B2_3")
+
+[node name="MapPath2" parent="B2_2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_bfyl1")
+target_field = NodePath("../../B2_1")
+
+[node name="B2_0" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 1154.0
+offset_top = 425.0
+offset_right = 1213.0
+offset_bottom = 485.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wwu2j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7e4q1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_colca")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_d3am1")
+rounded = true
+
+[node name="MapPath" parent="B2_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_5xswd")
+target_field = NodePath("../../B2_1")
+
+[node name="MapPath2" parent="B2_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_xtabb")
+target_field = NodePath("../../Main_20_7")
+
+[node name="B2_1" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 1145.0
+offset_top = 365.0
+offset_right = 1204.0
+offset_bottom = 425.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kepub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aa5oi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iuuhj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ilqvh")
+rounded = true
+
+[node name="MapPath" parent="B2_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_mufyt")
+target_field = NodePath("../../B2_2")
+
+[node name="MapPath2" parent="B2_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_q45bh")
+target_field = NodePath("../../B2_0")
+
+[node name="B3_0" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 1332.0
+offset_top = 429.0
+offset_right = 1391.0
+offset_bottom = 489.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1y3va")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vcl6m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ruqvj")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ultj4")
+rounded = true
+
+[node name="MapPath" parent="B3_0" instance=ExtResource("3_2pmp2")]
+position = Vector2(-1332, -429)
+curve = SubResource("Curve2D_wus07")
+target_field = NodePath("../../B3_1")
+
+[node name="MapPath2" parent="B3_0" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_bueg7")
+target_field = NodePath("../../Main_22_6")
+
+[node name="B3_1" parent="." instance=ExtResource("2_n4m0x")]
+offset_left = 1272.0
+offset_top = 429.0
+offset_right = 1331.0
+offset_bottom = 489.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcwl5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gr0o1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yvro7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_c3prj")
+rounded = true
+
+[node name="MapPath" parent="B3_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_dlqt0")
+target_field = NodePath("../../Main_20_7")
+
+[node name="MapPath2" parent="B3_1" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_8rqen")
+target_field = NodePath("../../B3_0")
