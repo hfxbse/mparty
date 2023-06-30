@@ -9,6 +9,12 @@ var paths: Array[MapPath]
 var picked_receivers: Array[Callable]
 var field_reached: Signal
 
+@export var rounded: bool = false:
+	set(round):
+		if rounded != round:
+			rounded = round
+			apply_theme_overide()
+
 
 var shadow_color_overrides: Dictionary = {
 	"disabled": func (): return theme_override.field_color,
@@ -32,15 +38,23 @@ var shadow_color_overrides: Dictionary = {
 
 func apply_theme_overide():
 	for style_name in theme.get_stylebox_list("Button"):
-		if theme_override == null:
+		if theme_override == null && !rounded:
 			remove_theme_stylebox_override(style_name)
 			continue
 
 		var style: StyleBoxFlat = theme.get_stylebox(style_name, "Button").duplicate()
-		style.bg_color = theme_override.field_color
 
-		var shadow_color = shadow_color_overrides.get(style_name)
-		if shadow_color != null: style.shadow_color = shadow_color.call()
+		if theme_override != null:
+			style.bg_color = theme_override.field_color
+
+			var shadow_color = shadow_color_overrides.get(style_name)
+			if shadow_color != null: style.shadow_color = shadow_color.call()
+
+		if rounded:
+			style.corner_radius_bottom_left = 40
+			style.corner_radius_bottom_right = 40
+			style.corner_radius_top_left = 40
+			style.corner_radius_top_right = 40
 
 		add_theme_stylebox_override(style_name, style)
 
