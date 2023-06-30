@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bcs3nvv2okhry"]
+[gd_scene load_steps=35 format=3 uid="uid://bcs3nvv2okhry"]
 
 [ext_resource type="Script" path="res://map/map.gd" id="1_4s7g8"]
 [ext_resource type="PackedScene" uid="uid://v1lhq5i31xjj" path="res://map/field/field.tscn" id="2_n4m0x"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://map/field/field_theme.gd" id="4_1itb6"]
 [ext_resource type="Script" path="res://map/start_field.gd" id="4_y86eb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hn5a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cajwy"]
 bg_color = Color(0.0196078, 0.607843, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -15,9 +15,8 @@ border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
 shadow_color = Color(0.541176, 0.772549, 1, 1)
 shadow_size = 10
-anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xps2q"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hujn"]
 bg_color = Color(0.0196078, 0.607843, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -26,9 +25,8 @@ border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
 shadow_color = Color(0.541176, 0.772549, 1, 1)
 shadow_size = 15
-anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opf5s"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2oau6"]
 bg_color = Color(0.0196078, 0.607843, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -38,7 +36,7 @@ border_color = Color(0, 0, 0, 1)
 shadow_color = Color(0.717647, 0.862745, 1, 1)
 shadow_size = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2yy3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsu7p"]
 bg_color = Color(0.0196078, 0.607843, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -71,61 +69,43 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33clj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76q40"]
 bg_color = Color(0.666667, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
 shadow_color = Color(1, 0.337255, 0.266667, 1)
 shadow_size = 10
-anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fgc3e"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d4s4"]
 bg_color = Color(0.666667, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
 shadow_color = Color(1, 0.337255, 0.266667, 1)
 shadow_size = 15
-anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e7n5p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7pvq"]
 bg_color = Color(0.666667, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
 shadow_color = Color(1, 0.576471, 0.517647, 1)
 shadow_size = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1pcl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdt2s"]
 bg_color = Color(0.666667, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
 shadow_color = Color(0.666667, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_4san2"]
@@ -140,7 +120,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ospxr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdxiv"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -153,9 +133,8 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
 shadow_size = 10
-anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijxht"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b41vt"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -168,9 +147,8 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
 shadow_size = 15
-anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myn3c"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp5me"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -184,7 +162,7 @@ corner_radius_bottom_left = 40
 shadow_color = Color(1, 1, 1, 1)
 shadow_size = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxh1e"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kak5n"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -202,6 +180,12 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_0vlhj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 22, 33, 0, 0, 0, 0, -81, -19)
+}
+point_count = 2
+
 [sub_resource type="Curve2D" id="Curve2D_ejsm5"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 24, 28, 0, 0, 0, 0, 285, 15)
@@ -214,7 +198,13 @@ _data = {
 }
 point_count = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrj1k"]
+[sub_resource type="Curve2D" id="Curve2D_uor0h"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 24, 27, 0, 0, 0, 0, -122, -53)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjbjp"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -227,9 +217,8 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
 shadow_size = 10
-anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmw7i"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikikh"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -242,9 +231,8 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 shadow_color = Color(0.792157, 0.792157, 0.792157, 1)
 shadow_size = 15
-anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5up85"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52ta3"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -258,7 +246,7 @@ corner_radius_bottom_left = 40
 shadow_color = Color(1, 1, 1, 1)
 shadow_size = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lwnp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3hau"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
@@ -276,6 +264,12 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_8k08j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 27, 30, 0, 0, 0, 0, -86, -23)
+}
+point_count = 2
+
 [node name="Node" type="Node2D"]
 script = ExtResource("1_4s7g8")
 
@@ -284,10 +278,10 @@ offset_left = 184.0
 offset_top = 49.0
 offset_right = 243.0
 offset_bottom = 109.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_0hn5a")
-theme_override_styles/hover = SubResource("StyleBoxFlat_xps2q")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_opf5s")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_a2yy3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cajwy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8hujn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2oau6")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tsu7p")
 rounded = false
 theme_override = SubResource("Resource_78g4e")
 
@@ -312,11 +306,11 @@ offset_left = 416.0
 offset_top = 25.0
 offset_right = 475.0
 offset_bottom = 85.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_33clj")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fgc3e")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_e7n5p")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_s1pcl")
-rounded = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_76q40")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6d4s4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u7pvq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bdt2s")
+rounded = false
 theme_override = SubResource("Resource_4san2")
 
 [node name="MapPath" parent="Field" instance=ExtResource("3_2pmp2")]
@@ -329,15 +323,19 @@ offset_left = 293.0
 offset_top = 98.0
 offset_right = 352.0
 offset_bottom = 158.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ospxr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ijxht")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_myn3c")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_kxh1e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cdxiv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b41vt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wp5me")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kak5n")
 rounded = true
 
 [node name="MapPath" parent="Field2" instance=ExtResource("3_2pmp2")]
 curve = SubResource("Curve2D_mckfj")
 target_field = NodePath("../../Field5")
+
+[node name="MapPath2" parent="Field2" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_0vlhj")
+target_field = NodePath("../../Start")
 
 [node name="Field3" parent="." instance=ExtResource("2_n4m0x")]
 offset_left = 295.0
@@ -362,20 +360,28 @@ rounded = false
 curve = SubResource("Curve2D_7xdg5")
 target_field = NodePath("../../Start")
 
+[node name="MapPath2" parent="Field4" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_uor0h")
+target_field = NodePath("../../Field5")
+
 [node name="Field5" parent="." instance=ExtResource("2_n4m0x")]
 offset_left = 399.0
 offset_top = 150.0
 offset_right = 458.0
 offset_bottom = 210.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_xrj1k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dmw7i")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5up85")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_3lwnp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mjbjp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ikikh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_52ta3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_c3hau")
 rounded = true
 
 [node name="MapPath" parent="Field5" instance=ExtResource("3_2pmp2")]
 position = Vector2(259, -13)
 curve = SubResource("Curve2D_65mwl")
 target_field = NodePath("../../Field4")
+
+[node name="MapPath2" parent="Field5" instance=ExtResource("3_2pmp2")]
+curve = SubResource("Curve2D_8k08j")
+target_field = NodePath("../../Field2")
 
 [editable path="Start"]

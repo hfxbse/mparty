@@ -32,8 +32,9 @@ func move(distance: int):
 func step():
 	moves -= 1
 
-	last_transversed = current_location
+	var last = current_location
 	current_location = await current_location.move_forwards(self)
+	last_transversed = last
 
 	if moves == 0:
 		turn_ended.emit()
