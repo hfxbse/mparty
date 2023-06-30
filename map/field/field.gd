@@ -88,8 +88,6 @@ func _get_configuration_warnings():
 
 
 func move_backwards(player: Player):
-	if player.traversed_fields.is_empty(): return
-
 	for path in paths:
 		if path.target == player.current_location:
 			player.current_location = self
