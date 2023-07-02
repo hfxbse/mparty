@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwi8fnj64w2xn"]
+
+[ext_resource type="Script" path="res://map/field_types/theme_override.gd" id="1_6uigl"]
+[ext_resource type="Texture2D" uid="uid://d206suk1yo36e" path="res://map/field_types/sabotage/sabotage.png" id="2_d5k8e"]
+
+[node name="sabotage" type="Node2D"]
+script = ExtResource("1_6uigl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(30, 30)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_d5k8e")

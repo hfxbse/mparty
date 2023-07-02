@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdv5v7cuwavd2"
-path="res://.godot/imported/patentamt.png-34b7a211dbb3bbfb924bea0d0c75dbbc.ctex"
+uid="uid://d206suk1yo36e"
+path="res://.godot/imported/sabotage.png-207dfcaa603bbbc93b06c75ac7a834a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/field_types/patent_office/patentamt.png"
-dest_files=["res://.godot/imported/patentamt.png-34b7a211dbb3bbfb924bea0d0c75dbbc.ctex"]
+source_file="res://map/field_types/sabotage/sabotage.png"
+dest_files=["res://.godot/imported/sabotage.png-207dfcaa603bbbc93b06c75ac7a834a2.ctex"]
 
 [params]
 
