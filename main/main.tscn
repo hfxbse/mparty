@@ -11,30 +11,30 @@ script = ExtResource("1_5mwui")
 position = Vector2(-54, 156)
 
 [node name="Player" parent="." instance=ExtResource("3_kj1dm")]
+z_index = 2
 
 [node name="MoveButton" type="Button" parent="."]
-offset_left = 732.0
-offset_top = 129.0
-offset_right = 799.0
-offset_bottom = 160.0
+offset_left = 151.0
+offset_top = 63.0
+offset_right = 218.0
+offset_bottom = 94.0
 text = "MOVE"
 
 [node name="BackButton" type="Button" parent="."]
-offset_left = 730.0
-offset_top = 176.0
-offset_right = 801.0
-offset_bottom = 211.0
+offset_left = 257.0
+offset_top = 13.0
+offset_right = 328.0
+offset_bottom = 48.0
 text = "BACK"
 
 [node name="UndoButton" type="Button" parent="."]
-offset_left = 733.0
-offset_top = 231.0
-offset_right = 807.0
-offset_bottom = 266.0
+offset_left = 260.0
+offset_top = 68.0
+offset_right = 334.0
+offset_bottom = 103.0
 text = "Undo"
 
 [connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
 [connection signal="pressed" from="MoveButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UndoButton" to="." method="_on_undo_button_pressed"]
-[connection signal="pressed" from="UndoButton" to="." method="_on_reset_button_pressed"]

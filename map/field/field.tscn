@@ -12,7 +12,6 @@ focus_mode = 0
 theme = ExtResource("1_2v8b7")
 disabled = true
 script = ExtResource("2_snbne")
-rounded = null
 metadata/_edit_group_ = true
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
