@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwi8fnj64w2xn"]
+[gd_scene load_steps=5 format=3 uid="uid://bwi8fnj64w2xn"]
 
 [ext_resource type="Script" path="res://map/field_types/theme_override.gd" id="1_6uigl"]
 [ext_resource type="Texture2D" uid="uid://d206suk1yo36e" path="res://map/field_types/sabotage/sabotage.png" id="2_d5k8e"]
+[ext_resource type="Script" path="res://map/field/field_theme.gd" id="2_ouq16"]
+
+[sub_resource type="Resource" id="Resource_ga3l8"]
+script = ExtResource("2_ouq16")
+field_color = Color(0.666667, 0, 0, 1)
+shadow_color_normal = Color(0, 0, 0, 1)
+shadow_color_pressed = Color(0, 0, 0, 1)
 
 [node name="sabotage" type="Node2D"]
 script = ExtResource("1_6uigl")
+field_theme_override = SubResource("Resource_ga3l8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(30, 30)
