@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://81keekdxlo27"]
-
-[ext_resource type="Script" path="res://fieldActions/questionDifficulty/questionDifficulty.gd" id="1_vvura"]
+[gd_scene format=3 uid="uid://c8nj6d5xqeitp"]
 
 [node name="questionDifficulty" type="Control"]
 layout_mode = 3
@@ -10,7 +8,6 @@ anchor_bottom = 1.0
 offset_left = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vvura")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
