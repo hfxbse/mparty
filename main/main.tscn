@@ -11,6 +11,7 @@ script = ExtResource("1_5mwui")
 position = Vector2(-54, 156)
 
 [node name="Player" parent="." instance=ExtResource("3_kj1dm")]
+z_index = 2
 
 [node name="MoveButton" type="Button" parent="."]
 offset_left = 151.0
