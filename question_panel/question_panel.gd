@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends Control
 
 var question: Question
 var selected_answer
