@@ -1,5 +1,7 @@
 class_name Player extends Node2D
 
+@onready var sprite = $Sprite2D
+
 var patente
 signal change_patente(player, amount)
 
