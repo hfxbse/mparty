@@ -13,7 +13,7 @@ func _ready():
 func _unhandled_input(event: InputEvent) -> void:
 	if is_current():  
 		if event is InputEventMouseMotion:
-			if event.button_mask == MOUSE_BUTTON_MASK_MIDDLE:
+			if event.button_mask == MOUSE_BUTTON_MASK_LEFT:
 				position -= event.relative * zoom
 		elif event is InputEventMouseButton:
 			if event.is_pressed:
@@ -42,3 +42,9 @@ func _physics_process(delta):
 func set_camera():
 	position = last_pos
 	make_current()
+
+func on_mobile_zoom_in():
+	pass
+
+func on_mobile_zoom_out():
+	pass

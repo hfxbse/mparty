@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb1er5sfi5gct"]
+
+[ext_resource type="Script" path="res://mobile_hud.gd" id="1_iekf0"]
+
+[node name="MobileHUD" type="CanvasLayer"]
+script = ExtResource("1_iekf0")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 1070
+theme_override_constants/margin_top = 500
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ZoomInButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "+"
+
+[node name="ZoomOutButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "-"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ZoomInButton" to="." method="_on_zoom_in_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ZoomOutButton" to="." method="_on_zoom_out_button_pressed"]

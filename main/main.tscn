@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwbwn4wc8mnyf"]
+[gd_scene load_steps=5 format=3 uid="uid://b1jy560klq0en"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
@@ -34,6 +34,9 @@ offset_top = 68.0
 offset_right = 334.0
 offset_bottom = 103.0
 text = "Undo"
+
+[node name="MainCamera" type="Camera2D" parent="."]
+script = ExtResource("4_3shos")
 
 [connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
 [connection signal="pressed" from="MoveButton" to="." method="_on_button_pressed"]

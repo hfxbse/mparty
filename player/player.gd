@@ -1,7 +1,6 @@
 class_name Player extends Node2D
 
 var moves = 0
-
 var current_location: Field
 var last_location: Field
 
