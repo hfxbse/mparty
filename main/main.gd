@@ -2,6 +2,10 @@ extends Node
 
 ## HUD Elements can attach here to show current Player
 signal player_turn_begin(player)
+## HUD Elements can attach here to update Player "Riesen" Display
+signal player_change_riesen(player, amount)
+## HUD Elements can attach here to update Player "Patente" Display
+signal player_change_patente(player, amount)
 ## HUD Elements can attach here to show current Round
 signal round_begin(roundNum)
 
@@ -30,9 +34,12 @@ func createPlayers(num):
 ## Allocate the correct number of players
 ## set their currentLocation and global_position
 ## initialize "Riesen" and "Patente"
+## connect their change_riesen and change_patente
+## to the handler function
 	pass
 	
 func orderPlayers(numPlayers):
+## Optional
 ## Get order of players by rolling dice
 ## Order Players Accordingly
 	pass
@@ -46,3 +53,9 @@ func playerTurn(player):
 	player_turn_begin.emit(currentPlayer)
 	var diceRoll = await rollDice()
 	await player.move(diceRoll)
+	
+func on_player_change_riesen(player, amount):
+	player_change_riesen.emit(player, amount)
+	
+func on_player_change_patente(player, amount):
+	player_change_patente.emit(player, amount)

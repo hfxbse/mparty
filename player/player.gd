@@ -1,5 +1,11 @@
 class_name Player extends Node2D
 
+var patente
+signal change_patente(player, amount)
+
+var riesen
+signal change_riesen(player, amount)
+
 var moves = 0
 
 var current_location: Field
@@ -55,3 +61,13 @@ func move_backwards(n):
 func undo_last_move():
 	while last_transversed && current_location != last_location:
 		await move_backwards(1)
+		
+		
+func set_riesen(amount):
+	self.riesen = amount
+	change_riesen.emit(self, amount)
+	
+	
+func set_patente(amount):
+	self.patente = amount
+	change_patente.emit(self, amount)
