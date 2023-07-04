@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://c8nj6d5xqeitp"]
+[gd_scene load_steps=4 format=3 uid="uid://c8nj6d5xqeitp"]
+
+[ext_resource type="Texture2D" uid="uid://k5ljrlx7xtsj" path="res://Picture/EasyQuestionCard.png" id="1_t83nk"]
+[ext_resource type="Texture2D" uid="uid://b31y1mi7flnnp" path="res://Picture/mediumQuesrtionCard.png" id="2_kl5si"]
+[ext_resource type="Texture2D" uid="uid://bs0608tx25fkv" path="res://Picture/DifficultQuestionCard.png" id="3_xix84"]
 
 [node name="questionDifficulty" type="Control"]
 layout_mode = 3
@@ -40,32 +44,52 @@ theme_override_font_sizes/font_size = 49
 text = "Schwierigkeit der Fragen"
 
 [node name="Difficulty1" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 124.0
-offset_top = 156.0
-offset_right = -516.0
-offset_bottom = -56.0
-grow_vertical = 2
+layout_mode = 0
+offset_left = 112.0
+offset_top = 128.0
+offset_right = 662.0
+offset_bottom = 928.0
+scale = Vector2(0.27, 0.27)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.2)
+theme_override_font_sizes/font_size = 130
 text = "Einfach"
+icon = ExtResource("1_t83nk")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Difficulty2" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 316.0
-offset_top = 156.0
-offset_right = 444.0
-offset_bottom = 351.0
+offset_left = 312.0
+offset_top = 128.0
+offset_right = 862.0
+offset_bottom = 928.0
+scale = Vector2(0.27, 0.27)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.164706)
+theme_override_font_sizes/font_size = 130
 text = "Mittel"
+icon = ExtResource("2_kl5si")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Difficulty3" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 508.0
-offset_top = 156.0
-offset_right = 636.0
-offset_bottom = 351.0
+offset_left = 512.0
+offset_top = 128.0
+offset_right = 1041.0
+offset_bottom = 919.0
+scale = Vector2(0.27, 0.27)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.168627)
+theme_override_font_sizes/font_size = 130
 text = "Schwer"
+icon = ExtResource("3_xix84")
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="Panel/Difficulty1" to="." method="_on_difficulty_1_pressed"]
 [connection signal="pressed" from="Panel/Difficulty2" to="." method="_on_difficulty_2_pressed"]
