@@ -23,7 +23,8 @@ func _init():
 
 func _ready():
 	startGame(10, 3)
-	
+
+
 func startGame(numRounds, numPlayers):
 ## Is called by the start-screen to start the game
 	createPlayers(numPlayers)
@@ -31,8 +32,9 @@ func startGame(numRounds, numPlayers):
 	for round in numRounds:
 		round_begin.emit(round+1)
 		for player in players:
-			playerTurn(player)
-	
+			await playerTurn(player)
+
+
 func createPlayers(num):
 	var playerScene = load("res://player/player.tscn")
 	var sprites = ["res://player/euro.svg", "res://player/yen.svg", "res://player/pound.svg"]
@@ -45,26 +47,31 @@ func createPlayers(num):
 		player.change_riesen.connect(on_player_change_riesen)
 		player.sprite.texture = load(sprites[i])
 		players.append(player)
-	
+
+
 func orderPlayers(numPlayers):
 ## Optional
 ## Get order of players by rolling dice
 ## Order Players Accordingly
 	pass
 
+
 func rollDice():
 ## roll dice and return the eyecount
 	pass
-	
+
+
 func playerTurn(player):
 	currentPlayer = player
 	player_turn_begin.emit(currentPlayer)
 	## var diceRoll = await rollDice()
 	var diceRoll = 3
 	await player.move(diceRoll)
-	
+
+
 func on_player_change_riesen(player, amount):
 	player_change_riesen.emit(player, amount)
-	
+
+
 func on_player_change_patente(player, amount):
 	player_change_patente.emit(player, amount)

@@ -34,7 +34,7 @@ var last_transversed: Field:
 func move(distance: int):
 	last_location = current_location
 	moves = distance
-	step()
+	await step()
 	
 	
 func step():
@@ -48,7 +48,7 @@ func step():
 		turn_ended.emit()
 		return
 
-	step()
+	await step()
 
 
 func move_backwards(n):
