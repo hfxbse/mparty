@@ -21,7 +21,7 @@ func _ready():
 	player.global_position = start.global_position
 	
 	if DisplayServer.is_touchscreen_available():
-		var mobile_hud = preload("res://mobile_hud.tscn").instantiate()
+		var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
 		mobile_hud.zoom_in.connect(main_camera.zoom_in)
 		mobile_hud.zoom_out.connect(main_camera.zoom_out)
 		hud.add_child(mobile_hud)

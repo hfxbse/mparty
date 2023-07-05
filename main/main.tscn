@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1jy560klq0en"]
+[gd_scene load_steps=6 format=3 uid="uid://cfjyx6b4461mv"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
 [ext_resource type="PackedScene" uid="uid://c82nk64v2y7hl" path="res://player/player.tscn" id="3_kj1dm"]
-[ext_resource type="Script" path="res://main/MainCamera.gd" id="4_3shos"]
+[ext_resource type="Script" path="res://main/main_camera.gd" id="4_lgfck"]
 [ext_resource type="PackedScene" uid="uid://bnq4t47e7q8pi" path="res://hud.tscn" id="5_1jwv2"]
 
 [node name="Node2" type="Node"]
@@ -37,7 +37,7 @@ offset_bottom = 103.0
 text = "Undo"
 
 [node name="MainCamera" type="Camera2D" parent="."]
-script = ExtResource("4_3shos")
+script = ExtResource("4_lgfck")
 
 [node name="HUD" parent="." instance=ExtResource("5_1jwv2")]
 

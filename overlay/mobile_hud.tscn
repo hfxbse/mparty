@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb1er5sfi5gct"]
+[gd_scene load_steps=2 format=3 uid="uid://li7iekjt8rnd"]
 
-[ext_resource type="Script" path="res://mobile_hud.gd" id="1_iekf0"]
+[ext_resource type="Script" path="res://overlay/mobile_hud.gd" id="1_dgr5d"]
 
 [node name="MobileHUD" type="CanvasLayer"]
-script = ExtResource("1_iekf0")
+script = ExtResource("1_dgr5d")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 1070.0
