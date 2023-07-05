@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b35fyw2y1dh4e"]
 
-[ext_resource type="Script" path="res://feld_aktionen/event_field/Button.gd" id="1_guv7i"]
+[ext_resource type="Script" path="res://feld_aktionen/event_field/Button.gd" id="1_a5o5v"]
 
 [node name="DrawEventCard" type="Control"]
 layout_mode = 3
@@ -40,6 +40,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 38
 text = "Read Card"
-script = ExtResource("1_guv7i")
+script = ExtResource("1_a5o5v")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cm30qejf5kuhx"]
 
-[ext_resource type="Script" path="res://feld_aktionen/sabotage_field/actionfieldLabel.gd" id="1_oqoy0"]
+[ext_resource type="Script" path="res://feld_aktionen/sabotage_field/action_field.gd" id="1_8hjli"]
 
 [node name="sabotagefield" type="Control"]
 layout_mode = 3
@@ -23,7 +23,7 @@ offset_right = 384.0
 offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oqoy0")
+script = ExtResource("1_8hjli")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="actionfieldLabel"]
 layout_mode = 1
