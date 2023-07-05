@@ -23,7 +23,7 @@ func _ready():
 	player.global_position = start.global_position
 	
 	hud = preload("res://hud.tscn").instantiate()
-	hud.camera_menu_pressed.connect(_on_hud_id_pressed)
+	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 	if DisplayServer.is_touchscreen_available():
 		var mobile_hud = preload("res://mobile_hud.tscn").instantiate()
 		mobile_hud.zoom_in.connect(main_camera.zoom_in)
@@ -31,7 +31,7 @@ func _ready():
 		hud.add_child(mobile_hud)
 	add_child(hud)
 
-func _on_hud_id_pressed(main_camera_selected: bool):
+func _on_menu_button_pressed(main_camera_selected: bool):
 	#MainCamera
 	if main_camera_selected:
 		main_camera.set_camera()
