@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dfnk5atutaof6"]
 
-[ext_resource type="Script" path="res://feld_aktionen/event_field/readEventCard.gd" id="1_7ao4o"]
+[ext_resource type="Script" path="res://feld_aktionen/event_field/read_eventcard.gd" id="1_fyqdx"]
 
 [node name="readEventCard" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7ao4o")
+script = ExtResource("1_fyqdx")
 
 [node name="openEventCard" type="Panel" parent="."]
 layout_mode = 1

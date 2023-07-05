@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8nj6d5xqeitp"]
+[gd_scene load_steps=5 format=3 uid="uid://c8nj6d5xqeitp"]
 
-[ext_resource type="Texture2D" uid="uid://k5ljrlx7xtsj" path="res://Picture/EasyQuestionCard.png" id="1_fqr7s"]
-[ext_resource type="Texture2D" uid="uid://b31y1mi7flnnp" path="res://Picture/mediumQuesrtionCard.png" id="2_gr6vj"]
-[ext_resource type="Texture2D" uid="uid://bs0608tx25fkv" path="res://Picture/DifficultQuestionCard.png" id="3_nm2gp"]
+[ext_resource type="Texture2D" uid="uid://k5ljrlx7xtsj" path="res://Picture/EasyQuestionCard.png" id="1_8eoon"]
+[ext_resource type="Script" path="res://feld_aktionen/question_difficulty/question_difficulty.gd" id="1_26qfy"]
+[ext_resource type="Texture2D" uid="uid://b31y1mi7flnnp" path="res://Picture/mediumQuesrtionCard.png" id="2_wp7bb"]
+[ext_resource type="Texture2D" uid="uid://bs0608tx25fkv" path="res://Picture/DifficultQuestionCard.png" id="3_frm6m"]
 
 [node name="questionDifficulty" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 offset_left = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_26qfy")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -51,11 +53,11 @@ offset_right = 662.0
 offset_bottom = 928.0
 scale = Vector2(0.27, 0.27)
 theme_override_colors/font_color = Color(0, 0, 0, 0)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.2)
 theme_override_font_sizes/font_size = 130
 text = "Einfach"
-icon = ExtResource("1_fqr7s")
+icon = ExtResource("1_8eoon")
 icon_alignment = 1
 expand_icon = true
 
@@ -67,11 +69,11 @@ offset_right = 862.0
 offset_bottom = 928.0
 scale = Vector2(0.27, 0.27)
 theme_override_colors/font_color = Color(0, 0, 0, 0)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.164706)
 theme_override_font_sizes/font_size = 130
 text = "Mittel"
-icon = ExtResource("2_gr6vj")
+icon = ExtResource("2_wp7bb")
 icon_alignment = 1
 expand_icon = true
 
@@ -83,11 +85,11 @@ offset_right = 1041.0
 offset_bottom = 919.0
 scale = Vector2(0.27, 0.27)
 theme_override_colors/font_color = Color(0, 0, 0, 0)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.168627)
 theme_override_font_sizes/font_size = 130
 text = "Schwer"
-icon = ExtResource("3_nm2gp")
+icon = ExtResource("3_frm6m")
 icon_alignment = 1
 expand_icon = true
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdyxfal3dhvj6"]
+[gd_scene load_steps=2 format=3 uid="uid://bt88a5bg5e6dx"]
 
-[ext_resource type="Script" path="res://feld_aktionen/actions_field/aktionfeld.gd" id="1_xud27"]
+[ext_resource type="Script" path="res://feld_aktionen/actions_field/action_field.gd" id="1_2wn5s"]
 
 [node name="actionfield" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ offset_right = 448.0
 offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xud27")
+script = ExtResource("1_2wn5s")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="actionfieldLabel"]
 layout_mode = 0
