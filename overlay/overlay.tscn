@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0srafpochl6y"]
+[gd_scene load_steps=5 format=3 uid="uid://d0srafpochl6y"]
 
 [ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://Pictures/Picture6.png" id="1_yyl4d"]
 [ext_resource type="Texture2D" uid="uid://bxdc70a6a0h2i" path="res://Pictures/Picture5.png" id="2_2lj4e"]
 [ext_resource type="Script" path="res://overlay/GridContainer.gd" id="3_a58id"]
+[ext_resource type="Script" path="res://overlay/Rounds.gd" id="4_3gu32"]
 
 [node name="gameOverlay" type="Node2D"]
 
@@ -83,7 +84,6 @@ text = "Spieler 1:
 [node name="Geldstatus1" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
-text = "5 Riesen"
 horizontal_alignment = 2
 
 [node name="Spieler2" type="Label" parent="Panel/Stats/GridContainer"]
@@ -94,7 +94,6 @@ text = "Spieler 2: "
 [node name="Geldstatus2" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
-text = "5 Riesen"
 
 [node name="Spieler3" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
@@ -104,7 +103,6 @@ text = "Spieler 3: "
 [node name="Geldstatus3" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
-text = "5 Riesen"
 
 [node name="Spieler4" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
@@ -114,7 +112,6 @@ text = "Spieler 4: "
 [node name="Geldstatus4" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
-text = "5 Riesen"
 
 [node name="Rounds" type="Panel" parent="Panel"]
 layout_mode = 0
@@ -122,6 +119,7 @@ offset_left = 1019.0
 offset_top = 570.0
 offset_right = 1152.0
 offset_bottom = 650.0
+script = ExtResource("4_3gu32")
 
 [node name="RoundStatus" type="Label" parent="Panel/Rounds"]
 layout_mode = 0
@@ -130,7 +128,6 @@ offset_top = 6.0
 offset_right = 61.0
 offset_bottom = 51.0
 theme_override_font_sizes/font_size = 30
-text = "100"
 horizontal_alignment = 2
 
 [node name="SeperateSign" type="Label" parent="Panel/Rounds"]
@@ -150,4 +147,3 @@ offset_top = 26.0
 offset_right = 124.0
 offset_bottom = 71.0
 theme_override_font_sizes/font_size = 30
-text = "300"
