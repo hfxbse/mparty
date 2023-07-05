@@ -1,24 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://d03x38s8a6m8y"]
 
-[ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://pictures/white_setting_sign.png" id="1_t836x"]
+[ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://Pictures/white_setting_sign.png" id="1_t836x"]
 [ext_resource type="Script" path="res://overlay/GridContainer.gd" id="3_a58id"]
 [ext_resource type="Script" path="res://overlay/Rounds.gd" id="4_3gu32"]
 
-[node name="gameOverlay" type="Node2D"]
+[node name="gameOverlay" type="CanvasLayer"]
 
-[node name="Panel" type="Panel" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Settings" type="Panel" parent="Panel"]
-layout_mode = 0
+[node name="Settings" type="Panel" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="MenuButton" type="MenuButton" parent="Panel/Settings"]
+[node name="MenuButton" type="MenuButton" parent="Settings"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
@@ -38,17 +30,19 @@ popup/item_1/checked = true
 popup/item_1/id = 1
 popup/item_1/disabled = true
 
-[node name="Actions" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_top = 584.0
-offset_right = 64.0
-offset_bottom = 648.0
+[node name="Actions" type="Panel" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_right = 128.0
+grow_vertical = 0
 
-[node name="MenuButton" type="MenuButton" parent="Panel/Actions"]
+[node name="MenuButton" type="MenuButton" parent="Actions"]
 layout_mode = 0
-offset_left = 8.0
+offset_left = 72.0
 offset_top = 8.0
-offset_right = 288.0
+offset_right = 352.0
 offset_bottom = 250.0
 scale = Vector2(0.2, 0.2)
 item_count = 2
@@ -58,13 +52,15 @@ popup/item_1/text = "MapView"
 popup/item_1/checked = true
 popup/item_1/id = 2
 
-[node name="Stats" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 952.0
-offset_right = 1152.0
+[node name="Stats" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
 offset_bottom = 151.0
+grow_horizontal = 0
 
-[node name="GridContainer" type="GridContainer" parent="Panel/Stats"]
+[node name="GridContainer" type="GridContainer" parent="Stats"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
@@ -73,53 +69,57 @@ offset_bottom = 148.0
 columns = 2
 script = ExtResource("3_a58id")
 
-[node name="Spieler1" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Spieler1" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 1: 
 "
 
-[node name="Geldstatus1" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Geldstatus1" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 horizontal_alignment = 2
 
-[node name="Spieler2" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Spieler2" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 2: "
 
-[node name="Geldstatus2" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Geldstatus2" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 
-[node name="Spieler3" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Spieler3" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 3: "
 
-[node name="Geldstatus3" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Geldstatus3" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 
-[node name="Spieler4" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Spieler4" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 4: "
 
-[node name="Geldstatus4" type="Label" parent="Panel/Stats/GridContainer"]
+[node name="Geldstatus4" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 
-[node name="Rounds" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 1019.0
-offset_top = 570.0
-offset_right = 1152.0
-offset_bottom = 650.0
+[node name="Rounds" type="Panel" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -80.0
+grow_horizontal = 0
+grow_vertical = 0
 script = ExtResource("4_3gu32")
 
-[node name="RoundStatus" type="Label" parent="Panel/Rounds"]
+[node name="RoundStatus" type="Label" parent="Rounds"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 6.0
@@ -128,7 +128,7 @@ offset_bottom = 51.0
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 2
 
-[node name="SeperateSign" type="Label" parent="Panel/Rounds"]
+[node name="SeperateSign" type="Label" parent="Rounds"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 11.0
@@ -138,7 +138,7 @@ theme_override_font_sizes/font_size = 37
 text = "/"
 horizontal_alignment = 1
 
-[node name="MaxRounds" type="Label" parent="Panel/Rounds"]
+[node name="MaxRounds" type="Label" parent="Rounds"]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 26.0
