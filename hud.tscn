@@ -6,12 +6,16 @@
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_usqta")
 
-[node name="MenuButton" type="Button" parent="."]
+[node name="MenuButton" type="TextureButton" parent="."]
 offset_top = 544.0
 offset_right = 104.0
 offset_bottom = 648.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
-icon = ExtResource("1_hgasm")
+texture_normal = ExtResource("1_hgasm")
+texture_pressed = ExtResource("1_hgasm")
+texture_hover = ExtResource("1_hgasm")
+texture_disabled = ExtResource("1_hgasm")
+texture_focused = ExtResource("1_hgasm")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
