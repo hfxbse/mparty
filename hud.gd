@@ -2,10 +2,13 @@ extends CanvasLayer
 
 @onready var menu_button = $MenuButton
 
-signal hud_id_pressed(id: int, item_count: int)
+var main_camera_selected: bool = false
+
+signal camera_menu_pressed(main_camera_selected: bool)
 
 func _ready():
-	menu_button.get_popup().id_pressed.connect(_on_id_pressed)
-	
-func _on_id_pressed(id: int):
-	hud_id_pressed.emit(id, menu_button.item_count)
+	camera_menu_pressed.connect(_on_menu_button_pressed)
+
+func _on_menu_button_pressed():
+	main_camera_selected = !main_camera_selected
+	camera_menu_pressed.emit(main_camera_selected)

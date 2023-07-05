@@ -6,15 +6,12 @@
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_usqta")
 
-[node name="MenuButton" type="MenuButton" parent="."]
+[node name="MenuButton" type="Button" parent="."]
 offset_top = 544.0
 offset_right = 104.0
 offset_bottom = 648.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
 icon = ExtResource("1_hgasm")
-item_count = 2
-popup/item_0/text = "Übersicht"
-popup/item_0/id = 0
-popup/item_1/text = "Spieler"
-popup/item_1/id = 1
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
