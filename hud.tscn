@@ -6,14 +6,10 @@
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_usqta")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 1152.0
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_top = 544.0
+offset_right = 104.0
 offset_bottom = 648.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MenuButton" type="MenuButton" parent="MarginContainer"]
-layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 icon = ExtResource("1_hgasm")

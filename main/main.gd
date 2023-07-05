@@ -16,16 +16,20 @@ func _init():
 	print(question_handler.get_next_question(Question.Difficulty.EASY).question)
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 	
-	#if OS.get_name() == "Android" or OS.get_name() == "iOS":
-	hud = preload("res://hud.tscn").instantiate()
-	hud.hud_id_pressed.connect(_on_hud_id_pressed)
-	add_child(hud)
-
 
 func _ready():
 	var start = map.start
 	player.current_location = start
 	player.global_position = start.global_position
+	
+	hud = preload("res://hud.tscn").instantiate()
+	hud.hud_id_pressed.connect(_on_hud_id_pressed)
+	if DisplayServer.is_touchscreen_available():
+		var mobile_hud = preload("res://mobile_hud.tscn").instantiate()
+		mobile_hud.zoom_in.connect(main_camera.zoom_in)
+		mobile_hud.zoom_out.connect(main_camera.zoom_out)
+		hud.add_child(mobile_hud)
+	add_child(hud)
 
 func _on_hud_id_pressed(id: int, item_count: int):
 	assert(id < item_count, "Item for id %s doesn't exits" % id)

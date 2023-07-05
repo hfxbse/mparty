@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var menu_button = $MarginContainer/MenuButton
+@onready var menu_button = $MenuButton
 
 signal hud_id_pressed(id: int, item_count: int)
 
