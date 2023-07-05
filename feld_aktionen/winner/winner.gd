@@ -15,4 +15,4 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	animation.play.backward("popUpUniversal");
+	self.visible = false
