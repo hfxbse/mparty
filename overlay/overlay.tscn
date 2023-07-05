@@ -76,75 +76,78 @@ script = ExtResource("3_a58id")
 
 [node name="Spieler1" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 text = "Spieler 1: 
 "
 
 [node name="Geldstatus1" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 17
 text = "5 Riesen"
+horizontal_alignment = 2
 
 [node name="Spieler2" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 text = "Spieler 2: "
 
 [node name="Geldstatus2" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 17
 text = "5 Riesen"
 
 [node name="Spieler3" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 text = "Spieler 3: "
 
 [node name="Geldstatus3" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 17
 text = "5 Riesen"
 
 [node name="Spieler4" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 text = "Spieler 4: "
 
 [node name="Geldstatus4" type="Label" parent="Panel/Stats/GridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 17
 text = "5 Riesen"
 
 [node name="Rounds" type="Panel" parent="Panel"]
 layout_mode = 0
-offset_left = 1013.0
-offset_top = 564.0
+offset_left = 1019.0
+offset_top = 570.0
 offset_right = 1152.0
 offset_bottom = 650.0
 
 [node name="RoundStatus" type="Label" parent="Panel/Rounds"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 12.0
+offset_left = 10.0
+offset_top = 6.0
 offset_right = 61.0
-offset_bottom = 52.0
-theme_override_font_sizes/font_size = 25
+offset_bottom = 51.0
+theme_override_font_sizes/font_size = 30
 text = "100"
+horizontal_alignment = 2
+
+[node name="SeperateSign" type="Label" parent="Panel/Rounds"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 11.0
+offset_right = 87.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 37
+text = "/"
+horizontal_alignment = 1
 
 [node name="MaxRounds" type="Label" parent="Panel/Rounds"]
 layout_mode = 0
 offset_left = 73.0
-offset_top = 32.0
-offset_right = 118.0
-offset_bottom = 72.0
-theme_override_font_sizes/font_size = 25
-text = "300"
-
-[node name="SeperateSign" type="Label" parent="Panel/Rounds"]
-layout_mode = 0
-offset_left = 62.0
 offset_top = 26.0
-offset_right = 102.0
-offset_bottom = 68.0
-theme_override_font_sizes/font_size = 28
-text = "/"
+offset_right = 124.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 30
+text = "300"

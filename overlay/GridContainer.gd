@@ -10,8 +10,8 @@ func _ready():
 	var spieler = $Spieler1 #change this based on playerturn
 	spieler.add_theme_color_override("font_color", Color(1, 0.5, 0))
 	
-	var money = "1" #how to change the Text of Moneystats
-	geld1.set_text(money)
+	var money = "100" #how to change the Text of Moneystats
+	geld1.set_text(money + "Riesen")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
