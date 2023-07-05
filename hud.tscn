@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnq4t47e7q8pi"]
+
+[ext_resource type="Texture2D" uid="uid://diaxj1uviwa50" path="res://camera.png" id="1_hgasm"]
+[ext_resource type="Script" path="res://hud.gd" id="1_usqta"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_usqta")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+icon = ExtResource("1_hgasm")
+item_count = 2
+popup/item_0/text = "Übersicht"
+popup/item_0/id = 0
+popup/item_1/text = "Spieler"
+popup/item_1/id = 1

@@ -16,9 +16,10 @@ func _init():
 	print(question_handler.get_next_question(Question.Difficulty.EASY).question)
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 	
-	if OS.get_name() == "Android" or OS.get_name() == "iOS":
-		hud = preload("res://mobile_hud.tscn").instantiate()
-		add_child(hud)
+	#if OS.get_name() == "Android" or OS.get_name() == "iOS":
+	hud = preload("res://hud.tscn").instantiate()
+	hud.hud_id_pressed.connect(_on_hud_id_pressed)
+	add_child(hud)
 
 
 func _ready():
@@ -26,6 +27,14 @@ func _ready():
 	player.current_location = start
 	player.global_position = start.global_position
 
+func _on_hud_id_pressed(id: int, item_count: int):
+	assert(id < item_count, "Item for id %s doesn't exits" % id)
+	#MainCamera
+	if id == 0:
+		main_camera.set_camera()
+	#PlayerCamera
+	elif id == 1:
+		player_camera.make_current()
 
 func _on_button_pressed():
 	MoveButton.hide()
