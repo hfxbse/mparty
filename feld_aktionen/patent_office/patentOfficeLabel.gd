@@ -12,10 +12,13 @@ func _process(delta):
 
 
 func _on_difficulty_1_pressed():
-	#buy patent
+	#buy patent (communication with patent and money storage
+	var kost_of_patent = 10
+	var patent_value = 5
+	#stop move? --> has to be approved first
 	pass # Replace with function body.
 
 
 func _on_difficulty_2_pressed():
-	#exit
+	#just continue move
 	pass # Replace with function body.

@@ -1,9 +1,8 @@
-extends Control
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#vision, but also get variable from storage for event
 	pass # Replace with function body.
 
 
@@ -12,6 +11,6 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	#leave vision, popout
-	pass # Replace with function body.
+func _on_pressed():
+	self.visible = false
+	#signal need to scene: lese_ereigniskarte

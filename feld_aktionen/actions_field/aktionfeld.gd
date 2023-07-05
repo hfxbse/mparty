@@ -7,11 +7,11 @@ func _ready():
 	#patent operation or stable money operations, change value of patents, send varaibles to calculator...
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 
 func _on_button_pressed():
-#go to dice
+	self.visible = false
+	#go to dice

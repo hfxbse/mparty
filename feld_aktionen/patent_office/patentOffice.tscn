@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://du0xcb1ecvkd7"]
+[gd_scene load_steps=2 format=3 uid="uid://ciatgbwq80fy"]
 
-[ext_resource type="Script" path="res://fieldActions/patentOffice/patentOfficeLabel.gd" id="1_8dtia"]
+[ext_resource type="Script" path="res://feld_aktionen/patent_office/patentOfficeLabel.gd" id="1_jdc7x"]
 
 [node name="patentOffice" type="Control"]
 layout_mode = 3
@@ -23,7 +23,7 @@ offset_right = 380.0
 offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8dtia")
+script = ExtResource("1_jdc7x")
 
 [node name="Label" type="Label" parent="patentOfficeLabel"]
 layout_mode = 1
@@ -51,7 +51,9 @@ offset_top = 152.0
 offset_right = -444.0
 offset_bottom = -60.0
 grow_vertical = 2
-text = "Ja"
+text = "Ja:
+Kosten: 10 Riesen
+Patentwert: 5 Riesen"
 
 [node name="patentNo" type="Button" parent="patentOfficeLabel"]
 layout_mode = 0
@@ -59,7 +61,8 @@ offset_left = 452.0
 offset_top = 152.0
 offset_right = 644.0
 offset_bottom = 347.0
-text = "Nein"
+text = "Nein:
+Zug fortführen"
 
 [connection signal="pressed" from="patentOfficeLabel/patentYes" to="patentOfficeLabel" method="_on_difficulty_1_pressed"]
 [connection signal="pressed" from="patentOfficeLabel/patentNo" to="patentOfficeLabel" method="_on_difficulty_2_pressed"]

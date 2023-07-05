@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://cki1jlgudiu0y"]
+
+[ext_resource type="Script" path="res://feld_aktionen/winner/winner.gd" id="1_jbt66"]
+
+[node name="winnerAlert" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="winner" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -192.0
+offset_right = 405.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.833333, 0.833333)
+pivot_offset = Vector2(336, 166)
+script = ExtResource("1_jbt66")
+
+[node name="Button" type="Button" parent="winner"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.5
+offset_top = -106.0
+offset_right = 47.5
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 38
+action_mode = 0
+text = "ok"
+
+[node name="Label" type="Label" parent="winner"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -288.5
+offset_top = 48.0
+offset_right = 287.5
+offset_bottom = 164.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 85
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="winner/Button" to="winner" method="_on_button_pressed" flags=18]
