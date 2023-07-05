@@ -5,8 +5,7 @@ extends Node
 @onready var MoveButton = $MoveButton
 @onready var main_camera = $MainCamera
 @onready var player_camera = $Player/PlayerCamera
-
-var hud
+@onready var hud = $HUD
 
 signal turn_start()
 
@@ -16,22 +15,20 @@ func _init():
 	print(question_handler.get_next_question(Question.Difficulty.EASY).question)
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 	
-
 func _ready():
 	var start = map.start
 	player.current_location = start
 	player.global_position = start.global_position
 	
-	hud = preload("res://hud.tscn").instantiate()
-	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 	if DisplayServer.is_touchscreen_available():
 		var mobile_hud = preload("res://mobile_hud.tscn").instantiate()
 		mobile_hud.zoom_in.connect(main_camera.zoom_in)
 		mobile_hud.zoom_out.connect(main_camera.zoom_out)
 		hud.add_child(mobile_hud)
-	add_child(hud)
 
 func _on_menu_button_pressed(main_camera_selected: bool):
+	main_camera.last_pos = player.position
+	main_camera.zoom_out()
 	#MainCamera
 	if main_camera_selected:
 		main_camera.set_camera()

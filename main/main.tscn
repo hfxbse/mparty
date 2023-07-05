@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1jy560klq0en"]
+[gd_scene load_steps=6 format=3 uid="uid://b1jy560klq0en"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
 [ext_resource type="PackedScene" uid="uid://c82nk64v2y7hl" path="res://player/player.tscn" id="3_kj1dm"]
 [ext_resource type="Script" path="res://main/MainCamera.gd" id="4_3shos"]
+[ext_resource type="PackedScene" uid="uid://bnq4t47e7q8pi" path="res://hud.tscn" id="5_1jwv2"]
 
 [node name="Node2" type="Node"]
 script = ExtResource("1_5mwui")
@@ -38,7 +39,10 @@ text = "Undo"
 [node name="MainCamera" type="Camera2D" parent="."]
 script = ExtResource("4_3shos")
 
+[node name="HUD" parent="." instance=ExtResource("5_1jwv2")]
+
 [connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
 [connection signal="pressed" from="MoveButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="UndoButton" to="." method="_on_undo_button_pressed"]
+[connection signal="camera_menu_pressed" from="HUD" to="." method="_on_menu_button_pressed"]
