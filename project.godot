@@ -17,7 +17,8 @@ config/icon="res://player/icon.svg"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
