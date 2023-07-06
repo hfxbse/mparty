@@ -20,8 +20,8 @@ func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	
 func _ready():
-	player_turn_begin.connect(menu_overlay.on_player_begin_turn)
-	menu_overlay.received_dice_number.connect(rollDice)
+	##player_turn_begin.connect(menu_overlay.on_player_begin_turn)
+	##menu_overlay.received_dice_number.connect(rollDice)
 
 	startGame(10, 3)
 
@@ -64,8 +64,8 @@ func rollDice():
 func playerTurn(player):
 	currentPlayer = player
 	player_turn_begin.emit(currentPlayer)
-	var diceRoll = rollDice()
-	print(diceRoll)
+	var diceRoll = 3 ##rollDice()
+	##print(diceRoll)
 	await player.move(diceRoll)
 
 
