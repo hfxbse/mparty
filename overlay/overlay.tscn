@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d03x38s8a6m8y"]
 
-[ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://Pictures/white_setting_sign.png" id="1_t836x"]
+[ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://pictures/white_setting_sign.png" id="1_t836x"]
 [ext_resource type="Script" path="res://overlay/GridContainer.gd" id="3_a58id"]
-[ext_resource type="Script" path="res://overlay/Rounds.gd" id="4_3gu32"]
+[ext_resource type="Script" path="res://overlay/rounds.gd" id="3_wcbr8"]
 
 [node name="gameOverlay" type="CanvasLayer"]
 
@@ -34,23 +34,24 @@ popup/item_1/disabled = true
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -64.0
-offset_right = 128.0
+offset_top = -69.0
+offset_right = 136.0
 grow_vertical = 0
 
-[node name="MenuButton" type="MenuButton" parent="Actions"]
-layout_mode = 0
-offset_left = 72.0
-offset_top = 8.0
-offset_right = 352.0
-offset_bottom = 250.0
-scale = Vector2(0.2, 0.2)
-item_count = 2
-popup/item_0/text = "Patent ansehen"
-popup/item_0/id = 1
-popup/item_1/text = "MapView"
-popup/item_1/checked = true
-popup/item_1/id = 2
+[node name="Button" type="Button" parent="Actions"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -24.0
+offset_right = -8.0
+offset_bottom = 23.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Patent"
 
 [node name="Stats" type="Panel" parent="."]
 anchors_preset = 1
@@ -69,41 +70,41 @@ offset_bottom = 148.0
 columns = 2
 script = ExtResource("3_a58id")
 
-[node name="Spieler1" type="Label" parent="Stats/GridContainer"]
+[node name="Player1" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 1: 
 "
 
-[node name="Geldstatus1" type="Label" parent="Stats/GridContainer"]
+[node name="Money1" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 horizontal_alignment = 2
 
-[node name="Spieler2" type="Label" parent="Stats/GridContainer"]
+[node name="Player2" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 2: "
 
-[node name="Geldstatus2" type="Label" parent="Stats/GridContainer"]
+[node name="Money2" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 
-[node name="Spieler3" type="Label" parent="Stats/GridContainer"]
+[node name="Player3" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 3: "
 
-[node name="Geldstatus3" type="Label" parent="Stats/GridContainer"]
+[node name="Money3" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 
-[node name="Spieler4" type="Label" parent="Stats/GridContainer"]
+[node name="Player4" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Spieler 4: "
 
-[node name="Geldstatus4" type="Label" parent="Stats/GridContainer"]
+[node name="Money4" type="Label" parent="Stats/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 17
 
@@ -117,7 +118,7 @@ offset_left = -133.0
 offset_top = -80.0
 grow_horizontal = 0
 grow_vertical = 0
-script = ExtResource("4_3gu32")
+script = ExtResource("3_wcbr8")
 
 [node name="RoundStatus" type="Label" parent="Rounds"]
 layout_mode = 0

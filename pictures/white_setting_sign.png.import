@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckyo5673aivb1"
-path="res://.godot/imported/white_setting_sign.png-114308cb7b07d481cae6343a2e490ea7.ctex"
+path="res://.godot/imported/white_setting_sign.png-9b0feb731b00401daf3d920c96830f0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pictures/white_setting_sign.png"
-dest_files=["res://.godot/imported/white_setting_sign.png-114308cb7b07d481cae6343a2e490ea7.ctex"]
+source_file="res://pictures/white_setting_sign.png"
+dest_files=["res://.godot/imported/white_setting_sign.png-9b0feb731b00401daf3d920c96830f0f.ctex"]
 
 [params]
 
