@@ -15,14 +15,16 @@ signal round_begin(roundNum)
 
 @onready var players = []
 
+
 func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	#Example call
 	print(question_handler.get_next_question(Question.Difficulty.EASY).question)
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 
+
 func _ready():
-	start_game(10, 3)
+	start_game(10, 4)
 
 
 func start_game(num_rounds, num_players):
@@ -36,7 +38,7 @@ func start_game(num_rounds, num_players):
 
 func create_players(num):
 	var player_scene = load("res://player/player.tscn")
-	var sprites = ["res://player/euro.svg", "res://player/yen.svg", "res://player/pound.svg"]
+	var sprites = ["res://player/euro.svg", "res://player/yen.svg", "res://player/pound.svg", "res://player/dollar.svg"]
 	for i in num:
 		var player : Player = player_scene.instantiate()
 		add_child(player)
