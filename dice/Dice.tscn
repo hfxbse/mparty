@@ -32,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2eigy")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -41,7 +42,6 @@ offset_right = 1104.0
 offset_bottom = 521.0
 scale = Vector2(0.666667, 0.666667)
 pivot_offset = Vector2(336, 166)
-script = ExtResource("1_2eigy")
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 1
@@ -78,4 +78,5 @@ libraries = {
 "": SubResource("AnimationLibrary_d273h")
 }
 
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed" flags=18]

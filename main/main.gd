@@ -12,6 +12,7 @@ signal round_begin(roundNum)
 @onready var map = $Map
 @onready var start : Field = map.start
 @onready var currentPlayer: Player = $Player
+@onready var menu_overlay = $MenuOverlay
 
 @onready var players = []
 
@@ -19,6 +20,9 @@ func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	
 func _ready():
+	player_turn_begin.connect(menu_overlay.on_player_begin_turn)
+	menu_overlay.received_dice_number.connect(rollDice)
+
 	startGame(10, 3)
 
 
@@ -54,15 +58,14 @@ func orderPlayers(numPlayers):
 
 
 func rollDice():
-## roll dice and return the eyecount
 	pass
 
 
 func playerTurn(player):
 	currentPlayer = player
 	player_turn_begin.emit(currentPlayer)
-	## var diceRoll = await rollDice()
-	var diceRoll = 3
+	var diceRoll = rollDice()
+	print(diceRoll)
 	await player.move(diceRoll)
 
 
