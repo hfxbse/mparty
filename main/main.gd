@@ -11,7 +11,7 @@ signal round_begin(roundNum)
 
 @onready var map = $Map
 @onready var start : Field = map.start
-@onready var currentPlayer: Player = $Player
+@onready var current_player: Player = $Player
 
 @onready var players = []
 
@@ -22,24 +22,23 @@ func _init():
 	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 
 func _ready():
-	startGame(10, 3)
+	start_game(10, 3)
 
 
-func startGame(numRounds, numPlayers):
+func start_game(num_rounds, num_players):
 ## Is called by the start-screen to start the game
-	createPlayers(numPlayers)
-	orderPlayers(numPlayers)
-	for round in numRounds:
+	create_players(num_players)
+	for round in num_rounds:
 		round_begin.emit(round+1)
 		for player in players:
-			await playerTurn(player)
+			await player_turn(player)
 
 
-func createPlayers(num):
-	var playerScene = load("res://player/player.tscn")
+func create_players(num):
+	var player_scene = load("res://player/player.tscn")
 	var sprites = ["res://player/euro.svg", "res://player/yen.svg", "res://player/pound.svg"]
 	for i in num:
-		var player : Player = playerScene.instantiate()
+		var player : Player = player_scene.instantiate()
 		add_child(player)
 		player.current_location = start
 		player.global_position = start.global_position
@@ -49,22 +48,15 @@ func createPlayers(num):
 		players.append(player)
 
 
-func orderPlayers(numPlayers):
-## Optional
-## Get order of players by rolling dice
-## Order Players Accordingly
-	pass
-
-
-func rollDice():
+func roll_dice():
 ## roll dice and return the eyecount
 	pass
 
 
-func playerTurn(player):
-	currentPlayer = player
-	player_turn_begin.emit(currentPlayer)
-	## var diceRoll = await rollDice()
+func player_turn(player):
+	current_player = player
+	player_turn_begin.emit(current_player)
+	## var diceRoll = await roll_dice()
 	var diceRoll = 3
 	await player.move(diceRoll)
 
