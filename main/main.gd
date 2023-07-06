@@ -45,6 +45,7 @@ func create_players(num):
 		player.change_patente.connect(on_player_change_patente)
 		player.change_riesen.connect(on_player_change_riesen)
 		player.sprite.texture = load(sprites[i])
+		player.sprite.visibility_layer = 9
 		players.append(player)
 
 
@@ -55,10 +56,12 @@ func roll_dice():
 
 func player_turn(player):
 	current_player = player
+	current_player.z_index += 1
 	player_turn_begin.emit(current_player)
 	## var diceRoll = await roll_dice()
 	var diceRoll = 3
 	await player.move(diceRoll)
+	current_player.z_index -= 1
 
 
 func on_player_change_riesen(player, amount):
