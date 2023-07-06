@@ -38,9 +38,9 @@ text = "Würfelglück entscheidet über die Aktion!"
 [node name="Button" type="Button" parent="actionfieldLabel"]
 layout_mode = 0
 offset_left = 408.0
-offset_top = 308.0
+offset_top = 316.0
 offset_right = 488.0
-offset_bottom = 356.0
+offset_bottom = 364.0
 text = "Würfeln!"
 
 [node name="GridContainer" type="GridContainer" parent="actionfieldLabel"]
@@ -49,8 +49,8 @@ offset_left = 64.0
 offset_top = 96.0
 offset_right = 832.0
 offset_bottom = 197.0
-theme_override_constants/h_separation = 34
-theme_override_constants/v_separation = 30
+theme_override_constants/h_separation = 39
+theme_override_constants/v_separation = 26
 columns = 2
 
 [node name="Label" type="Label" parent="actionfieldLabel/GridContainer"]
@@ -80,10 +80,16 @@ vertical_alignment = 1
 [node name="Label5" type="Label" parent="actionfieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "11: Prozenanteil aller Anlagen sinkt  "
+text = "9-10: ?"
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "11: Prozenanteil aller Anlagen sinkt  "
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="actionfieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "12: Prozenanteil aller Anlagen steigt"
