@@ -16,7 +16,6 @@ signal round_begin(roundNum)
 @onready var players = []
 
 @onready var main_camera = $MainCamera
-@onready var player_camera = $Player/PlayerCamera
 @onready var hud = $HUD
 
 
@@ -40,7 +39,7 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_M):
 		main_camera.set_camera()
 	elif Input.is_key_pressed(KEY_P):
-		player_camera.make_current()
+		current_player.camera.make_current()
 
 
 func _on_menu_button_pressed(main_camera_selected: bool):
@@ -51,7 +50,7 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 		main_camera.set_camera()
 
 	else:
-		player_camera.make_current()
+		current_player.camera.make_current()
 		
 		
 func start_game(num_rounds, num_players):
@@ -86,6 +85,7 @@ func roll_dice():
 func player_turn(player):
 	current_player = player
 	current_player.z_index += 1
+	current_player.camera.make_current()
 	player_turn_begin.emit(current_player)
 	## var diceRoll = await roll_dice()
 	var diceRoll = 3
