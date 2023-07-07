@@ -11,14 +11,13 @@ signal turn_start()
 
 func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
-	#Example call
-	print(question_handler.get_next_question(Question.Difficulty.EASY).question)
-	print(question_handler.get_random_question(Question.Difficulty.EASY).question)
 	
 func _ready():
 	var start = map.start
 	player.current_location = start
 	player.global_position = start.global_position
+	
+	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 	
 	if DisplayServer.is_touchscreen_available():
 		var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
@@ -40,7 +39,6 @@ func _on_button_pressed():
 	MoveButton.hide()
 	player.move(2)
 
-
 func _on_player_turn_ended():
 	MoveButton.show()
 
@@ -57,3 +55,4 @@ func _process(delta):
 		main_camera.set_camera()
 	elif(Input.is_key_pressed(KEY_P)):
 		player_camera.make_current()
+

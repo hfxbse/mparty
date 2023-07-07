@@ -14,7 +14,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_current():  
 		if event is InputEventMouseMotion:
 			if event.button_mask == MOUSE_BUTTON_MASK_LEFT:
-				position -= event.relative * zoom
+				position -= event.relative / zoom
 		elif event is InputEventMouseButton:
 			if event.is_pressed:
 				if event.button_index == MOUSE_BUTTON_WHEEL_UP:
@@ -32,9 +32,7 @@ func zoom_out():
 	
 func _physics_process(delta):
 	zoom = lerp(zoom, target_zoom * Vector2.ONE, zoom_rate * delta)
-	set_physics_process(
-		not is_equal_approx(zoom.x, target_zoom)
-	)
+	set_physics_process(not is_equal_approx(zoom.x, target_zoom))
 
 func set_camera():
 	position = last_pos
