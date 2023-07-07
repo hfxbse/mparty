@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyx17trotpesx"]
+[gd_scene load_steps=3 format=3 uid="uid://byc2sh2w05cqw"]
 
 [ext_resource type="Script" path="res://question_panel/answer_button.gd" id="1_wwjbo"]
 
@@ -18,6 +18,5 @@ layout_mode = 2
 theme_override_colors/font_pressed_color = Color(100, 100, 100, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_lknxa")
-text = "test"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
