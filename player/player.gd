@@ -1,7 +1,6 @@
 class_name Player extends Node2D
 
 var moves = 0
-
 var current_location: Field
 var last_location: Field
 
@@ -27,8 +26,8 @@ func move(distance: int):
 	last_location = current_location
 	moves = distance
 	step()
-	
-	
+
+
 func step():
 	moves -= 1
 

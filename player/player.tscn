@@ -10,3 +10,5 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_br2sk")
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
