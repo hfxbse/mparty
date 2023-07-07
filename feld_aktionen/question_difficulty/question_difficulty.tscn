@@ -10,9 +10,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_26qfy")
 
 [node name="Panel" type="Panel" parent="."]
@@ -22,10 +23,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -388.0
-offset_top = -220.0
-offset_right = 380.0
-offset_bottom = 184.0
+offset_left = -384.0
+offset_top = -202.0
+offset_right = 384.0
+offset_bottom = 202.0
 grow_horizontal = 2
 grow_vertical = 2
 

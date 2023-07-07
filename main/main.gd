@@ -58,14 +58,17 @@ func orderPlayers(numPlayers):
 
 
 func rollDice():
+	var dice_value = await menu_overlay.add_dice_menu()
+	print(str(dice_value) + "rollDice")
+	return dice_value
 	pass
 
 
 func playerTurn(player):
 	currentPlayer = player
 	player_turn_begin.emit(currentPlayer)
-	var diceRoll = 3 ##rollDice()
-	##print(diceRoll)
+	var diceRoll = await rollDice()
+	print(str(diceRoll) + "diceRoll") 
 	await player.move(diceRoll)
 
 
