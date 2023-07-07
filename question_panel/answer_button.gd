@@ -1,17 +1,23 @@
-class_name AnswerButton extends Button
+@tool
+
+class_name AnswerButton extends Node
 
 signal answer_selected(answer_text: String)
 
-func _init(button_text):
-	self.text = button_text
-	self.custom_minimum_size = Vector2(100, 150)
-	self.add_theme_font_size_override("font_size", 30)
-	self.pressed.connect(_on_answer_button_pressed)
-	
-	var pressed_style_box = StyleBoxFlat.new()
-	pressed_style_box.bg_color = Color(0.015, 0.988, 0.517)
-	self.add_theme_stylebox_override("focus", pressed_style_box)
-	
-func _on_answer_button_pressed():
-	self.add_theme_color_override("color", Color(100.0, 100.0, 100.0))
-	answer_selected.emit(self.text)
+
+@onready var answer_button = $Button
+@export var button_text: String = "":
+	set(text):
+		if text != button_text:
+			button_text = text
+
+			if answer_button:
+				answer_button.text = text
+
+
+func _ready():
+	answer_button.text = button_text
+
+
+func _on_button_pressed():
+	answer_selected.emit(answer_button.text)

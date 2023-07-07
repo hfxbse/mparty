@@ -31,19 +31,10 @@ text = "Question: ..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnswerContainer" type="HBoxContainer" parent="MarginContainer/QuestionContainer"]
+[node name="AnswerContainer" type="GridContainer" parent="MarginContainer/QuestionContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="AnswerColumn1" type="VBoxContainer" parent="MarginContainer/QuestionContainer/AnswerContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-alignment = 1
-
-[node name="AnswerColumn2" type="VBoxContainer" parent="MarginContainer/QuestionContainer/AnswerContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-alignment = 1
+columns = 2
 
 [node name="SubmitButton" type="Button" parent="MarginContainer/QuestionContainer"]
 custom_minimum_size = Vector2(100, 75)
