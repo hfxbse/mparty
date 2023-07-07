@@ -2,12 +2,11 @@ extends Node
 
 @onready var map = $Map
 @onready var start : Field = map.start
-@onready var current_player: Player
-
-@onready var players = []
-
 @onready var main_camera = $MainCamera
 @onready var hud = $GameOverlay
+
+var current_player: Player
+var players = []
 
 
 func _ready():
