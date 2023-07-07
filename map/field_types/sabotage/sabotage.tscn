@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwi8fnj64w2xn"]
+[gd_scene load_steps=5 format=3 uid="uid://ba267pqprld8g"]
 
 [ext_resource type="Script" path="res://map/field_types/theme_override.gd" id="1_6uigl"]
 [ext_resource type="Texture2D" uid="uid://d206suk1yo36e" path="res://map/field_types/sabotage/sabotage.png" id="2_d5k8e"]
