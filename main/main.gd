@@ -63,8 +63,8 @@ func start_game(num_rounds, num_players):
 
 
 func create_players(num):
-	var player_scene = load("res://player/player.tscn")
-	var sprites = ["res://player/euro.svg", "res://player/yen.svg", "res://player/pound.svg", "res://player/dollar.svg"]
+	var player_scene = preload("res://player/player.tscn")
+	var sprites = [preload("res://player/euro.svg"), preload("res://player/yen.svg"), preload("res://player/pound.svg"), preload("res://player/dollar.svg")]
 	for i in num:
 		var player : Player = player_scene.instantiate()
 		add_child(player)
@@ -72,7 +72,7 @@ func create_players(num):
 		player.global_position = start.global_position
 		player.change_patente.connect(on_player_change_patente)
 		player.change_riesen.connect(on_player_change_riesen)
-		player.sprite.texture = load(sprites[i])
+		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
 		players.append(player)
 
