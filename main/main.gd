@@ -1,12 +1,12 @@
 extends Node
 
-## HUD Elements can attach here to show current Player
+# HUD Elements can attach here to show current Player
 signal player_turn_begin(player)
-## HUD Elements can attach here to update Player "Riesen" Display
+# HUD Elements can attach here to update Player "Riesen" Display
 signal player_change_riesen(player, amount)
-## HUD Elements can attach here to update Player "Patente" Display
+# HUD Elements can attach here to update Player "Patente" Display
 signal player_change_patente(player, amount)
-## HUD Elements can attach here to show current Round
+# HUD Elements can attach here to show current Round
 signal round_begin(roundNum)
 
 @onready var map = $Map
@@ -54,7 +54,7 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 		
 		
 func start_game(num_rounds, num_players):
-## Is called by the start-screen to start the game
+# Is called by the start-screen to start the game
 	create_players(num_players)
 	for round in num_rounds:
 		round_begin.emit(round+1)
