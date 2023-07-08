@@ -78,8 +78,8 @@ func create_players(num):
 
 
 func roll_dice():
-## roll dice and return the eyecount
-	pass
+# roll dice and return the eyecount
+	return 3
 
 
 func player_turn(player):
@@ -87,9 +87,7 @@ func player_turn(player):
 	current_player.z_index += 1
 	current_player.camera.make_current()
 	player_turn_begin.emit(current_player)
-	## var diceRoll = await roll_dice()
-	var diceRoll = 3
-	await player.move(diceRoll)
+	await player.move(await roll_dice())
 	current_player.z_index -= 1
 
 
