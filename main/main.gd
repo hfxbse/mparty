@@ -65,6 +65,7 @@ func start_game(num_rounds, num_players):
 func create_players(num):
 	var player_scene = preload("res://player/player.tscn")
 	var sprites = [preload("res://player/euro.svg"), preload("res://player/yen.svg"), preload("res://player/pound.svg"), preload("res://player/dollar.svg")]
+	assert(num <= sprites.size(), "This game only supports 4 players")
 	for i in num:
 		var player : Player = player_scene.instantiate()
 		add_child(player)
