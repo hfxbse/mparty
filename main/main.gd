@@ -1,14 +1,5 @@
 extends Node
 
-# HUD Elements can attach here to show current Player
-signal player_turn_begin(player)
-# HUD Elements can attach here to update Player "Riesen" Display
-signal player_change_riesen(player, amount)
-# HUD Elements can attach here to update Player "Patente" Display
-signal player_change_patente(player, amount)
-# HUD Elements can attach here to show current Round
-signal round_begin(roundNum)
-
 @onready var map = $Map
 @onready var start : Field = map.start
 @onready var current_player: Player
@@ -57,7 +48,7 @@ func start_game(num_rounds, num_players):
 # Is called by the start-screen to start the game
 	create_players(num_players)
 	for round in num_rounds:
-		round_begin.emit(round+1)
+		round_begin(round+1)
 		for player in players:
 			await player_turn(player)
 
@@ -87,14 +78,26 @@ func player_turn(player):
 	current_player = player
 	current_player.z_index += 1
 	current_player.camera.make_current()
-	player_turn_begin.emit(current_player)
+	player_turn_begin(current_player)
 	await player.move(await roll_dice())
 	current_player.z_index -= 1
 
 
 func on_player_change_riesen(player, amount):
-	player_change_riesen.emit(player, amount)
+# Add code for communicating change to HUD
+	pass
 
 
 func on_player_change_patente(player, amount):
-	player_change_patente.emit(player, amount)
+# Add code for communicating change to HUD
+	pass
+
+
+func player_turn_begin(player):
+# Add code to display the current player in the HUD
+	pass
+
+
+func round_begin(round_num):
+# Add code to change the round display in the HUD
+	pass
