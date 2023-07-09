@@ -21,8 +21,9 @@ func _ready():
 		var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
 		mobile_hud.zoom_in.connect(main_camera.zoom_in)
 		mobile_hud.zoom_out.connect(main_camera.zoom_out)
+
 		hud.add_child(mobile_hud)
-		
+
 	start_game(10, 4)
 
 
@@ -42,35 +43,45 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 
 	else:
 		current_player.camera.make_current()
-		
-		
+
+
+# Invoced by the start-screen to start the game
 func start_game(num_rounds, num_players):
-# Is called by the start-screen to start the game
 	create_players(num_players)
+
 	for round in num_rounds:
 		round_begin(round+1)
+
 		for player in players:
 			await player_turn(player)
 
 
 func create_players(num):
 	var player_scene = preload("res://player/player.tscn")
-	var sprites = [preload("res://player/euro.svg"), preload("res://player/yen.svg"), preload("res://player/pound.svg"), preload("res://player/dollar.svg")]
+	var sprites = [
+		preload("res://player/euro.svg"),
+		preload("res://player/yen.svg"),
+		preload("res://player/pound.svg"),
+		preload("res://player/dollar.svg")
+	]
+
 	assert(num <= sprites.size(), "This game only supports 4 players")
+
 	for i in num:
 		var player : Player = player_scene.instantiate()
+
 		add_child(player)
+		players.append(player)
+
 		player.current_location = start
 		player.global_position = start.global_position
 		player.change_patente.connect(on_player_change_patente)
 		player.change_riesen.connect(on_player_change_riesen)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
-		players.append(player)
 
 
-func roll_dice():
-# roll dice and return the eyecount
+func roll_dice():	# roll dice and return the eyecount
 	return 3
 
 
@@ -78,26 +89,28 @@ func player_turn(player):
 	current_player = player
 	current_player.z_index += 1
 	current_player.camera.make_current()
+
 	player_turn_begin(current_player)
 	await player.move(await roll_dice())
+
 	current_player.z_index -= 1
 
 
 func on_player_change_riesen(player, amount):
-# Add code for communicating change to HUD
+	# Add code for communicating change to HUD
 	pass
 
 
 func on_player_change_patente(player, amount):
-# Add code for communicating change to HUD
+	# Add code for communicating change to HUD
 	pass
 
 
 func player_turn_begin(player):
-# Add code to display the current player in the HUD
+	# Add code to display the current player in the HUD
 	pass
 
 
 func round_begin(round_num):
-# Add code to change the round display in the HUD
+	# Add code to change the round display in the HUD
 	pass
