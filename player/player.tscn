@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c82nk64v2y7hl"]
+[gd_scene load_steps=2 format=3 uid="uid://c82nk64v2y7hl"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_fyw3b"]
-[ext_resource type="Texture2D" uid="uid://br6fg1fghhmy2" path="res://player/icon.svg" id="2_br2sk"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_fyw3b")
@@ -9,6 +8,5 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_br2sk")
 
 [node name="PlayerCamera" type="Camera2D" parent="."]
