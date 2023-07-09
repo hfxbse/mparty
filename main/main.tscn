@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwbwn4wc8mnyf"]
+[gd_scene load_steps=5 format=3 uid="uid://bwbwn4wc8mnyf"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
+[ext_resource type="PackedScene" uid="uid://b87k43gn00bjy" path="res://menu_overlay/menu_overlay.tscn" id="2_tj4n1"]
 [ext_resource type="PackedScene" uid="uid://c82nk64v2y7hl" path="res://player/player.tscn" id="3_kj1dm"]
 
 [node name="Node2" type="Node"]
 script = ExtResource("1_5mwui")
 
+[node name="MenuOverlay" parent="." instance=ExtResource("2_tj4n1")]
+
 [node name="Map" parent="." instance=ExtResource("2_n57xg")]
-z_index = -1
 position = Vector2(-54, 156)
 
 [node name="Player" parent="." instance=ExtResource("3_kj1dm")]

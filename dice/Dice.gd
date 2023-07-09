@@ -1,13 +1,14 @@
-extends Panel
+extends Control
 
-@onready var animation = $AnimationPlayer
-@onready var label = $Label
-@onready var button = $Button
+@onready var label = $CanvasLayer/Panel/Label
+@onready var button = $CanvasLayer/Panel/Button
+
+signal dice_number(dnumber: int)
 
 func _on_button_pressed():
-	var random = randi_range(1,6)
+	var random = randi_range(1,12)
 	
-	animation.play("popUpScale")
 	label.set_text(String("%d" % random))
-	animation.play("popUpScale")
+	dice_number.emit(random)
+	
 	button.hide()
