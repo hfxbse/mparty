@@ -9,6 +9,7 @@ var selected_answer
 signal answer_selected(answer: bool)
 
 
+
 func display_question(difficulty):
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	
@@ -23,13 +24,13 @@ func display_question(difficulty):
 	
 	return answer_selected
 	
-"res://question_panel/question_panel.gd"
+	
 func create_answer_button(answer, selected_receiver):
 	var scene = preload("res://question_panel/answer_button.tscn")
 	var answer_button = scene.instantiate()
 	answer_button.button_text = answer
 
-	answer_button.answer_selected.connect(selected_receiver)
+	answer_button.button_pressed.connect(selected_receiver)
 
 	return answer_button
 
