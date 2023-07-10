@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dft2qj70fe0nb"]
+[gd_scene load_steps=3 format=3 uid="uid://dft2qj70fe0nb"]
 
 [ext_resource type="Script" path="res://question_panel/question_panel.gd" id="1_jy063"]
+
+[sub_resource type="Theme" id="Theme_itjmp"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,11 +11,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jy063")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 2
 offset_right = 1152.0
 offset_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.160784, 0.223529, 0.266667, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 640.0
+theme = SubResource("Theme_itjmp")
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
@@ -21,7 +34,6 @@ theme_override_constants/margin_bottom = 50
 
 [node name="QuestionContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-script = ExtResource("1_jy063")
 
 [node name="QuestionLabel" type="Label" parent="MarginContainer/QuestionContainer"]
 layout_mode = 2

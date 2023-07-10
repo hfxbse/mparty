@@ -114,3 +114,12 @@ func player_turn_begin(player):
 func round_begin(round_num):
 	# Add code to change the round display in the HUD
 	pass
+
+
+func _on_question_panel_button_pressed():
+	var question_panel_scene = preload("res://question_panel/question_panel.tscn").instantiate()
+	add_child(question_panel_scene)
+	question_panel_scene.display_question(Question.Difficulty.EASY)
+	
+	#TODO: await remove
+	#remove_child(question_panel_scene)	
