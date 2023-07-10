@@ -21,7 +21,6 @@ var riesen: int:
 
 
 var moves = 0
-var distance
 
 var current_location: Field
 var last_location: Field
@@ -45,19 +44,12 @@ var last_transversed: Field:
 
 
 func move(distance: int):
-	self.distance = distance
 	last_location = current_location
 	moves = distance
 	await step()
 
 
 func step():
-	if moves != distance:
-		for event in current_location.driveby_events:
-			if moves == 0 && event.get_method() == "driveby_duel":
-				continue
-			event.call(self)
-		
 	moves -= 1
 
 	var last = current_location
@@ -70,7 +62,12 @@ func step():
 		register_duels()
 		turn_ended.emit()
 		return
-
+	
+	for event in current_location.driveby_events:
+			if moves == 0 && event.get_method() == "driveby_duel":
+				continue
+			event.call(self)
+	
 	await step()
 
 
