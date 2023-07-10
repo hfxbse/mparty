@@ -63,11 +63,17 @@ func rollDice():
 	return dice_value
 	pass
 
+func playerQuestion():
+	menu_overlay.ask_difficulty()
+	print ("function playerQuestion executed")
+	pass
+
 
 func playerTurn(player):
 	currentPlayer = player
 	player_turn_begin.emit(currentPlayer)
 	var diceRoll = await rollDice()
+	await playerQuestion()
 	print(str(diceRoll) + "diceRoll") 
 	await player.move(diceRoll)
 

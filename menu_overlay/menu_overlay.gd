@@ -9,7 +9,7 @@ signal received_dice_number(dnumber: int, player: Player)
 func _ready():
 	dice_menu = preload("res://dice/Dice.tscn").instantiate()
 	dice_menu.dice_number.connect(_on_dice_number)
-	ask_difficulty()
+	#difficuly_menu = preload()
 
 func on_player_begin_turn(player: Player):
 	current_player = player
@@ -19,7 +19,7 @@ func _on_dice_number(dnumber: int):
 	received_dice_number.emit(dnumber, current_player)
 	
 func ask_difficulty():
-	#add_child(difficulty_menu)
+	add_child(difficulty_menu)
 	pass
 	
 func _on_difficulty(diff: Question.Difficulty):
