@@ -1,18 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://uneluecuej83"]
+[gd_scene load_steps=3 format=3 uid="uid://uneluecuej83"]
 
+[ext_resource type="Script" path="res://map/field_types/patent_office/patent_office.gd" id="1_wsun4"]
 [ext_resource type="Texture2D" uid="uid://cdv5v7cuwavd2" path="res://map/field_types/patent_office/patent_office.png" id="1_x3aur"]
-[ext_resource type="Script" path="res://map/field_types/theme_override.gd" id="1_x24la"]
-[ext_resource type="Script" path="res://map/field/field_theme.gd" id="2_oibng"]
-
-[sub_resource type="Resource" id="Resource_rq0lo"]
-script = ExtResource("2_oibng")
-field_color = Color(0.054902, 0.780392, 0, 1)
-shadow_color_normal = Color(0.0823529, 0.976471, 0, 1)
-shadow_color_pressed = Color(0.539231, 1, 0.501576, 1)
 
 [node name="patent_office" type="Node2D" groups=["event"]]
-script = ExtResource("1_x24la")
-field_theme_override = SubResource("Resource_rq0lo")
+script = ExtResource("1_wsun4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(30, 30)

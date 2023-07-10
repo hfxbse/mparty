@@ -51,6 +51,9 @@ func move(distance: int):
 
 func step():
 	moves -= 1
+	
+	for event in current_location.driveby_events:
+		event.call(self)
 
 	var last = current_location
 	current_location = await current_location.move_forwards(self)
@@ -58,6 +61,8 @@ func step():
 
 	if moves == 0:
 		turn_ended.emit()
+		for event in current_location.field_events:
+			event.call(self)
 		return
 
 	await step()

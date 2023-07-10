@@ -1,18 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://hpexnq1lmbsg"]
+[gd_scene load_steps=3 format=3 uid="uid://hpexnq1lmbsg"]
 
-[ext_resource type="Script" path="res://map/field_types/theme_override.gd" id="1_drnj7"]
-[ext_resource type="Script" path="res://map/field/field_theme.gd" id="2_3rsik"]
+[ext_resource type="Script" path="res://map/field_types/action/action.gd" id="1_nrkvy"]
 [ext_resource type="Texture2D" uid="uid://cs07f62ghebuk" path="res://map/field_types/action/action.png" id="3_8oftb"]
 
-[sub_resource type="Resource" id="Resource_vh4bb"]
-script = ExtResource("2_3rsik")
-field_color = Color(1, 0.427451, 0.0196078, 1)
-shadow_color_normal = Color(1, 0.560784, 0.34902, 1)
-shadow_color_pressed = Color(1, 0.773118, 0.670434, 1)
-
 [node name="action" type="Node2D" groups=["event"]]
-script = ExtResource("1_drnj7")
-field_theme_override = SubResource("Resource_vh4bb")
+script = ExtResource("1_nrkvy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(30, 30)
