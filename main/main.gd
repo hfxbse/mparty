@@ -116,10 +116,21 @@ func round_begin(round_num):
 	pass
 
 
+# START: sample code
+@onready var question_panel_scene: Control
+
 func _on_question_panel_button_pressed():
-	var question_panel_scene = preload("res://question_panel/question_panel.tscn").instantiate()
+	question_panel_scene = preload("res://question_panel/question_panel.tscn").instantiate()
 	add_child(question_panel_scene)
-	question_panel_scene.display_question(Question.Difficulty.EASY)
+	var question_signal = question_panel_scene.display_question(Question.Difficulty.EASY)
+	question_panel_scene.answer_selected.connect(_on_answer_submited)
+
+
+func _on_answer_submited(signal_response: bool):
+	if signal_response:
+		print("right answer")
+	else:
+		print("wrong answer")
 	
-	#TODO: await remove
-	#remove_child(question_panel_scene)	
+	remove_child(question_panel_scene)
+# END: sample code
