@@ -10,7 +10,7 @@ field_color = Color(0.054902, 0.780392, 0, 1)
 shadow_color_normal = Color(0.0823529, 0.976471, 0, 1)
 shadow_color_pressed = Color(0.539231, 1, 0.501576, 1)
 
-[node name="patent_office" type="Node2D"]
+[node name="patent_office" type="Node2D" groups=["event"]]
 script = ExtResource("1_x24la")
 field_theme_override = SubResource("Resource_rq0lo")
 

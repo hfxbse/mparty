@@ -10,7 +10,7 @@ field_color = Color(0.407843, 0, 0.780392, 1)
 shadow_color_normal = Color(0.603922, 0.368627, 1, 1)
 shadow_color_pressed = Color(0.694961, 0.561446, 1, 1)
 
-[node name="question" type="Node2D"]
+[node name="question" type="Node2D" groups=["event"]]
 script = ExtResource("1_ket7p")
 field_theme_override = SubResource("Resource_tmcnj")
 

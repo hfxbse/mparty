@@ -10,7 +10,7 @@ field_color = Color(1, 0.427451, 0.0196078, 1)
 shadow_color_normal = Color(1, 0.560784, 0.34902, 1)
 shadow_color_pressed = Color(1, 0.773118, 0.670434, 1)
 
-[node name="action" type="Node2D"]
+[node name="action" type="Node2D" groups=["event"]]
 script = ExtResource("1_drnj7")
 field_theme_override = SubResource("Resource_vh4bb")
 
