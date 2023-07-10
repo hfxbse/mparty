@@ -10,21 +10,29 @@ extends Node
 @onready var hud = $gameOverlay
 
 
+
 func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 
 
 func _ready():
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
+  
+	if DisplayServer.is_touchscreen_available():
+		var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
+		mobile_hud.zoom_in.connect(main_camera.zoom_in)
+		mobile_hud.zoom_out.connect(main_camera.zoom_out)
 
-	#if DisplayServer.is_touchscreen_available():
-	var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
-	mobile_hud.zoom_in.connect(main_camera.zoom_in)
-	mobile_hud.zoom_out.connect(main_camera.zoom_out)
-
-	hud.add_child(mobile_hud)
+		hud.add_child(mobile_hud)
 
 	start_game(10, 4)
+
+
+func _process(delta):
+	if Input.is_key_pressed(KEY_M):
+		main_camera.set_camera()
+	elif Input.is_key_pressed(KEY_P):
+		current_player.camera.make_current()
 
 
 func _process(delta):
