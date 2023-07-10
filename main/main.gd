@@ -35,13 +35,6 @@ func _process(delta):
 		current_player.camera.make_current()
 
 
-func _process(delta):
-	if Input.is_key_pressed(KEY_M):
-		main_camera.set_camera()
-	elif Input.is_key_pressed(KEY_P):
-		current_player.camera.make_current()
-
-
 func _on_menu_button_pressed(main_camera_selected: bool):
 	main_camera.last_pos = current_player.position
 	main_camera.zoom_out()
