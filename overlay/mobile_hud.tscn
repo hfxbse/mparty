@@ -5,25 +5,35 @@
 [node name="MobileHUD" type="CanvasLayer"]
 script = ExtResource("1_dgr5d")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 1070.0
-offset_top = 500.0
-offset_right = 1132.0
-offset_bottom = 628.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ZoomInButton" type="Button" parent="VBoxContainer"]
+[node name="ZoomInButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
 text = "+"
 
-[node name="ZoomOutButton" type="Button" parent="VBoxContainer"]
+[node name="ZoomOutButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 24
 text = "-"
 
-[connection signal="pressed" from="VBoxContainer/ZoomInButton" to="." method="_on_zoom_in_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ZoomOutButton" to="." method="_on_zoom_out_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ZoomInButton" to="." method="_on_zoom_in_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ZoomOutButton" to="." method="_on_zoom_out_button_pressed"]

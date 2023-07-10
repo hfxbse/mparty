@@ -17,12 +17,12 @@ func _init():
 func _ready():
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 
-	if DisplayServer.is_touchscreen_available():
-		var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
-		mobile_hud.zoom_in.connect(main_camera.zoom_in)
-		mobile_hud.zoom_out.connect(main_camera.zoom_out)
+	#if DisplayServer.is_touchscreen_available():
+	var mobile_hud = preload("res://overlay/mobile_hud.tscn").instantiate()
+	mobile_hud.zoom_in.connect(main_camera.zoom_in)
+	mobile_hud.zoom_out.connect(main_camera.zoom_out)
 
-		hud.add_child(mobile_hud)
+	hud.add_child(mobile_hud)
 
 	start_game(10, 4)
 

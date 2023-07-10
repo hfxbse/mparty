@@ -33,7 +33,7 @@ popup/item_1/checked = true
 popup/item_1/id = 1
 popup/item_1/disabled = true
 
-[node name="ActionMenue" type="Panel" parent="."]
+[node name="ActionMenu" type="Panel" parent="."]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -41,7 +41,7 @@ offset_top = -69.0
 offset_right = 136.0
 grow_vertical = 0
 
-[node name="MenuButton" type="TextureButton" parent="ActionMenue"]
+[node name="MenuButton" type="TextureButton" parent="ActionMenu"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -59,7 +59,7 @@ texture_hover = ExtResource("2_18srf")
 texture_disabled = ExtResource("2_18srf")
 texture_focused = ExtResource("2_18srf")
 
-[node name="Button" type="Button" parent="ActionMenue"]
+[node name="Button" type="Button" parent="ActionMenu"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -168,4 +168,4 @@ offset_right = 124.0
 offset_bottom = 71.0
 theme_override_font_sizes/font_size = 30
 
-[connection signal="pressed" from="ActionMenue/MenuButton" to="ActionMenue" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="ActionMenu/MenuButton" to="." method="_on_menu_button_pressed"]
