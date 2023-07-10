@@ -70,7 +70,7 @@ func _ready():
 		if child is MapPath:
 			paths.append(child)
 			
-		if child.is_in_group("event"):
+		if child.is_in_group("event") && child.has_method("event"):
 			if child.name == "patent_office":
 				driveby_events.append(child.event)
 			else:
