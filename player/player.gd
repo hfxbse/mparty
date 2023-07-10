@@ -53,6 +53,8 @@ func step():
 	moves -= 1
 	
 	for event in current_location.driveby_events:
+		if moves == 0 && event.get_method() == "driveby_duel":
+			continue
 		event.call(self)
 
 	var last = current_location
