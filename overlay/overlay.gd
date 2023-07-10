@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var menu_button = $MenuButton
+@onready var menu_button = $ActionMenue/MenuButton
 
 var main_camera_selected = false
 

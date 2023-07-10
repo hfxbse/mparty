@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d03x38s8a6m8y"]
+[gd_scene load_steps=6 format=3 uid="uid://d03x38s8a6m8y"]
 
+[ext_resource type="Script" path="res://overlay/overlay.gd" id="1_ga4h3"]
 [ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://pictures/white_setting_sign.png" id="1_t836x"]
+[ext_resource type="Texture2D" uid="uid://diaxj1uviwa50" path="res://camera.png" id="2_18srf"]
 [ext_resource type="Script" path="res://overlay/GridContainer.gd" id="3_a58id"]
 [ext_resource type="Script" path="res://overlay/rounds.gd" id="3_wcbr8"]
 
 [node name="gameOverlay" type="CanvasLayer"]
+script = ExtResource("1_ga4h3")
 
 [node name="Settings" type="Panel" parent="."]
 offset_right = 40.0
@@ -30,7 +33,7 @@ popup/item_1/checked = true
 popup/item_1/id = 1
 popup/item_1/disabled = true
 
-[node name="Actions" type="Panel" parent="."]
+[node name="ActionMenue" type="Panel" parent="."]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -38,7 +41,25 @@ offset_top = -69.0
 offset_right = 136.0
 grow_vertical = 0
 
-[node name="Button" type="Button" parent="Actions"]
+[node name="MenuButton" type="TextureButton" parent="ActionMenue"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -29.5
+offset_right = 96.0
+offset_bottom = 66.5
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("2_18srf")
+texture_pressed = ExtResource("2_18srf")
+texture_hover = ExtResource("2_18srf")
+texture_disabled = ExtResource("2_18srf")
+texture_focused = ExtResource("2_18srf")
+
+[node name="Button" type="Button" parent="ActionMenue"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -146,3 +167,5 @@ offset_top = 26.0
 offset_right = 124.0
 offset_bottom = 71.0
 theme_override_font_sizes/font_size = 30
+
+[connection signal="pressed" from="ActionMenue/MenuButton" to="ActionMenue" method="_on_menu_button_pressed"]

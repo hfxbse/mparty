@@ -39,7 +39,7 @@ offset_left = 117.0
 offset_top = 122.0
 offset_right = 1044.0
 offset_bottom = 520.0
-scale = Vector2(0.966667, 0.966667)
+scale = Vector2(0.833333, 0.833333)
 pivot_offset = Vector2(336, 166)
 script = ExtResource("1_2eigy")
 

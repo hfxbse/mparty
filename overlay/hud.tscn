@@ -1,24 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://do3h71ihunhmt"]
+[gd_scene load_steps=2 format=3 uid="uid://bbj026lvkk5iq"]
 
-[ext_resource type="Script" path="res://overlay/hud.gd" id="1_fsqm8"]
-[ext_resource type="Texture2D" uid="uid://diaxj1uviwa50" path="res://camera.png" id="2_pdxrk"]
+[sub_resource type="GDScript" id="GDScript_d14ns"]
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource("1_fsqm8")
-
-[node name="MenuButton" type="TextureButton" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -104.0
-offset_right = 104.0
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-texture_normal = ExtResource("2_pdxrk")
-texture_pressed = ExtResource("2_pdxrk")
-texture_hover = ExtResource("2_pdxrk")
-texture_disabled = ExtResource("2_pdxrk")
-texture_focused = ExtResource("2_pdxrk")
-
-[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+script = SubResource("GDScript_d14ns")
