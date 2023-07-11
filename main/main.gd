@@ -8,6 +8,7 @@ extends Node
 
 @onready var main_camera = $MainCamera
 @onready var hud = $HUD
+@onready var menu_overlay = $MenuOverlay
 
 
 func _init():
@@ -81,8 +82,8 @@ func create_players(num):
 		player.sprite.visibility_layer = 9
 
 
-func roll_dice():	# roll dice and return the eyecount
-	return 3
+func roll_dice():
+	return await menu_overlay.add_dice_menu()
 
 
 func player_turn(player):

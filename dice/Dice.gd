@@ -1,8 +1,9 @@
 extends Control
 
-@onready var animation = $AnimationPlayer
-@onready var label = $Label
-@onready var button = $Button
+@onready var label = $Panel/Label
+@onready var button = $Panel/Button
+
+signal dice_number(dnumber: int)
 
 func _on_button_pressed():
 	var random = randi_range(1,12)
@@ -10,4 +11,5 @@ func _on_button_pressed():
 	label.set_text(String("%d" % random))
 	button.hide()
 	await get_tree().create_timer(1.5).timeout
-	self.visible = false
+	dice_number.emit(random)
+	visible = false

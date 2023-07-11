@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfjyx6b4461mv"]
+[gd_scene load_steps=6 format=3 uid="uid://cfjyx6b4461mv"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
+[ext_resource type="PackedScene" uid="uid://c6dijanr2hvlp" path="res://menu_overlay/menu_overlay.tscn" id="2_72htq"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
 [ext_resource type="Script" path="res://main/main_camera.gd" id="4_lgfck"]
 [ext_resource type="PackedScene" uid="uid://do3h71ihunhmt" path="res://overlay/hud.tscn" id="5_j2h8g"]
 
 [node name="Node2" type="Node"]
 script = ExtResource("1_5mwui")
+
+[node name="MenuOverlay" parent="." instance=ExtResource("2_72htq")]
 
 [node name="HUD" parent="." instance=ExtResource("5_j2h8g")]
 
