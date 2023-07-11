@@ -3,19 +3,32 @@
 [ext_resource type="Script" path="res://question_panel/answer_button.gd" id="1_wwjbo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lknxa"]
-bg_color = Color(0.02, 0.99, 0.52, 1)
+bg_color = Color(0.180392, 0.254902, 0.47451, 1)
+draw_center = false
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 1
+shadow_color = Color(0, 0, 0, 0.721569)
+shadow_size = 10
 
 [node name="MarginContainer" type="MarginContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 script = ExtResource("1_wwjbo")
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(100, 100, 100, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_lknxa")
 
