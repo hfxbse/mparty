@@ -73,8 +73,7 @@ func _ready():
 		if child.is_in_group("event") && child.has_method("event"):
 			if child.name == "patent_office":
 				driveby_events.append(child.event)
-			else:
-				field_events.append(child.event)
+			field_events.append(child.event)
 
 		if "field_theme_override" in child && child.field_theme_override != null:
 			child_theme_override = child.field_theme_override

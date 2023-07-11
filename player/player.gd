@@ -64,9 +64,7 @@ func step():
 		return
 	
 	for event in current_location.driveby_events:
-			if moves == 0 && event.get_method() == "driveby_duel":
-				continue
-			event.call(self)
+		event.call(self)
 	
 	await step()
 
