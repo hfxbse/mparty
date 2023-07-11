@@ -8,6 +8,9 @@ const missing_path_warning = "Field needs at least one MapPath."
 var paths: Array[MapPath]
 var picked_receivers: Array[Callable]
 var field_reached: Signal
+var field_events: Array[Callable]
+var driveby_events: Array[Callable]
+
 
 @export var rounded: bool = false:
 	set(round):
@@ -66,6 +69,11 @@ func _ready():
 	for child in get_children():
 		if child is MapPath:
 			paths.append(child)
+			
+		if child.is_in_group("event") && child.has_method("event"):
+			if child.name == "patent_office":
+				driveby_events.append(child.event)
+			field_events.append(child.event)
 
 		if "field_theme_override" in child && child.field_theme_override != null:
 			child_theme_override = child.field_theme_override
