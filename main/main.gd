@@ -81,8 +81,14 @@ func create_players(num):
 		player.sprite.visibility_layer = 9
 
 
-func roll_dice():	# roll dice and return the eyecount
-	return 3
+func roll_dice():
+	var dice_menu = preload("res://dice/dice.tscn").instantiate()
+	add_child(dice_menu)
+	
+	var dice_value = await dice_menu.dice_number
+	remove_child(dice_menu)
+	
+	return dice_value
 
 
 func player_turn(player):
