@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d03x38s8a6m8y"]
+[gd_scene load_steps=4 format=3 uid="uid://ctqluws6rgmy4"]
 
 [ext_resource type="Script" path="res://overlay/overlay.gd" id="1_ga4h3"]
 [ext_resource type="Texture2D" uid="uid://ckyo5673aivb1" path="res://pictures/white_setting_sign.png" id="1_t836x"]
@@ -22,19 +22,13 @@ icon = ExtResource("1_t836x")
 flat = false
 alignment = 0
 icon_alignment = 1
-item_count = 2
-popup/item_0/text = "Exit"
-popup/item_0/id = 0
-popup/item_1/text = "Musik"
-popup/item_1/id = 1
-popup/item_1/disabled = true
 
 [node name="ActionMenu" type="Panel" parent="."]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -69.0
-offset_right = 136.0
+offset_right = 66.0
 grow_vertical = 0
 
 [node name="CameraButton" type="TextureButton" parent="ActionMenu"]
@@ -54,21 +48,6 @@ texture_pressed = ExtResource("2_18srf")
 texture_hover = ExtResource("2_18srf")
 texture_disabled = ExtResource("2_18srf")
 texture_focused = ExtResource("2_18srf")
-
-[node name="Button" type="Button" parent="ActionMenu"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -56.0
-offset_top = -24.0
-offset_right = -8.0
-offset_bottom = 23.0
-grow_horizontal = 0
-grow_vertical = 2
-text = "Patent"
 
 [node name="Stats" type="Panel" parent="."]
 anchors_preset = 1

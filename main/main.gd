@@ -48,15 +48,14 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 # Invoced by the start-screen to start the game
 func start_game(num_rounds, num_players):
 	create_players(num_players)
-	hud.update_player_stats(players)
+	hud.update_player_stats(current_player, players)
 
 	for round in num_rounds:
-		hud.update_round_count(round, num_rounds)
+		hud.update_round_count(round + 1, num_rounds)
 		round_begin(round+1)
 
 		for player in players:
 			await player_turn(player)
-			hud.update_player_stats(players)
 
 
 func create_players(num):
@@ -98,6 +97,8 @@ func player_turn(player):
 	current_player = player
 	current_player.z_index += 1
 	current_player.camera.make_current()
+	
+	hud.update_player_stats(current_player, players)
 
 	player_turn_begin(current_player)
 	await player.move(await roll_dice())
@@ -123,8 +124,3 @@ func player_turn_begin(player):
 func round_begin(round_num):
 	# Add code to change the round display in the HUD
 	pass
-
-
-func _on_game_overlay_close_game_requested(is_close_requested):
-	if is_close_requested:
-		get_tree().quit()
