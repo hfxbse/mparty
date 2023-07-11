@@ -8,7 +8,6 @@ extends Node
 
 @onready var main_camera = $MainCamera
 @onready var hud = $HUD
-@onready var menu_overlay = $MenuOverlay
 
 
 func _init():
@@ -83,7 +82,13 @@ func create_players(num):
 
 
 func roll_dice():
-	return await menu_overlay.add_dice_menu()
+	var dice_menu = preload("res://dice/Dice.tscn").instantiate()
+	add_child(dice_menu)
+	
+	var dice_value = await dice_menu.dice_number
+	remove_child(dice_menu)
+	
+	return dice_value
 
 
 func player_turn(player):

@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var label = $Panel/Label
 @onready var button = $Panel/Button
