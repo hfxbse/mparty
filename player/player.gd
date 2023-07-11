@@ -57,9 +57,15 @@ func step():
 	last_transversed = last
 
 	if moves == 0:
+		for event in current_location.field_events:
+			event.call(self)
+		register_duels()
 		turn_ended.emit()
 		return
-
+	
+	for event in current_location.driveby_events:
+		event.call(self)
+	
 	await step()
 
 
@@ -75,4 +81,17 @@ func move_backwards(n):
 func undo_last_move():
 	while last_transversed && current_location != last_location:
 		await move_backwards(1)
+		
+		
+func register_duels():
+	current_location.field_events.append(duel)
+	current_location.driveby_events.append(driveby_duel)
+	
+	
+func duel(player: Player):
+	print("Duel triggered")
+	
+	
+func driveby_duel(player: Player):
+	print("Drive-by Duel triggered")
 

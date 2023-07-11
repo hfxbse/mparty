@@ -1,18 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://xxnuhr17s0sl"]
+[gd_scene load_steps=3 format=3 uid="uid://xxnuhr17s0sl"]
 
-[ext_resource type="Script" path="res://map/field_types/theme_override.gd" id="1_ket7p"]
-[ext_resource type="Script" path="res://map/field/field_theme.gd" id="2_ae26b"]
+[ext_resource type="Script" path="res://map/field_types/question/question.gd" id="1_314vo"]
 [ext_resource type="Texture2D" uid="uid://ce3rlwqqfccgg" path="res://map/field_types/question/question.png" id="3_h8al3"]
 
-[sub_resource type="Resource" id="Resource_tmcnj"]
-script = ExtResource("2_ae26b")
-field_color = Color(0.407843, 0, 0.780392, 1)
-shadow_color_normal = Color(0.603922, 0.368627, 1, 1)
-shadow_color_pressed = Color(0.694961, 0.561446, 1, 1)
-
-[node name="question" type="Node2D"]
-script = ExtResource("1_ket7p")
-field_theme_override = SubResource("Resource_tmcnj")
+[node name="question" type="Node2D" groups=["event"]]
+script = ExtResource("1_314vo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(30, 30)
