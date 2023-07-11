@@ -10,10 +10,6 @@ extends Node
 @onready var hud = $HUD
 
 
-func _init():
-	var question_handler = preload("res://data_providers/resources/question_provider.tres")
-
-
 func _ready():
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 

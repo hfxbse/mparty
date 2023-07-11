@@ -17,9 +17,8 @@ var current_question_index = -1;
 func _init():
 	var questions_from_json = load_json_file(file_path)
 	assert(questions_from_json != null, "No questions found.")
-	for i in range(0, len(questions_from_json)):
-		var question = questions_from_json[str(i)]
-		
+	
+	for question in questions_from_json:
 		var question_obj = Question.new()
 		var difficulty = difficulty_mapping[str(question["difficulty"])]
 		assert(difficulty != null, "Difficulty \"%s\" is not supported." % difficulty)

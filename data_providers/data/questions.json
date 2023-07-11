@@ -1,1587 +1,1587 @@
-{
-  "0": {
-	"answer_possibilities": [
-	  "Als Basis für die Festlegung von Terminen und Deadlines",
-	  "Zur Netzwerkübersicht",
-	  "Für die Planung zur Verlegung von elektrischen Kabeln"
-	],
-	"difficulty": 0,
-	"right_answer": "Als Basis für die Festlegung von Terminen und Deadlines",
-	"text": "Wofür benötigt man einen Netzplan?"
-  },
-  "1": {
-	"answer_possibilities": [
-	  "Die Definition des Projektumfangs",
-	  "Ein Projektarchiv welches alle Projektdokumente beinhaltet",
-	  "Spezielle Art von Teleskop"
-	],
-	"difficulty": 0,
-	"right_answer": "Die Definition des Projektumfangs",
-	"text": "Was ist ein Project-Scope?"
-  },
-  "2": {
-	"answer_possibilities": [
-	  "Gewinn oder Verlust",
-	  "Gewinn",
-	  "Umsatz"
-	],
-	"difficulty": 0,
-	"right_answer": "Gewinn oder Verlust",
-	"text": "Was ist Erfolg?"
-  },
-  "3": {
-	"answer_possibilities": [
-	  "0.45",
-	  "0.42",
-	  "0.39"
-	],
-	"difficulty": 0,
-	"right_answer": "0.45",
-	"text": "Was ist der maximale Steuersatz?"
-  },
-  "4": {
-	"answer_possibilities": [
-	  "Das Verfolgen einer Gewinnerziehlungsabsicht",
-	  "Ein eigenes Haus",
-	  "Volljährigkeit"
-	],
-	"difficulty": 0,
-	"right_answer": "Das Verfolgen einer Gewinnerziehlungsabsicht",
-	"text": "Was ist ein Kriterium für die Selbstständigkeit?"
-  },
-  "5": {
-	"answer_possibilities": [
-	  "Arbeit, Boden, Kapital",
-	  "Arbeitsbegleitkarte",
-	  "Allgemeine Berufsquallifizierende Kompetenzen"
-	],
-	"difficulty": 0,
-	"right_answer": "Arbeit, Boden, Kapital",
-	"text": "Für was steht ABK?"
-  },
-  "6": {
-	"answer_possibilities": [
-	  "Ein Kreislauf von Geld und Gütern",
-	  "Ein Kreislauf von Waren und Dienstleistungen",
-	  "Ein Kreislauf von Angebot und Nachfrage"
-	],
-	"difficulty": 0,
-	"right_answer": "Ein Kreislauf von Geld und Gütern",
-	"text": "Was ist der Wirtschaftskreislauf? "
-  },
-  "7": {
-	"answer_possibilities": [
-	  "Ein Unternehmen, welches seinen Aktionären gehört",
-	  "Ein Unternehmen, das von einer Person oder einer Gruppe von Personen betrieben wird",
-	  "Ein Unternehmen, das von einem oder mehreren Partnern betrieben wird"
-	],
-	"difficulty": 0,
-	"right_answer": "Ein Unternehmen, welches seinen Aktionären gehört",
-	"text": "Was ist eine Aktiengesellschaft (AG)?"
-  },
-  "8": {
-	"answer_possibilities": [
-	  "Ein Zwischenziel oder ein wichtiges Ereigniss im Projektverlauf",
-	  " Ein Zwischenziel im Projektverlauf, welches nicht erreicht werden muss.",
-	  "Ein Ereigniss im Projektverlauf, das übersprungen werden kann. "
-	],
-	"difficulty": 0,
-	"right_answer": "Ein Zwischenziel oder ein wichtiges Ereigniss im Projektverlauf",
-	"text": "Was ist ein Meilenstein? "
-  },
-  "9": {
-	"answer_possibilities": [
-	  "Kommanditgesellschaft",
-	  "OHG",
-	  "EK"
-	],
-	"difficulty": 0,
-	"right_answer": "Kommanditgesellschaft",
-	"text": "Bei welchen Unternehmensrechtsform spricht man von \"Kommanditisten\"?"
-  },
-  "10": {
-	"answer_possibilities": [
-	  "Sozialgesetzbuch",
-	  "Sozial-Grundbuch",
-	  "Schwerer Granitbohrer"
-	],
-	"difficulty": 0,
-	"right_answer": "Sozialgesetzbuch",
-	"text": "Wofür steht SGB?"
-  },
-  "11": {
-	"answer_possibilities": [
-	  "25.000 Euro",
-	  "20.000 Euro",
-	  "es wird keins benötigt"
-	],
-	"difficulty": 0,
-	"right_answer": "25.000 Euro",
-	"text": "Wie hoch ist das Mindeststammkapital um eine GmbH zu gründen?"
-  },
-  "12": {
-	"answer_possibilities": [
-	  "Preis x Absatzmenge",
-	  "Ausgaben x Umsatz",
-	  "Gewinn x Kosten"
-	],
-	"difficulty": 0,
-	"right_answer": "Preis x Absatzmenge",
-	"text": "Wie berechnet sich der Umsatz?"
-  },
-  "13": {
-	"answer_possibilities": [
-	  "Degenerationsphase",
-	  "Reifephase",
-	  "Einführungsphase"
-	],
-	"difficulty": 0,
-	"right_answer": "Degenerationsphase",
-	"text": "Wann spricht man vom \"Tod\" des Produkts? "
-  },
-  "14": {
-	"answer_possibilities": [
-	  "Personen die Aktien von dem Unternehmen besitzen",
-	  "Personen die im Unternehmen arbeiten",
-	  "Personen die das Unternehmen leiten"
-	],
-	"difficulty": 0,
-	"right_answer": "Personen die Aktien von dem Unternehmen besitzen",
-	"text": "Was sind Shareholder?"
-  },
-  "15": {
-	"answer_possibilities": [
-	  "Produkt, Preis, Platz, Promotion",
-	  "Pampelmuse, Project, Pinienzapfen, Pups",
-	  "Projekt, Preis, Prozent, Präzise"
-	],
-	"difficulty": 0,
-	"right_answer": "Produkt, Preis, Platz, Promotion",
-	"text": "Was sind die 4Ps des Marketings?"
-  },
-  "16": {
-	"answer_possibilities": [
-	  "Judikative, Exekutive, Legislative",
-	  "Präsident, Kanzler, Parlament",
-	  "Bundestag, Bundesrat, Landtage"
-	],
-	"difficulty": 0,
-	"right_answer": "Judikative, Exekutive, Legislative",
-	"text": "Welche Aufteilung entsteht durch die Gewaltenteilung des Staats?"
-  },
-  "17": {
-	"answer_possibilities": [
-	  "nominal 1€",
-	  "2",
-	  "Geld"
-	],
-	"difficulty": 0,
-	"right_answer": "nominal 1€",
-	"text": "Was ist 1€?"
-  },
-  "18": {
-	"answer_possibilities": [
-	  "Verzicht auf Konsum",
-	  "Geld investieren",
-	  "Geld spenden"
-	],
-	"difficulty": 0,
-	"right_answer": "Verzicht auf Konsum",
-	"text": "Was bedeutet sparen?"
-  },
-  "19": {
-	"answer_possibilities": [
-	  "Gefühl des Mangels und Absicht es zu beseitigen",
-	  "Man benötigt Luxus",
-	  "Es fehlt etwas und man möchte es haben"
-	],
-	"difficulty": 0,
-	"right_answer": "Gefühl des Mangels und Absicht es zu beseitigen",
-	"text": "Was ist ein Bedürfniss?"
-  },
-  "20": {
-	"answer_possibilities": [
-	  "Gehalt & Lohn",
-	  "Geld & Verdienst",
-	  "Provision & Vergütung"
-	],
-	"difficulty": 0,
-	"right_answer": "Gehalt & Lohn",
-	"text": "Was ist ein Entgeld für Arbeit?"
-  },
-  "21": {
-	"answer_possibilities": [
-	  "Miete & Pacht",
-	  "Gehalt & Lohn",
-	  "Verpflegung & Ausgleich"
-	],
-	"difficulty": 0,
-	"right_answer": "Miete & Pacht",
-	"text": "Was ist ein Entgeld für zur Verfügung gestellten Boden?"
-  },
-  "22": {
-	"answer_possibilities": [
-	  "Zinsen & Abschreibung",
-	  "Provision & Vergütung",
-	  "Gehalt & Lohn"
-	],
-	"difficulty": 0,
-	"right_answer": "Zinsen & Abschreibung",
-	"text": "Was ist ein Entgeld für Kapital?"
-  },
-  "23": {
-	"answer_possibilities": [
-	  "Generationsphase",
-	  "Degenerationsphase",
-	  "Wachstumsphase"
-	],
-	"difficulty": 0,
-	"right_answer": "Generationsphase",
-	"text": "Was ist keine Phase des Produktlebenszyklus?"
-  },
-  "24": {
-	"answer_possibilities": [
-	  "Es muss schonmal durchgeführt worden sein",
-	  "Definiertes Ziel",
-	  "feste Deadline"
-	],
-	"difficulty": 0,
-	"right_answer": "Es muss schonmal durchgeführt worden sein",
-	"text": "Was ist kein Kriterium, dass eine Aufgabe ein Projekt ist?"
-  },
-  "25": {
-	"answer_possibilities": [
-	  "Kosten, Umfang, Zeitplan, Qualität",
-	  "spezifisch, messbar, erreichbar, relevant, zeitlich befristet",
-	  "Performance, Teamwork, Zeitmanagment"
-	],
-	"difficulty": 0,
-	"right_answer": "Kosten, Umfang, Zeitplan, Qualität",
-	"text": "Was sind die Ecksteine des Projektmanagments?"
-  },
-  "26": {
-	"answer_possibilities": [
-	  "Quantität",
-	  "Fortlaufende Verbesserungen",
-	  "Qualitätskontrolle"
-	],
-	"difficulty": 0,
-	"right_answer": "Quantität",
-	"text": "Was gehört nicht zum Qualitätsmanagment?"
-  },
-  "27": {
-	"answer_possibilities": [
-	  "Identifizieren, Analysieren, Reagieren, Dokumentieren",
-	  "Planen, Organisieren, Kontrollieren, Abschließen",
-	  "Sehen, Handeln"
-	],
-	"difficulty": 0,
-	"right_answer": "Identifizieren, Analysieren, Reagieren, Dokumentieren",
-	"text": "Welche Schritte gehören zum Risikomanagmentprozess?"
-  },
-  "28": {
-	"answer_possibilities": [
-	  "Wahrscheinlichkeit & Auswirkung",
-	  "Graviertheit & Aufwand",
-	  "Chance & Analyse"
-	],
-	"difficulty": 0,
-	"right_answer": "Wahrscheinlichkeit & Auswirkung",
-	"text": "Welche Achsenbeschriftungen gibt es auf einer Matrix zum einschätzen von Risiko?"
-  },
-  "29": {
-	"answer_possibilities": [
-	  "Einschätzen",
-	  "Wissen",
-	  "Alles auf eine Karte setzten"
-	],
-	"difficulty": 0,
-	"right_answer": "Einschätzen",
-	"text": "Was kann man mit Risiken machen?"
-  },
-  "30": {
-	"answer_possibilities": [
-	  "Streuen der Produktrisiken",
-	  "Verschiedene Projekte",
-	  "Streuung der Arbeitslast"
-	],
-	"difficulty": 0,
-	"right_answer": "Streuen der Produktrisiken",
-	"text": "Was ist Diversifkation?"
-  },
-  "31": {
-	"answer_possibilities": [
-	  "Produkt 1 steht neben Produkt 2",
-	  "Produkt 1 ist unabhängig von Produkt 2",
-	  "Produkt 1 erweiert Produkt 2"
-	],
-	"difficulty": 0,
-	"right_answer": "Produkt 1 steht neben Produkt 2",
-	"text": "Was ist die horizontale Diversifikation?"
-  },
-  "32": {
-	"answer_possibilities": [
-	  "field research",
-	  "desktopresearch",
-	  "keyboardresearch"
-	],
-	"difficulty": 0,
-	"right_answer": "field research",
-	"text": "Wie wird die Primärforschung noch genannt?"
-  },
-  "33": {
-	"answer_possibilities": [
-	  "desktopresearch",
-	  "fieldresearch",
-	  "keyboardresearch"
-	],
-	"difficulty": 0,
-	"right_answer": "desktopresearch",
-	"text": "Wie wird die Sekundärforschung noch genannt?"
-  },
-  "34": {
-	"answer_possibilities": [
-	  "mit potenziellen Kunden ins Gespräch gehen",
-	  "der Chef geht auf die Mitarbeiter zu",
-	  "Gespräche werden vermieden"
-	],
-	"difficulty": 0,
-	"right_answer": "mit potenziellen Kunden ins Gespräch gehen",
-	"text": "Was versteht man unter dialogorientiertem Marketing?"
-  },
-  "35": {
-	"answer_possibilities": [
-	  "Das Produkt wird nach den Vorstellungen der Mitarbeiter gerichtet",
-	  "mit potenziellen Kunden ins Gespräch gehen",
-	  "es werden Mitarbeiter entlassen"
-	],
-	"difficulty": 0,
-	"right_answer": "Das Produkt wird nach den Vorstellungen der Mitarbeiter gerichtet",
-	"text": "Was versteht man unter mitarbeiterorientiertem Marketing?"
-  },
-  "36": {
-	"answer_possibilities": [
-	  "Ein Produkt mit geringem Marktwachstum und geringem Martkanteil",
-	  "Ein Produkt mit geringem Marktwachstum und hohem Martkanteil",
-	  "Ein Produkt mit hohem Marktwachstum und hohem Martkanteil"
-	],
-	"difficulty": 0,
-	"right_answer": "Ein Produkt mit geringem Marktwachstum und geringem Martkanteil",
-	"text": "Was ist ein poor dog?"
-  },
-  "37": {
-	"answer_possibilities": [
-	  "Ein Produkt mit geringem Marktwachstum und hohem Martkanteil",
-	  "Ein Produkt mit geringem Marktwachstum und geringem Martkanteil",
-	  "Ein Produkt mit hohem Marktwachstum und hohem martkanteil"
-	],
-	"difficulty": 0,
-	"right_answer": "Ein Produkt mit geringem Marktwachstum und hohem Martkanteil",
-	"text": "Was ist eine cash cow?"
-  },
-  "38": {
-	"answer_possibilities": [
-	  "1 % des Fahrzeugsneupreis",
-	  "0.5 % des Fahrzeugsneupreis",
-	  "1.5 % des Fahrzeugsneupreis"
-	],
-	"difficulty": 0,
-	"right_answer": "1 % des Fahrzeugsneupreis",
-	"text": "Wie hoch ist die Versteuerung eines Leasingfirmenwagens mit Verbrennungsmotor?"
-  },
-  "39": {
-	"answer_possibilities": [
-	  "0.5 % des Fahrzeugsneupreis",
-	  "1 % des Fahrzeugsneupreis",
-	  "1.5 % des Fahrzeugsneupreis"
-	],
-	"difficulty": 0,
-	"right_answer": "0.5 % des Fahrzeugsneupreis",
-	"text": "Wie hoch ist die Versteuerung eines Leasingfirmenwagens mit Elektromotor?"
-  },
-  "40": {
-	"answer_possibilities": [
-	  "5",
-	  "3",
-	  "4"
-	],
-	"difficulty": 0,
-	"right_answer": "5",
-	"text": "Wie viele Phasen hat der Marktzyklus?"
-  },
-  "41": {
-	"answer_possibilities": [
-	  "Verlust",
-	  "Investment",
-	  "Gewinn"
-	],
-	"difficulty": 0,
-	"right_answer": "Verlust",
-	"text": "Wovon spricht man, wenn die Kosten höher als die Einnahmen sind?"
-  },
-  "42": {
-	"answer_possibilities": [
-	  "ja",
-	  "nein",
-	  "fast"
-	],
-	"difficulty": 0,
-	"right_answer": "ja",
-	"text": "Ist die Markterkundung dasselbe wie die Marktforschung?"
-  },
-  "43": {
-	"answer_possibilities": [
-	  "KG",
-	  "e.K.",
-	  "GmbH"
-	],
-	"difficulty": 0,
-	"right_answer": "KG",
-	"text": "Was ist eine Sonderform der OHG?"
-  },
-  "44": {
-	"answer_possibilities": [
-	  "das Produkt",
-	  "die Zeit",
-	  "Schulden"
-	],
-	"difficulty": 0,
-	"right_answer": "das Produkt",
-	"text": "Was ist das größte Risiko während der Marktphase?"
-  },
-  "45": {
-	"answer_possibilities": [
-	  "Es gibt nur einen Nachfrager und viele Anbieter",
-	  "Es gibt nur einen Anbieter und viele Nachfrager",
-	  "Es gibt nur einen Anbieter und wenig Nachfrager"
-	],
-	"difficulty": 0,
-	"right_answer": "Es gibt nur einen Nachfrager und viele Anbieter",
-	"text": "Was ist ein Nachfragemonopol?"
-  },
-  "46": {
-	"answer_possibilities": [
-	  "Es gilt die doppelte Buchführung",
-	  "Die doppelte Buchführung gilt nicht",
-	  "Man braucht eine Firma"
-	],
-	"difficulty": 0,
-	"right_answer": "Es gilt die doppelte Buchführung",
-	"text": "Welchen Nachteil hat man als Händler im HGB?"
-  },
-  "47": {
-	"answer_possibilities": [
-	  "Einzelkaufmann",
-	  "Eingetragener Käufer",
-	  "Eingetragener Kunde"
-	],
-	"difficulty": 0,
-	"right_answer": "Einzelkaufmann",
-	"text": "Wofür steht die Abkürzung e.k.?"
-  },
-  "48": {
-	"answer_possibilities": [
-	  "Anzeigen in einer Zeitschrift schalten",
-	  "Erstellung einer Satzung",
-	  "Eintragung ins Handelsregister"
-	],
-	"difficulty": 0,
-	"right_answer": "Anzeigen in einer Zeitschrift schalten",
-	"text": "Welche Schritte sind im Gründungsfahrplan einer GmbH nicht enthalten?"
-  },
-  "49": {
-	"answer_possibilities": [
-	  "die Hauptursache der Kostenüberschreitung",
-	  "der Bereich in dem Creeper explodieren",
-	  "die Ursache weshalb das Projekt nicht mehr läuft"
-	],
-	"difficulty": 0,
-	"right_answer": "die Hauptursache der Kostenüberschreitung",
-	"text": "Was ist ein Creeping Scope?"
-  },
-  "50": {
-	"answer_possibilities": [
-	  "Zeitdruck",
-	  "Eine gute Definition",
-	  "Eine sinnvolle Erreichbarkeit"
-	],
-	"difficulty": 0,
-	"right_answer": "Zeitdruck",
-	"text": "Welche Richtlinie ist kein guter Indikator für ein Projektumfang?"
-  },
-  "51": {
-	"answer_possibilities": [
-	  "Management Risk",
-	  "Strategic Risk",
-	  "Operational Risk"
-	],
-	"difficulty": 0,
-	"right_answer": "Management Risk",
-	"text": "Was ist kein Risikotyp im Projektmanagement?"
-  },
-  "52": {
-	"answer_possibilities": [
-	  "(mindestens) zwei Personen haften",
-	  "Nur ein eine Person haftet",
-	  "Niemand haftet"
-	],
-	"difficulty": 0,
-	"right_answer": "(mindestens) zwei Personen haften",
-	"text": "Was bedeutet \"Gesamtschuldnerisch\" im Kontext der Rechtsformen?"
-  },
-  "53": {
-	"answer_possibilities": [
-	  "Den Kunden in den Mittelpunkt zu rücken",
-	  "Das Produkt erfolgreich zu gestalten",
-	  "Die Mitarbeiter mit einbeziehen"
-	],
-	"difficulty": 0,
-	"right_answer": "Den Kunden in den Mittelpunkt zu rücken",
-	"text": "Was ist ein Ziel von Marketing?"
-  },
-  "54": {
-	"answer_possibilities": [
-	  "Maß wie groß der Markt ist",
-	  "Umfang des Marktes",
-	  "Fläche des Marktes"
-	],
-	"difficulty": 0,
-	"right_answer": "Maß wie groß der Markt ist",
-	"text": "Was heißt Marktvolumen?"
-  },
-  "55": {
-	"answer_possibilities": [
-	  "maximal erzielbare Umsatzmenge",
-	  "Höhe des maximalen Gewinns",
-	  "der vergangene Marktzuwachs"
-	],
-	"difficulty": 0,
-	"right_answer": "maximal erzielbare Umsatzmenge",
-	"text": "Was heißt Marktpotential?"
-  },
-  "56": {
-	"answer_possibilities": [
-	  "eindeutiges Gut",
-	  "kein eindeutiges Gut",
-	  "mehrere Güter"
-	],
-	"difficulty": 0,
-	"right_answer": "eindeutiges Gut",
-	"text": "Was ist eine Grundvoraussetzung für den vollkommenden Markt?"
-  },
-  "57": {
-	"answer_possibilities": [
-	  "zwei unterschiedliche Interessen herrschen",
-	  "keine Interessen sind vorhanden",
-	  "es herrscht eine Macht"
-	],
-	"difficulty": 0,
-	"right_answer": "zwei unterschiedliche Interessen herrschen",
-	"text": "Was ist eine Grundvoraussetzung für den vollkommenden Markt?"
-  },
-  "58": {
-	"answer_possibilities": [
-	  "Modell des vollkommenden Marktes",
-	  "Inselmodell",
-	  "Modell der Monarchie"
-	],
-	"difficulty": 0,
-	"right_answer": "Modell des vollkommenden Marktes",
-	"text": "In welchem Modell wird die Macht ausgeschlossen?"
-  },
-  "59": {
-	"answer_possibilities": [
-	  "Bürgerliches Gesetzbuch",
-	  "Bundes-Gesellschaftler-Buch",
-	  "Berliner Großbereitschaft"
-	],
-	"difficulty": 0,
-	"right_answer": "Bürgerliches Gesetzbuch",
-	"text": "Wofür steht BGB?"
-  },
-  "60": {
-	"answer_possibilities": [
-	  "Gewinnerzielung",
-	  "Investment",
-	  "Liebheaberei"
-	],
-	"difficulty": 0,
-	"right_answer": "Gewinnerzielung",
-	"text": "Welche primäre Absicht verfolgt die Selbstständigkeit?"
-  },
-  "61": {
-	"answer_possibilities": [
-	  "Direkte und Indirekte Kosten",
-	  "Material und Nutzungskosten",
-	  "Aus einer Gewinn- und Verlustrechnung"
-	],
-	"difficulty": 0,
-	"right_answer": "Direkte und Indirekte Kosten",
-	"text": "Wie setzt sich die Teilkostenrechnung zusammen?"
-  },
-  "62": {
-	"answer_possibilities": [
-	  "Einzelkosten im Produkt",
-	  "Kosten welche sofort bezahlt werden",
-	  "Kosten welche erst später bezahlt werden"
-	],
-	"difficulty": 0,
-	"right_answer": "Einzelkosten im Produkt",
-	"text": "Was sind direkte Kosten?"
-  },
-  "63": {
-	"answer_possibilities": [
-	  "Gemeinkosten im Betrieb",
-	  "Kosten welche sofort bezahlt werden",
-	  "Kosten welche erst später bezahlt werden"
-	],
-	"difficulty": 0,
-	"right_answer": "Gemeinkosten im Betrieb",
-	"text": "Was sind indirekte Kosten?"
-  },
-  "64": {
-	"answer_possibilities": [
-	  "6",
-	  "1",
-	  "3"
-	],
-	"difficulty": 0,
-	"right_answer": "6",
-	"text": "Welche Steuerklasse wird am stärksten versteuert?"
-  },
-  "65": {
-	"answer_possibilities": [
-	  "Personal",
-	  "Produkt",
-	  "Promotion",
-	  "Preis"
-	],
-	"difficulty": 1,
-	"right_answer": "Personal",
-	"text": "Was ist kein Bestandteil des Marketing-Mix?"
-  },
-  "66": {
-	"answer_possibilities": [
-	  "Spezifisch",
-	  "Sportlich",
-	  "Selbstreflektion",
-	  "Satzung"
-	],
-	"difficulty": 1,
-	"right_answer": "Spezifisch",
-	"text": "Wofür steht das S in der S.M.A.R.T. Regel?"
-  },
-  "67": {
-	"answer_possibilities": [
-	  "Messbar",
-	  "Management",
-	  "Maß",
-	  "Mehrwert"
-	],
-	"difficulty": 1,
-	"right_answer": "Messbar",
-	"text": "Wofür steht das M in der S.M.A.R.T. Regel?"
-  },
-  "68": {
-	"answer_possibilities": [
-	  "Pfad aller Teilaufgaben, welche keinen zeitlichen Puffer haben",
-	  "Ist der Teil des Netzwerks, in dem die Verbindung am anfälligsten ist",
-	  "Der Bereich in dem alle Dokumente mit dem Status \"kritisch\" hinterlegt sind",
-	  "Der Pfad wenn keine Mitarbeiter mehr zu Verfügung stehen"
-	],
-	"difficulty": 1,
-	"right_answer": "Pfad aller Teilaufgaben, welche keinen zeitlichen Puffer haben",
-	"text": "Was ist der kritische Pfad eines Netzplans?"
-  },
-  "69": {
-	"answer_possibilities": [
-	  "Puffer, bevor der unmittelbar folgende Prozessschritt beinflusst wird",
-	  "Kostenlose Ressourcen für das Projektteam",
-	  "Die Zeit, welche für das Projektteam als Freizeit eingeplant ist",
-	  "Ein Bereich, der für unerwartete Ausgaben reserviert ist"
-	],
-	"difficulty": 1,
-	"right_answer": "Puffer, bevor der unmittelbar folgende Prozessschritt beinflusst wird",
-	"text": "Was ist ein freier Puffer im Netzplan?"
-  },
-  "70": {
-	"answer_possibilities": [
-	  "Puffer, bevor der pünktliche Abschluss des Gesamtprozesses gefährdet wird",
-	  "Die Gesamtzahl der arbeitsfreien Stunden für die Projektmitarbeiter",
-	  "Ein Bereich, der für unerwartete Ausgaben reserviert ist",
-	  "Gesamtzahl aller Puffer"
-	],
-	"difficulty": 1,
-	"right_answer": "Puffer, bevor der pünktliche Abschluss des Gesamtprozesses gefährdet wird",
-	"text": "Was ist ein Gesamtpuffer im Netzplan?"
-  },
-  "71": {
-	"answer_possibilities": [
-	  "Haushalte, Unternehmen, Staat, Ausland ",
-	  "Haushalte, Staat, Ausland",
-	  "Haushalte, Unternehmen, Banken",
-	  "Unternehmen, Staat, Banken "
-	],
-	"difficulty": 1,
-	"right_answer": "Haushalte, Unternehmen, Staat, Ausland ",
-	"text": "Welche Akteure sind im Wirtschaftskreislauf vertreten? "
-  },
-  "72": {
-	"answer_possibilities": [
-	  "Die Anzahl der Anbieter",
-	  "Die Art der Werbung",
-	  "Die Anzahl der Mitarbeiter",
-	  "Die Art der Produkte"
-	],
-	"difficulty": 1,
-	"right_answer": "Die Anzahl der Anbieter",
-	"text": "Was ist der Unterschied zwischen einem Oligopol und einem Polypol?"
-  },
-  "73": {
-	"answer_possibilities": [
-	  "Marktform mit wenigen Anbietern und vielen Nachfragern",
-	  "Marktform mit vielen Anbietern und vielen Nachfragern",
-	  "Marktform mit einem Nachfrager und vielen Anbietern",
-	  "Marktform mit einem Anbieter und vielen Nachfragern"
-	],
-	"difficulty": 1,
-	"right_answer": "Marktform mit wenigen Anbietern und vielen Nachfragern",
-	"text": "Was ist ein Angebotsoligopol?"
-  },
-  "74": {
-	"answer_possibilities": [
-	  "Ein Unternehmen, dass von einer Person oder einer Gruppe von Personen betrieben wird",
-	  "Ein Unternehmen, dass von einer Regierung betrieben wird",
-	  "Ein Unternehmen, das von einem oder mehreren Partnern betrieben wird",
-	  "Ein Unternehmen, das von seinen Aktionären betrieben wird"
-	],
-	"difficulty": 1,
-	"right_answer": "Ein Unternehmen, dass von einer Person oder einer Gruppe von Personen betrieben wird",
-	"text": "Welche Art von Unternehmen ist ein Einzelunternehmen?"
-  },
-  "75": {
-	"answer_possibilities": [
-	  "Ein Darlehen, bei dem die Tilgung und die Zinsen während der Laufzeit gezahlt werden",
-	  "Ein Darlehen, bei dem die Tilgung am Ende der Laufzeit gezahlt wird",
-	  "Ein Darlehen, bei dem die Tilgung und die Zinsen am Ende der Laufzeit gezahlt werden",
-	  "Ein Darlehen, bei dem die Zinsen während der Laufzeit gezahlt werden"
-	],
-	"difficulty": 1,
-	"right_answer": "Ein Darlehen, bei dem die Tilgung und die Zinsen während der Laufzeit gezahlt werden",
-	"text": "Was ist ein Tilgungsdarlehen? "
-  },
-  "76": {
-	"answer_possibilities": [
-	  "Eine Sicherheit in Form einer Garantie durch eine dritte Person",
-	  "Eine Sicherheit in Form von Bargeld",
-	  "Eine Sicherheit in Form von Aktien",
-	  "Eine Sicherheit in Form von Immobilien"
-	],
-	"difficulty": 1,
-	"right_answer": "Eine Sicherheit in Form einer Garantie durch eine dritte Person",
-	"text": "Was ist mit einer Bürgschaft gemeint? "
-  },
-  "77": {
-	"answer_possibilities": [
-	  "Eine Sicherheit in Form von Immobilien",
-	  "Eine Sicherheit in Form von Bargeld",
-	  "Eine Sicherheit in Form von Aktien",
-	  "Eine Sicherheit in Form einer Garantie durch eine dritte Person"
-	],
-	"difficulty": 1,
-	"right_answer": "Eine Sicherheit in Form von Immobilien",
-	"text": "Was ist eine Hypothek? "
-  },
-  "78": {
-	"answer_possibilities": [
-	  "Eine Person oder Organisation, die vom Projekt betroffen ist",
-	  "Eine Person oder Organisation, die das Projekt überwacht",
-	  "Eine Person oder Organisation, die das Projekt durchführt",
-	  "Eine Person oder Organisation, die das Projekt finanziert"
-	],
-	"difficulty": 1,
-	"right_answer": "Eine Person oder Organisation, die vom Projekt betroffen ist",
-	"text": "Was ist ein Stakeholder? "
-  },
-  "79": {
-	"answer_possibilities": [
-	  "Wachstumsphase",
-	  "Reifephase",
-	  "Einführungsphase",
-	  "Degenerationsphase"
-	],
-	"difficulty": 1,
-	"right_answer": "Wachstumsphase",
-	"text": "Am Ende welcher Phase wird das Gewinnmaximum erreicht?"
-  },
-  "80": {
-	"answer_possibilities": [
-	  "Vermögensänderung",
-	  "Haushalt",
-	  "Unternehmen",
-	  "keine"
-	],
-	"difficulty": 1,
-	"right_answer": "Vermögensänderung",
-	"text": "Welche Rolle spielen Banken im Witschaftskreislauf?"
-  },
-  "81": {
-	"answer_possibilities": [
-	  "keins notwenig",
-	  "10.000 Euro",
-	  "1.000 Euro pro Gründer",
-	  "25.000 Euro"
-	],
-	"difficulty": 1,
-	"right_answer": "keins notwenig",
-	"text": "Wie hoch ist das Mindeststammkapital um eine OhG zu gründen?"
-  },
-  "82": {
-	"answer_possibilities": [
-	  "Aktionäre",
-	  "Kommanditisten",
-	  "Komplementäre",
-	  "Gesellschafler"
-	],
-	"difficulty": 1,
-	"right_answer": "Aktionäre",
-	"text": "Welche Gruppe sind die Kapitalgeber bei der Gründung einer AG?"
-  },
-  "83": {
-	"answer_possibilities": [
-	  "50.000 Euro",
-	  "100.000 Euro",
-	  "25.000 Euro",
-	  "keins benötigt"
-	],
-	"difficulty": 1,
-	"right_answer": "50.000 Euro",
-	"text": "Wie hoch muss das Grundkapital für die Gründung einer AG sein?"
-  },
-  "84": {
-	"answer_possibilities": [
-	  "Optimale Machinenbelegung",
-	  "Lange Kaffeepausen",
-	  "Geringer Transportaufwand",
-	  "kurze Durchlaufzeiten"
-	],
-	"difficulty": 1,
-	"right_answer": "Optimale Machinenbelegung",
-	"text": "Was sind Vorteile der Werkstattfertigung?"
-  },
-  "85": {
-	"answer_possibilities": [
-	  "Staatsbürger, Staatsgebiet, Staatsgrenze, Verfassung",
-	  "Parlament, Präsident, Wahlen",
-	  "Bürger, Gebiet, Politische Institutionen",
-	  "Internationale Anerkennung, Festgelgtes Gebiet"
-	],
-	"difficulty": 1,
-	"right_answer": "Staatsbürger, Staatsgebiet, Staatsgrenze, Verfassung",
-	"text": "Welche Bestandteile braucht jeder Staat?"
-  },
-  "86": {
-	"answer_possibilities": [
-	  "Arbeit, Boden, Kapital",
-	  "Sachen, Dienste, Rechte",
-	  "Investments, Unterstützung, Abgaben",
-	  "Haushalt, Unternehmen, Staat"
-	],
-	"difficulty": 1,
-	"right_answer": "Arbeit, Boden, Kapital",
-	"text": "Was sind die drei Arten von Produktionsfaktoren?"
-  },
-  "87": {
-	"answer_possibilities": [
-	  "Gebühren haben eine konkrete Gegenleistung, Steuern nicht",
-	  "Steuern fallen regelmäßg an, Gebühren wenn man etwas falsch macht",
-	  "Steuern haben eine Gegenleistung, Gebühren nicht",
-	  "Es ist das gleiche (kein Unterschied)"
-	],
-	"difficulty": 1,
-	"right_answer": "Gebühren haben eine konkrete Gegenleistung, Steuern nicht",
-	"text": "Was ist der Unterschied zwischen Steuer und Gebühr?"
-  },
-  "88": {
-	"answer_possibilities": [
-	  "Sachziele, Terminziele, Kostenziele",
-	  "Standardziele, Innovationsziele, Entwicklungsziele",
-	  "Bedienungsfreundlichkeit, Sicherheit, Zuverlässigkeit",
-	  "Spezifische, Messbare, Aktzeptierbare, Realistische, Zeitgebundene Ziele"
-	],
-	"difficulty": 1,
-	"right_answer": "Sachziele, Terminziele, Kostenziele",
-	"text": "Welche Beurteilungskriterien gibt es für den Erfolg eines Projekts?"
-  },
-  "89": {
-	"answer_possibilities": [
-	  "Günstig",
-	  "Zeitgebunden",
-	  "Realismus",
-	  "Zuweisbar"
-	],
-	"difficulty": 1,
-	"right_answer": "Günstig",
-	"text": "Was gehört nicht zu den S.M.A.R.T.?"
-  },
-  "90": {
-	"answer_possibilities": [
-	  "Relevanz",
-	  "Geschrieben",
-	  "Klar verstanden",
-	  "Genau definiert"
-	],
-	"difficulty": 1,
-	"right_answer": "Relevanz",
-	"text": "Was ist keins der vier Gebote für gutes Projekt Scope?"
-  },
-  "91": {
-	"answer_possibilities": [
-	  "Definieren, Planen, Organiesieren, Kontrollieren, Abschließen",
-	  "Kosten, Umfang, Zeitplan, Qualität",
-	  "Spezifischy, Messbar, Erreichbar, Relevanz, Zeitgebunden",
-	  "Übersicht, Pfad, Beschreiben, Berichten, Überprüfen"
-	],
-	"difficulty": 1,
-	"right_answer": "Definieren, Planen, Organiesieren, Kontrollieren, Abschließen",
-	"text": "Was sind die Phasen des Projektmanagment?"
-  },
-  "92": {
-	"answer_possibilities": [
-	  "Kostenausgleich",
-	  "Abnahme durch Kunde",
-	  "Abschlussbericht",
-	  "Prüfung nach der Umsetzung"
-	],
-	"difficulty": 1,
-	"right_answer": "Kostenausgleich",
-	"text": "Was ist kein Teil des Projektabschlusses?"
-  },
-  "93": {
-	"answer_possibilities": [
-	  "cash cow",
-	  "Star",
-	  "poor dog",
-	  "Questionmark"
-	],
-	"difficulty": 1,
-	"right_answer": "cash cow",
-	"text": "Was ist dein Portfolio, wenn das Marktwachstum und Marktanteil hoch ist?"
-  },
-  "94": {
-	"answer_possibilities": [
-	  "Innvation, Variation, Elimination",
-	  "Forschung, Produktion, Verkauf",
-	  "Marktanalyse, Marketing",
-	  "vermarktetes Gut"
-	],
-	"difficulty": 1,
-	"right_answer": "Innvation, Variation, Elimination",
-	"text": "Was heißt Produkt?"
-  },
-  "95": {
-	"answer_possibilities": [
-	  "Verschiedene Biersorten anbieten",
-	  "Verschieden farbige Autos",
-	  "Bier und Bomben verkaufen",
-	  "Diverse Mitarbeiter haben"
-	],
-	"difficulty": 1,
-	"right_answer": "Verschiedene Biersorten anbieten",
-	"text": "Was ist eine Vertikale Diversifikation?"
-  },
-  "96": {
-	"answer_possibilities": [
-	  "Erweiterung eines Produkts durch mehrere Varianten",
-	  "Änderung der technischen Eigenschaften eines Produktes",
-	  "Produkt 1 steht neben Produkt 2",
-	  "Produkt 1 hat nichts mit Produkt 2 zutun"
-	],
-	"difficulty": 1,
-	"right_answer": "Erweiterung eines Produkts durch mehrere Varianten",
-	"text": "Was meint Produktvariation?"
-  },
-  "97": {
-	"answer_possibilities": [
-	  "Änderung der technischen Eigenschaften eines Produktes um sich abzuheben",
-	  "Erweiterung eines Produkts durch mehrere Varianten",
-	  "Produkt 1 hat nichts mit Produkt 2 zutun",
-	  "Produkt 1 steht neben Produkt 2"
-	],
-	"difficulty": 1,
-	"right_answer": "Änderung der technischen Eigenschaften eines Produktes um sich abzuheben",
-	"text": "Was meint die Produktdifferenzierung?"
-  },
-  "98": {
-	"answer_possibilities": [
-	  "Verteilung von Risiko",
-	  "Verlustanalyse",
-	  "Forschungsplan",
-	  "Geldanlage"
-	],
-	"difficulty": 1,
-	"right_answer": "Verteilung von Risiko",
-	"text": "Was ist ein Portfolio?"
-  },
-  "99": {
-	"answer_possibilities": [
-	  "Konkurenz",
-	  "Geldfluss",
-	  "Umsatz",
-	  "Marktkarte"
-	],
-	"difficulty": 1,
-	"right_answer": "Konkurenz",
-	"text": "Woran orientiert man sich auf dem Markt?"
-  },
-  "100": {
-	"answer_possibilities": [
-	  "5",
-	  "3",
-	  "2",
-	  "4"
-	],
-	"difficulty": 1,
-	"right_answer": "5",
-	"text": "Nach wie vielen gewinnlosen Jahren zählt die Selbstständigkeit als Liebhaberei?"
-  },
-  "101": {
-	"answer_possibilities": [
-	  "Heterogenes Gut",
-	  "Homogenes Gut",
-	  "Angebot und Nachfrage",
-	  "Ausgeschlossene Präferenzen"
-	],
-	"difficulty": 1,
-	"right_answer": "Heterogenes Gut",
-	"text": "Welches ist kein Grundsatz eines vollkommenen Marktes?"
-  },
-  "102": {
-	"answer_possibilities": [
-	  "Moderne Präferenz",
-	  "Zeitliche Präferenz",
-	  "Räumliche Präferenz",
-	  "Persönliche Präferenz"
-	],
-	"difficulty": 1,
-	"right_answer": "Moderne Präferenz",
-	"text": "Was ist keine Präferenz?"
-  },
-  "103": {
-	"answer_possibilities": [
-	  "Es gibt wenige Anbieter und ein Nachfrager",
-	  "Es gibt ein Anbieter und wenig Nachfrager",
-	  "Es gibt wenig Anbieter und wenig Nachfrager",
-	  "Es gibt wenig Anbieter und viele Nachfrager"
-	],
-	"difficulty": 1,
-	"right_answer": "Es gibt wenige Anbieter und ein Nachfrager",
-	"text": "Was ist ein beschränktes Nachfragemonopol?"
-  },
-  "104": {
-	"answer_possibilities": [
-	  "Immobil = Haus und Mobil = Auto",
-	  "Immobil = Bewegungseinschränkung und Mobil = Hilfsmittel",
-	  "Immobil = Computer und Mobil = Smartphone",
-	  "Immobil = Bürgschaft und Mobil = Smartphone"
-	],
-	"difficulty": 1,
-	"right_answer": "Immobil = Haus und Mobil = Auto",
-	"text": "Was ist der Unterschied zwischen Immobil und Mobil bezogen auf die Sicherheit eines Kredits?"
-  },
-  "105": {
-	"answer_possibilities": [
-	  "Wenn der Projektumfang schlecht gesetzt, dokumentiert oder kontrolliert worden ist",
-	  "Wenn man den Creeper schlecht einschätzt",
-	  "Durch eine schlechte Planung",
-	  "Durch eine gute Planung"
-	],
-	"difficulty": 1,
-	"right_answer": "Wenn der Projektumfang schlecht gesetzt, dokumentiert oder kontrolliert worden ist",
-	"text": "Wie geschieht ein Creeping Scope?"
-  },
-  "106": {
-	"answer_possibilities": [
-	  "Ein Sondermietvertrag",
-	  "Ein Sonderfinanzierungsvertrag",
-	  "Ein Kaufvertrag",
-	  "Ein Mietvertrag"
-	],
-	"difficulty": 1,
-	"right_answer": "Ein Sondermietvertrag",
-	"text": "Was ist Leasing nach dem Steuerrecht?"
-  },
-  "107": {
-	"answer_possibilities": [
-	  "Identifizieren, Analysieren, Reagieren, Dokumentieren",
-	  "Dokumentieren, Analysieren, Reagieren, Identifizieren",
-	  "Umsetzen, Eskalieren, Reagieren, Dokumentieren",
-	  "Identifizieren, Reagieren, Dokumentieren"
-	],
-	"difficulty": 1,
-	"right_answer": "Identifizieren, Analysieren, Reagieren, Dokumentieren",
-	"text": "Mit welcher Reihenfolge geht man mit Risiken um?"
-  },
-  "108": {
-	"answer_possibilities": [
-	  "Den Preis nach oben zu testen",
-	  "Den Markt zu führen",
-	  "Konkurenten zu entfernen",
-	  "andere Produkte zu vermarkten"
-	],
-	"difficulty": 1,
-	"right_answer": "Den Preis nach oben zu testen",
-	"text": "Was ist die Aufgabe des Marktführers?"
-  },
-  "109": {
-	"answer_possibilities": [
-	  "Kapitaleinlagen der Gesellschafter einer Kapitalgesellschaft",
-	  "Vermögen des Gesellschafters",
-	  "Geldmittel, die von einer Behörde für ein Projekt bereitgestellt werden",
-	  "Zahlungen an Aktionäre als Dividenden"
-	],
-	"difficulty": 1,
-	"right_answer": "Kapitaleinlagen der Gesellschafter einer Kapitalgesellschaft",
-	"text": "Was sind Stammeinlagen?"
-  },
-  "110": {
-	"answer_possibilities": [
-	  "mit seinen Stammeinlagen",
-	  "Gesamtschuldnerisch",
-	  "Unbeschränkt",
-	  "Persönlich"
-	],
-	"difficulty": 1,
-	"right_answer": "mit seinen Stammeinlagen",
-	"text": "Wie haftet man als Einzelkaufmann nicht?"
-  },
-  "111": {
-	"answer_possibilities": [
-	  "6",
-	  "5",
-	  "7",
-	  "8"
-	],
-	"difficulty": 1,
-	"right_answer": "6",
-	"text": "Wie viel Steuerklassen gibt es?"
-  },
-  "112": {
-	"answer_possibilities": [
-	  "4",
-	  "3",
-	  "5",
-	  "6"
-	],
-	"difficulty": 1,
-	"right_answer": "4",
-	"text": "Wie viele Preisstrategien gibt es?"
-  },
-  "113": {
-	"answer_possibilities": [
-	  "Niedrig",
-	  "hoch",
-	  "Mittel",
-	  "Kostenlos"
-	],
-	"difficulty": 1,
-	"right_answer": "Niedrig",
-	"text": "Was ist der Preis bei der Promotionspreisstrategie?"
-  },
-  "114": {
-	"answer_possibilities": [
-	  "der Markt ist für die Unternehmen nicht mehr rentable",
-	  "Die Konsumenten werden durch hohe Preise vertrieben",
-	  "Ein Markt, der mit ruinösen Produkten gefüllt ist",
-	  "Es gibt keine Konsumenten mehr auf dem Markt"
-	],
-	"difficulty": 1,
-	"right_answer": "der Markt ist für die Unternehmen nicht mehr rentable",
-	"text": "Was ist ein ruinöser Markt?"
-  },
-  "115": {
-	"answer_possibilities": [
-	  "Schnelles Sortiment",
-	  "Randsortiment",
-	  "Kernsortiment",
-	  "tiefes Sortiment"
-	],
-	"difficulty": 1,
-	"right_answer": "Schnelles Sortiment",
-	"text": "Was ist kein Sortiment in der Sortimentenpolitik?"
-  },
-  "116": {
-	"answer_possibilities": [
-	  "Preisabsatzfunktion",
-	  "Pakistan Air Force",
-	  "Pfaffenhofen an der Fulda",
-	  "Plant & Foulkes"
-	],
-	"difficulty": 1,
-	"right_answer": "Preisabsatzfunktion",
-	"text": "Was heißt PAF?"
-  },
-  "117": {
-	"answer_possibilities": [
-	  "Ausführen",
-	  "Organisieren",
-	  "Kontrollieren",
-	  "Planen"
-	],
-	"difficulty": 2,
-	"right_answer": "Ausführen",
-	"text": "Was davon ist kein Teil der Projektmanagementphilosophie?"
-  },
-  "118": {
-	"answer_possibilities": [
-	  "Zielkonflikte auflösen und nicht bestehen lassen",
-	  "Ist/Soll Formulierung",
-	  "Umsetzung richtig gestalten",
-	  "Ziele setzen"
-	],
-	"difficulty": 2,
-	"right_answer": "Zielkonflikte auflösen und nicht bestehen lassen",
-	"text": "Welcher Grundsatz einer guten Zielvereinbarung ist richtig?"
-  },
-  "119": {
-	"answer_possibilities": [
-	  "p.p.A.",
-	  "i.A.",
-	  "i.V.",
-	  "G.G."
-	],
-	"difficulty": 2,
-	"right_answer": "p.p.A.",
-	"text": "Was ist die Abkürzung für die Vertretungsvollmacht?"
-  },
-  "120": {
-	"answer_possibilities": [
-	  "Die Erhöhung des Lebensstandards",
-	  "Die Schaffung von Arbeitsplätzen ",
-	  "Die Erhöhung des Bruttoinlandsprodukts (BIP) ",
-	  "Die Steigerung der Produktivität "
-	],
-	"difficulty": 2,
-	"right_answer": "Die Erhöhung des Lebensstandards",
-	"text": "Was ist das Ziel des Wirtschaftskreislaufs? "
-  },
-  "121": {
-	"answer_possibilities": [
-	  "Ein Unternehmen, bei dem es mindestens einen Komplementär und einen Kommanditisten gibt.",
-	  "Ein Unternehmen, das von einer Person oder einer Gruppe von Personen betrieben wird.",
-	  "Ein Unternehmen, das von einem oder mehreren Partnern betrieben wird.",
-	  "Ein Unternehmen, das von seinen Aktionären betrieben wird. "
-	],
-	"difficulty": 2,
-	"right_answer": "Ein Unternehmen, bei dem es mindestens einen Komplementär und einen Kommanditisten gibt.",
-	"text": "Welche Art von Unternehmen ist eine Kommanditgesellschaft (KG)?"
-  },
-  "122": {
-	"answer_possibilities": [
-	  "Ein Darlehen mit einer festen monatlichen Rate. ",
-	  "Ein Darlehen mit einer variablen jährlichen Rate.",
-	  "Ein Darlehen mit einer variablen monatlichen Rate. ",
-	  "Ein Darlehen mit einer festen jährlichen Rate. "
-	],
-	"difficulty": 2,
-	"right_answer": "Ein Darlehen mit einer festen monatlichen Rate. ",
-	"text": "Was ist ein Annuitätendarlehen? "
-  },
-  "123": {
-	"answer_possibilities": [
-	  "Ratendarlehen",
-	  "Annuitätendarlehen",
-	  "Standard-Darlehen",
-	  "Schuld-Darlehen"
-	],
-	"difficulty": 2,
-	"right_answer": "Ratendarlehen",
-	"text": "Bei welcher Darlehensart bleibt die Tilgung stets gleich?"
-  },
-  "124": {
-	"answer_possibilities": [
-	  "Amarita",
-	  "Wasserfall-Methode",
-	  "Scrum",
-	  "Lean"
-	],
-	"difficulty": 2,
-	"right_answer": "Amarita",
-	"text": "Was ist keine Projektmanagmentmethode?"
-  },
-  "125": {
-	"answer_possibilities": [
-	  "Benötigtes Stammkapital",
-	  "Geschäftszweck",
-	  "Eintragung ins Handelsregister ",
-	  "Mindestanzahl an Gesellschaftler "
-	],
-	"difficulty": 2,
-	"right_answer": "Benötigtes Stammkapital",
-	"text": "Was ist der Unterschied zwischen GmbH und UG?"
-  },
-  "126": {
-	"answer_possibilities": [
-	  "Laufzeit, Anfangskapital, Zinsen, Tilgung, Rate, Restkapital",
-	  "Laufzeit, Kapital, Kosten, Rate",
-	  "Laufzeit, Zinsen, Tilgung, Kapital",
-	  "Anfangskapital, Rate, Restkapital"
-	],
-	"difficulty": 2,
-	"right_answer": "Laufzeit, Anfangskapital, Zinsen, Tilgung, Rate, Restkapital",
-	"text": "Welche Spalten hat ein Tilgungsplan?"
-  },
-  "127": {
-	"answer_possibilities": [
-	  "0.04",
-	  "0.01",
-	  "50000",
-	  "25000"
-	],
-	"difficulty": 2,
-	"right_answer": "0.04",
-	"text": "Was ist die Mindestkapitalausschüttung bei einer OHG?"
-  },
-  "128": {
-	"answer_possibilities": [
-	  "Führungsperson",
-	  "Führungsaufbau",
-	  "Führungsaufgaben",
-	  "Führungstechnik"
-	],
-	"difficulty": 2,
-	"right_answer": "Führungsperson",
-	"text": "Was ist kein Teil der Gesamtheit des Projektmanagments?"
-  },
-  "129": {
-	"answer_possibilities": [
-	  "Ziele->Umfang->Meilensteine->Budget->Ressourcen",
-	  "Umfang->Ressourcen->Meilensteine->Budget->Ziele",
-	  "Spezifisch->Messbar->Erreichbar->Relevanz->Zeitgebunden",
-	  "Budget->Ziele->Umfang->Ressourcen"
-	],
-	"difficulty": 2,
-	"right_answer": "Ziele->Umfang->Meilensteine->Budget->Ressourcen",
-	"text": "In welcher Reihenfolge sollte ein Projekt geplant werden?"
-  },
-  "130": {
-	"answer_possibilities": [
-	  "Systematische Erkundung unter Verwendung einer wissenschaftlichen Methode",
-	  "Erforschung des Marktes mittels Ausschlussprinzip",
-	  "Durchführen ein Wettbewerbsanalyse",
-	  "Eine Marktprognosetreffen um vorherzusagen was in dem nächsten Quartal passieren wird"
-	],
-	"difficulty": 2,
-	"right_answer": "Systematische Erkundung unter Verwendung einer wissenschaftlichen Methode",
-	"text": "Was ist Marktforschung?"
-  },
-  "131": {
-	"answer_possibilities": [
-	  "Umfragen, Beobachtungen, Fragebögen, Interviews",
-	  "Literaturrecherche, Datenbankanalyse, Statistiken",
-	  "Desktopresearch, Datenanalyse, Trendanalyse",
-	  "Marktstudien, Syndicated Research, Social Listening"
-	],
-	"difficulty": 2,
-	"right_answer": "Umfragen, Beobachtungen, Fragebögen, Interviews",
-	"text": "Welche Instrumente hat ein Feldforscher in der Primärforschung?"
-  },
-  "132": {
-	"answer_possibilities": [
-	  "Produkt 1 ist unabhängig von Produkt 2",
-	  "Produkt 1 erweiert Produkt 2",
-	  "Erweiterung des Produktportfolios",
-	  "Produkt 1 steht neben Produkt 2"
-	],
-	"difficulty": 2,
-	"right_answer": "Produkt 1 ist unabhängig von Produkt 2",
-	"text": "Was meint die laterale Diversifikation?"
-  },
-  "133": {
-	"answer_possibilities": [
-	  "Umfragen durchführen",
-	  "Statistiken auswerten",
-	  "Forschungsinsitute hinzuziehen",
-	  "Im Internet suchen"
-	],
-	"difficulty": 2,
-	"right_answer": "Umfragen durchführen",
-	"text": "Was wird in der Primärforschung typischerweise gemacht?"
-  },
-  "134": {
-	"answer_possibilities": [
-	  "neue Forschung",
-	  "entstandene Schulden",
-	  "Gehalt ",
-	  "weitere Marktzyklen"
-	],
-	"difficulty": 2,
-	"right_answer": "neue Forschung",
-	"text": "Was soll der Gewinn des Marktzkyluses finanzieren?"
-  },
-  "135": {
-	"answer_possibilities": [
-	  "Accepted",
-	  "Attempt",
-	  "Affectabilities",
-	  "Administration"
-	],
-	"difficulty": 2,
-	"right_answer": "Accepted",
-	"text": "Für was steht das A in S.M.A.R.T.?"
-  },
-  "136": {
-	"answer_possibilities": [
-	  "Realistic",
-	  "React",
-	  "Reorganization",
-	  "Recollection"
-	],
-	"difficulty": 2,
-	"right_answer": "Realistic",
-	"text": "Für was steht das R in S.M.A.R.T.?"
-  },
-  "137": {
-	"answer_possibilities": [
-	  "Time-related",
-	  "Timeless",
-	  "Tertiary",
-	  "Trouble"
-	],
-	"difficulty": 2,
-	"right_answer": "Time-related",
-	"text": "Für was steht das T in S.M.A.R.T.?"
-  },
-  "138": {
-	"answer_possibilities": [
-	  "Kosten, Zeitplan, Umfang, Qualität",
-	  "Kosten, Arbeit, Quantität, Zeitdruck",
-	  "Gewinn, Präferenzen, Qualität, Kosten",
-	  "Risiko, Zeitdruck, Gewinn, Qualität"
-	],
-	"difficulty": 2,
-	"right_answer": "Kosten, Zeitplan, Umfang, Qualität",
-	"text": "Wie lauten die vier Cornerstones des Projektmanagements?"
-  },
-  "139": {
-	"answer_possibilities": [
-	  "Qualität",
-	  "Einschätzung einer guten Kontrollbasis",
-	  "Kostenkontrolle",
-	  "Anwendung von kontrollierenden Prozeduren für einen finanziellen Fortschritt"
-	],
-	"difficulty": 2,
-	"right_answer": "Qualität",
-	"text": "Was ist kein Aspekt der Kosten?"
-  },
-  "140": {
-	"answer_possibilities": [
-	  "8 Jahre",
-	  "2 Jahre",
-	  "4 Jahre",
-	  "5 Jahre"
-	],
-	"difficulty": 2,
-	"right_answer": "8 Jahre",
-	"text": "Wie lange ist ein Leasing höchstens verlängerbar?"
-  },
-  "141": {
-	"answer_possibilities": [
-	  "Auswirkung, Wahrscheinlichkeit",
-	  "Kosten, Häufung",
-	  "Kosten, Auswirkung",
-	  "Wahrscheinlichkeit, Kosten"
-	],
-	"difficulty": 2,
-	"right_answer": "Auswirkung, Wahrscheinlichkeit",
-	"text": "Mit welchen Eigenschaften kann man Risiken einordnen?"
-  },
-  "142": {
-	"answer_possibilities": [
-	  "Skimmingmethode",
-	  "Premiummethode",
-	  "Promotionsmethode",
-	  "Penetrationsmethoed"
-	],
-	"difficulty": 2,
-	"right_answer": "Skimmingmethode",
-	"text": "Wie heißt die Methode bei der dynamischen Hochpreisstrategie?"
-  },
-  "143": {
-	"answer_possibilities": [
-	  "Sie ermöglicht die Identifizierung von Zielgruppen und Chancen",
-	  "Sie ist nicht relevant",
-	  "Sie beeinflusst die Preisgestaltung",
-	  "Sie hilft bei der Entwicklung von Vertriebskanälen"
-	],
-	"difficulty": 2,
-	"right_answer": "Sie ermöglicht die Identifizierung von Zielgruppen und Chancen",
-	"text": "Welche Rolle spielt Marktforschung bei der Entwicklung einer Marketingstrategie?"
-  },
-  "144": {
-	"answer_possibilities": [
-	  "Sie beeinflusst die Wettbewerbsposition und Rentabilität",
-	  "Sie ist irrelevant solang das Produkt gut genug ist",
-	  "Sie hat keinen Einfluss auf Kaufentscheidungen",
-	  "Sie beeinflusst das Marketingimage"
-	],
-	"difficulty": 2,
-	"right_answer": "Sie beeinflusst die Wettbewerbsposition und Rentabilität",
-	"text": "Welche Rolle spielen Preisstrategien im Marketing-Mix?"
-  },
-  "145": {
-	"answer_possibilities": [
-	  "Flexibel und Anpassungsfähig",
-	  "Alle Entscheidungen deligieren",
-	  "Ignoranz gegenüber Änderungen und Unsicherheiten",
-	  "Starre Vorgaben beibehalten"
-	],
-	"difficulty": 2,
-	"right_answer": "Flexibel und Anpassungsfähig",
-	"text": "Wie können Projektmanager effektiv mit Änderungen und Unsicherheiten umgehen?"
-  },
-  "146": {
-	"answer_possibilities": [
-	  "Klare Rollen & Verantwortlichkeiten, Unterstützung und Anerkennung",
-	  "Vertrauen und Eigenverantwortung",
-	  "Keine klare Organisation/Motivation nötig",
-	  "Mikromanagement und ständige Überwachung"
-	],
-	"difficulty": 2,
-	"right_answer": "Klare Rollen & Verantwortlichkeiten, Unterstützung und Anerkennung",
-	"text": "Wie können Teams effizient organisiert/motiviert werden?"
-  },
-  "147": {
-	"answer_possibilities": [
-	  "Projektmanagement-Software/Statusberichte",
-	  "To-Do-Listen/Post-Its",
-	  "Telefonkonferenzen/Sozial-Media",
-	  "E-Mail/Persönliche Meetings"
-	],
-	"difficulty": 2,
-	"right_answer": "Projektmanagement-Software/Statusberichte",
-	"text": "Wie kann der Projektfortschritt überwacht und gesteuert werden?"
-  },
-  "148": {
-	"answer_possibilities": [
-	  "Höhere Flexibilität, schnellere Anpassungsfähigkeit, bessere Kundenorientierung",
-	  "Keine Vorteile, Agile ist ineffizient",
-	  "Mehr bürokratische Kontrolle, weniger Verantwortung für das Team",
-	  "Engere Einhaltung von Zeitplänen & Budgets"
-	],
-	"difficulty": 2,
-	"right_answer": "Höhere Flexibilität, schnellere Anpassungsfähigkeit, bessere Kundenorientierung",
-	"text": "Welche Vorteile haben Agile Projektmanagmentmethoden?"
-  },
-  "149": {
-	"answer_possibilities": [
-	  "Der Punkt an dem die Gesamtkosten und der Erlöse gleich sind",
-	  "Der Zeitpunkt an dem die Produktion eingestellt wird",
-	  "Der Punkt an dem ein Unternehmen den Gewinn maximiert",
-	  "Der Zeitpunkt an dem das Unternehmen Gewinn erziehlt"
-	],
-	"difficulty": 2,
-	"right_answer": "Der Punkt an dem die Gesamtkosten und der Erlöse gleich sind",
-	"text": "Was versteht man unter dem \"Break-Even-Point\"?"
-  }
-}
+[
+	{
+		"answer_possibilities": [
+			"Als Basis für die Festlegung von Terminen und Deadlines",
+			"Zur Netzwerkübersicht",
+			"Für die Planung zur Verlegung von elektrischen Kabeln"
+		],
+		"difficulty": 0,
+		"right_answer": "Als Basis für die Festlegung von Terminen und Deadlines",
+		"text": "Wofür benötigt man einen Netzplan?"
+	},
+	{
+		"answer_possibilities": [
+			"Die Definition des Projektumfangs",
+			"Ein Projektarchiv welches alle Projektdokumente beinhaltet",
+			"Spezielle Art von Teleskop"
+		],
+		"difficulty": 0,
+		"right_answer": "Die Definition des Projektumfangs",
+		"text": "Was ist ein Project-Scope?"
+	},
+	{
+		"answer_possibilities": [
+			"Gewinn oder Verlust",
+			"Gewinn",
+			"Umsatz"
+		],
+		"difficulty": 0,
+		"right_answer": "Gewinn oder Verlust",
+		"text": "Was ist Erfolg?"
+	},
+	{
+		"answer_possibilities": [
+			"0.45",
+			"0.42",
+			"0.39"
+		],
+		"difficulty": 0,
+		"right_answer": "0.45",
+		"text": "Was ist der maximale Steuersatz?"
+	},
+	{
+		"answer_possibilities": [
+			"Das Verfolgen einer Gewinnerziehlungsabsicht",
+			"Ein eigenes Haus",
+			"Volljährigkeit"
+		],
+		"difficulty": 0,
+		"right_answer": "Das Verfolgen einer Gewinnerziehlungsabsicht",
+		"text": "Was ist ein Kriterium für die Selbstständigkeit?"
+	},
+	{
+		"answer_possibilities": [
+			"Arbeit, Boden, Kapital",
+			"Arbeitsbegleitkarte",
+			"Allgemeine Berufsquallifizierende Kompetenzen"
+		],
+		"difficulty": 0,
+		"right_answer": "Arbeit, Boden, Kapital",
+		"text": "Für was steht ABK?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Kreislauf von Geld und Gütern",
+			"Ein Kreislauf von Waren und Dienstleistungen",
+			"Ein Kreislauf von Angebot und Nachfrage"
+		],
+		"difficulty": 0,
+		"right_answer": "Ein Kreislauf von Geld und Gütern",
+		"text": "Was ist der Wirtschaftskreislauf? "
+	},
+	{
+		"answer_possibilities": [
+			"Ein Unternehmen, welches seinen Aktionären gehört",
+			"Ein Unternehmen, das von einer Person oder einer Gruppe von Personen betrieben wird",
+			"Ein Unternehmen, das von einem oder mehreren Partnern betrieben wird"
+		],
+		"difficulty": 0,
+		"right_answer": "Ein Unternehmen, welches seinen Aktionären gehört",
+		"text": "Was ist eine Aktiengesellschaft (AG)?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Zwischenziel oder ein wichtiges Ereigniss im Projektverlauf",
+			" Ein Zwischenziel im Projektverlauf, welches nicht erreicht werden muss.",
+			"Ein Ereigniss im Projektverlauf, das übersprungen werden kann. "
+		],
+		"difficulty": 0,
+		"right_answer": "Ein Zwischenziel oder ein wichtiges Ereigniss im Projektverlauf",
+		"text": "Was ist ein Meilenstein? "
+	},
+	{
+		"answer_possibilities": [
+			"Kommanditgesellschaft",
+			"OHG",
+			"EK"
+		],
+		"difficulty": 0,
+		"right_answer": "Kommanditgesellschaft",
+		"text": "Bei welchen Unternehmensrechtsform spricht man von \"Kommanditisten\"?"
+	},
+	{
+		"answer_possibilities": [
+			"Sozialgesetzbuch",
+			"Sozial-Grundbuch",
+			"Schwerer Granitbohrer"
+		],
+		"difficulty": 0,
+		"right_answer": "Sozialgesetzbuch",
+		"text": "Wofür steht SGB?"
+	},
+	{
+		"answer_possibilities": [
+			"25.000 Euro",
+			"20.000 Euro",
+			"es wird keins benötigt"
+		],
+		"difficulty": 0,
+		"right_answer": "25.000 Euro",
+		"text": "Wie hoch ist das Mindeststammkapital um eine GmbH zu gründen?"
+	},
+	{
+		"answer_possibilities": [
+			"Preis x Absatzmenge",
+			"Ausgaben x Umsatz",
+			"Gewinn x Kosten"
+		],
+		"difficulty": 0,
+		"right_answer": "Preis x Absatzmenge",
+		"text": "Wie berechnet sich der Umsatz?"
+	},
+	{
+		"answer_possibilities": [
+			"Degenerationsphase",
+			"Reifephase",
+			"Einführungsphase"
+		],
+		"difficulty": 0,
+		"right_answer": "Degenerationsphase",
+		"text": "Wann spricht man vom \"Tod\" des Produkts? "
+	},
+	{
+		"answer_possibilities": [
+			"Personen die Aktien von dem Unternehmen besitzen",
+			"Personen die im Unternehmen arbeiten",
+			"Personen die das Unternehmen leiten"
+		],
+		"difficulty": 0,
+		"right_answer": "Personen die Aktien von dem Unternehmen besitzen",
+		"text": "Was sind Shareholder?"
+	},
+	{
+		"answer_possibilities": [
+			"Produkt, Preis, Platz, Promotion",
+			"Pampelmuse, Project, Pinienzapfen, Pups",
+			"Projekt, Preis, Prozent, Präzise"
+		],
+		"difficulty": 0,
+		"right_answer": "Produkt, Preis, Platz, Promotion",
+		"text": "Was sind die 4Ps des Marketings?"
+	},
+	{
+		"answer_possibilities": [
+			"Judikative, Exekutive, Legislative",
+			"Präsident, Kanzler, Parlament",
+			"Bundestag, Bundesrat, Landtage"
+		],
+		"difficulty": 0,
+		"right_answer": "Judikative, Exekutive, Legislative",
+		"text": "Welche Aufteilung entsteht durch die Gewaltenteilung des Staats?"
+	},
+	{
+		"answer_possibilities": [
+			"nominal 1€",
+			"2",
+			"Geld"
+		],
+		"difficulty": 0,
+		"right_answer": "nominal 1€",
+		"text": "Was ist 1€?"
+	},
+	{
+		"answer_possibilities": [
+			"Verzicht auf Konsum",
+			"Geld investieren",
+			"Geld spenden"
+		],
+		"difficulty": 0,
+		"right_answer": "Verzicht auf Konsum",
+		"text": "Was bedeutet sparen?"
+	},
+	{
+		"answer_possibilities": [
+			"Gefühl des Mangels und Absicht es zu beseitigen",
+			"Man benötigt Luxus",
+			"Es fehlt etwas und man möchte es haben"
+		],
+		"difficulty": 0,
+		"right_answer": "Gefühl des Mangels und Absicht es zu beseitigen",
+		"text": "Was ist ein Bedürfniss?"
+	},
+	{
+		"answer_possibilities": [
+			"Gehalt & Lohn",
+			"Geld & Verdienst",
+			"Provision & Vergütung"
+		],
+		"difficulty": 0,
+		"right_answer": "Gehalt & Lohn",
+		"text": "Was ist ein Entgeld für Arbeit?"
+	},
+	{
+		"answer_possibilities": [
+			"Miete & Pacht",
+			"Gehalt & Lohn",
+			"Verpflegung & Ausgleich"
+		],
+		"difficulty": 0,
+		"right_answer": "Miete & Pacht",
+		"text": "Was ist ein Entgeld für zur Verfügung gestellten Boden?"
+	},
+	{
+		"answer_possibilities": [
+			"Zinsen & Abschreibung",
+			"Provision & Vergütung",
+			"Gehalt & Lohn"
+		],
+		"difficulty": 0,
+		"right_answer": "Zinsen & Abschreibung",
+		"text": "Was ist ein Entgeld für Kapital?"
+	},
+	{
+		"answer_possibilities": [
+			"Generationsphase",
+			"Degenerationsphase",
+			"Wachstumsphase"
+		],
+		"difficulty": 0,
+		"right_answer": "Generationsphase",
+		"text": "Was ist keine Phase des Produktlebenszyklus?"
+	},
+	{
+		"answer_possibilities": [
+			"Es muss schonmal durchgeführt worden sein",
+			"Definiertes Ziel",
+			"feste Deadline"
+		],
+		"difficulty": 0,
+		"right_answer": "Es muss schonmal durchgeführt worden sein",
+		"text": "Was ist kein Kriterium, dass eine Aufgabe ein Projekt ist?"
+	},
+	{
+		"answer_possibilities": [
+			"Kosten, Umfang, Zeitplan, Qualität",
+			"spezifisch, messbar, erreichbar, relevant, zeitlich befristet",
+			"Performance, Teamwork, Zeitmanagment"
+		],
+		"difficulty": 0,
+		"right_answer": "Kosten, Umfang, Zeitplan, Qualität",
+		"text": "Was sind die Ecksteine des Projektmanagments?"
+	},
+	{
+		"answer_possibilities": [
+			"Quantität",
+			"Fortlaufende Verbesserungen",
+			"Qualitätskontrolle"
+		],
+		"difficulty": 0,
+		"right_answer": "Quantität",
+		"text": "Was gehört nicht zum Qualitätsmanagment?"
+	},
+	{
+		"answer_possibilities": [
+			"Identifizieren, Analysieren, Reagieren, Dokumentieren",
+			"Planen, Organisieren, Kontrollieren, Abschließen",
+			"Sehen, Handeln"
+		],
+		"difficulty": 0,
+		"right_answer": "Identifizieren, Analysieren, Reagieren, Dokumentieren",
+		"text": "Welche Schritte gehören zum Risikomanagmentprozess?"
+	},
+	{
+		"answer_possibilities": [
+			"Wahrscheinlichkeit & Auswirkung",
+			"Graviertheit & Aufwand",
+			"Chance & Analyse"
+		],
+		"difficulty": 0,
+		"right_answer": "Wahrscheinlichkeit & Auswirkung",
+		"text": "Welche Achsenbeschriftungen gibt es auf einer Matrix zum einschätzen von Risiko?"
+	},
+	{
+		"answer_possibilities": [
+			"Einschätzen",
+			"Wissen",
+			"Alles auf eine Karte setzten"
+		],
+		"difficulty": 0,
+		"right_answer": "Einschätzen",
+		"text": "Was kann man mit Risiken machen?"
+	},
+	{
+		"answer_possibilities": [
+			"Streuen der Produktrisiken",
+			"Verschiedene Projekte",
+			"Streuung der Arbeitslast"
+		],
+		"difficulty": 0,
+		"right_answer": "Streuen der Produktrisiken",
+		"text": "Was ist Diversifkation?"
+	},
+	{
+		"answer_possibilities": [
+			"Produkt 1 steht neben Produkt 2",
+			"Produkt 1 ist unabhängig von Produkt 2",
+			"Produkt 1 erweiert Produkt 2"
+		],
+		"difficulty": 0,
+		"right_answer": "Produkt 1 steht neben Produkt 2",
+		"text": "Was ist die horizontale Diversifikation?"
+	},
+	{
+		"answer_possibilities": [
+			"field research",
+			"desktopresearch",
+			"keyboardresearch"
+		],
+		"difficulty": 0,
+		"right_answer": "field research",
+		"text": "Wie wird die Primärforschung noch genannt?"
+	},
+	{
+		"answer_possibilities": [
+			"desktopresearch",
+			"fieldresearch",
+			"keyboardresearch"
+		],
+		"difficulty": 0,
+		"right_answer": "desktopresearch",
+		"text": "Wie wird die Sekundärforschung noch genannt?"
+	},
+	{
+		"answer_possibilities": [
+			"mit potenziellen Kunden ins Gespräch gehen",
+			"der Chef geht auf die Mitarbeiter zu",
+			"Gespräche werden vermieden"
+		],
+		"difficulty": 0,
+		"right_answer": "mit potenziellen Kunden ins Gespräch gehen",
+		"text": "Was versteht man unter dialogorientiertem Marketing?"
+	},
+	{
+		"answer_possibilities": [
+			"Das Produkt wird nach den Vorstellungen der Mitarbeiter gerichtet",
+			"mit potenziellen Kunden ins Gespräch gehen",
+			"es werden Mitarbeiter entlassen"
+		],
+		"difficulty": 0,
+		"right_answer": "Das Produkt wird nach den Vorstellungen der Mitarbeiter gerichtet",
+		"text": "Was versteht man unter mitarbeiterorientiertem Marketing?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Produkt mit geringem Marktwachstum und geringem Martkanteil",
+			"Ein Produkt mit geringem Marktwachstum und hohem Martkanteil",
+			"Ein Produkt mit hohem Marktwachstum und hohem Martkanteil"
+		],
+		"difficulty": 0,
+		"right_answer": "Ein Produkt mit geringem Marktwachstum und geringem Martkanteil",
+		"text": "Was ist ein poor dog?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Produkt mit geringem Marktwachstum und hohem Martkanteil",
+			"Ein Produkt mit geringem Marktwachstum und geringem Martkanteil",
+			"Ein Produkt mit hohem Marktwachstum und hohem martkanteil"
+		],
+		"difficulty": 0,
+		"right_answer": "Ein Produkt mit geringem Marktwachstum und hohem Martkanteil",
+		"text": "Was ist eine cash cow?"
+	},
+	{
+		"answer_possibilities": [
+			"1 % des Fahrzeugsneupreis",
+			"0.5 % des Fahrzeugsneupreis",
+			"1.5 % des Fahrzeugsneupreis"
+		],
+		"difficulty": 0,
+		"right_answer": "1 % des Fahrzeugsneupreis",
+		"text": "Wie hoch ist die Versteuerung eines Leasingfirmenwagens mit Verbrennungsmotor?"
+	},
+	{
+		"answer_possibilities": [
+			"0.5 % des Fahrzeugsneupreis",
+			"1 % des Fahrzeugsneupreis",
+			"1.5 % des Fahrzeugsneupreis"
+		],
+		"difficulty": 0,
+		"right_answer": "0.5 % des Fahrzeugsneupreis",
+		"text": "Wie hoch ist die Versteuerung eines Leasingfirmenwagens mit Elektromotor?"
+	},
+	{
+		"answer_possibilities": [
+			"5",
+			"3",
+			"4"
+		],
+		"difficulty": 0,
+		"right_answer": "5",
+		"text": "Wie viele Phasen hat der Marktzyklus?"
+	},
+	{
+		"answer_possibilities": [
+			"Verlust",
+			"Investment",
+			"Gewinn"
+		],
+		"difficulty": 0,
+		"right_answer": "Verlust",
+		"text": "Wovon spricht man, wenn die Kosten höher als die Einnahmen sind?"
+	},
+	{
+		"answer_possibilities": [
+			"ja",
+			"nein",
+			"fast"
+		],
+		"difficulty": 0,
+		"right_answer": "ja",
+		"text": "Ist die Markterkundung dasselbe wie die Marktforschung?"
+	},
+	{
+		"answer_possibilities": [
+			"KG",
+			"e.K.",
+			"GmbH"
+		],
+		"difficulty": 0,
+		"right_answer": "KG",
+		"text": "Was ist eine Sonderform der OHG?"
+	},
+	{
+		"answer_possibilities": [
+			"das Produkt",
+			"die Zeit",
+			"Schulden"
+		],
+		"difficulty": 0,
+		"right_answer": "das Produkt",
+		"text": "Was ist das größte Risiko während der Marktphase?"
+	},
+	{
+		"answer_possibilities": [
+			"Es gibt nur einen Nachfrager und viele Anbieter",
+			"Es gibt nur einen Anbieter und viele Nachfrager",
+			"Es gibt nur einen Anbieter und wenig Nachfrager"
+		],
+		"difficulty": 0,
+		"right_answer": "Es gibt nur einen Nachfrager und viele Anbieter",
+		"text": "Was ist ein Nachfragemonopol?"
+	},
+	{
+		"answer_possibilities": [
+			"Es gilt die doppelte Buchführung",
+			"Die doppelte Buchführung gilt nicht",
+			"Man braucht eine Firma"
+		],
+		"difficulty": 0,
+		"right_answer": "Es gilt die doppelte Buchführung",
+		"text": "Welchen Nachteil hat man als Händler im HGB?"
+	},
+	{
+		"answer_possibilities": [
+			"Einzelkaufmann",
+			"Eingetragener Käufer",
+			"Eingetragener Kunde"
+		],
+		"difficulty": 0,
+		"right_answer": "Einzelkaufmann",
+		"text": "Wofür steht die Abkürzung e.k.?"
+	},
+	{
+		"answer_possibilities": [
+			"Anzeigen in einer Zeitschrift schalten",
+			"Erstellung einer Satzung",
+			"Eintragung ins Handelsregister"
+		],
+		"difficulty": 0,
+		"right_answer": "Anzeigen in einer Zeitschrift schalten",
+		"text": "Welche Schritte sind im Gründungsfahrplan einer GmbH nicht enthalten?"
+	},
+	{
+		"answer_possibilities": [
+			"die Hauptursache der Kostenüberschreitung",
+			"der Bereich in dem Creeper explodieren",
+			"die Ursache weshalb das Projekt nicht mehr läuft"
+		],
+		"difficulty": 0,
+		"right_answer": "die Hauptursache der Kostenüberschreitung",
+		"text": "Was ist ein Creeping Scope?"
+	},
+	{
+		"answer_possibilities": [
+			"Zeitdruck",
+			"Eine gute Definition",
+			"Eine sinnvolle Erreichbarkeit"
+		],
+		"difficulty": 0,
+		"right_answer": "Zeitdruck",
+		"text": "Welche Richtlinie ist kein guter Indikator für ein Projektumfang?"
+	},
+	{
+		"answer_possibilities": [
+			"Management Risk",
+			"Strategic Risk",
+			"Operational Risk"
+		],
+		"difficulty": 0,
+		"right_answer": "Management Risk",
+		"text": "Was ist kein Risikotyp im Projektmanagement?"
+	},
+	{
+		"answer_possibilities": [
+			"(mindestens) zwei Personen haften",
+			"Nur ein eine Person haftet",
+			"Niemand haftet"
+		],
+		"difficulty": 0,
+		"right_answer": "(mindestens) zwei Personen haften",
+		"text": "Was bedeutet \"Gesamtschuldnerisch\" im Kontext der Rechtsformen?"
+	},
+	{
+		"answer_possibilities": [
+			"Den Kunden in den Mittelpunkt zu rücken",
+			"Das Produkt erfolgreich zu gestalten",
+			"Die Mitarbeiter mit einbeziehen"
+		],
+		"difficulty": 0,
+		"right_answer": "Den Kunden in den Mittelpunkt zu rücken",
+		"text": "Was ist ein Ziel von Marketing?"
+	},
+	{
+		"answer_possibilities": [
+			"Maß wie groß der Markt ist",
+			"Umfang des Marktes",
+			"Fläche des Marktes"
+		],
+		"difficulty": 0,
+		"right_answer": "Maß wie groß der Markt ist",
+		"text": "Was heißt Marktvolumen?"
+	},
+	{
+		"answer_possibilities": [
+			"maximal erzielbare Umsatzmenge",
+			"Höhe des maximalen Gewinns",
+			"der vergangene Marktzuwachs"
+		],
+		"difficulty": 0,
+		"right_answer": "maximal erzielbare Umsatzmenge",
+		"text": "Was heißt Marktpotential?"
+	},
+	{
+		"answer_possibilities": [
+			"eindeutiges Gut",
+			"kein eindeutiges Gut",
+			"mehrere Güter"
+		],
+		"difficulty": 0,
+		"right_answer": "eindeutiges Gut",
+		"text": "Was ist eine Grundvoraussetzung für den vollkommenden Markt?"
+	},
+	{
+		"answer_possibilities": [
+			"zwei unterschiedliche Interessen herrschen",
+			"keine Interessen sind vorhanden",
+			"es herrscht eine Macht"
+		],
+		"difficulty": 0,
+		"right_answer": "zwei unterschiedliche Interessen herrschen",
+		"text": "Was ist eine Grundvoraussetzung für den vollkommenden Markt?"
+	},
+	{
+		"answer_possibilities": [
+			"Modell des vollkommenden Marktes",
+			"Inselmodell",
+			"Modell der Monarchie"
+		],
+		"difficulty": 0,
+		"right_answer": "Modell des vollkommenden Marktes",
+		"text": "In welchem Modell wird die Macht ausgeschlossen?"
+	},
+	{
+		"answer_possibilities": [
+			"Bürgerliches Gesetzbuch",
+			"Bundes-Gesellschaftler-Buch",
+			"Berliner Großbereitschaft"
+		],
+		"difficulty": 0,
+		"right_answer": "Bürgerliches Gesetzbuch",
+		"text": "Wofür steht BGB?"
+	},
+	{
+		"answer_possibilities": [
+			"Gewinnerzielung",
+			"Investment",
+			"Liebheaberei"
+		],
+		"difficulty": 0,
+		"right_answer": "Gewinnerzielung",
+		"text": "Welche primäre Absicht verfolgt die Selbstständigkeit?"
+	},
+	{
+		"answer_possibilities": [
+			"Direkte und Indirekte Kosten",
+			"Material und Nutzungskosten",
+			"Aus einer Gewinn- und Verlustrechnung"
+		],
+		"difficulty": 0,
+		"right_answer": "Direkte und Indirekte Kosten",
+		"text": "Wie setzt sich die Teilkostenrechnung zusammen?"
+	},
+	{
+		"answer_possibilities": [
+			"Einzelkosten im Produkt",
+			"Kosten welche sofort bezahlt werden",
+			"Kosten welche erst später bezahlt werden"
+		],
+		"difficulty": 0,
+		"right_answer": "Einzelkosten im Produkt",
+		"text": "Was sind direkte Kosten?"
+	},
+	{
+		"answer_possibilities": [
+			"Gemeinkosten im Betrieb",
+			"Kosten welche sofort bezahlt werden",
+			"Kosten welche erst später bezahlt werden"
+		],
+		"difficulty": 0,
+		"right_answer": "Gemeinkosten im Betrieb",
+		"text": "Was sind indirekte Kosten?"
+	},
+	{
+		"answer_possibilities": [
+			"6",
+			"1",
+			"3"
+		],
+		"difficulty": 0,
+		"right_answer": "6",
+		"text": "Welche Steuerklasse wird am stärksten versteuert?"
+	},
+	{
+		"answer_possibilities": [
+			"Personal",
+			"Produkt",
+			"Promotion",
+			"Preis"
+		],
+		"difficulty": 1,
+		"right_answer": "Personal",
+		"text": "Was ist kein Bestandteil des Marketing-Mix?"
+	},
+	{
+		"answer_possibilities": [
+			"Spezifisch",
+			"Sportlich",
+			"Selbstreflektion",
+			"Satzung"
+		],
+		"difficulty": 1,
+		"right_answer": "Spezifisch",
+		"text": "Wofür steht das S in der S.M.A.R.T. Regel?"
+	},
+	{
+		"answer_possibilities": [
+			"Messbar",
+			"Management",
+			"Maß",
+			"Mehrwert"
+		],
+		"difficulty": 1,
+		"right_answer": "Messbar",
+		"text": "Wofür steht das M in der S.M.A.R.T. Regel?"
+	},
+	{
+		"answer_possibilities": [
+			"Pfad aller Teilaufgaben, welche keinen zeitlichen Puffer haben",
+			"Ist der Teil des Netzwerks, in dem die Verbindung am anfälligsten ist",
+			"Der Bereich in dem alle Dokumente mit dem Status \"kritisch\" hinterlegt sind",
+			"Der Pfad wenn keine Mitarbeiter mehr zu Verfügung stehen"
+		],
+		"difficulty": 1,
+		"right_answer": "Pfad aller Teilaufgaben, welche keinen zeitlichen Puffer haben",
+		"text": "Was ist der kritische Pfad eines Netzplans?"
+	},
+	{
+		"answer_possibilities": [
+			"Puffer, bevor der unmittelbar folgende Prozessschritt beinflusst wird",
+			"Kostenlose Ressourcen für das Projektteam",
+			"Die Zeit, welche für das Projektteam als Freizeit eingeplant ist",
+			"Ein Bereich, der für unerwartete Ausgaben reserviert ist"
+		],
+		"difficulty": 1,
+		"right_answer": "Puffer, bevor der unmittelbar folgende Prozessschritt beinflusst wird",
+		"text": "Was ist ein freier Puffer im Netzplan?"
+	},
+	{
+		"answer_possibilities": [
+			"Puffer, bevor der pünktliche Abschluss des Gesamtprozesses gefährdet wird",
+			"Die Gesamtzahl der arbeitsfreien Stunden für die Projektmitarbeiter",
+			"Ein Bereich, der für unerwartete Ausgaben reserviert ist",
+			"Gesamtzahl aller Puffer"
+		],
+		"difficulty": 1,
+		"right_answer": "Puffer, bevor der pünktliche Abschluss des Gesamtprozesses gefährdet wird",
+		"text": "Was ist ein Gesamtpuffer im Netzplan?"
+	},
+	{
+		"answer_possibilities": [
+			"Haushalte, Unternehmen, Staat, Ausland ",
+			"Haushalte, Staat, Ausland",
+			"Haushalte, Unternehmen, Banken",
+			"Unternehmen, Staat, Banken "
+		],
+		"difficulty": 1,
+		"right_answer": "Haushalte, Unternehmen, Staat, Ausland ",
+		"text": "Welche Akteure sind im Wirtschaftskreislauf vertreten? "
+	},
+	{
+		"answer_possibilities": [
+			"Die Anzahl der Anbieter",
+			"Die Art der Werbung",
+			"Die Anzahl der Mitarbeiter",
+			"Die Art der Produkte"
+		],
+		"difficulty": 1,
+		"right_answer": "Die Anzahl der Anbieter",
+		"text": "Was ist der Unterschied zwischen einem Oligopol und einem Polypol?"
+	},
+	{
+		"answer_possibilities": [
+			"Marktform mit wenigen Anbietern und vielen Nachfragern",
+			"Marktform mit vielen Anbietern und vielen Nachfragern",
+			"Marktform mit einem Nachfrager und vielen Anbietern",
+			"Marktform mit einem Anbieter und vielen Nachfragern"
+		],
+		"difficulty": 1,
+		"right_answer": "Marktform mit wenigen Anbietern und vielen Nachfragern",
+		"text": "Was ist ein Angebotsoligopol?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Unternehmen, dass von einer Person oder einer Gruppe von Personen betrieben wird",
+			"Ein Unternehmen, dass von einer Regierung betrieben wird",
+			"Ein Unternehmen, das von einem oder mehreren Partnern betrieben wird",
+			"Ein Unternehmen, das von seinen Aktionären betrieben wird"
+		],
+		"difficulty": 1,
+		"right_answer": "Ein Unternehmen, dass von einer Person oder einer Gruppe von Personen betrieben wird",
+		"text": "Welche Art von Unternehmen ist ein Einzelunternehmen?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Darlehen, bei dem die Tilgung und die Zinsen während der Laufzeit gezahlt werden",
+			"Ein Darlehen, bei dem die Tilgung am Ende der Laufzeit gezahlt wird",
+			"Ein Darlehen, bei dem die Tilgung und die Zinsen am Ende der Laufzeit gezahlt werden",
+			"Ein Darlehen, bei dem die Zinsen während der Laufzeit gezahlt werden"
+		],
+		"difficulty": 1,
+		"right_answer": "Ein Darlehen, bei dem die Tilgung und die Zinsen während der Laufzeit gezahlt werden",
+		"text": "Was ist ein Tilgungsdarlehen? "
+	},
+	{
+		"answer_possibilities": [
+			"Eine Sicherheit in Form einer Garantie durch eine dritte Person",
+			"Eine Sicherheit in Form von Bargeld",
+			"Eine Sicherheit in Form von Aktien",
+			"Eine Sicherheit in Form von Immobilien"
+		],
+		"difficulty": 1,
+		"right_answer": "Eine Sicherheit in Form einer Garantie durch eine dritte Person",
+		"text": "Was ist mit einer Bürgschaft gemeint? "
+	},
+	{
+		"answer_possibilities": [
+			"Eine Sicherheit in Form von Immobilien",
+			"Eine Sicherheit in Form von Bargeld",
+			"Eine Sicherheit in Form von Aktien",
+			"Eine Sicherheit in Form einer Garantie durch eine dritte Person"
+		],
+		"difficulty": 1,
+		"right_answer": "Eine Sicherheit in Form von Immobilien",
+		"text": "Was ist eine Hypothek? "
+	},
+	{
+		"answer_possibilities": [
+			"Eine Person oder Organisation, die vom Projekt betroffen ist",
+			"Eine Person oder Organisation, die das Projekt überwacht",
+			"Eine Person oder Organisation, die das Projekt durchführt",
+			"Eine Person oder Organisation, die das Projekt finanziert"
+		],
+		"difficulty": 1,
+		"right_answer": "Eine Person oder Organisation, die vom Projekt betroffen ist",
+		"text": "Was ist ein Stakeholder? "
+	},
+	{
+		"answer_possibilities": [
+			"Wachstumsphase",
+			"Reifephase",
+			"Einführungsphase",
+			"Degenerationsphase"
+		],
+		"difficulty": 1,
+		"right_answer": "Wachstumsphase",
+		"text": "Am Ende welcher Phase wird das Gewinnmaximum erreicht?"
+	},
+	{
+		"answer_possibilities": [
+			"Vermögensänderung",
+			"Haushalt",
+			"Unternehmen",
+			"keine"
+		],
+		"difficulty": 1,
+		"right_answer": "Vermögensänderung",
+		"text": "Welche Rolle spielen Banken im Witschaftskreislauf?"
+	},
+	{
+		"answer_possibilities": [
+			"keins notwenig",
+			"10.000 Euro",
+			"1.000 Euro pro Gründer",
+			"25.000 Euro"
+		],
+		"difficulty": 1,
+		"right_answer": "keins notwenig",
+		"text": "Wie hoch ist das Mindeststammkapital um eine OhG zu gründen?"
+	},
+	{
+		"answer_possibilities": [
+			"Aktionäre",
+			"Kommanditisten",
+			"Komplementäre",
+			"Gesellschafler"
+		],
+		"difficulty": 1,
+		"right_answer": "Aktionäre",
+		"text": "Welche Gruppe sind die Kapitalgeber bei der Gründung einer AG?"
+	},
+	{
+		"answer_possibilities": [
+			"50.000 Euro",
+			"100.000 Euro",
+			"25.000 Euro",
+			"keins benötigt"
+		],
+		"difficulty": 1,
+		"right_answer": "50.000 Euro",
+		"text": "Wie hoch muss das Grundkapital für die Gründung einer AG sein?"
+	},
+	{
+		"answer_possibilities": [
+			"Optimale Machinenbelegung",
+			"Lange Kaffeepausen",
+			"Geringer Transportaufwand",
+			"kurze Durchlaufzeiten"
+		],
+		"difficulty": 1,
+		"right_answer": "Optimale Machinenbelegung",
+		"text": "Was sind Vorteile der Werkstattfertigung?"
+	},
+	{
+		"answer_possibilities": [
+			"Staatsbürger, Staatsgebiet, Staatsgrenze, Verfassung",
+			"Parlament, Präsident, Wahlen",
+			"Bürger, Gebiet, Politische Institutionen",
+			"Internationale Anerkennung, Festgelgtes Gebiet"
+		],
+		"difficulty": 1,
+		"right_answer": "Staatsbürger, Staatsgebiet, Staatsgrenze, Verfassung",
+		"text": "Welche Bestandteile braucht jeder Staat?"
+	},
+	{
+		"answer_possibilities": [
+			"Arbeit, Boden, Kapital",
+			"Sachen, Dienste, Rechte",
+			"Investments, Unterstützung, Abgaben",
+			"Haushalt, Unternehmen, Staat"
+		],
+		"difficulty": 1,
+		"right_answer": "Arbeit, Boden, Kapital",
+		"text": "Was sind die drei Arten von Produktionsfaktoren?"
+	},
+	{
+		"answer_possibilities": [
+			"Gebühren haben eine konkrete Gegenleistung, Steuern nicht",
+			"Steuern fallen regelmäßg an, Gebühren wenn man etwas falsch macht",
+			"Steuern haben eine Gegenleistung, Gebühren nicht",
+			"Es ist das gleiche (kein Unterschied)"
+		],
+		"difficulty": 1,
+		"right_answer": "Gebühren haben eine konkrete Gegenleistung, Steuern nicht",
+		"text": "Was ist der Unterschied zwischen Steuer und Gebühr?"
+	},
+	{
+		"answer_possibilities": [
+			"Sachziele, Terminziele, Kostenziele",
+			"Standardziele, Innovationsziele, Entwicklungsziele",
+			"Bedienungsfreundlichkeit, Sicherheit, Zuverlässigkeit",
+			"Spezifische, Messbare, Aktzeptierbare, Realistische, Zeitgebundene Ziele"
+		],
+		"difficulty": 1,
+		"right_answer": "Sachziele, Terminziele, Kostenziele",
+		"text": "Welche Beurteilungskriterien gibt es für den Erfolg eines Projekts?"
+	},
+	{
+		"answer_possibilities": [
+			"Günstig",
+			"Zeitgebunden",
+			"Realismus",
+			"Zuweisbar"
+		],
+		"difficulty": 1,
+		"right_answer": "Günstig",
+		"text": "Was gehört nicht zu den S.M.A.R.T.?"
+	},
+	{
+		"answer_possibilities": [
+			"Relevanz",
+			"Geschrieben",
+			"Klar verstanden",
+			"Genau definiert"
+		],
+		"difficulty": 1,
+		"right_answer": "Relevanz",
+		"text": "Was ist keins der vier Gebote für gutes Projekt Scope?"
+	},
+	{
+		"answer_possibilities": [
+			"Definieren, Planen, Organiesieren, Kontrollieren, Abschließen",
+			"Kosten, Umfang, Zeitplan, Qualität",
+			"Spezifischy, Messbar, Erreichbar, Relevanz, Zeitgebunden",
+			"Übersicht, Pfad, Beschreiben, Berichten, Überprüfen"
+		],
+		"difficulty": 1,
+		"right_answer": "Definieren, Planen, Organiesieren, Kontrollieren, Abschließen",
+		"text": "Was sind die Phasen des Projektmanagment?"
+	},
+	{
+		"answer_possibilities": [
+			"Kostenausgleich",
+			"Abnahme durch Kunde",
+			"Abschlussbericht",
+			"Prüfung nach der Umsetzung"
+		],
+		"difficulty": 1,
+		"right_answer": "Kostenausgleich",
+		"text": "Was ist kein Teil des Projektabschlusses?"
+	},
+	{
+		"answer_possibilities": [
+			"cash cow",
+			"Star",
+			"poor dog",
+			"Questionmark"
+		],
+		"difficulty": 1,
+		"right_answer": "cash cow",
+		"text": "Was ist dein Portfolio, wenn das Marktwachstum und Marktanteil hoch ist?"
+	},
+	{
+		"answer_possibilities": [
+			"Innvation, Variation, Elimination",
+			"Forschung, Produktion, Verkauf",
+			"Marktanalyse, Marketing",
+			"vermarktetes Gut"
+		],
+		"difficulty": 1,
+		"right_answer": "Innvation, Variation, Elimination",
+		"text": "Was heißt Produkt?"
+	},
+	{
+		"answer_possibilities": [
+			"Verschiedene Biersorten anbieten",
+			"Verschieden farbige Autos",
+			"Bier und Bomben verkaufen",
+			"Diverse Mitarbeiter haben"
+		],
+		"difficulty": 1,
+		"right_answer": "Verschiedene Biersorten anbieten",
+		"text": "Was ist eine Vertikale Diversifikation?"
+	},
+	{
+		"answer_possibilities": [
+			"Erweiterung eines Produkts durch mehrere Varianten",
+			"Änderung der technischen Eigenschaften eines Produktes",
+			"Produkt 1 steht neben Produkt 2",
+			"Produkt 1 hat nichts mit Produkt 2 zutun"
+		],
+		"difficulty": 1,
+		"right_answer": "Erweiterung eines Produkts durch mehrere Varianten",
+		"text": "Was meint Produktvariation?"
+	},
+	{
+		"answer_possibilities": [
+			"Änderung der technischen Eigenschaften eines Produktes um sich abzuheben",
+			"Erweiterung eines Produkts durch mehrere Varianten",
+			"Produkt 1 hat nichts mit Produkt 2 zutun",
+			"Produkt 1 steht neben Produkt 2"
+		],
+		"difficulty": 1,
+		"right_answer": "Änderung der technischen Eigenschaften eines Produktes um sich abzuheben",
+		"text": "Was meint die Produktdifferenzierung?"
+	},
+	{
+		"answer_possibilities": [
+			"Verteilung von Risiko",
+			"Verlustanalyse",
+			"Forschungsplan",
+			"Geldanlage"
+		],
+		"difficulty": 1,
+		"right_answer": "Verteilung von Risiko",
+		"text": "Was ist ein Portfolio?"
+	},
+	{
+		"answer_possibilities": [
+			"Konkurenz",
+			"Geldfluss",
+			"Umsatz",
+			"Marktkarte"
+		],
+		"difficulty": 1,
+		"right_answer": "Konkurenz",
+		"text": "Woran orientiert man sich auf dem Markt?"
+	},
+	{
+		"answer_possibilities": [
+			"5",
+			"3",
+			"2",
+			"4"
+		],
+		"difficulty": 1,
+		"right_answer": "5",
+		"text": "Nach wie vielen gewinnlosen Jahren zählt die Selbstständigkeit als Liebhaberei?"
+	},
+	{
+		"answer_possibilities": [
+			"Heterogenes Gut",
+			"Homogenes Gut",
+			"Angebot und Nachfrage",
+			"Ausgeschlossene Präferenzen"
+		],
+		"difficulty": 1,
+		"right_answer": "Heterogenes Gut",
+		"text": "Welches ist kein Grundsatz eines vollkommenen Marktes?"
+	},
+	{
+		"answer_possibilities": [
+			"Moderne Präferenz",
+			"Zeitliche Präferenz",
+			"Räumliche Präferenz",
+			"Persönliche Präferenz"
+		],
+		"difficulty": 1,
+		"right_answer": "Moderne Präferenz",
+		"text": "Was ist keine Präferenz?"
+	},
+	{
+		"answer_possibilities": [
+			"Es gibt wenige Anbieter und ein Nachfrager",
+			"Es gibt ein Anbieter und wenig Nachfrager",
+			"Es gibt wenig Anbieter und wenig Nachfrager",
+			"Es gibt wenig Anbieter und viele Nachfrager"
+		],
+		"difficulty": 1,
+		"right_answer": "Es gibt wenige Anbieter und ein Nachfrager",
+		"text": "Was ist ein beschränktes Nachfragemonopol?"
+	},
+	{
+		"answer_possibilities": [
+			"Immobil = Haus und Mobil = Auto",
+			"Immobil = Bewegungseinschränkung und Mobil = Hilfsmittel",
+			"Immobil = Computer und Mobil = Smartphone",
+			"Immobil = Bürgschaft und Mobil = Smartphone"
+		],
+		"difficulty": 1,
+		"right_answer": "Immobil = Haus und Mobil = Auto",
+		"text": "Was ist der Unterschied zwischen Immobil und Mobil bezogen auf die Sicherheit eines Kredits?"
+	},
+	{
+		"answer_possibilities": [
+			"Wenn der Projektumfang schlecht gesetzt, dokumentiert oder kontrolliert worden ist",
+			"Wenn man den Creeper schlecht einschätzt",
+			"Durch eine schlechte Planung",
+			"Durch eine gute Planung"
+		],
+		"difficulty": 1,
+		"right_answer": "Wenn der Projektumfang schlecht gesetzt, dokumentiert oder kontrolliert worden ist",
+		"text": "Wie geschieht ein Creeping Scope?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Sondermietvertrag",
+			"Ein Sonderfinanzierungsvertrag",
+			"Ein Kaufvertrag",
+			"Ein Mietvertrag"
+		],
+		"difficulty": 1,
+		"right_answer": "Ein Sondermietvertrag",
+		"text": "Was ist Leasing nach dem Steuerrecht?"
+	},
+	{
+		"answer_possibilities": [
+			"Identifizieren, Analysieren, Reagieren, Dokumentieren",
+			"Dokumentieren, Analysieren, Reagieren, Identifizieren",
+			"Umsetzen, Eskalieren, Reagieren, Dokumentieren",
+			"Identifizieren, Reagieren, Dokumentieren"
+		],
+		"difficulty": 1,
+		"right_answer": "Identifizieren, Analysieren, Reagieren, Dokumentieren",
+		"text": "Mit welcher Reihenfolge geht man mit Risiken um?"
+	},
+	{
+		"answer_possibilities": [
+			"Den Preis nach oben zu testen",
+			"Den Markt zu führen",
+			"Konkurenten zu entfernen",
+			"andere Produkte zu vermarkten"
+		],
+		"difficulty": 1,
+		"right_answer": "Den Preis nach oben zu testen",
+		"text": "Was ist die Aufgabe des Marktführers?"
+	},
+	{
+		"answer_possibilities": [
+			"Kapitaleinlagen der Gesellschafter einer Kapitalgesellschaft",
+			"Vermögen des Gesellschafters",
+			"Geldmittel, die von einer Behörde für ein Projekt bereitgestellt werden",
+			"Zahlungen an Aktionäre als Dividenden"
+		],
+		"difficulty": 1,
+		"right_answer": "Kapitaleinlagen der Gesellschafter einer Kapitalgesellschaft",
+		"text": "Was sind Stammeinlagen?"
+	},
+	{
+		"answer_possibilities": [
+			"mit seinen Stammeinlagen",
+			"Gesamtschuldnerisch",
+			"Unbeschränkt",
+			"Persönlich"
+		],
+		"difficulty": 1,
+		"right_answer": "mit seinen Stammeinlagen",
+		"text": "Wie haftet man als Einzelkaufmann nicht?"
+	},
+	{
+		"answer_possibilities": [
+			"6",
+			"5",
+			"7",
+			"8"
+		],
+		"difficulty": 1,
+		"right_answer": "6",
+		"text": "Wie viel Steuerklassen gibt es?"
+	},
+	{
+		"answer_possibilities": [
+			"4",
+			"3",
+			"5",
+			"6"
+		],
+		"difficulty": 1,
+		"right_answer": "4",
+		"text": "Wie viele Preisstrategien gibt es?"
+	},
+	{
+		"answer_possibilities": [
+			"Niedrig",
+			"hoch",
+			"Mittel",
+			"Kostenlos"
+		],
+		"difficulty": 1,
+		"right_answer": "Niedrig",
+		"text": "Was ist der Preis bei der Promotionspreisstrategie?"
+	},
+	{
+		"answer_possibilities": [
+			"der Markt ist für die Unternehmen nicht mehr rentable",
+			"Die Konsumenten werden durch hohe Preise vertrieben",
+			"Ein Markt, der mit ruinösen Produkten gefüllt ist",
+			"Es gibt keine Konsumenten mehr auf dem Markt"
+		],
+		"difficulty": 1,
+		"right_answer": "der Markt ist für die Unternehmen nicht mehr rentable",
+		"text": "Was ist ein ruinöser Markt?"
+	},
+	{
+		"answer_possibilities": [
+			"Schnelles Sortiment",
+			"Randsortiment",
+			"Kernsortiment",
+			"tiefes Sortiment"
+		],
+		"difficulty": 1,
+		"right_answer": "Schnelles Sortiment",
+		"text": "Was ist kein Sortiment in der Sortimentenpolitik?"
+	},
+	{
+		"answer_possibilities": [
+			"Preisabsatzfunktion",
+			"Pakistan Air Force",
+			"Pfaffenhofen an der Fulda",
+			"Plant & Foulkes"
+		],
+		"difficulty": 1,
+		"right_answer": "Preisabsatzfunktion",
+		"text": "Was heißt PAF?"
+	},
+	{
+		"answer_possibilities": [
+			"Ausführen",
+			"Organisieren",
+			"Kontrollieren",
+			"Planen"
+		],
+		"difficulty": 2,
+		"right_answer": "Ausführen",
+		"text": "Was davon ist kein Teil der Projektmanagementphilosophie?"
+	},
+	{
+		"answer_possibilities": [
+			"Zielkonflikte auflösen und nicht bestehen lassen",
+			"Ist/Soll Formulierung",
+			"Umsetzung richtig gestalten",
+			"Ziele setzen"
+		],
+		"difficulty": 2,
+		"right_answer": "Zielkonflikte auflösen und nicht bestehen lassen",
+		"text": "Welcher Grundsatz einer guten Zielvereinbarung ist richtig?"
+	},
+	{
+		"answer_possibilities": [
+			"p.p.A.",
+			"i.A.",
+			"i.V.",
+			"G.G."
+		],
+		"difficulty": 2,
+		"right_answer": "p.p.A.",
+		"text": "Was ist die Abkürzung für die Vertretungsvollmacht?"
+	},
+	{
+		"answer_possibilities": [
+			"Die Erhöhung des Lebensstandards",
+			"Die Schaffung von Arbeitsplätzen ",
+			"Die Erhöhung des Bruttoinlandsprodukts (BIP) ",
+			"Die Steigerung der Produktivität "
+		],
+		"difficulty": 2,
+		"right_answer": "Die Erhöhung des Lebensstandards",
+		"text": "Was ist das Ziel des Wirtschaftskreislaufs? "
+	},
+	{
+		"answer_possibilities": [
+			"Ein Unternehmen, bei dem es mindestens einen Komplementär und einen Kommanditisten gibt.",
+			"Ein Unternehmen, das von einer Person oder einer Gruppe von Personen betrieben wird.",
+			"Ein Unternehmen, das von einem oder mehreren Partnern betrieben wird.",
+			"Ein Unternehmen, das von seinen Aktionären betrieben wird. "
+		],
+		"difficulty": 2,
+		"right_answer": "Ein Unternehmen, bei dem es mindestens einen Komplementär und einen Kommanditisten gibt.",
+		"text": "Welche Art von Unternehmen ist eine Kommanditgesellschaft (KG)?"
+	},
+	{
+		"answer_possibilities": [
+			"Ein Darlehen mit einer festen monatlichen Rate. ",
+			"Ein Darlehen mit einer variablen jährlichen Rate.",
+			"Ein Darlehen mit einer variablen monatlichen Rate. ",
+			"Ein Darlehen mit einer festen jährlichen Rate. "
+		],
+		"difficulty": 2,
+		"right_answer": "Ein Darlehen mit einer festen monatlichen Rate. ",
+		"text": "Was ist ein Annuitätendarlehen? "
+	},
+	{
+		"answer_possibilities": [
+			"Ratendarlehen",
+			"Annuitätendarlehen",
+			"Standard-Darlehen",
+			"Schuld-Darlehen"
+		],
+		"difficulty": 2,
+		"right_answer": "Ratendarlehen",
+		"text": "Bei welcher Darlehensart bleibt die Tilgung stets gleich?"
+	},
+	{
+		"answer_possibilities": [
+			"Amarita",
+			"Wasserfall-Methode",
+			"Scrum",
+			"Lean"
+		],
+		"difficulty": 2,
+		"right_answer": "Amarita",
+		"text": "Was ist keine Projektmanagmentmethode?"
+	},
+	{
+		"answer_possibilities": [
+			"Benötigtes Stammkapital",
+			"Geschäftszweck",
+			"Eintragung ins Handelsregister ",
+			"Mindestanzahl an Gesellschaftler "
+		],
+		"difficulty": 2,
+		"right_answer": "Benötigtes Stammkapital",
+		"text": "Was ist der Unterschied zwischen GmbH und UG?"
+	},
+	{
+		"answer_possibilities": [
+			"Laufzeit, Anfangskapital, Zinsen, Tilgung, Rate, Restkapital",
+			"Laufzeit, Kapital, Kosten, Rate",
+			"Laufzeit, Zinsen, Tilgung, Kapital",
+			"Anfangskapital, Rate, Restkapital"
+		],
+		"difficulty": 2,
+		"right_answer": "Laufzeit, Anfangskapital, Zinsen, Tilgung, Rate, Restkapital",
+		"text": "Welche Spalten hat ein Tilgungsplan?"
+	},
+	{
+		"answer_possibilities": [
+			"0.04",
+			"0.01",
+			"50000",
+			"25000"
+		],
+		"difficulty": 2,
+		"right_answer": "0.04",
+		"text": "Was ist die Mindestkapitalausschüttung bei einer OHG?"
+	},
+	{
+		"answer_possibilities": [
+			"Führungsperson",
+			"Führungsaufbau",
+			"Führungsaufgaben",
+			"Führungstechnik"
+		],
+		"difficulty": 2,
+		"right_answer": "Führungsperson",
+		"text": "Was ist kein Teil der Gesamtheit des Projektmanagments?"
+	},
+	{
+		"answer_possibilities": [
+			"Ziele->Umfang->Meilensteine->Budget->Ressourcen",
+			"Umfang->Ressourcen->Meilensteine->Budget->Ziele",
+			"Spezifisch->Messbar->Erreichbar->Relevanz->Zeitgebunden",
+			"Budget->Ziele->Umfang->Ressourcen"
+		],
+		"difficulty": 2,
+		"right_answer": "Ziele->Umfang->Meilensteine->Budget->Ressourcen",
+		"text": "In welcher Reihenfolge sollte ein Projekt geplant werden?"
+	},
+	{
+		"answer_possibilities": [
+			"Systematische Erkundung unter Verwendung einer wissenschaftlichen Methode",
+			"Erforschung des Marktes mittels Ausschlussprinzip",
+			"Durchführen ein Wettbewerbsanalyse",
+			"Eine Marktprognosetreffen um vorherzusagen was in dem nächsten Quartal passieren wird"
+		],
+		"difficulty": 2,
+		"right_answer": "Systematische Erkundung unter Verwendung einer wissenschaftlichen Methode",
+		"text": "Was ist Marktforschung?"
+	},
+	{
+		"answer_possibilities": [
+			"Umfragen, Beobachtungen, Fragebögen, Interviews",
+			"Literaturrecherche, Datenbankanalyse, Statistiken",
+			"Desktopresearch, Datenanalyse, Trendanalyse",
+			"Marktstudien, Syndicated Research, Social Listening"
+		],
+		"difficulty": 2,
+		"right_answer": "Umfragen, Beobachtungen, Fragebögen, Interviews",
+		"text": "Welche Instrumente hat ein Feldforscher in der Primärforschung?"
+	},
+	{
+		"answer_possibilities": [
+			"Produkt 1 ist unabhängig von Produkt 2",
+			"Produkt 1 erweiert Produkt 2",
+			"Erweiterung des Produktportfolios",
+			"Produkt 1 steht neben Produkt 2"
+		],
+		"difficulty": 2,
+		"right_answer": "Produkt 1 ist unabhängig von Produkt 2",
+		"text": "Was meint die laterale Diversifikation?"
+	},
+	{
+		"answer_possibilities": [
+			"Umfragen durchführen",
+			"Statistiken auswerten",
+			"Forschungsinsitute hinzuziehen",
+			"Im Internet suchen"
+		],
+		"difficulty": 2,
+		"right_answer": "Umfragen durchführen",
+		"text": "Was wird in der Primärforschung typischerweise gemacht?"
+	},
+	{
+		"answer_possibilities": [
+			"neue Forschung",
+			"entstandene Schulden",
+			"Gehalt ",
+			"weitere Marktzyklen"
+		],
+		"difficulty": 2,
+		"right_answer": "neue Forschung",
+		"text": "Was soll der Gewinn des Marktzkyluses finanzieren?"
+	},
+	{
+		"answer_possibilities": [
+			"Accepted",
+			"Attempt",
+			"Affectabilities",
+			"Administration"
+		],
+		"difficulty": 2,
+		"right_answer": "Accepted",
+		"text": "Für was steht das A in S.M.A.R.T.?"
+	},
+	{
+		"answer_possibilities": [
+			"Realistic",
+			"React",
+			"Reorganization",
+			"Recollection"
+		],
+		"difficulty": 2,
+		"right_answer": "Realistic",
+		"text": "Für was steht das R in S.M.A.R.T.?"
+	},
+	{
+		"answer_possibilities": [
+			"Time-related",
+			"Timeless",
+			"Tertiary",
+			"Trouble"
+		],
+		"difficulty": 2,
+		"right_answer": "Time-related",
+		"text": "Für was steht das T in S.M.A.R.T.?"
+	},
+	{
+		"answer_possibilities": [
+			"Kosten, Zeitplan, Umfang, Qualität",
+			"Kosten, Arbeit, Quantität, Zeitdruck",
+			"Gewinn, Präferenzen, Qualität, Kosten",
+			"Risiko, Zeitdruck, Gewinn, Qualität"
+		],
+		"difficulty": 2,
+		"right_answer": "Kosten, Zeitplan, Umfang, Qualität",
+		"text": "Wie lauten die vier Cornerstones des Projektmanagements?"
+	},
+	{
+		"answer_possibilities": [
+			"Qualität",
+			"Einschätzung einer guten Kontrollbasis",
+			"Kostenkontrolle",
+			"Anwendung von kontrollierenden Prozeduren für einen finanziellen Fortschritt"
+		],
+		"difficulty": 2,
+		"right_answer": "Qualität",
+		"text": "Was ist kein Aspekt der Kosten?"
+	},
+	{
+		"answer_possibilities": [
+			"8 Jahre",
+			"2 Jahre",
+			"4 Jahre",
+			"5 Jahre"
+		],
+		"difficulty": 2,
+		"right_answer": "8 Jahre",
+		"text": "Wie lange ist ein Leasing höchstens verlängerbar?"
+	},
+	{
+		"answer_possibilities": [
+			"Auswirkung, Wahrscheinlichkeit",
+			"Kosten, Häufung",
+			"Kosten, Auswirkung",
+			"Wahrscheinlichkeit, Kosten"
+		],
+		"difficulty": 2,
+		"right_answer": "Auswirkung, Wahrscheinlichkeit",
+		"text": "Mit welchen Eigenschaften kann man Risiken einordnen?"
+	},
+	{
+		"answer_possibilities": [
+			"Skimmingmethode",
+			"Premiummethode",
+			"Promotionsmethode",
+			"Penetrationsmethoed"
+		],
+		"difficulty": 2,
+		"right_answer": "Skimmingmethode",
+		"text": "Wie heißt die Methode bei der dynamischen Hochpreisstrategie?"
+	},
+	{
+		"answer_possibilities": [
+			"Sie ermöglicht die Identifizierung von Zielgruppen und Chancen",
+			"Sie ist nicht relevant",
+			"Sie beeinflusst die Preisgestaltung",
+			"Sie hilft bei der Entwicklung von Vertriebskanälen"
+		],
+		"difficulty": 2,
+		"right_answer": "Sie ermöglicht die Identifizierung von Zielgruppen und Chancen",
+		"text": "Welche Rolle spielt Marktforschung bei der Entwicklung einer Marketingstrategie?"
+	},
+	{
+		"answer_possibilities": [
+			"Sie beeinflusst die Wettbewerbsposition und Rentabilität",
+			"Sie ist irrelevant solang das Produkt gut genug ist",
+			"Sie hat keinen Einfluss auf Kaufentscheidungen",
+			"Sie beeinflusst das Marketingimage"
+		],
+		"difficulty": 2,
+		"right_answer": "Sie beeinflusst die Wettbewerbsposition und Rentabilität",
+		"text": "Welche Rolle spielen Preisstrategien im Marketing-Mix?"
+	},
+	{
+		"answer_possibilities": [
+			"Flexibel und Anpassungsfähig",
+			"Alle Entscheidungen deligieren",
+			"Ignoranz gegenüber Änderungen und Unsicherheiten",
+			"Starre Vorgaben beibehalten"
+		],
+		"difficulty": 2,
+		"right_answer": "Flexibel und Anpassungsfähig",
+		"text": "Wie können Projektmanager effektiv mit Änderungen und Unsicherheiten umgehen?"
+	},
+	{
+		"answer_possibilities": [
+			"Klare Rollen & Verantwortlichkeiten, Unterstützung und Anerkennung",
+			"Vertrauen und Eigenverantwortung",
+			"Keine klare Organisation/Motivation nötig",
+			"Mikromanagement und ständige Überwachung"
+		],
+		"difficulty": 2,
+		"right_answer": "Klare Rollen & Verantwortlichkeiten, Unterstützung und Anerkennung",
+		"text": "Wie können Teams effizient organisiert/motiviert werden?"
+	},
+	{
+		"answer_possibilities": [
+			"Projektmanagement-Software/Statusberichte",
+			"To-Do-Listen/Post-Its",
+			"Telefonkonferenzen/Sozial-Media",
+			"E-Mail/Persönliche Meetings"
+		],
+		"difficulty": 2,
+		"right_answer": "Projektmanagement-Software/Statusberichte",
+		"text": "Wie kann der Projektfortschritt überwacht und gesteuert werden?"
+	},
+	{
+		"answer_possibilities": [
+			"Höhere Flexibilität, schnellere Anpassungsfähigkeit, bessere Kundenorientierung",
+			"Keine Vorteile, Agile ist ineffizient",
+			"Mehr bürokratische Kontrolle, weniger Verantwortung für das Team",
+			"Engere Einhaltung von Zeitplänen & Budgets"
+		],
+		"difficulty": 2,
+		"right_answer": "Höhere Flexibilität, schnellere Anpassungsfähigkeit, bessere Kundenorientierung",
+		"text": "Welche Vorteile haben Agile Projektmanagmentmethoden?"
+	},
+	{
+		"answer_possibilities": [
+			"Der Punkt an dem die Gesamtkosten und der Erlöse gleich sind",
+			"Der Zeitpunkt an dem die Produktion eingestellt wird",
+			"Der Punkt an dem ein Unternehmen den Gewinn maximiert",
+			"Der Zeitpunkt an dem das Unternehmen Gewinn erziehlt"
+		],
+		"difficulty": 2,
+		"right_answer": "Der Punkt an dem die Gesamtkosten und der Erlöse gleich sind",
+		"text": "Was versteht man unter dem \"Break-Even-Point\"?"
+	}
+]
