@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu4muogpuu7uj"]
+
+[ext_resource type="Script" path="res://map/field_types/start/start.gd" id="1_fxwmu"]
+[ext_resource type="Script" path="res://map/field/field_theme.gd" id="2_pl40u"]
+
+[sub_resource type="Resource" id="Resource_ntpfy"]
+script = ExtResource("2_pl40u")
+field_color = Color(0.0196078, 0.607843, 1, 1)
+shadow_color_normal = Color(0, 0, 0, 1)
+shadow_color_pressed = Color(0, 0, 0, 1)
+
+[node name="start" type="Node2D" groups=["event"]]
+script = ExtResource("1_fxwmu")
+field_theme_override = SubResource("Resource_ntpfy")

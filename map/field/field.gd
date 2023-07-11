@@ -71,7 +71,7 @@ func _ready():
 			paths.append(child)
 			
 		if child.is_in_group("event") && child.has_method("event"):
-			if child.name == "patent_office":
+			if child.name == "patent_office" || child.name == "start":
 				driveby_events.append(child.event)
 			field_events.append(child.event)
 
