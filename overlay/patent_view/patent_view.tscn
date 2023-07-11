@@ -35,6 +35,7 @@ theme_override_font_sizes/font_size = 28
 vertical_alignment = 1
 
 [node name="Player2" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 188.0
 offset_right = 384.0
@@ -43,6 +44,7 @@ theme_override_font_sizes/font_size = 28
 vertical_alignment = 1
 
 [node name="Player3" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 60.0
 offset_right = 832.0
@@ -51,6 +53,7 @@ theme_override_font_sizes/font_size = 28
 vertical_alignment = 1
 
 [node name="Player4" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 188.0
 offset_right = 832.0

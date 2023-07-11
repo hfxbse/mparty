@@ -7,7 +7,7 @@ extends Node
 @onready var players = []
 
 @onready var main_camera = $MainCamera
-@onready var hud = $gameOverlay
+@onready var hud = $GameOverlay
 
 
 func _init():
