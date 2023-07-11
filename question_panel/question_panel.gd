@@ -5,6 +5,7 @@ var selected_answer
 
 @onready var question_label = $MarginContainer/QuestionContainer/QuestionLabel
 @onready var answer_container = $MarginContainer/QuestionContainer/AnswerContainer
+@onready var question_container = $MarginContainer/QuestionContainer
 
 signal answer_selected(answer: bool)
 
@@ -41,17 +42,26 @@ func _on_answer_selected(answer_text):
 
 
 func _on_submit_button_pressed():
-	var rightAnswer = question.answer_possibilities[question.right_answer]
+	if selected_answer != null:
+		var rightAnswer = question.answer_possibilities[question.right_answer]
 
-	for child in answer_container.get_children():
-		if child.button_text == rightAnswer:
-			child._right_answer_selected()
+		for child in answer_container.get_children():
+			if child.button_text == rightAnswer:
+				child._right_answer_selected()
+			else:
+				child._wrong_answer_selected()
+
+		if rightAnswer == selected_answer:
+			answer_selected.emit(true)
 		else:
-			child._wrong_answer_selected()
-
-	if rightAnswer == selected_answer:
-		answer_selected.emit(true)
-	else:
-		answer_selected.emit(false)
+			answer_selected.emit(false)
 		
-	print("Submit current answer: " + selected_answer)
+		print("Submit current answer: " + selected_answer)
+	else:
+		if question_container.get_child_count() == 3:
+			var error_label = Label.new()
+			error_label.text = "Es wurde noch keine Antwort ausgewählt!"
+			error_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			error_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+			
+			question_container.add_child(error_label)
