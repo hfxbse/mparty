@@ -3,10 +3,10 @@ class_name Player extends Node2D
 @onready var sprite = $Sprite2D
 @onready var camera = $PlayerCamera
 
-var patente
+var patente = 0
 signal change_patente(player, amount)
 
-var riesen
+var riesen = 0
 signal change_riesen(player, amount)
 
 var moves = 0

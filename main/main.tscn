@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
-[ext_resource type="PackedScene" uid="uid://cy6kvnehu883m" path="res://overlay/overlay.tscn" id="4_4fn2p"]
+[ext_resource type="PackedScene" uid="uid://d03x38s8a6m8y" path="res://overlay/overlay.tscn" id="4_4fn2p"]
 [ext_resource type="Script" path="res://main/main_camera.gd" id="4_lgfck"]
 
 [node name="Node2" type="Node"]
@@ -16,3 +16,5 @@ position = Vector2(-54, 156)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 script = ExtResource("4_lgfck")
+
+[connection signal="close_game_requested" from="GameOverlay" to="." method="_on_game_overlay_close_game_requested"]
