@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 var question: Question
 var selected_answer
