@@ -58,13 +58,13 @@ func step():
 
 	if moves == 0:
 		for event in current_location.field_events:
-			event.call(self)
+			await event.call(self)
 		register_duels()
 		turn_ended.emit()
 		return
 	
 	for event in current_location.driveby_events:
-		event.call(self)
+		await event.call(self)
 	
 	await step()
 

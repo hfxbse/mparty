@@ -1,19 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://dft2qj70fe0nb"]
+[gd_scene load_steps=3 format=3 uid="uid://dft2qj70fe0nb"]
 
 [ext_resource type="Script" path="res://question_panel/question_panel.gd" id="1_jy063"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[sub_resource type="Theme" id="Theme_itjmp"]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_jy063")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.160784, 0.223529, 0.266667, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 640.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_itjmp")
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
@@ -21,7 +44,6 @@ theme_override_constants/margin_bottom = 50
 
 [node name="QuestionContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-script = ExtResource("1_jy063")
 
 [node name="QuestionLabel" type="Label" parent="MarginContainer/QuestionContainer"]
 layout_mode = 2
@@ -42,4 +64,4 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Abgeben"
 
-[connection signal="pressed" from="MarginContainer/QuestionContainer/SubmitButton" to="MarginContainer/QuestionContainer" method="_on_submit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/QuestionContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
