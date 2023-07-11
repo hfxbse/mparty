@@ -16,7 +16,7 @@ func _ready():
 	settings_menu_button.get_popup().id_pressed.connect(on_settings_button_id_pressed)
 
 
-func _on_camera_button_toggled(button_pressed):
+func _on_camera_button_pressed():
 	main_camera_selected = !main_camera_selected
 	camera_menu_pressed.emit(main_camera_selected)
 
