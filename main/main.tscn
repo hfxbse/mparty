@@ -16,10 +16,3 @@ position = Vector2(-54, 156)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 script = ExtResource("4_lgfck")
-
-[node name="QuestionPanelButton" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "quesiton panel"
-
-[connection signal="pressed" from="QuestionPanelButton" to="." method="_on_question_panel_button_pressed"]
