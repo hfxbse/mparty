@@ -3,11 +3,22 @@ class_name Player extends Node2D
 @onready var sprite = $Sprite2D
 @onready var camera = $PlayerCamera
 
-var patente = 0
 signal change_patente(player, amount)
-
-var riesen = 0
 signal change_riesen(player, amount)
+
+var patente: int:
+	set(amount):
+		if patente != amount:
+			patente = amount
+			change_patente.emit(self, amount)
+
+
+var riesen: int:
+	set(amount):
+		if patente != amount:
+			patente = amount
+			change_patente.emit(self, amount)
+
 
 var moves = 0
 
@@ -36,8 +47,8 @@ func move(distance: int):
 	last_location = current_location
 	moves = distance
 	await step()
-	
-	
+
+
 func step():
 	moves -= 1
 
@@ -46,9 +57,15 @@ func step():
 	last_transversed = last
 
 	if moves == 0:
+		for event in current_location.field_events:
+			await event.call(self)
+		register_duels()
 		turn_ended.emit()
 		return
-
+	
+	for event in current_location.driveby_events:
+		await event.call(self)
+	
 	await step()
 
 
@@ -66,11 +83,15 @@ func undo_last_move():
 		await move_backwards(1)
 		
 		
-func set_riesen(amount):
-	self.riesen = amount
-	change_riesen.emit(self, amount)
+func register_duels():
+	current_location.field_events.append(duel)
+	current_location.driveby_events.append(driveby_duel)
 	
 	
-func set_patente(amount):
-	self.patente = amount
-	change_patente.emit(self, amount)
+func duel(player: Player):
+	print("Duel triggered")
+	
+	
+func driveby_duel(player: Player):
+	print("Drive-by Duel triggered")
+
