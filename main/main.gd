@@ -132,5 +132,6 @@ func _on_answer_submited(signal_response: bool):
 	else:
 		print("wrong answer")
 	
+	await get_tree().create_timer(1.5).timeout
 	remove_child(question_panel_scene)
 # END: sample code
