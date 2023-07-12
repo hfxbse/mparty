@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cm30qejf5kuhx"]
 
-[ext_resource type="Script" path="res://feld_aktionen/sabotage_field/action_field.gd" id="1_8hjli"]
+[ext_resource type="Script" path="res://sabotage_field/sabotage_field.gd" id="1_lr0ke"]
 
 [node name="sabotagefield" type="Control"]
 layout_mode = 3
@@ -9,8 +9,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lr0ke")
 
-[node name="actionfieldLabel" type="Panel" parent="."]
+[node name="SabotageFieldLabel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,9 +24,8 @@ offset_right = 384.0
 offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8hjli")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="actionfieldLabel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="SabotageFieldLabel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.495536
@@ -40,7 +40,7 @@ theme_override_font_sizes/normal_font_size = 38
 text = "Würfelglück entscheidet die Sabotage!"
 metadata/_edit_use_anchors_ = true
 
-[node name="GridContainer" type="GridContainer" parent="actionfieldLabel"]
+[node name="GridContainer" type="GridContainer" parent="SabotageFieldLabel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,48 +57,48 @@ theme_override_constants/h_separation = 25
 theme_override_constants/v_separation = 22
 columns = 2
 
-[node name="Label" type="Label" parent="actionfieldLabel/GridContainer"]
+[node name="Label" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "1-2: Duell
 Einsatz: 50 Riesen"
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="actionfieldLabel/GridContainer"]
+[node name="Label2" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "3-4: Duell um Zug stehlen"
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="actionfieldLabel/GridContainer"]
+[node name="Label3" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "5-6: Big Baller Duell
 Einsatz: halbes Vermögen                 "
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="actionfieldLabel/GridContainer"]
+[node name="Label4" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "7-8: Erhalt Sabotage Freikarte
 "
 vertical_alignment = 1
 
-[node name="Label5" type="Label" parent="actionfieldLabel/GridContainer"]
+[node name="Label5" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "9-10: Eigentor
 Verlust: 50 Riesen"
 vertical_alignment = 1
 
-[node name="Label6" type="Label" parent="actionfieldLabel/GridContainer"]
+[node name="Label6" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "11-12: Duell Würfelgeld
 Wert:gewürfelte Anzahl Riesen*10"
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="actionfieldLabel"]
+[node name="Button" type="Button" parent="SabotageFieldLabel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.499442
@@ -112,5 +112,3 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Würfeln!"
 metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="actionfieldLabel/Button" to="actionfieldLabel" method="_on_button_pressed"]

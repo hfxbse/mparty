@@ -1,4 +1,5 @@
-extends Panel
+extends Control
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,8 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed():
-	self.visible = false
-	#go to dice
-	#sabotage UI and Actions not done yet
-	#winner scene can be used to alert the winner
+func _on_start_button_pressed():
+	pass # Replace with function body.
