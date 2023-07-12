@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://b35fyw2y1dh4e"]
+
+[ext_resource type="Script" path="res://feld_aktionen/event_field/Button.gd" id="1_a5o5v"]
+
+[node name="DrawEventCard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OpenEventCard" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -192.5
+offset_right = 480.0
+offset_bottom = 192.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(336, 166)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -132.0
+offset_right = 256.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+text = "Read Card"
+script = ExtResource("1_a5o5v")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
