@@ -14,8 +14,8 @@ var patente: int:
 
 var riesen: int:
 	set(amount):
-		if patente != amount:
-			patente = amount
+		if riesen != amount:
+			riesen = amount
 			update.emit()
 
 
