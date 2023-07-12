@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://hpexnq1lmbsg"]
+
+[ext_resource type="Script" path="res://map/field_types/action/action.gd" id="1_nrkvy"]
+[ext_resource type="Texture2D" uid="uid://cs07f62ghebuk" path="res://map/field_types/action/action.png" id="3_8oftb"]
+
+[node name="action" type="Node2D" groups=["event"]]
+script = ExtResource("1_nrkvy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(30, 30)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_8oftb")

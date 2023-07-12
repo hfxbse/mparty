@@ -2,18 +2,17 @@
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
-[ext_resource type="PackedScene" uid="uid://b87k43gn00bjy" path="res://menu_overlay/menu_overlay.tscn" id="2_tj4n1"]
-[ext_resource type="PackedScene" uid="uid://c82nk64v2y7hl" path="res://player/player.tscn" id="3_kj1dm"]
+[ext_resource type="Script" path="res://main/main_camera.gd" id="4_lgfck"]
+[ext_resource type="PackedScene" uid="uid://do3h71ihunhmt" path="res://overlay/hud.tscn" id="5_j2h8g"]
 
 [node name="Node2" type="Node"]
 script = ExtResource("1_5mwui")
 
-[node name="MenuOverlay" parent="." instance=ExtResource("2_tj4n1")]
+[node name="HUD" parent="." instance=ExtResource("5_j2h8g")]
 
 [node name="Map" parent="." instance=ExtResource("2_n57xg")]
+z_index = -1
 position = Vector2(-54, 156)
 
-[node name="Player" parent="." instance=ExtResource("3_kj1dm")]
-z_index = 2
-
-[connection signal="turn_ended" from="Player" to="." method="_on_player_turn_ended"]
+[node name="MainCamera" type="Camera2D" parent="."]
+script = ExtResource("4_lgfck")
