@@ -92,6 +92,17 @@ func unregister_duels():
 	current_location.field_events.erase(duel)
 	current_location.field_events.erase(driveby_duel)
 
+
+func teleport(target: Field):
+	traversed_fields = []
+	last_location = current_location
+	current_location = target
+	global_position = target.global_position
+	
+	for event in current_location.field_events:
+		await event.call(self)
+	register_duels()
+		
 		
 func register_duels():
 	current_location.field_events.append(duel)
@@ -104,4 +115,7 @@ func duel(player: Player):
 	
 func driveby_duel(player: Player):
 	print("Drive-by Duel triggered")
+	
+	
+	
 

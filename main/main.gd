@@ -13,6 +13,7 @@ func _init():
 
 
 func _ready():
+	State.start = start
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 
 	if DisplayServer.is_touchscreen_available():
