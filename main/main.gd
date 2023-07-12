@@ -9,13 +9,6 @@ extends Node
 @onready var main_camera = $MainCamera
 @onready var hud = $HUD
 
-@onready var map = $Map
-@onready var start : Field = map.start
-@onready var currentPlayer: Player = $Player
-@onready var menu_overlay = $MenuOverlay
-
-@onready var players = []
-
 func _init():
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 
