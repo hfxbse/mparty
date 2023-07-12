@@ -52,7 +52,6 @@ func start_game(num_rounds, num_players):
 
 	for round in num_rounds:
 		hud.update_round_count(round + 1, num_rounds)
-		round_begin(round+1)
 
 		for player in players:
 			await player_turn(player)
@@ -77,8 +76,7 @@ func create_players(num):
 
 		player.current_location = start
 		player.global_position = start.global_position
-		player.change_patente.connect(on_player_change_patente)
-		player.change_riesen.connect(on_player_change_riesen)
+		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
 
@@ -100,27 +98,10 @@ func player_turn(player):
 	
 	hud.update_player_stats(current_player, players)
 
-	player_turn_begin(current_player)
 	await player.move(await roll_dice())
 
 	current_player.z_index -= 1
 
 
-func on_player_change_riesen(player, amount):
-	# Add code for communicating change to HUD
-	pass
-
-
-func on_player_change_patente(player, amount):
-	# Add code for communicating change to HUD
-	pass
-
-
-func player_turn_begin(player):
-	# Add code to display the current player in the HUD
-	pass
-
-
-func round_begin(round_num):
-	# Add code to change the round display in the HUD
-	pass
+func _on_update():
+	hud.update_player_stats(current_player, players)
