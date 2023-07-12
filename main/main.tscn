@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwbwn4wc8mnyf"]
+[gd_scene load_steps=5 format=3 uid="uid://cfjyx6b4461mv"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
+[ext_resource type="PackedScene" uid="uid://ctqluws6rgmy4" path="res://overlay/overlay.tscn" id="4_4fn2p"]
 [ext_resource type="Script" path="res://main/main_camera.gd" id="4_lgfck"]
-[ext_resource type="PackedScene" uid="uid://do3h71ihunhmt" path="res://overlay/hud.tscn" id="5_j2h8g"]
 
 [node name="Node2" type="Node"]
 script = ExtResource("1_5mwui")
 
-[node name="HUD" parent="." instance=ExtResource("5_j2h8g")]
+[node name="GameOverlay" parent="." instance=ExtResource("4_4fn2p")]
 
 [node name="Map" parent="." instance=ExtResource("2_n57xg")]
 z_index = -1
