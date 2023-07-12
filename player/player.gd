@@ -6,6 +6,8 @@ class_name Player extends Node2D
 signal change_patente(player, amount)
 signal change_riesen(player, amount)
 
+var skip = false
+
 var patente: int:
 	set(amount):
 		if patente != amount:

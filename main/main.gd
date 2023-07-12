@@ -4,8 +4,6 @@ extends Node
 @onready var start : Field = map.start
 @onready var current_player: Player
 
-@onready var players = []
-
 @onready var main_camera = $MainCamera
 @onready var hud = $HUD
 
@@ -52,7 +50,11 @@ func start_game(num_rounds, num_players):
 	for round in num_rounds:
 		round_begin(round+1)
 
-		for player in players:
+		while true:
+			print("Getting next player")
+			var player = State.next_player
+			if (player == null): 
+				break
 			await player_turn(player)
 
 
@@ -71,7 +73,7 @@ func create_players(num):
 		var player : Player = player_scene.instantiate()
 
 		add_child(player)
-		players.append(player)
+		State.players.append(player)
 
 		player.current_location = start
 		player.global_position = start.global_position
@@ -79,6 +81,8 @@ func create_players(num):
 		player.change_riesen.connect(on_player_change_riesen)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
+		
+	State.queue = State.players.duplicate()
 
 
 func roll_dice():
