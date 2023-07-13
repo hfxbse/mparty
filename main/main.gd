@@ -4,13 +4,12 @@ extends Node
 @onready var start : Field = map.start
 @onready var current_player: Player
 
-@onready var players = []
-
 @onready var main_camera = $MainCamera
 @onready var hud = $GameOverlay
 
 
 func _ready():
+	State.start = start
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 
 	if DisplayServer.is_touchscreen_available():
@@ -49,7 +48,11 @@ func start_game(num_rounds, num_players):
 	for round in num_rounds:
 		hud.update_round_count(round + 1, num_rounds)
 
-		for player in players:
+		while true:
+			print("Getting next player")
+			var player = State.next_player
+			if (player == null): 
+				break
 			await player_turn(player)
 
 
@@ -68,7 +71,7 @@ func create_players(num):
 		var player : Player = player_scene.instantiate()
 
 		add_child(player)
-		players.append(player)
+		State.players.append(player)
 
 		player.current_location = start
 		player.global_position = start.global_position
@@ -77,6 +80,8 @@ func create_players(num):
 		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
+		
+	State.queue = State.players.duplicate()
 
 
 func roll_dice():

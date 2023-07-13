@@ -97,7 +97,7 @@ func _get_configuration_warnings():
 
 func available_paths(player: Player):
 	return paths.filter(func(path): 
-		return path.target != player.last_transversed
+		return path.target != player.last_traversed
 	)
 
 
