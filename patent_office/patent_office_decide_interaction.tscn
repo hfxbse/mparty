@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://xil7ybcaxkq"]
+
+[ext_resource type="Script" path="res://patent_office/patent_office_decide_interaction.gd" id="1_waqly"]
+
+[node name="patent_office_decide_interaction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_waqly")
+
+[node name="patentOfficeLabel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.0
+offset_top = -220.0
+offset_right = 380.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="patentOfficeLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.062
+anchor_right = 0.964
+anchor_bottom = 0.287
+offset_left = 155.744
+offset_top = 6.952
+offset_right = -144.352
+offset_bottom = 15.052
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 49
+text = "Patent erwerben"
+
+[node name="Stay" type="Button" parent="patentOfficeLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 152.0
+offset_right = -444.0
+offset_bottom = -60.0
+grow_vertical = 2
+text = "Patentamt betreten"
+
+[node name="ContinueMove" type="Button" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 152.0
+offset_right = 644.0
+offset_bottom = 347.0
+text = "Zug fortführen"
+
+[node name="Label2" type="Label" parent="patentOfficeLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.062
+anchor_right = 0.964
+anchor_bottom = 0.287
+offset_left = 155.744
+offset_top = 6.952
+offset_right = -144.352
+offset_bottom = 15.052
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 49
+text = "Patent erwerben"
+
+[connection signal="pressed" from="patentOfficeLabel/Stay" to="." method="_on_stay_pressed"]
+[connection signal="pressed" from="patentOfficeLabel/ContinueMove" to="." method="_on_continue_move_pressed"]
