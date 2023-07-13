@@ -10,9 +10,8 @@ var selected_answer
 signal answer_selected(answer: bool)
 
 
-
 func display_question(difficulty):
-	var question_handler = preload("res://data_providers/resources/question_provider.tres")
+	var question_handler = preload("res://data_providers/question_provider/question_provider.tres")
 	
 	question = question_handler.get_random_question(difficulty)
 	question_label.set_text(question.question)
@@ -21,11 +20,10 @@ func display_question(difficulty):
 		var answer_button = create_answer_button(answer_possibility, _on_answer_selected)
 		
 		answer_container.add_child(answer_button)
-	
-	
+
 	return answer_selected
-	
-	
+
+
 func create_answer_button(answer, selected_receiver):
 	var scene = preload("res://question_panel/answer_button.tscn")
 	var answer_button = scene.instantiate()
@@ -38,25 +36,20 @@ func create_answer_button(answer, selected_receiver):
 
 func _on_answer_selected(answer_text):
 	selected_answer = answer_text
-	print("Selected answer: " + answer_text)
 
 
 func _on_submit_button_pressed():
 	if selected_answer != null:
-		var rightAnswer = question.answer_possibilities[question.right_answer]
-
 		for child in answer_container.get_children():
-			if child.button_text == rightAnswer:
+			if child.button_text == question.right_answer:
 				child._right_answer_selected()
 			else:
 				child._wrong_answer_selected()
 
-		if rightAnswer == selected_answer:
+		if question.right_answer == selected_answer:
 			answer_selected.emit(true)
 		else:
 			answer_selected.emit(false)
-		
-		print("Submit current answer: " + selected_answer)
 	else:
 		if question_container.get_child_count() == 3:
 			var error_label = Label.new()
