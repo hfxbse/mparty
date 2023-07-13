@@ -1,27 +1,24 @@
 extends Control
 
+var player
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var responseDice=1;
-	var result;
-	if (responseDice<=6):
-		result="Duell Einsatz: 50 Riesen"
-	if (responseDice==7||8):
-		result="Big Baller Duell Einsatz: halbes Vermögen"
-	if (responseDice==9):
-		result="Duell um Zug stehlen"
-	if (responseDice==10):
-		result="Erhalt Sabotage Freikarte"
-	if (responseDice==11):
-		result="Eigentor Verlust: 50 Riesen"
-	if (responseDice==12):
-		result="Duell Würfelgeld \nWert:gewürfelte Anzahl Riesen*10"
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	self.visible = false
 
 
 func _on_button_pressed():
-	self.visible = false
+	var dice_menu = preload("res://dice/dice.tscn").instantiate()
+	add_child(dice_menu)
+	var dice_value = await dice_menu.dice_number
+	remove_child(dice_menu)
+	
+	var result_display = preload("res://sabotage_field/sabotage_dice_result.tscn").instantiate()
+	add_child(result_display)
+	await result_display.display(player, dice_value)
+	remove_child(result_display)
+
+
+func display(player: Player):
+	self.player = player
+	visible = true
+	
