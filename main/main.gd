@@ -7,10 +7,7 @@ extends Node
 @onready var players = []
 
 @onready var main_camera = $MainCamera
-@onready var hud = $HUD
-
-func _init():
-	var question_handler = preload("res://data_providers/resources/question_provider.tres")
+@onready var hud = $GameOverlay
 
 
 func _ready():
@@ -22,7 +19,7 @@ func _ready():
 		mobile_hud.zoom_out.connect(main_camera.zoom_out)
 
 		hud.add_child(mobile_hud)
-
+	
 	start_game(10, 4)
 
 
@@ -47,9 +44,10 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 # Invoced by the start-screen to start the game
 func start_game(num_rounds, num_players):
 	create_players(num_players)
+	hud.update_player_stats(current_player, players)
 
 	for round in num_rounds:
-		round_begin(round+1)
+		hud.update_round_count(round + 1, num_rounds)
 
 		for player in players:
 			await player_turn(player)
@@ -74,8 +72,9 @@ func create_players(num):
 
 		player.current_location = start
 		player.global_position = start.global_position
-		player.change_patente.connect(on_player_change_patente)
-		player.change_riesen.connect(on_player_change_riesen)
+		player.riesen = 30
+		player.patente = 0
+		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
 
@@ -94,28 +93,13 @@ func player_turn(player):
 	current_player = player
 	current_player.z_index += 1
 	current_player.camera.make_current()
+	
+	hud.update_player_stats(current_player, players)
 
-	player_turn_begin(current_player)
 	await player.move(await roll_dice())
 
 	current_player.z_index -= 1
 
 
-func on_player_change_riesen(player, amount):
-	# Add code for communicating change to HUD
-	pass
-
-
-func on_player_change_patente(player, amount):
-	# Add code for communicating change to HUD
-	pass
-
-
-func player_turn_begin(player):
-	# Add code to display the current player in the HUD
-	pass
-
-
-func round_begin(round_num):
-	# Add code to change the round display in the HUD
-	pass
+func _on_update():
+	hud.update_player_stats(current_player, players)
