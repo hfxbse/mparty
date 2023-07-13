@@ -2,31 +2,33 @@ extends Control
 
 @onready var label=$CanvasLayer/Panel/Label
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var result="abc"
-	label.set_text(result)
+var player: Player
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _ready():
+	visible = false
 
 
 func _on_button_pressed():
-	self.visible = false
+# execute sabotage
+	pass
 
-"""
-var result;
-if (dice_value<=6):
-	result="Duell Einsatz: 50 Riesen"
-if (dice_value==7 || dice_value==8):
-	result="Big Baller Duell Einsatz: halbes Vermögen"
-if (dice_value==9):
-	result="Duell um Zug stehlen"
-if (dice_value==10):
-	result="Erhalt Sabotage Freikarte"
-if (dice_value==11):
-	result="Eigentor Verlust: 50 Riesen"
-if (dice_value==12):
-	result="Duell Würfelgeld \nWert:gewürfelte Anzahl Riesen*10"
-"""
+
+func display(player: Player, dice_value):
+	self.player = player
+	visible = true
+
+	var result
+	if (dice_value<=6):
+		result="Duell Einsatz: 50 Riesen"
+	if (dice_value==7 || dice_value==8):
+		result="Big Baller Duell Einsatz: halbes Vermögen"
+	if (dice_value==9):
+		result="Duell um Zug stehlen"
+	if (dice_value==10):
+		result="Erhalt Sabotage Freikarte"
+	if (dice_value==11):
+		result="Eigentor Verlust: 50 Riesen"
+	if (dice_value==12):
+		result="Duell Würfelgeld \nWert:gewürfelte Anzahl Riesen*10"
+	
+	label.set_text(result)
