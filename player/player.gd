@@ -5,6 +5,8 @@ class_name Player extends Node2D
 
 signal update
 
+var sabotage_card = false
+
 var patente: int:
 	set(amount):
 		if patente != amount:
