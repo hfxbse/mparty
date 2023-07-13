@@ -28,6 +28,7 @@ func create_answer_button(answer, selected_receiver):
 	var scene = preload("res://question_panel/answer_button.tscn")
 	var answer_button = scene.instantiate()
 	answer_button.button_text = answer
+	answer_button.correct_answer = answer == question.right_answer
 
 	answer_button.button_pressed.connect(selected_receiver)
 
@@ -40,11 +41,8 @@ func _on_answer_selected(answer_text):
 
 func _on_submit_button_pressed():
 	if selected_answer != null:
-		for child in answer_container.get_children():
-			if child.button_text == question.right_answer:
-				child._right_answer_selected()
-			else:
-				child._wrong_answer_selected()
+		for button in answer_container.get_children():
+			button.reveal()
 
 		if question.right_answer == selected_answer:
 			answer_selected.emit(true)
