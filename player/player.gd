@@ -94,14 +94,25 @@ func unregister_duels():
 
 
 func teleport(target: Field):
+	unregister_duels()
 	traversed_fields = []
-	last_location = current_location
+	last_location = null
 	current_location = target
 	global_position = target.global_position
 	
 	for event in current_location.field_events:
 		await event.call(self)
 	register_duels()
+		
+		
+func swap_with(player: Player):
+	unregister_duels()
+	player.unregister_duels()
+	
+	var tmp_field = current_location
+	
+	teleport(player.current_location)
+	player.teleport(tmp_field)
 		
 		
 func register_duels():

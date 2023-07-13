@@ -27,10 +27,6 @@ func roll_again(player):
 	queue.push_front(player)
 	
 	
-func move_to_start(player):
-	player.teleport(start)
-	
-	
 func all_move_back(amount):
 	for player in players:
 		await  player.move_backwards(amount)
