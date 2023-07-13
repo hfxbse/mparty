@@ -7,6 +7,7 @@ extends Node
 @onready var players = []
 
 @onready var main_camera = $MainCamera
+
 @onready var hud = $GameOverlay
 
 
