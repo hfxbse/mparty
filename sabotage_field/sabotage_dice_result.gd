@@ -5,15 +5,15 @@ extends Control
 signal terminated
 
 var player: Player
+var action: Callable
 
 func _ready():
 	visible = false
 
 
 func _on_button_pressed():
-# execute sabotage
+	await action.call()
 	terminated.emit()
-
 
 func display(player: Player, dice_value):
 	self.player = player
@@ -36,3 +36,36 @@ func display(player: Player, dice_value):
 	label.set_text(result)
 	
 	return terminated
+
+
+func duel_50():
+	pass
+	
+
+func duel_big():
+	pass
+	
+	
+func steal_turn():
+	pass
+	
+	
+func sabotage_free_card():
+	pass
+
+
+func lose_50():
+	pass
+	
+	
+func duel_roll():
+	pass
+	
+	
+func get_target():
+	var menu = preload("res://sabotage_field/select_duellist.tscn").instantiate()
+	add_child(menu)
+	var target = await menu.display(player)
+	remove_child(menu)
+	return target
+	
