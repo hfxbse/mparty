@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8nj6d5xqeitp"]
 
-[ext_resource type="Texture2D" uid="uid://k5ljrlx7xtsj" path="res://Picture/EasyQuestionCard.png" id="1_8eoon"]
-[ext_resource type="Script" path="res://feld_aktionen/question_difficulty/question_difficulty.gd" id="1_26qfy"]
-[ext_resource type="Texture2D" uid="uid://b31y1mi7flnnp" path="res://Picture/mediumQuesrtionCard.png" id="2_wp7bb"]
-[ext_resource type="Texture2D" uid="uid://bs0608tx25fkv" path="res://Picture/DifficultQuestionCard.png" id="3_frm6m"]
+[ext_resource type="Texture2D" uid="uid://db3fenp32m85f" path="res://question_difficulty/Pictures/EasyQuestionCard.png" id="1_8eoon"]
+[ext_resource type="Script" path="res://question_difficulty/question_difficulty.gd" id="1_26qfy"]
+[ext_resource type="Texture2D" uid="uid://cq1ma630mu5kg" path="res://question_difficulty/Pictures/MediumQuestionCard.png" id="2_wp7bb"]
+[ext_resource type="Texture2D" uid="uid://4qsmg3vfwbw8" path="res://question_difficulty/Pictures/DifficultQuestionCard.png" id="3_frm6m"]
 
 [node name="questionDifficulty" type="Control"]
 layout_mode = 3
