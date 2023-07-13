@@ -7,7 +7,6 @@ func _ready():
 	var result="abc"
 	label.set_text(result)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

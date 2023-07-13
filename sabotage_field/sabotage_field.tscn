@@ -60,41 +60,41 @@ columns = 2
 [node name="Label" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "1-2: Duell
+text = "1-6: Duell
 Einsatz: 50 Riesen"
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "3-4: Duell um Zug stehlen"
+text = "9: Duell um Zug stehlen"
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "5-6: Big Baller Duell
+text = "7-8: Big Baller Duell
 Einsatz: halbes Vermögen                 "
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "7-8: Erhalt Sabotage Freikarte
+text = "10: Erhalt Sabotage Freikarte
 "
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "9-10: Eigentor
+text = "11: Eigentor
 Verlust: 50 Riesen"
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="SabotageFieldLabel/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "11-12: Duell Würfelgeld
+text = "12: Duell Würfelgeld
 Wert:gewürfelte Anzahl Riesen*10"
 vertical_alignment = 1
 
