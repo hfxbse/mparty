@@ -7,6 +7,7 @@ signal update
 
 var skip = false
 
+
 var patente: int:
 	set(amount):
 		if patente != amount:
@@ -112,7 +113,7 @@ func swap_with(player: Player):
 	
 	teleport(player.current_location)
 	player.teleport(tmp_field)
-		
+
 		
 func register_duels():
 	current_location.field_events.append(duel)
