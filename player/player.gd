@@ -3,21 +3,20 @@ class_name Player extends Node2D
 @onready var sprite = $Sprite2D
 @onready var camera = $PlayerCamera
 
-signal change_patente(player, amount)
-signal change_riesen(player, amount)
+signal update
 
 var patente: int:
 	set(amount):
 		if patente != amount:
 			patente = amount
-			change_patente.emit(self, amount)
+			update.emit()
 
 
 var riesen: int:
 	set(amount):
-		if patente != amount:
-			patente = amount
-			change_patente.emit(self, amount)
+		if riesen != amount:
+			riesen = amount
+			update.emit()
 
 
 var moves = 0
@@ -50,6 +49,7 @@ func move(distance: int):
 
 
 func step():
+	unregister_duels()
 	moves -= 1
 
 	var last = current_location
@@ -70,18 +70,25 @@ func step():
 
 
 func move_backwards(n):
+	unregister_duels()
 	for i in n:
 		if not last_transversed:
 			break
 
 		var target = traversed_fields.pop_back()
 		await target.move_backwards(self)
+	register_duels()
 
 
 func undo_last_move():
 	while last_transversed && current_location != last_location:
 		await move_backwards(1)
 		
+		
+func unregister_duels():
+	current_location.field_events.erase(duel)
+	current_location.field_events.erase(driveby_duel)
+
 		
 func register_duels():
 	current_location.field_events.append(duel)
