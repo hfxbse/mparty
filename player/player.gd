@@ -3,21 +3,20 @@ class_name Player extends Node2D
 @onready var sprite = $Sprite2D
 @onready var camera = $PlayerCamera
 
-signal change_patente(player, amount)
-signal change_riesen(player, amount)
+signal update
 
 var patente: int:
 	set(amount):
 		if patente != amount:
 			patente = amount
-			change_patente.emit(self, amount)
+			update.emit()
 
 
 var riesen: int:
 	set(amount):
-		if patente != amount:
-			patente = amount
-			change_patente.emit(self, amount)
+		if riesen != amount:
+			riesen = amount
+			update.emit()
 
 
 var moves = 0
@@ -58,13 +57,13 @@ func step():
 
 	if moves == 0:
 		for event in current_location.field_events:
-			event.call(self)
+			await event.call(self)
 		register_duels()
 		turn_ended.emit()
 		return
 	
 	for event in current_location.driveby_events:
-		event.call(self)
+		await event.call(self)
 	
 	await step()
 
