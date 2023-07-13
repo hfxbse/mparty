@@ -31,9 +31,9 @@ signal turn_ended
 
 const TRAV_FIELDS_MAX_LENGTH = 20
 var traversed_fields: Array[Field] = []
-var last_transversed: Field:
+var last_traversed: Field:
 	set(field):
-		if last_transversed != field:
+		if last_traversed != field:
 			traversed_fields.push_back(field)
 
 			if traversed_fields.size() > TRAV_FIELDS_MAX_LENGTH:
@@ -57,7 +57,7 @@ func step():
 
 	var last = current_location
 	current_location = await current_location.move_forwards(self)
-	last_transversed = last
+	last_traversed = last
 
 	if moves == 0:
 		for event in current_location.field_events:
@@ -75,7 +75,7 @@ func step():
 func move_backwards(n):
 	unregister_duels()
 	for i in n:
-		if not last_transversed:
+		if not last_traversed:
 			break
 
 		var target = traversed_fields.pop_back()
@@ -84,7 +84,7 @@ func move_backwards(n):
 
 
 func undo_last_move():
-	while last_transversed && current_location != last_location:
+	while last_traversed && current_location != last_location:
 		await move_backwards(1)
 		
 		
