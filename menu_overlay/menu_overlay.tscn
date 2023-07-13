@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b87k43gn00bjy"]
-
-[ext_resource type="Script" path="res://menu_overlay/menu_overlay.gd" id="1_jb0w6"]
-
-[node name="MenuOverlay" type="CanvasLayer"]
-script = ExtResource("1_jb0w6")
