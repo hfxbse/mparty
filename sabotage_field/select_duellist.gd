@@ -1,35 +1,34 @@
 extends Control
 
+signal terminate(target)
+var player: Player
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass # Replace with function body.
+	visible = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-@onready var duellist = "" #enums would be better
-#send player back to duell method
-
+func display(player: Player):
+	self.player = player
+	visible = true
+	return terminate
 
 
 func _on_player_1_pressed():
-	#Dollar
-	pass # Replace with function body.
+	#Euro
+	terminate.emit(State.players[0])
 
 
 func _on_player_2_pressed():
-	#Euro
-	pass # Replace with function body.
-
+	#Yen
+	terminate.emit(State.players[1])
+	
 
 func _on_player_3_pressed():
-	#Yen
-	pass # Replace with function body.
+	#Pound
+	terminate.emit(State.players[2])
 
 
 func _on_player_4_pressed():
-	#Pounds
-	pass # Replace with function body.
+	#Dollar
+	terminate.emit(State.players[3])

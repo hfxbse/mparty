@@ -8,6 +8,8 @@ signal update
 var skip = false
 
 
+var sabotage_card = false
+
 var patente: int:
 	set(amount):
 		if patente != amount:
