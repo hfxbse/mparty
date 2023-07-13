@@ -10,7 +10,6 @@ var selected_answer
 signal answer_selected(answer: bool)
 
 
-
 func display_question(difficulty):
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
 	
