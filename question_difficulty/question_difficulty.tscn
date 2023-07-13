@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8nj6d5xqeitp"]
+
+[ext_resource type="Texture2D" uid="uid://db3fenp32m85f" path="res://question_difficulty/Pictures/EasyQuestionCard.png" id="1_8eoon"]
+[ext_resource type="Script" path="res://question_difficulty/question_difficulty.gd" id="1_26qfy"]
+[ext_resource type="Texture2D" uid="uid://cq1ma630mu5kg" path="res://question_difficulty/Pictures/MediumQuestionCard.png" id="2_wp7bb"]
+[ext_resource type="Texture2D" uid="uid://4qsmg3vfwbw8" path="res://question_difficulty/Pictures/DifficultQuestionCard.png" id="3_frm6m"]
+
+[node name="questionDifficulty" type="CanvasLayer"]
+script = ExtResource("1_26qfy")
+
+[node name="Panel" type="Panel" parent="."]
+z_as_relative = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -202.0
+offset_right = 384.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.062
+anchor_right = 0.964
+anchor_bottom = 0.287
+offset_left = 51.744
+offset_top = 0.16
+offset_right = -56.3521
+offset_bottom = 8.16
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 49
+text = "Schwierigkeit der Fragen"
+
+[node name="Difficulty1" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 128.0
+offset_right = 662.0
+offset_bottom = 928.0
+scale = Vector2(0.27, 0.27)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.2)
+theme_override_font_sizes/font_size = 130
+text = "Einfach"
+icon = ExtResource("1_8eoon")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Difficulty2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 128.0
+offset_right = 862.0
+offset_bottom = 928.0
+scale = Vector2(0.27, 0.27)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.164706)
+theme_override_font_sizes/font_size = 130
+text = "Mittel"
+icon = ExtResource("2_wp7bb")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Difficulty3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 128.0
+offset_right = 1041.0
+offset_bottom = 919.0
+scale = Vector2(0.27, 0.27)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.168627)
+theme_override_font_sizes/font_size = 130
+text = "Schwer"
+icon = ExtResource("3_frm6m")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Panel/Difficulty1" to="." method="_on_difficulty_1_pressed"]
+[connection signal="pressed" from="Panel/Difficulty2" to="." method="_on_difficulty_2_pressed"]
+[connection signal="pressed" from="Panel/Difficulty3" to="." method="_on_difficulty_3_pressed"]

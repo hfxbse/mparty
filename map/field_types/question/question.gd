@@ -4,9 +4,14 @@ extends Node
 
 func event(player : Player):
 	var question_panel = preload("res://question_panel/question_panel.tscn").instantiate()
+	var question_difficulty = preload("res://question_difficulty/question_difficulty.tscn").instantiate()
+	add_child(question_difficulty)
+	var difficulty = await question_difficulty.difficulty
+	remove_child(question_difficulty)
+	
 	add_child(question_panel)
 	
-	var result = await question_panel.display_question(Question.Difficulty.EASY)
+	var result = await question_panel.display_question(difficulty)
 	if result:
 		print("right answer")
 	else:
