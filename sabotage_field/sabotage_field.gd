@@ -5,17 +5,17 @@ extends Control
 func _ready():
 	var responseDice=1;
 	var result;
-	if (responseDice==1||2):
+	if (responseDice<=6):
 		result="Duell Einsatz: 50 Riesen"
-	if (responseDice==3||4):
-		result="Duell um Zug stehlen"
-	if (responseDice==5||6):
-		result="Big Baller Duell Einsatz: halbes Vermögen"
 	if (responseDice==7||8):
+		result="Big Baller Duell Einsatz: halbes Vermögen"
+	if (responseDice==9):
+		result="Duell um Zug stehlen"
+	if (responseDice==10):
 		result="Erhalt Sabotage Freikarte"
-	if (responseDice==9||10):
+	if (responseDice==11):
 		result="Eigentor Verlust: 50 Riesen"
-	if (responseDice==11||12):
+	if (responseDice==12):
 		result="Duell Würfelgeld \nWert:gewürfelte Anzahl Riesen*10"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

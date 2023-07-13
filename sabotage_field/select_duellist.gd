@@ -13,14 +13,23 @@ func _process(delta):
 @onready var duellist = "" #enums would be better
 #send player back to duell method
 
+
+
 func _on_player_1_pressed():
-	duellist="Player1"
+	#Dollar
+	pass # Replace with function body.
+
 
 func _on_player_2_pressed():
-	duellist="Player2"
+	#Euro
+	pass # Replace with function body.
+
 
 func _on_player_3_pressed():
-	duellist="Player3"
+	#Yen
+	pass # Replace with function body.
+
 
 func _on_player_4_pressed():
-	duellist="Player4"
+	#Pounds
+	pass # Replace with function body.
