@@ -2,6 +2,8 @@ extends Control
 
 @onready var label=$CanvasLayer/Panel/Label
 
+signal terminated
+
 var player: Player
 
 func _ready():
@@ -10,7 +12,7 @@ func _ready():
 
 func _on_button_pressed():
 # execute sabotage
-	pass
+	terminated.emit()
 
 
 func display(player: Player, dice_value):
@@ -32,3 +34,5 @@ func display(player: Player, dice_value):
 		result="Duell Würfelgeld \nWert:gewürfelte Anzahl Riesen*10"
 	
 	label.set_text(result)
+	
+	return terminated
