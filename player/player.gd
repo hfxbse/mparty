@@ -43,14 +43,15 @@ var last_transversed: Field:
 
 
 func move(distance: int):
+	unregister_duels()
 	last_location = current_location
 	moves = distance
 	await step()
+	register_duels()
 
 
 func step():
 	moves -= 1
-
 	var last = current_location
 	current_location = await current_location.move_forwards(self)
 	last_transversed = last
@@ -58,7 +59,6 @@ func step():
 	if moves == 0:
 		for event in current_location.field_events:
 			await event.call(self)
-		register_duels()
 		turn_ended.emit()
 		return
 	
@@ -69,18 +69,25 @@ func step():
 
 
 func move_backwards(n):
+	unregister_duels()
 	for i in n:
 		if not last_transversed:
 			break
 
 		var target = traversed_fields.pop_back()
 		await target.move_backwards(self)
+	register_duels()
 
 
 func undo_last_move():
 	while last_transversed && current_location != last_location:
 		await move_backwards(1)
 		
+		
+func unregister_duels():
+	current_location.field_events.erase(duel)
+	current_location.driveby_events.erase(driveby_duel)
+
 		
 func register_duels():
 	current_location.field_events.append(duel)
