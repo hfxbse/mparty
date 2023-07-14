@@ -9,7 +9,6 @@ extends Node
 
 
 func _ready():
-	State.start = start
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 
 	if DisplayServer.is_touchscreen_available():
@@ -42,8 +41,9 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 
 # Invoced by the start-screen to start the game
 func start_game(num_rounds, num_players):
-	create_players(num_players)
-	hud.update_player_stats(current_player, players)
+	State.init(create_players(num_players), start)
+	
+	hud.update_player_stats(current_player, State.players)
 
 	for round in num_rounds:
 		hud.update_round_count(round + 1, num_rounds)
@@ -66,12 +66,13 @@ func create_players(num):
 	]
 
 	assert(num <= sprites.size(), "This game only supports 4 players")
-
+	
+	var players = []
 	for i in num:
 		var player : Player = player_scene.instantiate()
 
 		add_child(player)
-		State.players.append(player)
+		players.append(player)
 
 		player.current_location = start
 		player.global_position = start.global_position
@@ -81,7 +82,7 @@ func create_players(num):
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
 		
-	State.queue = State.players.duplicate()
+	return players
 
 
 func roll_dice():
@@ -99,7 +100,7 @@ func player_turn(player):
 	current_player.z_index += 1
 	current_player.camera.make_current()
 	
-	hud.update_player_stats(current_player, players)
+	hud.update_player_stats(current_player, State.players)
 
 	await player.move(await roll_dice())
 
@@ -107,4 +108,4 @@ func player_turn(player):
 
 
 func _on_update():
-	hud.update_player_stats(current_player, players)
+	hud.update_player_stats(current_player, State.players)

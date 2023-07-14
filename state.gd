@@ -16,8 +16,14 @@ var next_player : Player:
 				return next_player
 			else:
 				return player
-			
-			
+
+
+func init(players, start):
+	self.players = players.duplicate()
+	self.queue = players.duplicate()
+	self.start = start
+
+
 func steal_turn(from, to):
 	from.skip = true
 	queue.push_front(to)
