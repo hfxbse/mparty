@@ -4,11 +4,8 @@ signal terminate(target)
 var player: Player
 
 
-func _ready():
-	visible = false
-
-
 func display(player: Player):
+	print("Choosing target")
 	self.player = player
 	visible = true
 	return terminate

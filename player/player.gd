@@ -7,7 +7,6 @@ signal update
 
 var skip = false
 
-
 var sabotage_card = false
 
 var patente: int:
@@ -21,6 +20,8 @@ var riesen: int:
 	set(amount):
 		if riesen != amount:
 			riesen = amount
+			if riesen < 0:
+				riesen = 0
 			update.emit()
 
 
