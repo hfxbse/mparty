@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmrg8wpl3am5"]
+
+[ext_resource type="Script" path="res://actions_field/action_results.gd" id="1_883jy"]
+
+[node name="action_result" type="CanvasLayer"]
+script = ExtResource("1_883jy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -192.0
+offset_right = 448.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 124.0
+offset_right = 768.0
+offset_bottom = 252.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 316.0
+offset_right = 480.0
+offset_bottom = 348.0
+text = "ok"
