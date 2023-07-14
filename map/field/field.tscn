@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://map/field/field.gd" id="2_snbne"]
 
 [node name="Field" type="Button"]
-z_index = -1
 offset_left = -29.0
 offset_top = -30.0
 offset_right = 30.0

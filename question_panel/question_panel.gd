@@ -13,7 +13,7 @@ signal answer_selected(answer: bool)
 
 func display_question(difficulty):
 	var question_handler = preload("res://data_providers/resources/question_provider.tres")
-	print ("Selected difficulty in display_question():" + str(difficulty))
+
 	question = question_handler.get_random_question(difficulty)
 	question_label.set_text(question.question)
 
