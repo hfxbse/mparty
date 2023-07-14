@@ -4,8 +4,6 @@ extends Node
 @onready var start : Field = map.start
 @onready var current_player: Player
 
-@onready var players = []
-
 @onready var main_camera = $MainCamera
 @onready var hud = $GameOverlay
 
@@ -43,13 +41,18 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 
 # Invoced by the start-screen to start the game
 func start_game(num_rounds, num_players):
-	create_players(num_players)
-	hud.update_player_stats(current_player, players)
+	State.init(create_players(num_players), start)
+	
+	hud.update_player_stats(current_player, State.players)
 
 	for round in num_rounds:
 		hud.update_round_count(round + 1, num_rounds)
 
-		for player in players:
+		while true:
+			print("Getting next player")
+			var player = State.next_player
+			if (player == null): 
+				break
 			await player_turn(player)
 
 
@@ -63,7 +66,8 @@ func create_players(num):
 	]
 
 	assert(num <= sprites.size(), "This game only supports 4 players")
-
+	
+	var players = []
 	for i in num:
 		var player : Player = player_scene.instantiate()
 
@@ -77,6 +81,8 @@ func create_players(num):
 		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
+		
+	return players
 
 
 func roll_dice():
@@ -94,7 +100,7 @@ func player_turn(player):
 	current_player.z_index += 1
 	current_player.camera.make_current()
 	
-	hud.update_player_stats(current_player, players)
+	hud.update_player_stats(current_player, State.players)
 
 	await player.move(await roll_dice())
 
@@ -102,4 +108,4 @@ func player_turn(player):
 
 
 func _on_update():
-	hud.update_player_stats(current_player, players)
+	hud.update_player_stats(current_player, State.players)
