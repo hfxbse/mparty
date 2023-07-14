@@ -5,6 +5,9 @@ class_name Player extends Node2D
 
 signal update
 
+var skip = false
+
+
 var patente: int:
 	set(amount):
 		if patente != amount:
@@ -28,9 +31,9 @@ signal turn_ended
 
 const TRAV_FIELDS_MAX_LENGTH = 20
 var traversed_fields: Array[Field] = []
-var last_transversed: Field:
+var last_traversed: Field:
 	set(field):
-		if last_transversed != field:
+		if last_traversed != field:
 			traversed_fields.push_back(field)
 
 			if traversed_fields.size() > TRAV_FIELDS_MAX_LENGTH:
@@ -54,7 +57,7 @@ func step():
 
 	var last = current_location
 	current_location = await current_location.move_forwards(self)
-	last_transversed = last
+	last_traversed = last
 
 	if moves == 0:
 		for event in current_location.field_events:
@@ -72,7 +75,7 @@ func step():
 func move_backwards(n):
 	unregister_duels()
 	for i in n:
-		if not last_transversed:
+		if not last_traversed:
 			break
 
 		var target = traversed_fields.pop_back()
@@ -81,13 +84,35 @@ func move_backwards(n):
 
 
 func undo_last_move():
-	while last_transversed && current_location != last_location:
+	while last_traversed && current_location != last_location:
 		await move_backwards(1)
 		
 		
 func unregister_duels():
 	current_location.field_events.erase(duel)
 	current_location.field_events.erase(driveby_duel)
+
+
+func teleport(target: Field):
+	unregister_duels()
+	traversed_fields = []
+	last_location = null
+	current_location = target
+	global_position = target.global_position
+	
+	for event in current_location.field_events:
+		await event.call(self)
+	register_duels()
+		
+		
+func swap_with(player: Player):
+	unregister_duels()
+	player.unregister_duels()
+	
+	var tmp_field = current_location
+	
+	teleport(player.current_location)
+	player.teleport(tmp_field)
 
 		
 func register_duels():
@@ -101,4 +126,7 @@ func duel(player: Player):
 	
 func driveby_duel(player: Player):
 	print("Drive-by Duel triggered")
+	
+	
+	
 
