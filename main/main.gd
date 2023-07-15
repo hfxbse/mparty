@@ -71,6 +71,16 @@ func create_players(num):
 	for i in num:
 		var player : Player = player_scene.instantiate()
 
+		match i: 
+			0:
+				player.player_name = "Euro"
+			1:
+				player.player_name = "Yen"
+			2:
+				player.player_name = "Pound"
+			3:
+				player.player_name = "Dollar"
+
 		add_child(player)
 		players.append(player)
 
@@ -81,6 +91,9 @@ func create_players(num):
 		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
+		
+	var duel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
+	duel.start_duel(players[0], players[1])
 		
 	return players
 

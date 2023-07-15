@@ -6,6 +6,7 @@ class_name Player extends Node2D
 signal update
 
 var skip = false
+var player_name: String
 
 
 var patente: int:
@@ -126,7 +127,3 @@ func duel(player: Player):
 	
 func driveby_duel(player: Player):
 	print("Drive-by Duel triggered")
-	
-	
-	
-

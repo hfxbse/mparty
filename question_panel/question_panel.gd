@@ -2,10 +2,15 @@ extends CanvasLayer
 
 var question: Question
 var selected_answer
-
+	
 @onready var question_label = $MarginContainer/QuestionContainer/QuestionLabel
 @onready var answer_container = $MarginContainer/QuestionContainer/AnswerContainer
 @onready var question_container = $MarginContainer/QuestionContainer
+
+@export var player_name: String = "":
+	set(text):
+		if question_label:
+			question_label.text = text + ": " + question_label.text
 
 signal answer_selected(answer: bool)
 
@@ -14,7 +19,7 @@ func display_question(difficulty):
 	var question_handler = preload("res://data_providers/question_provider/question_provider.tres")
 	
 	question = question_handler.get_random_question(difficulty)
-	question_label.set_text(question.question)
+	question_label.text = question_label.text + question.question
 
 	var answer_possibilities = question.answer_possibilities.duplicate()
 	answer_possibilities.shuffle()

@@ -4,14 +4,13 @@ class_name AnswerButton extends Node
 
 signal button_pressed(answer_text: String)
 
-
 @onready var answer_button_label = $Button/Label
 
 @export var button_text: String = "":
 	set(text):
 		if text != button_text:
 			button_text = text
-
+			
 			if answer_button_label:
 				answer_button_label.text = text
 
