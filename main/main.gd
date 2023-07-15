@@ -23,6 +23,8 @@ func _ready():
 	start_menu = preload("res://start_menu/start_menu.tscn").instantiate()
 	add_child(start_menu)
 	start_menu.start_params.connect(_on_start_button_pressed)
+	
+	preload("res://data_providers/resources/event_provider.tres")
 
 
 func _process(delta):
