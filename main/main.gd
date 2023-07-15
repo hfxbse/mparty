@@ -18,6 +18,9 @@ func _ready():
 		mobile_hud.zoom_out.connect(main_camera.zoom_out)
 
 		hud.add_child(mobile_hud)
+		
+	for child_number in map.get_child_count():
+		print(map.get_child(child_number).get_chidren())
 	
 	start_game(10, 4)
 
