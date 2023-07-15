@@ -109,3 +109,11 @@ func player_turn(player):
 
 func _on_update():
 	hud.update_player_stats(current_player, State.players)
+
+# Test function
+func _on_button_pressed():
+	print("Action triggered")
+	var action_panel = preload("res://actions_field/action_field.tscn").instantiate()
+	add_child(action_panel)
+	await action_panel.display(current_player)
+	remove_child(action_panel)

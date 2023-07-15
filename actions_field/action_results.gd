@@ -7,11 +7,9 @@ signal terminated
 var player: Player
 var action: Callable
 
-func _ready():
-	visible = false
-
 
 func _on_button_pressed():
+	visible = false
 	await action.call()
 	terminated.emit()
 

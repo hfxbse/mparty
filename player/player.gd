@@ -6,7 +6,7 @@ class_name Player extends Node2D
 signal update
 
 var skip = false
-
+var sabotage_card = false
 
 var patente: int:
 	set(amount):
