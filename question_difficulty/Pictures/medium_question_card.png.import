@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4qsmg3vfwbw8"
-path="res://.godot/imported/DifficultQuestionCard.png-47517cb58727d7ed3e75ff352a5ae521.ctex"
+uid="uid://cq1ma630mu5kg"
+path="res://.godot/imported/medium_question_card.png-3e36b2e9de03589727a5396e76bd98db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://question_difficulty/Pictures/DifficultQuestionCard.png"
-dest_files=["res://.godot/imported/DifficultQuestionCard.png-47517cb58727d7ed3e75ff352a5ae521.ctex"]
+source_file="res://question_difficulty/Pictures/medium_question_card.png"
+dest_files=["res://.godot/imported/medium_question_card.png-3e36b2e9de03589727a5396e76bd98db.ctex"]
 
 [params]
 
