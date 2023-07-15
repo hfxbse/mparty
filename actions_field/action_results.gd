@@ -47,14 +47,40 @@ func display(player: Player, dice_value):
 	
 	return terminated
 
-func swap():
-	
 
-"""
+func swap():
+	var target = await get_target()
+	player.swap_with(target)
+	
+	
+func roll_again():
+	State.roll_again(player)
+
+
+func go_back():
+	var dice_menu = preload("res://dice/dice.tscn").instantiate()
+	add_child(dice_menu)
+	var dice_value = await dice_menu.dice_number
+	remove_child(dice_menu)
+	
+	State.all_move_back(dice_value)
+
+
+func go_to_start():
+	player.teleport(State.start)
+
+
+func reduce_patents():
+	State.all_change_patente(0.9)
+
+
+func increase_patents():
+	State.all_change_patente(1.1)
+
+
 func get_target():
-	var menu = preload("res://sabotage_field/select_duellist.tscn").instantiate()
+	var menu = preload("res://select_target/select_target.tscn").instantiate()
 	add_child(menu)
 	var target = await menu.display(player)
 	remove_child(menu)
 	return target
-"""
