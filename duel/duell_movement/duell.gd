@@ -13,15 +13,6 @@ enum DuelEndings {
 }
 
 signal duel_result(ending: DuelEndings)
-
-func _ready():
-	var player1 = Player.new()
-	player1.player_name = "Euro"
-	
-	var player2 = Player.new()
-	player2.player_name = "Euro"
-	
-	start_duel(player1, player2)
 	
 func _on_start_button_pressed():
 	var counter = 0
