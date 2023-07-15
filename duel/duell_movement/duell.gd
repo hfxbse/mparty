@@ -13,10 +13,10 @@ enum DuelEndings {
 }
 
 signal duel_result(ending: DuelEndings)
-	
+
+
 func _on_start_button_pressed():
 	var counter = 0
-	print(attacker_points == target_points)
 	
 	while attacker_points == target_points && counter < 3:
 		counter += 1
