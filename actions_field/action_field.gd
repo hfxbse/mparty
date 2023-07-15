@@ -1,13 +1,13 @@
 extends CanvasLayer
 
-signal terminated
+signal finished
 var player: Player
 
 func display(player):
 	print("Displaying events")
 	visible = true
 	self.player = player
-	return terminated
+	return finished
 
 
 func _on_button_pressed():
@@ -21,5 +21,5 @@ func _on_button_pressed():
 	add_child(result_display)
 	await result_display.display(player, dice_value)
 	remove_child(result_display)
-	terminated.emit()
+	finished.emit()
 	

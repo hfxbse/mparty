@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-signal terminate(target)
+signal finished(target)
 var player: Player
 
 @onready var container = $GridContainer
@@ -20,8 +20,8 @@ func display(player: Player):
 				button.display(target).connect(_on_click)
 	
 	visible = true
-	return terminate
+	return finished
 
 
 func _on_click(target):
-	terminate.emit(target)
+	finished.emit(target)

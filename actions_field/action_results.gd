@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var label=$CanvasLayer/Panel/Label
 
-signal terminated
+signal finished
 
 var player: Player
 var action: Callable
@@ -11,7 +11,7 @@ var action: Callable
 func _on_button_pressed():
 	visible = false
 	await action.call()
-	terminated.emit()
+	finished.emit()
 
 
 func display(player: Player, dice_value):
@@ -43,7 +43,7 @@ func display(player: Player, dice_value):
 	label.set_text(result)
 	visible = true
 	
-	return terminated
+	return finished
 
 
 func swap():
