@@ -3,6 +3,8 @@ extends CanvasLayer
 @onready var panelNoMoney = $patentOfficeLabel/MoneyPanel
 @onready var noMoneyLabel = $patentOfficeLabel/MoneyPanel/NoMoney
 
+signal patent_office_done(done: bool)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -25,7 +27,9 @@ func _on_patent_yes_pressed():
 		noMoneyLabel.add_theme_color_override("font_color", Color(1,0,0))
 		panelNoMoney.visible=true;
 		#end turn
+	await get_tree().create_timer(1.5).timeout
+	patent_office_done.emit(true)
 
 func _on_end_turn_pressed():
-	#end turn
-	pass # Replace with function body.
+	patent_office_done.emit(true)
+	# Replace with function body.
