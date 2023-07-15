@@ -19,20 +19,46 @@ offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="patentOfficeLabel"]
+[node name="AddButton" type="Button" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 41.0
+offset_right = 644.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 22
+text = "+"
+
+[node name="PatentCountLabel" type="Label" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 33.0
+offset_right = 623.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="SubtractButton" type="Button" parent="patentOfficeLabel"]
+offset_left = 543.0
+offset_top = 41.0
+offset_right = 573.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 22
+text = "-"
+
+[node name="TitleLabel" type="Label" parent="patentOfficeLabel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.042
 anchor_top = 0.062
 anchor_right = 0.964
 anchor_bottom = 0.287
-offset_left = 155.744
-offset_top = -1.048
-offset_right = -144.352
-offset_bottom = -20.948
+offset_left = 100.744
+offset_top = 7.952
+offset_right = -199.352
+offset_bottom = -11.948
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 49
+theme_override_font_sizes/font_size = 40
 text = "Patent erwerben"
 
 [node name="PatentYes" type="Button" parent="patentOfficeLabel"]
@@ -94,5 +120,7 @@ offset_bottom = 256.0
 theme_override_font_sizes/font_size = 50
 text = "Kein Geld mehr verfügbar"
 
+[connection signal="pressed" from="patentOfficeLabel/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="patentOfficeLabel/SubtractButton" to="." method="_on_subtract_button_pressed"]
 [connection signal="pressed" from="patentOfficeLabel/PatentYes" to="." method="_on_patent_yes_pressed"]
 [connection signal="pressed" from="patentOfficeLabel/EndTurn" to="." method="_on_end_turn_pressed"]
