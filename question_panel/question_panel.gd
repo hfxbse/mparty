@@ -42,15 +42,13 @@ func _on_answer_selected(answer_text):
 
 func _on_submit_button_pressed():
 	if selected_answer != null:
-		var rightAnswer = question.answer_possibilities[question.right_answer]
-
 		for child in answer_container.get_children():
-			if child.button_text == rightAnswer:
+			if child.button_text == question.right_answer:
 				child._right_answer_selected()
 			else:
 				child._wrong_answer_selected()
 
-		if rightAnswer == selected_answer:
+		if question.right_answer == selected_answer:
 			answer_selected.emit(true)
 		else:
 			answer_selected.emit(false)
