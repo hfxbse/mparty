@@ -3,6 +3,8 @@ extends CanvasLayer
 signal terminate(target)
 var player: Player
 
+@onready var container = $GridContainer
+
 
 func display(player: Player):
 	print("Choosing target")
@@ -13,8 +15,8 @@ func display(player: Player):
 			if target.sabotage_card:
 				target.sabotage_card = false
 			else: 
-				var button = preload("res://sabotage_field/target_button.tscn").instantiate()
-				$GridContainer.add_child(button)
+				var button = preload("res://select_target/target_button.tscn").instantiate()
+				container.add_child(button)
 				button.display(target).connect(_on_click)
 	
 	visible = true
