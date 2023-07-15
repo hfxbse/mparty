@@ -26,8 +26,8 @@ func _on_patent_yes_pressed():
 	if (moneyLeft==0):
 		noMoneyLabel.add_theme_color_override("font_color", Color(1,0,0))
 		panelNoMoney.visible=true;
+		await get_tree().create_timer(1.5).timeout
 		#end turn
-	await get_tree().create_timer(1.5).timeout
 	patent_office_done.emit(true)
 
 func _on_end_turn_pressed():
