@@ -30,6 +30,20 @@ func display_question(difficulty):
 		answer_container.add_child(answer_button)
 
 	return answer_selected
+	
+func display_specific_question(question: Question):
+	self.question = question
+	
+	var question_handler = preload("res://data_providers/question_provider/question_provider.tres")
+	
+	question_label.text = question_label.text + question.question
+
+	for answer_possibility in question.answer_possibilities:
+		var answer_button = create_answer_button(answer_possibility, _on_answer_selected)
+		
+		answer_container.add_child(answer_button)
+
+	return answer_selected
 
 
 func create_answer_button(answer, selected_receiver):
