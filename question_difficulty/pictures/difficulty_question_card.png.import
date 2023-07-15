@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4qsmg3vfwbw8"
-path="res://.godot/imported/difficulty_question_card.png-d8c22ea3d869c8f8a6a1714ec8fdb6d3.ctex"
+path="res://.godot/imported/difficulty_question_card.png-79658d20dc36b02a33e38640d982d1b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://question_difficulty/Pictures/difficulty_question_card.png"
-dest_files=["res://.godot/imported/difficulty_question_card.png-d8c22ea3d869c8f8a6a1714ec8fdb6d3.ctex"]
+source_file="res://question_difficulty/pictures/difficulty_question_card.png"
+dest_files=["res://.godot/imported/difficulty_question_card.png-79658d20dc36b02a33e38640d982d1b6.ctex"]
 
 [params]
 
