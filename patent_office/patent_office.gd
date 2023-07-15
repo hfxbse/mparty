@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var panelNoMoney = $patentOfficeLabel/MoneyPanel
 @onready var noMoneyLabel = $patentOfficeLabel/MoneyPanel/NoMoney

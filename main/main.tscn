@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_5mwui"]
 [ext_resource type="PackedScene" uid="uid://bcs3nvv2okhry" path="res://map/map.tscn" id="2_n57xg"]
-[ext_resource type="PackedScene" path="res://overlay/overlay.tscn" id="4_4fn2p"]
+[ext_resource type="PackedScene" uid="uid://ctqluws6rgmy4" path="res://overlay/overlay.tscn" id="4_4fn2p"]
 [ext_resource type="Script" path="res://main/main_camera.gd" id="4_lgfck"]
 
 [node name="Node2" type="Node"]

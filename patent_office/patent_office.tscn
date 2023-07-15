@@ -3,17 +3,10 @@
 [ext_resource type="Script" path="res://patent_office/patent_office.gd" id="1_w0po7"]
 [ext_resource type="Texture2D" uid="uid://cmp2jubxb0g8f" path="res://patent_office/patent.svg" id="2_eunt1"]
 
-[node name="patentOffice" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="patentOffice" type="CanvasLayer"]
 script = ExtResource("1_w0po7")
 
 [node name="patentOfficeLabel" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
