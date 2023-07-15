@@ -1,56 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://pafrdl87j2l4"]
+[gd_scene load_steps=3 format=3 uid="uid://dvvoykdhhq6x5"]
 
-[ext_resource type="Script" path="res://dice/Dice.gd" id="1_2eigy"]
+[sub_resource type="GDScript" id="GDScript_psmr3"]
+script/source = "extends CanvasLayer
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("1_2eigy")
+@onready var label = $Panel/Label
+@onready var button = $Panel/Button
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+signal dice_number(dnumber: int)
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+func _on_button_pressed():
+	var random = randi_range(1,12)
+	
+	label.set_text(String(\"%d\" % random))
+	button.hide()
+	await get_tree().create_timer(1.5).timeout
+	dice_number.emit(random)
+	visible = false
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbr11"]
+bg_color = Color(0.682353, 0.8, 0.901961, 1)
+
+[node name="Control" type="CanvasLayer"]
+script = SubResource("GDScript_psmr3")
+
+[node name="Panel" type="Panel" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -480.0
-offset_top = -192.5
-offset_right = 480.0
-offset_bottom = 192.5
+offset_left = -448.0
+offset_top = -199.0
+offset_right = 448.0
+offset_bottom = 199.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.833333, 0.833333)
 pivot_offset = Vector2(336, 166)
 
-[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+[node name="Button" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.342
 anchor_top = 1.167
 anchor_right = 0.342
 anchor_bottom = 1.167
-offset_left = 103.68
-offset_top = -196.295
-offset_right = 199.68
-offset_bottom = -143.295
+offset_left = 81.932
+offset_top = -231.309
+offset_right = 187.932
+offset_bottom = -178.309
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_bbr11")
 action_mode = 0
 text = "ok"
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 49.0
-offset_right = 768.0
-offset_bottom = 168.0
+offset_left = 184.0
+offset_top = 59.0
+offset_right = 712.0
+offset_bottom = 178.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 85
 text = "Roll the dice!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
