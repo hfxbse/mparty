@@ -18,15 +18,37 @@ func _on_button_pressed():
 
 func display(player: Player, dice_value):
 	self.player = player
-	visible = true
 	var result = ""
 
-	#get label and action from dice value
+	if dice_value <= 2:
+		result = "Spielertausch nach Wahl"
+		action = swap
+	elif dice_value <= 4:
+		result = "Nochmal würfeln"
+		action = roll_again
+	elif dice_value <= 6:
+		result = "Alle bewegen sich zurück"
+		action = go_back
+	elif dice_value <= 8:
+		result = "Gehe zurück zum Start"
+		action = go_to_start
+	elif dice_value <= 10:
+		result = "Nochmal würfeln"
+		action = roll_again
+	elif dice_value == 11:
+		result = "Alle Patente verlieren um 10% an Wert"
+		action = reduce_patents
+	elif dice_value == 12:
+		result = "Alle Patente gewinnen um 10% an Wert"
+		action = increase_patents
 	
 	label.set_text(result)
+	visible = true
 	
 	return terminated
 
+func swap():
+	
 
 """
 func get_target():

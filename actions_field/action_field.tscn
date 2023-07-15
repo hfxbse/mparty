@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://actions_field/action_field.gd" id="1_0kgtt"]
 
 [node name="actionfield" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_0kgtt")
 
 [node name="actionfieldLabel" type="Panel" parent="."]
@@ -88,5 +87,5 @@ theme_override_font_sizes/font_size = 20
 text = "12: Prozenanteil aller Anlagen steigt"
 vertical_alignment = 1
 
-[connection signal="pressed" from="actionfieldLabel/Button" to="actionfieldLabel" method="_on_button_pressed"]
 [connection signal="pressed" from="actionfieldLabel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="actionfieldLabel/Button" to="actionfieldLabel" method="_on_button_pressed"]

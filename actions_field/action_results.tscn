@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://actions_field/action_results.gd" id="1_883jy"]
 
 [node name="action_result" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_883jy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
