@@ -2,11 +2,7 @@ extends CanvasLayer
 
 var player
 
-signal terminated
-
-func _ready():
-	visible = false
-
+signal finished
 
 func _on_button_pressed():
 	visible = false
@@ -19,11 +15,10 @@ func _on_button_pressed():
 	add_child(result_display)
 	await result_display.display(player, dice_value)
 	remove_child(result_display)
-	terminated.emit()
+	finished.emit()
 
 
 func display(player: Player):
 	self.player = player
-	visible = true
-	return terminated
+	return finished
 	

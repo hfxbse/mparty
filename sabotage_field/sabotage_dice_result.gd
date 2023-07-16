@@ -2,27 +2,30 @@ extends CanvasLayer
 
 @onready var label=$CanvasLayer/Panel/Label
 
-signal terminated
+signal finished
 
 var player: Player
 var action: Callable
 
-func _ready():
-	visible = false
-
 
 func _on_button_pressed():
 	await action.call()
-	terminated.emit()
+	finished.emit()
+
 
 func display(player: Player, dice_value):
 	self.player = player
 	visible = true
 
-	var result
-	if (dice_value<=6):
-		result="Duell Einsatz: 50 Riesen"
-		action = duel_50
+	var duel_50 = {
+		"text": "Duell Einsatz: 50 Riesen",
+		"action": func():
+			var target = await get_target()
+			var result = await run_duel(target)
+			# match case over result
+	}
+
+
 	if (dice_value==7 || dice_value==8):
 		result="Big Baller Duell Einsatz: halbes Vermögen"
 		action = duel_big
@@ -41,7 +44,7 @@ func display(player: Player, dice_value):
 	
 	label.set_text(result)
 	
-	return terminated
+	return finished
 
 
 func duel_50():
@@ -70,9 +73,11 @@ func lose_50():
 	
 	
 func get_target():
-	var menu = preload("res://sabotage_field/select_duellist.tscn").instantiate()
-	add_child(menu)
-	var target = await menu.display(player)
-	remove_child(menu)
-	return target
-	
+# Use select_target scene to get target
+	pass
+
+
+func run_duel(target):
+# Execute the duel. the player is the attacker
+# Return the result enum
+	pass
