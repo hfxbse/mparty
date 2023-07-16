@@ -157,19 +157,5 @@
 			"Du erforschst einen unentdeckten Tunnel. Dieser führt dich zum Startfeld.",
 			"Du hast auf dem Weg deine Kopfhörer verloren und gehst den ganzen Weg bis zum Start zurück um diese zu suchen."
 		]
-	},
-	"switch": { 
-		"position": "Wechsel die Position mit Spieler %s."
-	},
- 	"duel": {
-		"coins": "Duell um %d Riesen.",
-		"percentage": "Duell um %d Prozent deiner Riesen",
-		"dice_number": "Duell, wie hoch die Augenzahl der Würfel ist."
-	},
-	"steal": {
-		"turn": "Du hast Spieler %s einen Zug gestohlen."
-	},
-	"card": {
-		"sabotageProtection": "Damit kannst du einer Sabotage entgehen."
 	}
 }
