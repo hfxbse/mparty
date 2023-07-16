@@ -6,8 +6,10 @@ class_name Player extends Node2D
 signal update
 
 var skip = false
-var player_name: String
 
+var sabotage_card = 0
+
+var player_name: String
 
 var patente: int:
 	set(amount):
