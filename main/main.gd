@@ -5,10 +5,18 @@ extends Node
 @onready var current_player: Player
 
 @onready var main_camera = $MainCamera
-@onready var hud = $GameOverlay
+@onready var start_menu = $StartMenu
 
 
-func _ready():
+var hud
+
+
+func _on_start_button_pressed(rounds_count: int, player_count: int):
+	remove_child(start_menu)
+	
+	hud = preload("res://overlay/overlay.tscn").instantiate()
+	add_child(hud)
+	
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
 
 	if DisplayServer.is_touchscreen_available():
@@ -18,7 +26,7 @@ func _ready():
 
 		hud.add_child(mobile_hud)
 	
-	game_loop(10, 4)
+	game_loop(rounds_count, player_count)
 
 
 func _process(delta):
