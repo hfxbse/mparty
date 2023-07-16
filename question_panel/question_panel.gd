@@ -16,7 +16,10 @@ func display_question(difficulty):
 	question = question_handler.get_random_question(difficulty)
 	question_label.set_text(question.question)
 
-	for answer_possibility in question.answer_possibilities:
+	var answer_possibilities = question.answer_possibilities.duplicate()
+	answer_possibilities.shuffle()
+
+	for answer_possibility in answer_possibilities:
 		var answer_button = create_answer_button(answer_possibility, _on_answer_selected)
 		
 		answer_container.add_child(answer_button)
