@@ -89,6 +89,13 @@ func create_players(num):
 		player.sprite.texture = sprites[i]
 		player.sprite.visibility_layer = 9
 		
+		var regexPattern = "\\b(?!res\\b)\\w+\\b"
+		var regex = RegEx.new()
+		regex.compile(regexPattern)
+		var matches = regex.search_all(sprites[i].resource_path)
+		
+		player.player_name = matches[1].get_string()
+		
 	return players
 
 
