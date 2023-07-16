@@ -122,8 +122,29 @@ func register_duels():
 	
 	
 func duel(player: Player):
-	print("Duel triggered")
+	var duel_panel = preload("res://duel/duell_movement/same_field_duel.tscn").instantiate()
+	add_child(duel_panel)
+	var result = await duel_panel.start_duel(player, self)
+	match result:
+		duel_panel.DuelEndings.ATTACKER_WINS:
+			var pot = self.riesen / 2
+			self.riesen -= pot
+			player.riesen += pot
+		duel_panel.DuelEndings.ATTACKER_LOSES:
+			var pot = player.riesen / 2
+			self.riesen += pot
+			player.riesen -= pot
 	
 	
 func driveby_duel(player: Player):
-	print("Drive-by Duel triggered")
+	var duel_panel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
+	add_child(duel_panel)
+	var result = await duel_panel.start_duel(player, self)
+	var pot = 30
+	match result:
+		duel_panel.DuelEndings.ATTACKER_WINS:
+			self.riesen -= pot
+			player.riesen += pot
+		duel_panel.DuelEndings.ATTACKER_LOSES:
+			self.riesen += pot
+			player.riesen -= pot
