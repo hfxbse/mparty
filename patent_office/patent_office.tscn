@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciatgbwq80fy"]
+
+[ext_resource type="Script" path="res://patent_office/patent_office.gd" id="1_w0po7"]
+[ext_resource type="Texture2D" uid="uid://cmp2jubxb0g8f" path="res://patent_office/patent.svg" id="2_eunt1"]
+
+[node name="patentOffice" type="CanvasLayer"]
+script = ExtResource("1_w0po7")
+
+[node name="patentOfficeLabel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.0
+offset_top = -220.0
+offset_right = 380.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AddButton" type="Button" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 41.0
+offset_right = 644.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 22
+text = "+"
+
+[node name="PatentCountLabel" type="Label" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 33.0
+offset_right = 623.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="SubtractButton" type="Button" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 41.0
+offset_right = 573.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 22
+text = "-"
+
+[node name="TitleLabel" type="Label" parent="patentOfficeLabel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042
+anchor_top = 0.062
+anchor_right = 0.964
+anchor_bottom = 0.287
+offset_left = 100.744
+offset_top = 7.952
+offset_right = -199.352
+offset_bottom = -11.948
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Patent erwerben"
+
+[node name="PatentYes" type="Button" parent="patentOfficeLabel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -98.0
+offset_right = 479.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 28
+icon = ExtResource("2_eunt1")
+icon_alignment = 1
+
+[node name="EndTurn" type="Button" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 344.0
+offset_right = 449.0
+offset_bottom = 387.0
+text = "Zug beenden"
+
+[node name="Costs" type="Label" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 336.0
+offset_right = 708.0
+offset_bottom = 388.0
+text = "Kosten: 10 Riesen
+Patentwert: 5 Riesen"
+
+[node name="Pay" type="Label" parent="patentOfficeLabel"]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 192.0
+offset_right = 426.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 20
+text = "Einzahlen"
+
+[node name="MoneyPanel" type="Panel" parent="patentOfficeLabel"]
+visible = false
+layout_mode = 0
+offset_right = 772.0
+offset_bottom = 408.0
+
+[node name="NoMoney" type="Label" parent="patentOfficeLabel/MoneyPanel"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 184.0
+offset_right = 701.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 50
+text = "Kein Geld mehr verfügbar"
+
+[connection signal="pressed" from="patentOfficeLabel/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="patentOfficeLabel/SubtractButton" to="." method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="patentOfficeLabel/PatentYes" to="." method="_on_patent_yes_pressed"]
+[connection signal="pressed" from="patentOfficeLabel/EndTurn" to="." method="_on_end_turn_pressed"]
