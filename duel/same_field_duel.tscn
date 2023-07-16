@@ -63,5 +63,4 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Starte Duell"
 
-[connection signal="duel_result" from="." to="." method="_on_duel_result"]
 [connection signal="pressed" from="Panel/StartButton" to="." method="_on_start_button_pressed"]
