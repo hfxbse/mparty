@@ -8,7 +8,7 @@ signal start_params(num_rounds: int, player_count: int)
 var player_count = 4
 var rounds_count = 10:
 	set(number):
-		if number != rounds_count and rounds_count >= 2:
+		if number != rounds_count and number >= 2:
 			rounds_count = number
 			round_counter.text = str(rounds_count)
 
