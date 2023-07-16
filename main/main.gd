@@ -54,6 +54,12 @@ func start_game(num_rounds, num_players):
 			if (player == null): 
 				break
 			await player_turn(player)
+	
+	State.players.sort_custom(func(player1, player2): 
+			return player1.riesen + player1.riesen < player2.riesen + player2.patente)
+	var winner_screen = preload("res://winner_info/Winner.tscn").instantiate()
+	add_child(winner_screen)
+	winner_screen.display_winner(State.players)
 
 
 func create_players(num):
@@ -76,7 +82,7 @@ func create_players(num):
 
 		player.current_location = start
 		player.global_position = start.global_position
-		player.riesen = 30
+		player.riesen = 0
 		player.patente = 0
 		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
