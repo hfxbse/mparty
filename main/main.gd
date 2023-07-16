@@ -89,9 +89,6 @@ func create_players(num):
 		
 		player.player_name = matches[1].get_string()
 		
-	var duel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
-	duel.start_duel(players[0], players[1])
-		
 	return players
 
 

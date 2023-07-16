@@ -57,13 +57,3 @@ func start_question(player: Player):
 	remove_child(question_panel)
 	
 	return 1 if question_result else 0
-
-
-func _on_duel_result(ending):
-	match ending:
-		DuelEndings.ATTACKER_WINS:
-			print("ATTACKER_WINS")
-		DuelEndings.ATTACKER_LOSES:
-			print("ATTACKER_LOSES")
-		DuelEndings.DRAW:
-			print("DRAW")
