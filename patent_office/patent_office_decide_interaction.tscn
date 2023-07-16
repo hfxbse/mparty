@@ -1,9 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://xil7ybcaxkq"]
+[gd_scene load_steps=2 format=3 uid="uid://cgl4uedng60rg"]
 
-[ext_resource type="Script" path="res://patent_office/patent_office_decide_interaction.gd" id="1_waqly"]
+[sub_resource type="GDScript" id="GDScript_tb5j6"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_stay_pressed():
+	#call patent_office
+	pass # Replace with function body.
+
+
+func _on_continue_move_pressed():
+	#continue turn
+	pass # Replace with function body.
+"
 
 [node name="patent_office_decide_interaction" type="CanvasLayer"]
-script = ExtResource("1_waqly")
+script = SubResource("GDScript_tb5j6")
 
 [node name="patentOfficeLabel" type="Panel" parent="."]
 anchors_preset = 8
