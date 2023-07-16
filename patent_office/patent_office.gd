@@ -20,14 +20,14 @@ func _on_patent_yes_pressed():
 		no_money_panel.visible=false
 	else:
 		player.riesen -= patent_count * cost_of_patent
-		player.patente += patent_count
+		player.patente += patent_count * patent_value
 		patent_office_done.emit(true)
 
 
 func start_transaction(player: Player):
 	self.player = player
 	
-	return await patent_office_done
+	return patent_office_done
 
 
 func _on_end_turn_pressed():
