@@ -13,8 +13,10 @@ func event(player : Player):
 	
 	var result = await question_panel.display_question(difficulty)
 	if result:
+		player.riesen += 20 * (difficulty + 1)
 		print("right answer")
 	else:
+		print(20 * (difficulty + 1))
 		print("wrong answer")
 		
 	await get_tree().create_timer(1.5).timeout
