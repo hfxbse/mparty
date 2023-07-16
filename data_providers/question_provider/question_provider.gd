@@ -22,6 +22,7 @@ func _init():
 
 	for question in questions_from_json:
 		var question_obj = Question.new()
+
 		var difficulty = difficulty_mapping[str(question["difficulty"])]
 		assert(difficulty != null, "Difficulty \"%s\" is not supported." % difficulty)
 

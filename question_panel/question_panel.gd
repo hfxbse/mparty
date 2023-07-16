@@ -7,33 +7,43 @@ var selected_answer
 @onready var answer_container = $MarginContainer/QuestionContainer/AnswerContainer
 @onready var question_container = $MarginContainer/QuestionContainer
 
+@export var player_name: String = "":
+	set(text):
+		if player_name != text:
+			player_name = text
+			
+			if question_label:
+				question_label.text = text + ": " + question_label.text
+
 signal answer_selected(answer: bool)
 
 
 func display_question(difficulty):
-	var question_handler = preload("res://data_providers/question_provider/question_provider.tres")
+	var question_provider = preload("res://data_providers/question_provider/question_provider.tres")
+	return display_specific_question(question_provider.get_random_question(difficulty))
+
+
+func display_specific_question(question: Question):
+	self.question = question
 	
-	question = question_handler.get_random_question(difficulty)
-	question_label.set_text(question.question)
+	question_label.text = question_label.text + question.question
 
 	var answer_possibilities = question.answer_possibilities.duplicate()
 	answer_possibilities.shuffle()
 
 	for answer_possibility in answer_possibilities:
-		var answer_button = create_answer_button(answer_possibility, _on_answer_selected)
-		
+		var answer_button = create_answer_button(answer_possibility)
+		answer_button.button_pressed.connect(_on_answer_selected)
 		answer_container.add_child(answer_button)
 
 	return answer_selected
 
 
-func create_answer_button(answer, selected_receiver):
+func create_answer_button(answer):
 	var scene = preload("res://question_panel/answer_button.tscn")
 	var answer_button = scene.instantiate()
 	answer_button.button_text = answer
 	answer_button.correct_answer = answer == question.right_answer
-
-	answer_button.button_pressed.connect(selected_receiver)
 
 	return answer_button
 
