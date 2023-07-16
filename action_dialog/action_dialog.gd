@@ -22,6 +22,6 @@ func _on_button_pressed():
 	var action = await result_display.display(player, dice_value)
 	remove_child(result_display)
 	
-	await action.call(player, get_tree())
+	await action.call(player, get_tree().get_root())
 	finished.emit()
 	

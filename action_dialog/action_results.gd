@@ -10,7 +10,7 @@ var action: Callable
 var swap = {
 	"text": "Spielertausch nach Wahl",
 	"action": func(player, tree):
-		var target = await get_target()
+		var target = await get_target(tree)
 		await player.swap_with(target)
 }
 
@@ -67,7 +67,7 @@ func display(player: Player, dice_value):
 	return finished
 
 
-func get_target():
+func get_target(tree):
 	var menu = preload("res://select_target/select_target.tscn").instantiate()
 	add_child(menu)
 	var target = await menu.display(player)

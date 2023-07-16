@@ -74,7 +74,7 @@ func display(player: Player, dice_value):
 
 
 func get_target(tree):
-	var selector  = preload("res://select_target/select_target.tscn").instantiate()
+	var selector = preload("res://select_target/select_target.tscn").instantiate()
 	tree.add_child(selector)
 	var target = await selector.display(player)
 	tree.remove_child(selector)
