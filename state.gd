@@ -24,7 +24,7 @@ func init(players, start):
 	self.start = start
 
 
-func steal_turn(from, to):
+func steal_turn(to, from):
 	from.skip = true
 	queue.push_front(to)
 	
