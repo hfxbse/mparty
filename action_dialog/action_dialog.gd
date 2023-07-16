@@ -19,9 +19,8 @@ func _on_button_pressed():
 	
 	var result_display = preload("res://action_dialog/action_results.tscn").instantiate()
 	add_child(result_display)
-	var action = await result_display.display(player, dice_value)
+	await result_display.display(player, dice_value)
 	remove_child(result_display)
 	
-	action.call(player)
 	finished.emit()
 	
