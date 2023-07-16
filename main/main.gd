@@ -55,7 +55,7 @@ func game_loop(num_rounds, num_players):
 			await player_turn(player)
 
 	State.players.sort_custom(func(player1, player2): 
-			return player1.riesen + player1.riesen < player2.riesen + player2.patente
+			return player1.riesen + player1.patente < player2.riesen + player2.patente
 	)
 
 	var winner_screen = preload("res://winner_info/Winner.tscn").instantiate()
