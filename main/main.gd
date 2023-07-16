@@ -66,8 +66,11 @@ func game_loop(num_rounds, num_players):
 			await player_turn(player)
 
 	State.players.sort_custom(func(player1, player2): 
-			return player1.riesen + player1.patente < player2.riesen + player2.patente
+			return player1.riesen + player1.patente > player2.riesen + player2.patente
 	)
+
+	for player in State.players:
+		print(player.riesen + player.patente)
 
 	var podium = preload("res://podium/podium.tscn").instantiate()
 	add_child(podium)
@@ -94,7 +97,7 @@ func create_players(num):
 
 		player.current_location = start
 		player.global_position = start.global_position
-		player.riesen = 30
+		player.riesen = 30 - i * 5
 		player.patente = 0
 		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
