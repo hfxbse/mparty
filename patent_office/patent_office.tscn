@@ -38,6 +38,7 @@ theme_override_font_sizes/font_size = 40
 text = "1"
 
 [node name="SubtractButton" type="Button" parent="patentOfficeLabel"]
+layout_mode = 0
 offset_left = 543.0
 offset_top = 41.0
 offset_right = 573.0
