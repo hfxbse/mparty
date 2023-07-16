@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name Duel extends CanvasLayer
 
 var attacker: Player
 var target: Player

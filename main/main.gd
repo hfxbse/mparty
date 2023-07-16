@@ -88,7 +88,6 @@ func create_players(num):
 		var matches = regex.search_all(sprites[i].resource_path)
 		
 		player.player_name = matches[1].get_string()
-		print(player.player_name)
 		
 	var duel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
 	duel.start_duel(players[0], players[1])

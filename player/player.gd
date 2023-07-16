@@ -136,7 +136,7 @@ func driveby_duel(player: Player):
 	apply_duel_outcome(player, 30, result)
 			
 func apply_duel_outcome(other_player: Player, bet_amount: int, result):
-	if result == duel_panel.DuelEndings.ATTACKER_LOSES:
+	if result == Duel.DuelEndings.ATTACKER_LOSES:
 		bet_amount *= -1
 
 	self.riesen += bet_amount
