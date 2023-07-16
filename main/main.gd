@@ -24,7 +24,7 @@ func _ready():
 	add_child(start_menu)
 	start_menu.start_params.connect(_on_start_button_pressed)
 	
-	preload("res://data_providers/resources/event_provider.tres")
+	preload("res://data_providers/events/event_provider.tres")
 
 
 func _process(delta):

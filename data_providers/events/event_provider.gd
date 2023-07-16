@@ -18,6 +18,11 @@ func _init():
 	add_relative_movement_events(events["move"]["forward"], RelativeMovementEvent.Direction.FORWARD)
 	add_relative_movement_events(events["move"]["backward"], RelativeMovementEvent.Direction.BACKWARD)
 	
+	add_specific_movement_events(events["move"]["undo"], SpecificMovementEvent.MovementType.UNDO)
+	add_specific_movement_events(events["move"]["start"], SpecificMovementEvent.MovementType.START)
+	
+	add_dice_roll_events(events["diceRoll"]["again"], DiceRollEvent.RollType.AGAIN)
+	add_dice_roll_events(events["diceRoll"]["twice"], DiceRollEvent.RollType.TWICE)
 
 	for event in self.events:
 		print(event.text)
@@ -41,7 +46,16 @@ func add_relative_movement_events(events: Array, direction: RelativeMovementEven
 	)
 
 
-func add_dice_roll_events(events: Array, type: )
+func add_dice_roll_events(events: Array, type: DiceRollEvent.RollType):
+	add_events(events, func(text):
+		return DiceRollEvent.new(text, type)
+	)
+
+
+func add_specific_movement_events(events: Array, type: SpecificMovementEvent.MovementType):
+	add_events(events, func(text):
+		return SpecificMovementEvent.new(text, type)
+	)
 
 
 func add_value_variated_events(events: Array, event_factor: Callable):
@@ -49,3 +63,7 @@ func add_value_variated_events(events: Array, event_factor: Callable):
 		for text in variation["texts"]:
 			self.events.append(event_factor.call(text, variation))
 
+
+func add_events(events: Array, event_factor: Callable):
+		for text in events:
+			self.events.append(event_factor.call(text))
