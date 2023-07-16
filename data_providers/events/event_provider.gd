@@ -28,6 +28,10 @@ func _init():
 		print(event.text)
 
 
+func get_random_event():
+	return events[randi() % events.size()]
+
+
 func add_coin_events(events: Array, change_type: CoinEvent.ChangeType):
 	add_value_variated_events(events, func (text, variation): 
 		return CoinEvent.new(text, variation["amount"], change_type)
