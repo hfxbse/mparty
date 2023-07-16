@@ -82,7 +82,7 @@ func create_players(num):
 
 		player.current_location = start
 		player.global_position = start.global_position
-		player.riesen = 0
+		player.riesen = 30
 		player.patente = 0
 		player.update.connect(_on_update)
 		player.sprite.texture = sprites[i]
