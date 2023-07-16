@@ -12,8 +12,8 @@ func display(player: Player):
 	
 	for target in State.players:
 		if target != player:
-			if target.sabotage_card:
-				target.sabotage_card = false
+			if target.sabotage_card > 0:
+				target.sabotage_card -= 1
 			else: 
 				var button = preload("res://select_target/target_button.tscn").instantiate()
 				container.add_child(button)
