@@ -126,9 +126,9 @@ func player_turn(player):
 
 
 func _on_update():
-	hud.update_player_stats(current_player, players)
+	hud.update_player_stats(current_player, State.players)
 
 
 func _on_start_button_pressed(rounds_count: int, player_count: int):
 	remove_child(start_menu)
-	start_game(rounds_count, player_count)
+	game_loop(rounds_count, player_count)
