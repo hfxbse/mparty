@@ -20,7 +20,7 @@ func _on_start_button_pressed():
 	visible = false
 	var counter = 0
 	var question_difficulty = preload("res://question_difficulty/question_difficulty.tscn").instantiate()
-	var question_handler = preload("res://data_providers/question_provider/question_provider.tres")
+	var question_handler = preload("res://data_providers/questions/question_provider.tres")
 	
 	add_child(question_difficulty)
 	var difficulty = await question_difficulty.difficulty

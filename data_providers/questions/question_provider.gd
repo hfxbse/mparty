@@ -1,6 +1,6 @@
 class_name QuestionsProvider extends JSONLoader
 
-var file_path = "res://data_providers/data/questions.json"
+var file_path = "res://data_providers/questions/questions.json"
 
 const difficulty_mapping = {
 	"0": Question.Difficulty.EASY,
