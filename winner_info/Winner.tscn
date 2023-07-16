@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmkss2o7o4s1q"]
+[gd_scene load_steps=3 format=3 uid="uid://bxouetf7p2t5i"]
 
-[ext_resource type="Script" path="res://winner_info/Winner.gd" id="1_vrxwr"]
+[ext_resource type="Script" path="res://winner_info/winner.gd" id="1_7st6d"]
 [ext_resource type="Texture2D" uid="uid://drcs53bxwq3tv" path="res://winner_info/winner_stairs.jpg" id="2_a4kle"]
 
 [node name="Winner" type="CanvasLayer"]
-script = ExtResource("1_vrxwr")
+script = ExtResource("1_7st6d")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 8
@@ -37,50 +37,23 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 35
 text = "Und der Sieger ist!"
 
-[node name="first" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -76.0
-offset_right = 24.0
-offset_bottom = -24.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 35
-text = "1st"
+[node name="First" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 51.0
+offset_right = 513.0
+offset_bottom = 188.0
 
-[node name="second" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -184.0
-offset_top = 4.0
-offset_right = -128.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "2nd"
+[node name="Second" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 125.0
+offset_right = 342.0
+offset_bottom = 262.0
 
-[node name="third" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 136.0
-offset_top = 44.0
-offset_right = 192.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 28
-text = "3td"
+[node name="Third" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 558.0
+offset_top = 166.0
+offset_right = 685.0
+offset_bottom = 303.0

@@ -1,13 +1,11 @@
 extends CanvasLayer
 
-@onready var first=$Panel/first
-@onready var second = $Panel/second
-@onready var third = $Panel/third
+@onready var first=$Panel/First
+@onready var second = $Panel/Second
+@onready var third = $Panel/Third
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func display_winner(players_in_order: Array[Player]):
+	first.texture = players_in_order[0].sprite.texture
+	first.texture = players_in_order[1].sprite.texture
+	first.texture = players_in_order[2].sprite.texture
