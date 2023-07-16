@@ -1,0 +1,167 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjkxjqlcjh4vo"]
+
+[ext_resource type="Script" path="res://start_menu/start_menu.gd" id="1_lt2ga"]
+[ext_resource type="Texture2D" uid="uid://brrlsmkyej88s" path="res://player/dollar.svg" id="2_b6dli"]
+[ext_resource type="Texture2D" uid="uid://bkpfvf1dlrbnn" path="res://player/euro.svg" id="3_lxm47"]
+[ext_resource type="Texture2D" uid="uid://l8obnn5jj4kn" path="res://player/pound.svg" id="4_62sts"]
+[ext_resource type="Texture2D" uid="uid://cvp5ue5844a1n" path="res://player/yen.svg" id="5_uyrgt"]
+
+[node name="StartMenue" type="CanvasLayer"]
+script = ExtResource("1_lt2ga")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -188.0
+offset_right = 448.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Yen" type="Sprite2D" parent="Panel"]
+position = Vector2(240, 288)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_uyrgt")
+
+[node name="Yen" type="Sprite2D" parent="Panel/Yen"]
+position = Vector2(582.857, -171.429)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_uyrgt")
+
+[node name="Pound" type="Sprite2D" parent="Panel"]
+position = Vector2(784, 96)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_62sts")
+
+[node name="Pound" type="Sprite2D" parent="Panel/Pound"]
+position = Vector2(-902.857, 160)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_62sts")
+
+[node name="Euro" type="Sprite2D" parent="Panel"]
+position = Vector2(120, 80)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_lxm47")
+
+[node name="Euro" type="Sprite2D" parent="Panel/Euro"]
+position = Vector2(937.143, 205.714)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_lxm47")
+
+[node name="Dollar" type="Sprite2D" parent="Panel"]
+position = Vector2(648, 288)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_b6dli")
+
+[node name="Dollar" type="Sprite2D" parent="Panel/Dollar"]
+position = Vector2(-788.572, 45.7143)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_b6dli")
+
+[node name="StartMenuePanel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -192.0
+offset_right = 448.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu-Label" type="Label" parent="StartMenuePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -156.0
+offset_right = 250.0
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "Willkommen bei Plagirarello "
+
+[node name="Label" type="Label" parent="StartMenuePanel"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 124.0
+offset_right = 445.0
+offset_bottom = 152.0
+text = "Wähle die Spieleranzahl:"
+
+[node name="OptionButton" type="OptionButton" parent="StartMenuePanel"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 156.0
+offset_right = 576.0
+offset_bottom = 188.0
+item_count = 3
+selected = 0
+popup/item_0/text = "4 Spieler"
+popup/item_0/id = 0
+popup/item_1/text = "3 Spieler"
+popup/item_1/id = 1
+popup/item_2/text = "2 Spieler"
+popup/item_2/id = 2
+
+[node name="Start" type="Button" parent="StartMenuePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 100.0
+offset_right = 64.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="RoundsLabel" type="Label" parent="."]
+offset_left = 542.0
+offset_top = 330.0
+offset_right = 605.0
+offset_bottom = 356.0
+text = "Rounds:"
+
+[node name="SubtractRounds" type="Button" parent="."]
+offset_left = 528.0
+offset_top = 362.0
+offset_right = 549.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 22
+text = "-"
+
+[node name="AddRounds" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 362.0
+offset_right = 621.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 22
+text = "+"
+
+[node name="RoundCounter" type="Label" parent="."]
+offset_left = 561.0
+offset_top = 366.0
+offset_right = 601.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 22
+text = "10"
+
+[connection signal="item_selected" from="StartMenuePanel/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="StartMenuePanel/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="SubtractRounds" to="." method="_on_subtract_rounds_pressed"]
+[connection signal="pressed" from="AddRounds" to="." method="_on_add_rounds_pressed"]
