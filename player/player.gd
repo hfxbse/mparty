@@ -27,6 +27,7 @@ var moves = 0
 
 var current_location: Field
 var last_location: Field
+var duel_panel
 
 signal turn_ended
 
@@ -122,29 +123,21 @@ func register_duels():
 	
 	
 func duel(player: Player):
-	var duel_panel = preload("res://duel/duell_movement/same_field_duel.tscn").instantiate()
+	duel_panel = preload("res://duel/duell_movement/same_field_duel.tscn").instantiate()
 	add_child(duel_panel)
 	var result = await duel_panel.start_duel(player, self)
-	match result:
-		duel_panel.DuelEndings.ATTACKER_WINS:
-			var pot = self.riesen / 2
-			self.riesen -= pot
-			player.riesen += pot
-		duel_panel.DuelEndings.ATTACKER_LOSES:
-			var pot = player.riesen / 2
-			self.riesen += pot
-			player.riesen -= pot
+	apply_duel_outcome(player, self.riesen / 2, result)
 	
 	
 func driveby_duel(player: Player):
-	var duel_panel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
+	duel_panel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
 	add_child(duel_panel)
 	var result = await duel_panel.start_duel(player, self)
-	var pot = 30
-	match result:
-		duel_panel.DuelEndings.ATTACKER_WINS:
-			self.riesen -= pot
-			player.riesen += pot
-		duel_panel.DuelEndings.ATTACKER_LOSES:
-			self.riesen += pot
-			player.riesen -= pot
+	apply_duel_outcome(player, 30, result)
+			
+func apply_duel_outcome(other_player: Player, bet_amount: int, result):
+	if result == duel_panel.DuelEndings.ATTACKER_LOSES:
+		bet_amount *= -1
+
+	self.riesen += bet_amount
+	other_player.riesen -= bet_amount
