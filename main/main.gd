@@ -7,6 +7,8 @@ extends Node
 @onready var main_camera = $MainCamera
 @onready var hud = $GameOverlay
 
+var start_menu
+
 
 func _ready():
 	hud.camera_menu_pressed.connect(_on_menu_button_pressed)
@@ -18,7 +20,9 @@ func _ready():
 
 		hud.add_child(mobile_hud)
 	
-	game_loop(10, 4)
+	start_menu = preload("res://start_menu/start_menu.tscn").instantiate()
+	add_child(start_menu)
+	start_menu.start_params.connect(_on_start_button_pressed)
 
 
 func _process(delta):
@@ -122,4 +126,9 @@ func player_turn(player):
 
 
 func _on_update():
-	hud.update_player_stats(current_player, State.players)
+	hud.update_player_stats(current_player, players)
+
+
+func _on_start_button_pressed(rounds_count: int, player_count: int):
+	remove_child(start_menu)
+	start_game(rounds_count, player_count)

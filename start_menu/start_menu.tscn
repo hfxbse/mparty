@@ -130,4 +130,38 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
 
+[node name="RoundsLabel" type="Label" parent="."]
+offset_left = 542.0
+offset_top = 330.0
+offset_right = 605.0
+offset_bottom = 356.0
+text = "Rounds:"
+
+[node name="SubtractRounds" type="Button" parent="."]
+offset_left = 528.0
+offset_top = 362.0
+offset_right = 549.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 22
+text = "-"
+
+[node name="AddRounds" type="Button" parent="."]
+offset_left = 600.0
+offset_top = 362.0
+offset_right = 621.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 22
+text = "+"
+
+[node name="RoundCounter" type="Label" parent="."]
+offset_left = 561.0
+offset_top = 366.0
+offset_right = 601.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 22
+text = "10"
+
+[connection signal="item_selected" from="StartMenuePanel/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="StartMenuePanel/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="SubtractRounds" to="." method="_on_subtract_rounds_pressed"]
+[connection signal="pressed" from="AddRounds" to="." method="_on_add_rounds_pressed"]
