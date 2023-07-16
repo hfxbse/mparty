@@ -32,4 +32,3 @@ func reveal():
 		answer_button_label.add_theme_color_override("font_color", Color(0,128,0))
 	else:
 		answer_button_label.add_theme_color_override("font_color", Color(255,0,0))
-
