@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var first=$Panel/First
+@onready var first = $Panel/First
 @onready var second = $Panel/Second
 @onready var third = $Panel/Third
 

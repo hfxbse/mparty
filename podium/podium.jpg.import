@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drcs53bxwq3tv"
-path="res://.godot/imported/winner_stairs.jpg-22fba5b083a80d9cbb8f12cb02010d36.ctex"
+path="res://.godot/imported/podium.jpg-738b19d60e0c1ed8d362b6c80ae5d2e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://winner_info/winner_stairs.jpg"
-dest_files=["res://.godot/imported/winner_stairs.jpg-22fba5b083a80d9cbb8f12cb02010d36.ctex"]
+source_file="res://podium/podium.jpg"
+dest_files=["res://.godot/imported/podium.jpg-738b19d60e0c1ed8d362b6c80ae5d2e9.ctex"]
 
 [params]
 

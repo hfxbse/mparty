@@ -58,9 +58,9 @@ func game_loop(num_rounds, num_players):
 			return player1.riesen + player1.patente < player2.riesen + player2.patente
 	)
 
-	var winner_screen = preload("res://winner_info/Winner.tscn").instantiate()
-	add_child(winner_screen)
-	winner_screen.display_winner(State.players)
+	var podium = preload("res://podium/podium.tscn").instantiate()
+	add_child(podium)
+	podium.display_winner(State.players)
 
 
 func create_players(num):

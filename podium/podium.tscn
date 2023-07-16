@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxouetf7p2t5i"]
 
-[ext_resource type="Script" path="res://winner_info/winner.gd" id="1_7st6d"]
-[ext_resource type="Texture2D" uid="uid://drcs53bxwq3tv" path="res://winner_info/winner_stairs.jpg" id="2_a4kle"]
+[ext_resource type="Script" path="res://podium/podium.gd" id="1_eyaaa"]
+[ext_resource type="Texture2D" uid="uid://drcs53bxwq3tv" path="res://podium/podium.jpg" id="2_6tf6g"]
 
 [node name="Winner" type="CanvasLayer"]
-script = ExtResource("1_7st6d")
+script = ExtResource("1_eyaaa")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 8
@@ -22,7 +22,7 @@ grow_vertical = 2
 [node name="WinnerStairs" type="Sprite2D" parent="Panel"]
 position = Vector2(448, 192)
 scale = Vector2(0.202778, 0.204938)
-texture = ExtResource("2_a4kle")
+texture = ExtResource("2_6tf6g")
 
 [node name="Title" type="Label" parent="Panel"]
 layout_mode = 1
