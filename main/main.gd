@@ -7,8 +7,11 @@ extends Node
 @onready var main_camera = $MainCamera
 @onready var start_menu = $StartMenu
 
-
 var hud
+
+
+func _ready():
+	preload("res://data_providers/events/event_provider.tres")
 
 
 func _on_start_button_pressed(rounds_count: int, player_count: int):
@@ -25,7 +28,7 @@ func _on_start_button_pressed(rounds_count: int, player_count: int):
 		mobile_hud.zoom_out.connect(main_camera.zoom_out)
 
 		hud.add_child(mobile_hud)
-	
+
 	game_loop(rounds_count, player_count)
 
 

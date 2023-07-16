@@ -1,12 +1,13 @@
 class_name QuestionsProvider extends JSONLoader
 
-var file_path = "res://data_providers/data/questions.json"
+var file_path = "res://data_providers/questions/questions.json"
 
 const difficulty_mapping = {
 	"0": Question.Difficulty.EASY,
 	"1": Question.Difficulty.NORMAL,
 	"2": Question.Difficulty.DIFFICULT
 }
+
 var questions = {
 	Question.Difficulty.EASY: [],
 	Question.Difficulty.NORMAL: [],
@@ -18,11 +19,10 @@ var current_question_index = -1;
 
 func _init():
 	var questions_from_json = load_json_file(file_path)
-	assert(questions_from_json != null, "No questions found.")
+	assert(questions_from_json != null, "Failed to load questions.")
 
 	for question in questions_from_json:
 		var question_obj = Question.new()
-
 		var difficulty = difficulty_mapping[str(question["difficulty"])]
 		assert(difficulty != null, "Difficulty \"%s\" is not supported." % difficulty)
 
@@ -47,7 +47,6 @@ func get_next_question(difficulty: Question.Difficulty):
 		current_question_index += 1
 	else: 
 		current_question_index = 0
-
 	var question = get_question(current_question_index, difficulty)
 	assert(question != null, "No question found.")
 	return question
