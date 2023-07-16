@@ -23,7 +23,7 @@ func display(player: Player, dice_value):
 		"action": func():
 			var target = await get_target()
 			var result = await run_duel(target)
-			# match case over result
+			apply_duel_outcome(player, target, 50, result)
 	}
 	
 	var duell_big = {
@@ -31,15 +31,16 @@ func display(player: Player, dice_value):
 		"action": func():
 			var target = await get_target()
 			var result = await run_duel(target)
-			# match case over result
+			apply_duel_outcome(player, target, min(player.riesen, target.riesen) / 2, result)
 	}
 	
 	var duell_roll = {
 		"text": "Duell Würfelgeld \nWert:gewürfelte Anzahl Riesen*10",
 		"action": func():
 			var target = await get_target()
+			var bet_amount = await roll_dice()
 			var result = await run_duel(target)
-			# match case over result
+			apply_duel_outcome(player, target, bet_amount, result)
 	}
 
 	var steal_turn = {
@@ -47,7 +48,8 @@ func display(player: Player, dice_value):
 		"action": func():
 			var target = await get_target()
 			var result = await run_duel(target)
-			# match case over result
+			if result == Duel.DuelEndings.ATTACKER_WINS:
+				State.steal_turn(player, target)
 	}
 	
 	var sabotag_card = {
@@ -71,11 +73,37 @@ func display(player: Player, dice_value):
 
 
 func get_target():
-# Use select_target scene to get target
-	pass
+	var selector  = preload("res://select_target/select_target.tscn").instantiate()
+	add_child(selector)
+	var target = await selector.display(player)
+	remove_child(selector)
+	return target
 
 
 func run_duel(target):
-# Execute the duel. the player is the attacker
-# Return the result enum
-	pass
+	var duel_panel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
+	add_child(duel_panel)
+	var result = await duel_panel.start_duel(player, target)
+	remove_child(duel_panel)
+	return result
+
+
+func apply_duel_outcome(attacker, target, bet_amount, result):
+	if result == Duel.DuelEndings.ATTACKER_LOSES:
+		bet_amount *= -1
+	elif result == Duel.DuelEndings.DRAW:
+		bet_amount *= 0
+	
+	attacker += bet_amount
+	target -= bet_amount
+
+
+func roll_dice():
+	var dice_menu = preload("res://dice/dice.tscn").instantiate()
+	add_child(dice_menu)
+	
+	var dice_value = await dice_menu.dice_number
+	remove_child(dice_menu)
+	
+	return dice_value
+
