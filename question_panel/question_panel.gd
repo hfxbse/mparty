@@ -19,7 +19,7 @@ signal answer_selected(answer: bool)
 
 
 func display_question(difficulty):
-	var question_provider = preload("res://data_providers/question_provider/question_provider.tres")
+	var question_provider = preload("res://data_providers/questions/question_provider.tres")
 	return display_specific_question(question_provider.get_random_question(difficulty))
 
 
