@@ -43,9 +43,9 @@ func all_reduce_riesen(rate):
 		player.riesen = floor(player.riesen * (1 - rate))
 	
 	
-func all_reduce_patente(rate):
+func all_change_patente(rate):
 	for player in players:
-		player.patente = floor(player.patente * (1 - rate))
+		player.patente = floor(player.patente * rate)
 
 
 
