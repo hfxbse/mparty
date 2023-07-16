@@ -6,6 +6,7 @@ class_name Player extends Node2D
 signal update
 
 var skip = false
+var player_name: String
 
 
 var patente: int:
@@ -26,6 +27,7 @@ var moves = 0
 
 var current_location: Field
 var last_location: Field
+var duel_panel
 
 signal turn_ended
 
@@ -121,12 +123,23 @@ func register_duels():
 	
 	
 func duel(player: Player):
-	print("Duel triggered")
+	duel_panel = preload("res://duel/same_field_duel.tscn").instantiate()
+	add_child(duel_panel)
+	var result = await duel_panel.start_duel(player, self)
+	apply_duel_outcome(player, min(self.riesen, player.riesen) / 2, result)
 	
 	
 func driveby_duel(player: Player):
-	print("Drive-by Duel triggered")
+	duel_panel = preload("res://duel/overtaking_duell.tscn").instantiate()
+	add_child(duel_panel)
+	var result = await duel_panel.start_duel(player, self)
+	apply_duel_outcome(player, 30, result)
+			
+func apply_duel_outcome(other_player: Player, bet_amount: int, result):
+	if result == Duel.DuelEndings.ATTACKER_LOSES:
+		bet_amount *= -1
+	elif result == Duel.DuelEndings.DRAW:
+		bet_amount *= 0
 	
-	
-	
-
+	self.riesen -= bet_amount
+	other_player.riesen += bet_amount
