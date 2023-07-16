@@ -2,16 +2,15 @@ extends CanvasLayer
 
 @onready var label = $CanvasLayer/Panel/Label
 
-signal finished
+signal finished(action: Callable)
 
 var player: Player
 var action: Callable
 
 
 func _on_button_pressed():
-	visible = false
-	await action.call(player)
-	finished.emit()
+	hide()
+	finished.emit(action)
 
 
 var duel_50 = {

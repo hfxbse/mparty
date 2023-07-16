@@ -13,8 +13,10 @@ func _on_button_pressed():
 	
 	var result_display = preload("res://sabotage_dialog/sabotage_dice_result.tscn").instantiate()
 	add_child(result_display)
-	await result_display.display(player, dice_value)
+	var action = await result_display.display(player, dice_value)
 	remove_child(result_display)
+	
+	await action.call(player)
 	finished.emit()
 
 
