@@ -2,11 +2,11 @@ class_name CoinEvent extends Event
 
 var change_amount: int
 
-
 enum ChangeType { 
 	LOST, 
 	GAIN
 }
+
 
 func _init(text: String, change_amount: int, change_type: ChangeType):
 	self.text = text % change_amount

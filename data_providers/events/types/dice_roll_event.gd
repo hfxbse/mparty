@@ -5,5 +5,6 @@ enum RollType {
 	TWICE
 }
 
+
 func _init(text: String, roll_type: RollType):
 	self.text = text

@@ -14,13 +14,13 @@ func _init():
 
 	add_percentage_events(events["percentage"]["lost"], PercentageEvent.ChangeType.LOST)
 	add_percentage_events(events["percentage"]["gain"], PercentageEvent.ChangeType.GAIN)
-	
+
 	add_relative_movement_events(events["move"]["forward"], RelativeMovementEvent.Direction.FORWARD)
 	add_relative_movement_events(events["move"]["backward"], RelativeMovementEvent.Direction.BACKWARD)
-	
+
 	add_specific_movement_events(events["move"]["undo"], SpecificMovementEvent.MovementType.UNDO)
 	add_specific_movement_events(events["move"]["start"], SpecificMovementEvent.MovementType.START)
-	
+
 	add_dice_roll_events(events["diceRoll"]["again"], DiceRollEvent.RollType.AGAIN)
 
 	for event in self.events:
