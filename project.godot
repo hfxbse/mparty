@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="mparty"
+config/name="Plagiarello"
 run/main_scene="res://main/main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
+config/icon="res://plagiarello_logo_small.png"
 
 [autoload]
 
