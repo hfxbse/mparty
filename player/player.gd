@@ -20,8 +20,7 @@ var patente: int:
 var riesen: int:
 	set(amount):
 		if riesen != amount:
-			riesen = amount
-			riesen = max(0, riesen)
+			riesen = max(0, amount)
 			update.emit()
 
 
