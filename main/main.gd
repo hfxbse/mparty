@@ -127,7 +127,7 @@ func _on_update():
 # Test function
 func _on_button_pressed():
 	print("Action triggered")
-	var action_panel = preload("res://actions_field/action_field.tscn").instantiate()
+	var action_panel = preload("res://action_dialog/action_dialog.tscn").instantiate()
 	add_child(action_panel)
 	await action_panel.display(current_player)
 	remove_child(action_panel)

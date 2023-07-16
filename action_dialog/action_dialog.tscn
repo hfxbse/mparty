@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bt88a5bg5e6dx"]
 
-[ext_resource type="Script" path="res://actions_field/action_field.gd" id="1_0kgtt"]
+[ext_resource type="Script" path="res://action_dialog/action_dialog.gd" id="1_2cekf"]
 
 [node name="actionfield" type="CanvasLayer"]
-script = ExtResource("1_0kgtt")
+script = ExtResource("1_2cekf")
 
 [node name="actionfieldLabel" type="Panel" parent="."]
 anchors_preset = 8
