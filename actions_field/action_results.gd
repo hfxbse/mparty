@@ -16,64 +16,61 @@ func _on_button_pressed():
 
 func display(player: Player, dice_value):
 	self.player = player
-	var result = ""
-
-	if dice_value <= 2:
-		result = "Spielertausch nach Wahl"
-		action = swap
-	elif dice_value <= 4:
-		result = "Nochmal würfeln"
-		action = roll_again
-	elif dice_value <= 6:
-		result = "Alle bewegen sich zurück"
-		action = go_back
-	elif dice_value <= 8:
-		result = "Gehe zurück zum Start"
-		action = go_to_start
-	elif dice_value <= 10:
-		result = "Nochmal würfeln"
-		action = roll_again
-	elif dice_value == 11:
-		result = "Alle Patente verlieren um 10% an Wert"
-		action = reduce_patents
-	elif dice_value == 12:
-		result = "Alle Patente gewinnen um 10% an Wert"
-		action = increase_patents
+	var result_array = [swap, swap, roll_again, roll_again, go_back, go_back, go_to_start, go_to_start, roll_again, roll_again, reduce_patents, increase_patents]
+	var result = result_array[dice_value-1]
 	
-	label.set_text(result)
+	label.set_text(result["text"])
+	action = result["action"]
 	visible = true
 	
 	return finished
 
-
-func swap():
-	var target = await get_target()
-	player.swap_with(target)
+var swap = {
+	"text": "Spielertausch nach Wahl",
+	"action": func():
+		var target = await get_target()
+		await player.swap_with(target)
+}
 	
 	
-func roll_again():
-	State.roll_again(player)
-
-
-func go_back():
-	var dice_menu = preload("res://dice/dice.tscn").instantiate()
-	add_child(dice_menu)
-	var dice_value = await dice_menu.dice_number
-	remove_child(dice_menu)
+var roll_again = {
+	"text": "Nochmal würfeln",
+	"action": func():
+		State.roll_again(player)
+}
 	
-	State.all_move_back(dice_value)
 
 
-func go_to_start():
-	player.teleport(State.start)
+var go_back = {
+	"text": "Alle bewegen sich zurück",
+	"action": func():
+		var dice_menu = preload("res://dice/dice.tscn").instantiate()
+		add_child(dice_menu)
+		var dice_value = await dice_menu.dice_number
+		remove_child(dice_menu)
+		await State.all_move_back(dice_value)
+}
 
 
-func reduce_patents():
-	State.all_change_patente(0.9)
+var go_to_start = {
+	"text": "Gehe zurück zum Start",
+	"action":
+		await player.teleport(State.start)
+}
 
 
-func increase_patents():
-	State.all_change_patente(1.1)
+var reduce_patents = {
+	"text": "Alle Patente verlieren um 10% an Wert",
+	"action":
+		State.all_change_patente(0.9)
+}
+
+
+var increase_patents = {
+	"text": "Alle Patente gewinnen um 10% an Wert",
+	"action":
+		State.all_change_patente(1.1)
+}
 
 
 func get_target():
