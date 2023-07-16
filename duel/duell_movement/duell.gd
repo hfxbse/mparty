@@ -15,14 +15,6 @@ enum DuelEndings {
 
 signal duel_result(ending: DuelEndings)
 
-func _ready():
-	var player1 = Player.new()
-	player1.player_name = "Euro"
-	
-	var player2 = Player.new()
-	player2.player_name = "Yen"
-	
-	start_duel(player1, player2)
 
 func _on_start_button_pressed():
 	var counter = 0
@@ -51,7 +43,8 @@ func start_duel(attacker: Player, target: Player):
 	self.attacker = attacker
 	self.target = target
 
-	return await duel_result
+	return duel_result
+
 
 func start_question(player: Player):
 	var question_panel = preload("res://question_panel/question_panel.tscn").instantiate()

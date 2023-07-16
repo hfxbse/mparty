@@ -36,14 +36,6 @@ text = "Duell"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Infotext" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 296.0
-offset_top = 140.0
-offset_right = 606.0
-offset_bottom = 172.0
-text = "Duell um 30 Riesen mit allen überholten"
-
 [node name="StartButton" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = 7
