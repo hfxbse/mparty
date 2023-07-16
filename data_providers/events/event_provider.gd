@@ -41,6 +41,9 @@ func add_relative_movement_events(events: Array, direction: RelativeMovementEven
 	)
 
 
+func add_dice_roll_events(events: Array, type: )
+
+
 func add_value_variated_events(events: Array, event_factor: Callable):
 	for variation in events:
 		for text in variation["texts"]:
