@@ -11,6 +11,7 @@ var sabotage_card = 0
 
 var player_name: String
 
+
 var patente: int:
 	set(amount):
 		if patente != amount:
@@ -21,7 +22,7 @@ var patente: int:
 var riesen: int:
 	set(amount):
 		if riesen != amount:
-			riesen = amount
+			riesen = max(0, amount)
 			update.emit()
 
 
