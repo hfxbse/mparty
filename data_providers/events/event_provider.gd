@@ -22,7 +22,6 @@ func _init():
 	add_specific_movement_events(events["move"]["start"], SpecificMovementEvent.MovementType.START)
 	
 	add_dice_roll_events(events["diceRoll"]["again"], DiceRollEvent.RollType.AGAIN)
-	add_dice_roll_events(events["diceRoll"]["twice"], DiceRollEvent.RollType.TWICE)
 
 	for event in self.events:
 		print(event.text)
