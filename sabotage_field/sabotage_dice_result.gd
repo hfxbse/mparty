@@ -81,7 +81,7 @@ func get_target():
 
 
 func run_duel(target):
-	var duel_panel = preload("res://duel/duell_movement/overtaking_duell.tscn").instantiate()
+	var duel_panel = preload("res://duel/overtaking_duell.tscn").instantiate()
 	add_child(duel_panel)
 	var result = await duel_panel.start_duel(player, target)
 	remove_child(duel_panel)
