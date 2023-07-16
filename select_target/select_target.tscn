@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsomnmlma85vg"]
+
+[ext_resource type="Script" path="res://select_target/select_target.gd" id="1_npd1w"]
+
+[node name="select_duellist" type="CanvasLayer"]
+script = ExtResource("1_npd1w")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -192.0
+offset_right = 448.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 28.0
+offset_right = 192.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 37
+text = "Choose your target!"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+columns = 4
