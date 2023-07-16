@@ -11,7 +11,7 @@ func _on_button_pressed():
 	var dice_value = await dice_menu.dice_number
 	remove_child(dice_menu)
 	
-	var result_display = preload("res://sabotage_field/sabotage_dice_result.tscn").instantiate()
+	var result_display = preload("res://sabotage_dialog/sabotage_dice_result.tscn").instantiate()
 	add_child(result_display)
 	await result_display.display(player, dice_value)
 	remove_child(result_display)

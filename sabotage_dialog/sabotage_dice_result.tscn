@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bpmrg8wpl3am5"]
 
-[ext_resource type="Script" path="res://sabotage_field/sabotage_dice_result.gd" id="1_883jy"]
+[ext_resource type="Script" path="res://sabotage_dialog/sabotage_dice_result.gd" id="1_883jy"]
 
 [node name="sabotage_result" type="CanvasLayer"]
 script = ExtResource("1_883jy")
