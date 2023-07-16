@@ -126,7 +126,7 @@ func duel(player: Player):
 	duel_panel = preload("res://duel/duell_movement/same_field_duel.tscn").instantiate()
 	add_child(duel_panel)
 	var result = await duel_panel.start_duel(player, self)
-	apply_duel_outcome(player, player.riesen / 2, result)
+	apply_duel_outcome(player, min(self.riesen, player.riesen) / 2, result)
 	
 	
 func driveby_duel(player: Player):
@@ -135,12 +135,11 @@ func driveby_duel(player: Player):
 	var result = await duel_panel.start_duel(player, self)
 	apply_duel_outcome(player, 30, result)
 			
-func apply_duel_outcome(other_player: Player, other_player_bet: int, result):
-	var own_bet = self.riesen / 2
-	
+func apply_duel_outcome(other_player: Player, bet_amount: int, result):
 	if result == Duel.DuelEndings.ATTACKER_LOSES:
-		own_bet *= -1
-		other_player_bet *= -1
-
-	self.riesen += own_bet
-	other_player.riesen -= other_player_bet
+		bet_amount *= -1
+	elif result == Duel.DuelEndings.DRAW:
+		bet_amount *= 0
+	
+	self.riesen -= bet_amount
+	other_player.riesen += bet_amount
