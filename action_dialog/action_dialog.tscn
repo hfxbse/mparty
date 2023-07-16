@@ -1,0 +1,91 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt88a5bg5e6dx"]
+
+[ext_resource type="Script" path="res://action_dialog/action_dialog.gd" id="1_2cekf"]
+
+[node name="actionfield" type="CanvasLayer"]
+script = ExtResource("1_2cekf")
+
+[node name="actionfieldLabel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -192.0
+offset_right = 448.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="actionfieldLabel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 28.0
+offset_right = 832.0
+offset_bottom = 105.0
+theme_override_font_sizes/normal_font_size = 38
+text = "Würfelglück entscheidet über die Aktion!"
+
+[node name="Button" type="Button" parent="actionfieldLabel"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 316.0
+offset_right = 488.0
+offset_bottom = 364.0
+text = "Würfeln!"
+
+[node name="GridContainer" type="GridContainer" parent="actionfieldLabel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = 832.0
+offset_bottom = 197.0
+theme_override_constants/h_separation = 39
+theme_override_constants/v_separation = 26
+columns = 2
+
+[node name="Label" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1-2: Spielertausch nach Wahl"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "3-4: Nochmal würfeln"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "5-6: Alle Spieler laufen zurück "
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "7-8: Gehe zum Start"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "9-10: Nochmal würfeln"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "11: Prozenanteil aller Anlagen sinkt  "
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="actionfieldLabel/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "12: Prozenanteil aller Anlagen steigt"
+vertical_alignment = 1
+
+[connection signal="pressed" from="actionfieldLabel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="actionfieldLabel/Button" to="actionfieldLabel" method="_on_button_pressed"]
