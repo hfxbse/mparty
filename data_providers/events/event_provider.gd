@@ -23,9 +23,6 @@ func _init():
 
 	add_dice_roll_events(events["diceRoll"]["again"], DiceRollEvent.RollType.AGAIN)
 
-	for event in self.events:
-		print(event.text)
-
 
 func get_random_event():
 	return events[randi() % events.size()]

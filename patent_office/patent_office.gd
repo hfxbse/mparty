@@ -41,6 +41,7 @@ func _on_add_button_pressed():
 
 
 func _on_subtract_button_pressed():
-	patent_count -= 1
-	patent_count_label.text = str(patent_count)
-	print(patent_count)
+	if patent_count > 0:
+		patent_count -= 1
+		patent_count_label.text = str(patent_count)
+		print(patent_count)
