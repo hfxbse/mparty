@@ -18,7 +18,7 @@ func _ready():
 
 		hud.add_child(mobile_hud)
 	
-	start_game(10, 4)
+	game_loop(10, 4)
 
 
 func _process(delta):
@@ -39,8 +39,7 @@ func _on_menu_button_pressed(main_camera_selected: bool):
 		current_player.camera.make_current()
 
 
-# Invoced by the start-screen to start the game
-func start_game(num_rounds, num_players):
+func game_loop(num_rounds, num_players):
 	State.init(create_players(num_players), start)
 	
 	hud.update_player_stats(current_player, State.players)
@@ -54,9 +53,11 @@ func start_game(num_rounds, num_players):
 			if (player == null): 
 				break
 			await player_turn(player)
-	
+
 	State.players.sort_custom(func(player1, player2): 
-			return player1.riesen + player1.riesen < player2.riesen + player2.patente)
+			return player1.riesen + player1.riesen < player2.riesen + player2.patente
+	)
+
 	var winner_screen = preload("res://winner_info/Winner.tscn").instantiate()
 	add_child(winner_screen)
 	winner_screen.display_winner(State.players)
